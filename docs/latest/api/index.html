@@ -4052,7 +4052,7 @@ def</span><a class="reference internal" href="#steam.Ban.is_vac_banned">is_vac_b
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Ban.number_of_game_bans">
 <span class="sig-name descname"><span class="pre">number_of_game_bans</span></span><a class="headerlink" href="#steam.Ban.number_of_game_bans" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of game bans the User has.</p>
+<dd><p>The number of game bans the user has.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
@@ -4074,7 +4074,7 @@ def</span><a class="reference internal" href="#steam.Ban.is_vac_banned">is_vac_b
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Ban.is_vac_banned">
 <span class="sig-name descname"><span class="pre">is_vac_banned</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Ban.is_vac_banned" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not  the user is VAC banned.</p>
+<dd><p>Whether or not the user is VAC banned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -4290,7 +4290,7 @@ async</span><a class="reference internal" href="#steam.GroupChannel.send">send</
 <dd><p>The group to which messages are sent.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.Group" title="steam.group.Group">steam.group.Group</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Group" title="steam.group.Group">steam.group.Group</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4802,68 +4802,6 @@ async</span><a class="reference internal" href="#steam.Clan.members">members</a>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="steam.Clan.channels">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">channels</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[steam.channel.ClanChannel]</span></em><a class="headerlink" href="#steam.Clan.channels" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of the clan’s channels.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.get_channel">
-<span class="sig-name descname"><span class="pre">get_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.get_channel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a channel from cache.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The id of the channel.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.ClanChannel" title="steam.channel.ClanChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.channel.ClanChannel</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.members">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">members</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.members" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches a clan’s member list.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This can be a very slow operation due to the rate limits on this endpoint.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.SteamID</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.join">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.join" title="Permalink to this definition">¶</a></dt>
-<dd><p>Joins the clan. This will also join the clan’s chat.</p>
-<dl class="field-list simple">
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.leave">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">leave</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.leave" title="Permalink to this definition">¶</a></dt>
-<dd><p>Leaves the clan.</p>
-<dl class="field-list simple">
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.invite">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.invite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invites a <a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> to the clan.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>user</strong> (<a class="reference internal" href="#steam.User" title="steam.User"><em>User</em></a>) – The user to invite to the clan.</p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Clan.comment">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.comment" title="Permalink to this definition">¶</a></dt>
@@ -5013,6 +4951,68 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dt class="sig sig-object py" id="steam.Clan.universe">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">universe</span></span><em class="property"><span class="pre">:</span> <span class="pre">steam.enums.Universe</span></em><a class="headerlink" href="#steam.Clan.universe" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Steam universe of the SteamID.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Clan.channels">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">channels</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[steam.channel.ClanChannel]</span></em><a class="headerlink" href="#steam.Clan.channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the clan’s channels.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.get_channel">
+<span class="sig-name descname"><span class="pre">get_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.get_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a channel from cache.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The id of the channel.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.ClanChannel" title="steam.channel.ClanChannel"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.channel.ClanChannel</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.members">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">members</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.members" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches a clan’s member list.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be a very slow operation due to the rate limits on this endpoint.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.SteamID</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.join">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Joins the clan. This will also join the clan’s chat.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.leave">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">leave</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.leave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leaves the clan.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.invite">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.invite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invites a <a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> to the clan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> (<a class="reference internal" href="#steam.User" title="steam.User"><em>User</em></a>) – The user to invite to the clan.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -6265,7 +6265,7 @@ Attributes</span><ul>
 <dd><p>The lowest price observed by the market.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+<dd class="field-odd"><p>Union[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6276,7 +6276,7 @@ Attributes</span><ul>
 <dd><p>The median price observed by the market.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+<dd class="field-odd"><p>Union[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9218,7 +9218,6 @@ Similar to <a class="reference internal" href="#steam.NotFound" title="steam.Not
       Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.2.0+.
     </footer>
   </div>
-
   <div id="settings" class="modal" onclick="if (event.target == this){ settingsModal.close(); }" hidden>
     <div class="modal-content">
       <span class="close" onclick="settingsModal.close();" title="Close">
@@ -9262,7 +9261,7 @@ Similar to <a class="reference internal" href="#steam.NotFound" title="steam.Not
     </div>
   </div>
 
-  <div id="to-top" onclick="scrollToTop()" hidden>
+  <div id="to-top" onclick="window.scrollTo(0, 0)">
     <span><span class="material-icons">arrow_upward</span> to top</span>
   </div>
 
