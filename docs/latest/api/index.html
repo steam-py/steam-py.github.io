@@ -285,17 +285,28 @@ async</span><a class="reference internal" href="#steam.Client.wait_until_ready">
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>game</strong> (<a class="reference internal" href="#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a>) – A games to set your status as on connect.</p></li>
-<li><p><strong>games</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a>]) – A list of games to set your status to on connect.</p></li>
-<li><p><strong>state</strong> (<a class="reference internal" href="#steam.PersonaState" title="steam.PersonaState"><code class="xref py py-class docutils literal notranslate"><span class="pre">PersonaState</span></code></a>) – <p>The state to show your account as on connect.</p>
+<li><p><strong>proxy</strong> – A proxy URL to use for requests.</p></li>
+<li><p><strong>proxy_auth</strong> – The proxy authentication to use with requests.</p></li>
+<li><p><strong>connector</strong> – The connector to use with the <code class="xref py py-class docutils literal notranslate"><span class="pre">ClientSession</span></code>.</p></li>
+<li><p><strong>max_messages</strong> – The maximum number of messages to store in the internal cache, default is 1000.</p></li>
+<li><p><strong>game</strong> – A games to set your status as on connect.</p></li>
+<li><p><strong>games</strong> – A list of games to set your status to on connect.</p></li>
+<li><p><strong>state</strong> – <p>The state to show your account as on connect.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Setting your status to <code class="xref py py-attr docutils literal notranslate"><span class="pre">Offline</span></code>, will stop you receiving persona state updates
+<p>Setting your status to <a class="reference internal" href="#steam.PersonaState.Offline" title="steam.PersonaState.Offline"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Offline</span></code></a>, will stop you receiving persona state updates
 and by extension <a class="reference internal" href="#steam.Client.on_user_update" title="steam.Client.on_user_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_user_update()</span></code></a> will stop being dispatched.</p>
 </div>
 </p></li>
-<li><p><strong>ui_mode</strong> (<a class="reference internal" href="#steam.UIMode" title="steam.UIMode"><code class="xref py py-class docutils literal notranslate"><span class="pre">UIMode</span></code></a>) – The UI mode to set your status to on connect.</p></li>
-<li><p><strong>force_kick</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether or not to forcefully kick any other playing sessions on connect.</p></li>
+<li><p><strong>ui_mode</strong> – The UI mode to set your status to on connect.</p></li>
+<li><p><strong>flag</strong> – A flag to set your persona state to.</p></li>
+<li><p><strong>flags</strong> – <p>A list of flags to set your persona state to</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">components()</span></code> to easily calculate these.</p>
+</div>
+</p></li>
+<li><p><strong>force_kick</strong> – Whether or not to forcefully kick any other playing sessions on connect. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
