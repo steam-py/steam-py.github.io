@@ -561,8 +561,8 @@ event.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>game</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../api/#steam.Game" title="steam.game.Game"><em>steam.game.Game</em></a><em>]</em>) – A games to set your status as.</p></li>
-<li><p><strong>games</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Game" title="steam.game.Game"><em>steam.game.Game</em></a><em>]</em><em>]</em>) – A list of games to set your status to.</p></li>
+<li><p><strong>game</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>steam.Game</em></a><em>]</em>) – A games to set your status as.</p></li>
+<li><p><strong>games</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>steam.Game</em></a><em>]</em><em>]</em>) – A list of games to set your status to.</p></li>
 <li><p><strong>state</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../api/#steam.PersonaState" title="steam.enums.PersonaState"><em>steam.enums.PersonaState</em></a><em>]</em>) – <p>The state to show your account as.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -689,7 +689,7 @@ Register an event to listen to.</p>
 <a class="reference internal" href="../../../api/#steam.SteamID.id3" title="steam.SteamID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id3</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Clan" title="steam.clan.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.clan.Clan</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Clan</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -703,7 +703,7 @@ Register an event to listen to.</p>
 <dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The name of the Steam clan.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Clan" title="steam.clan.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.clan.Clan</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Clan</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -714,10 +714,10 @@ Register an event to listen to.</p>
 <dd><p>Fetch a game from its ID or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the game was not found.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>id</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.Game" title="steam.game.Game"><em>steam.game.Game</em></a><em>]</em>) – The app id of the game or a <a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a> instance.</p>
+<dd class="field-odd"><p><strong>id</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>steam.Game</em></a><em>]</em>) – The app id of the game or a <a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a> instance.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.FetchedGame" title="steam.game.FetchedGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.game.FetchedGame</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.FetchedGame" title="steam.FetchedGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.FetchedGame</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -730,12 +730,12 @@ Register an event to listen to.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The name of the item.</p></li>
-<li><p><strong>game</strong> (<a class="reference internal" href="../../../api/#steam.Game" title="steam.game.Game"><em>steam.game.Game</em></a>) – The game the item is from.</p></li>
+<li><p><strong>game</strong> (<a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>steam.Game</em></a>) – The game the item is from.</p></li>
 <li><p><strong>currency</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>]</em>) – The currency to fetch the price in.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="../../../api/#steam.PriceOverview" title="steam.models.PriceOverview"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.models.PriceOverview</span></code></a></p>
+<dd class="field-even"><p><a class="reference internal" href="../../../api/#steam.PriceOverview" title="steam.PriceOverview"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PriceOverview</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -760,7 +760,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.GameServer" title="steam.game_server.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.game_server.GameServer</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.GameServer" title="steam.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.GameServer</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -772,12 +772,12 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>query</strong> (<a class="reference internal" href="../../../api/#steam.Query" title="steam.game_server.Query"><em>steam.game_server.Query</em></a>) – The query to match servers with.</p></li>
+<li><p><strong>query</strong> (<a class="reference internal" href="../../../api/#steam.Query" title="steam.Query"><em>steam.Query</em></a>) – The query to match servers with.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The maximum amount of servers to return.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.GameServer" title="steam.game_server.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.game_server.GameServer</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.GameServer" title="steam.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.GameServer</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -791,7 +791,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The ID of the trade to search for from the API.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.trade.TradeOffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.TradeOffer</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.TradeOffer</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -806,7 +806,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <a class="reference internal" href="../../../api/#steam.SteamID.id3" title="steam.SteamID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id3</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.user.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.User</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -820,7 +820,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The name of the user after <a class="reference external" href="https://steamcommunity.com/id">https://steamcommunity.com/id</a></p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.user.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.User</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -838,7 +838,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dd class="field-odd"><p><strong>ids</strong> (<em>utils.Intable</em>) – The user’s IDs.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.user.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.User</span></code></a>]]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -853,7 +853,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <a class="reference internal" href="../../../api/#steam.SteamID.id3" title="steam.SteamID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id3</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Clan" title="steam.clan.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.clan.Clan</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Clan</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -885,7 +885,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <a class="reference internal" href="../../../api/#steam.SteamID.id3" title="steam.SteamID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id3</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Group" title="steam.group.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.group.Group</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Group</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -899,7 +899,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The id of the trade to search for from the cache.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.trade.TradeOffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.TradeOffer</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.TradeOffer</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -914,7 +914,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <a class="reference internal" href="../../../api/#steam.SteamID.id3" title="steam.SteamID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id3</span></code></a>.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.user.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.User</span></code></a>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1223,7 +1223,7 @@ returned callable, for example:</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<a class="reference internal" href="#steam.ext.commands.Bot" title="steam.ext.commands.bot.Bot"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.bot.Bot</span></code></a>, <a class="reference internal" href="../../../api/#steam.Message" title="steam.abc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.Message</span></code></a>, (list[str],)]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Bot</span></code>, <a class="reference internal" href="../../../api/#steam.Message" title="steam.abc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.Message</span></code></a>, (list[str],)]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1571,7 +1571,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Command.invo
 <dd><p>The command’s cog.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[Union[<a class="reference internal" href="#steam.ext.commands.Cog" title="steam.ext.commands.cog.Cog">steam.ext.commands.cog.Cog</a>, <a class="reference internal" href="#steam.ext.commands.Bot" title="steam.ext.commands.bot.Bot">steam.ext.commands.bot.Bot</a>]]</p>
+<dd class="field-odd"><p>Optional[Union[<a class="reference internal" href="#steam.ext.commands.Cog" title="steam.ext.commands.cog.Cog">steam.ext.commands.cog.Cog</a>, steam.Bot]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1582,7 +1582,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Command.invo
 <dd><p>The command’s parent.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[steam.ext.commands.commands.GroupMixin]</p>
+<dd class="field-odd"><p>Optional[steam.GroupMixin]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1817,7 +1817,7 @@ function.</p>
 <dd><p>Add a command to the internal commands list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>command</strong> (<a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.commands.Command"><em>steam.ext.commands.commands.Command</em></a>) – The command to register.</p>
+<dd class="field-odd"><p><strong>command</strong> (<em>steam.Command</em>) – The command to register.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1836,7 +1836,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Group.all_commands">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">all_commands</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[steam.ext.commands.commands.Command]</span></em><a class="headerlink" href="#steam.ext.commands.Group.all_commands" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">all_commands</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[steam.Command]</span></em><a class="headerlink" href="#steam.ext.commands.Group.all_commands" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the loaded commands.</p>
 </dd></dl>
 
@@ -1906,14 +1906,14 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dd class="field-even"><p>The created command.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.Command</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallbackType</span></code>, (&lt;class ‘steam.ext.commands.commands.Command’&gt;,)], <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallT</span></code>, (~C,)]]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Command</span></code>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallbackType</span></code>, (&lt;class ‘steam.Command’&gt;,)], <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallT</span></code>, (~C,)]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Group.commands">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">commands</span></span><em class="property"><span class="pre">:</span> <span class="pre">set[steam.ext.commands.commands.Command]</span></em><a class="headerlink" href="#steam.ext.commands.Group.commands" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">commands</span></span><em class="property"><span class="pre">:</span> <span class="pre">set[steam.Command]</span></em><a class="headerlink" href="#steam.ext.commands.Group.commands" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of the loaded commands without duplicates.</p>
 </dd></dl>
 
@@ -1953,7 +1953,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dd class="field-even"><p>The found command or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.Command</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Command</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1975,7 +1975,7 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dd class="field-even"><p>The created group command.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference internal" href="#steam.ext.commands.Group" title="steam.ext.commands.commands.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.Group</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallbackType</span></code>, (&lt;class ‘steam.ext.commands.commands.Group’&gt;,)], <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallT</span></code>, (~G,)]]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Group</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallbackType</span></code>, (&lt;class ‘steam.Group’&gt;,)], <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.CallT</span></code>, (~G,)]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2009,7 +2009,7 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dd class="field-even"><p>The removed command or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the command was not found.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.Command</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Command</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2161,8 +2161,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.HelpCommand.
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ext.commands.HelpCommand.context">
 <span class="sig-name descname"><span class="pre">context</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.context.Context"><span class="pre">steam.ext.commands.context.Context</span></a></em><a class="headerlink" href="#steam.ext.commands.HelpCommand.context" title="Permalink to this definition">¶</a></dt>
-<dd><p>The context for the command’s invocation.</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.HelpCommand.command_callback">
@@ -2189,7 +2188,7 @@ actually get dispatched:</p>
 <a class="reference internal" href="#steam.ext.commands.HelpCommand.send_help" title="steam.ext.commands.HelpCommand.send_help"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send_help()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.Command</span></code></a>]]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Command</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2638,7 +2637,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <a class="reference internal" href="#steam.ext.commands.DefaultHelpCommand.send_help" title="steam.ext.commands.DefaultHelpCommand.send_help"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send_help()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.commands.Command</span></code></a>]]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Command</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2771,7 +2770,7 @@ Can be set in subclass e.g.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Cog.commands">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">commands</span></span><em class="property"><span class="pre">:</span> <span class="pre">set[steam.ext.commands.commands.Command]</span></em><a class="headerlink" href="#steam.ext.commands.Cog.commands" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">commands</span></span><em class="property"><span class="pre">:</span> <span class="pre">set[steam.Command]</span></em><a class="headerlink" href="#steam.ext.commands.Cog.commands" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of the cog’s commands.</p>
 </dd></dl>
 
@@ -2916,7 +2915,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The author of the message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.User" title="steam.user.User">steam.user.User</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.User" title="steam.User">steam.User</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2938,7 +2937,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The clan the message was sent in <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a clan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.Clan" title="steam.clan.Clan">steam.clan.Clan</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan">steam.Clan</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2949,7 +2948,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The group the message was sent in <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.Group" title="steam.group.Group">steam.group.Group</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.Group" title="steam.Group">steam.Group</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2960,7 +2959,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The bot instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.ext.commands.Bot" title="steam.ext.commands.bot.Bot">steam.ext.commands.bot.Bot</a></p>
+<dd class="field-odd"><p>steam.Bot</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2971,7 +2970,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The command the context is attached to.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.commands.Command">steam.ext.commands.commands.Command</a>]</p>
+<dd class="field-odd"><p>Optional[steam.Command]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2982,7 +2981,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The cog the command is in.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ext.commands.Cog" title="steam.ext.commands.cog.Cog">steam.ext.commands.cog.Cog</a>]</p>
+<dd class="field-odd"><p>Optional[steam.Cog]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3009,7 +3008,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.iterators.AsyncIterator</span></code></a>[<a class="reference internal" href="../../../api/#steam.Message" title="steam.abc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.Message</span></code></a>]</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.AsyncIterator</span></code>[<a class="reference internal" href="../../../api/#steam.Message" title="steam.abc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.Message</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3028,7 +3027,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<em>Optional</em><em>[</em><em>Any</em><em>]</em>) – The content of the message to send.</p></li>
-<li><p><strong>image</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../api/#steam.Image" title="steam.image.Image"><em>steam.image.Image</em></a><em>]</em>) – The image to send to the user.</p></li>
+<li><p><strong>image</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../../api/#steam.Image" title="steam.Image"><em>steam.Image</em></a><em>]</em>) – The image to send to the user.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3079,8 +3078,7 @@ def</span><a class="reference internal" href="#steam.ext.commands.Cooldown.reset
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ext.commands.Cooldown.bucket">
 <span class="sig-name descname"><span class="pre">bucket</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#steam.ext.commands.BucketType" title="steam.ext.commands.cooldown.BucketType"><span class="pre">steam.ext.commands.cooldown.BucketType</span></a></em><a class="headerlink" href="#steam.ext.commands.Cooldown.bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>The bucket that should be used to determine this command’s cooldown.</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Cooldown.reset">
@@ -3403,8 +3401,7 @@ then carries on normally.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ext.commands.Greedy.converter">
 <span class="sig-name descname"><span class="pre">converter</span></span><em class="property"><span class="pre">:</span> <span class="pre">steam.ext.commands.converters.T</span></em><a class="headerlink" href="#steam.ext.commands.Greedy.converter" title="Permalink to this definition">¶</a></dt>
-<dd><p>The converter the Greedy type holds.</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Greedy.__class_getitem__">
@@ -3416,7 +3413,7 @@ then carries on normally.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.ext.commands.Greedy" title="steam.ext.commands.converters.Greedy"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.converters.Greedy</span></code></a></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Greedy</span></code></p>
 </dd>
 </dl>
 </dd></dl>
