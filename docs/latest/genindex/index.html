@@ -277,6 +277,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Asset.amount">amount (steam.Asset attribute)</a>
 </li>
+      <li><a href="../api/#steam.Clan.announcements">announcements() (steam.Clan method)</a>
+</li>
       <li><a href="../api/#steam.Type.AnonGameServer">AnonGameServer (steam.Type attribute)</a>
 </li>
       <li><a href="../api/#steam.Type.AnonUser">AnonUser (steam.Type attribute)</a>
@@ -615,10 +617,10 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Context.cog">(steam.ext.commands.Context attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Cog.cog_check">cog_check() (steam.ext.commands.Cog method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Cog.cog_command_error">cog_command_error() (steam.ext.commands.Cog method)</a>
 
       <ul>
@@ -791,6 +793,10 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.country">(steam.User attribute)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.Clan.create_announcement">create_announcement() (steam.Clan method)</a>
+</li>
+      <li><a href="../api/#steam.Clan.create_event">create_event() (steam.Clan method)</a>
+</li>
       <li><a href="../api/#steam.abc.BaseUser.created_at">created_at (steam.abc.BaseUser attribute)</a>
 
       <ul>
@@ -865,10 +871,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.DefaultHelpCommand">DefaultHelpCommand (class in steam.ext.commands)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Comment.delete">delete() (steam.Comment method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.DeniedDueToCommunityCooldown">DeniedDueToCommunityCooldown (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Clan.description">description (steam.Clan attribute)</a>
@@ -900,6 +906,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.FetchedGame.dlc">dlc (steam.FetchedGame attribute)</a>
 </li>
       <li><a href="../api/#steam.DMChannel">DMChannel (class in steam)</a>
+</li>
+      <li><a href="../api/#steam.Comment.downvote">downvote() (steam.Comment method)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.DuplicateKeywordArgument">DuplicateKeywordArgument</a>
 </li>
@@ -937,10 +945,10 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.TradeOffer.escrow">escrow (steam.TradeOffer attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.User.escrow">escrow() (steam.User method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.GameServerRegion.Europe">Europe (steam.GameServerRegion attribute)</a>
 </li>
       <li><a href="../api/#steam.Client.event">event() (steam.Client method)</a>
@@ -950,6 +958,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../api/#steam.TradeOfferState.event_name">event_name (steam.TradeOfferState property)</a>
+</li>
+      <li><a href="../api/#steam.Clan.events">events() (steam.Clan method)</a>
 </li>
       <li><a href="../api/#steam.Result.Expired">Expired (steam.Result attribute)</a>
 
@@ -987,6 +997,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.WishlistGame.fetch">(steam.WishlistGame method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.Clan.fetch_announcement">fetch_announcement() (steam.Clan method)</a>
+</li>
       <li><a href="../api/#steam.Client.fetch_clan">fetch_clan() (steam.Client method)</a>
 
       <ul>
@@ -999,6 +1011,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_clan_named">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.Clan.fetch_event">fetch_event() (steam.Clan method)</a>
+</li>
       <li><a href="../api/#steam.Client.fetch_game">fetch_game() (steam.Client method)</a>
 
       <ul>
@@ -1041,14 +1055,14 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_user_named">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.fetch_users">fetch_users() (steam.Client method)</a>
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_users">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.FetchedGame">FetchedGame (class in steam)</a>
 </li>
       <li><a href="../api/#steam.Result.FileNotFound">FileNotFound (steam.Result attribute)</a>
@@ -1189,16 +1203,22 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_cog">get_cog() (steam.ext.commands.Bot method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_command">get_command() (steam.ext.commands.Bot method)</a>
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Group.get_command">(steam.ext.commands.Group method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_context">get_context() (steam.ext.commands.Bot method)</a>
 </li>
+      <li><a href="../api/#steam.Client.get_game">get_game() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_game">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.Client.get_group">get_group() (steam.Client method)</a>
 
       <ul>
@@ -2181,10 +2201,20 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.GameServer.player_count">player_count (steam.GameServer attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameServer.players">players() (steam.GameServer method)</a>
+      <li><a href="../api/#steam.FetchedGame.player_count">player_count() (steam.FetchedGame method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.game.StatefulGame.player_count">(steam.game.StatefulGame method)</a>
 </li>
+        <li><a href="../api/#steam.UserGame.player_count">(steam.UserGame method)</a>
+</li>
+        <li><a href="../api/#steam.WishlistGame.player_count">(steam.WishlistGame method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.GameServer.players">players() (steam.GameServer method)</a>
+</li>
       <li><a href="../api/#steam.GameServer.port">port (steam.GameServer attribute)</a>
 </li>
       <li><a href="../api/#steam.UserBadge.Portal2PotatoARG">Portal2PotatoARG (steam.UserBadge attribute)</a>
@@ -2680,6 +2710,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.TradeOffer.updated_at">updated_at (steam.TradeOffer attribute)</a>
 </li>
+      <li><a href="../api/#steam.Comment.upvote">upvote() (steam.Comment method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.FetchedGame.url">url (steam.FetchedGame property)</a>
 
       <ul>
@@ -2692,8 +2726,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.WishlistGame.url">(steam.WishlistGame property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.GameServerRegion.USEastCoast">USEastCoast (steam.GameServerRegion attribute)</a>
 </li>
       <li><a href="../api/#steam.User">User (class in steam)</a>

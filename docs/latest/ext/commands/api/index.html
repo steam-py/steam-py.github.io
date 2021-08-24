@@ -216,6 +216,8 @@ def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_comman
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.get_context">get_context</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
+def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_game">get_game</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_group">get_group</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.get_prefix">get_prefix</a></li><li class="py-attribute-table-entry">
@@ -581,7 +583,7 @@ and by extension <code class="xref py py-meth docutils literal notranslate"><spa
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.children">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">children</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[~C]</span></em><a class="headerlink" href="#steam.ext.commands.Bot.children" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">children</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[Self]</span></em><a class="headerlink" href="#steam.ext.commands.Bot.children" title="Permalink to this definition">¶</a></dt>
 <dd><p>The commands children.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -748,7 +750,7 @@ Register an event to listen to.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ip</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – The ip of the server.</p></li>
-<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The port of the server.</p></li>
+<li><p><strong>port</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>]</em>) – The port of the server.</p></li>
 <li><p><strong>id</strong> (<em>utils.Intable</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a>) – The ID of the game server, can be an <a class="reference internal" href="../../../api/#steam.SteamID.id64" title="steam.SteamID.id64"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id64</span></code></a>, <a class="reference internal" href="../../../api/#steam.SteamID.id2" title="steam.SteamID.id2"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id2</span></code></a> or an <a class="reference internal" href="../../../api/#steam.SteamID.id3" title="steam.SteamID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SteamID.id3</span></code></a>.
 If this is passed, it makes a call to the master server to fetch its ip and port.</p></li>
 </ul>
@@ -871,6 +873,20 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>‘Command | None’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.get_game">
+<span class="sig-name descname"><span class="pre">get_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.get_game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a stateful game from its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>steam.Game</em></a><em>]</em>) – The app id of the game or a <a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a> instance.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.StatefulGame</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1278,8 +1294,6 @@ command error.</p>
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">BucketType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.BucketType" title="Permalink to this definition">¶</a></dt>
 <dd><p>A enumeration that handles cooldowns.</p>
 <p>Each attribute operates on a per x basis. So <a class="reference internal" href="#steam.ext.commands.BucketType.User" title="steam.ext.commands.BucketType.User"><code class="xref py py-attr docutils literal notranslate"><span class="pre">User</span></code></a> operates on a per <a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> basis.</p>
-<dl class="field-list simple">
-</dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ext.commands.BucketType.Default">
 <span class="sig-name descname"><span class="pre">Default</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#steam.ext.commands.BucketType.Default" title="Permalink to this definition">¶</a></dt>
@@ -1421,7 +1435,7 @@ A decorator that turns a <a class="reference external" href="https://docs.python
 
 <dl class="py decorator">
 <dt class="sig sig-object py" id="steam.ext.commands.cooldown">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">cooldown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">rate</span></em>, <em class="sig-param"><span class="pre">per</span></em>, <em class="sig-param"><span class="pre">type=&lt;BucketType.Default:</span> <span class="pre">0&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.cooldown" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">cooldown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">BucketType.Default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.cooldown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give a <a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a>’s a cooldown.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1445,7 +1459,7 @@ before being put on cooldown.</p></li>
 
 <dl class="py decorator">
 <dt class="sig sig-object py" id="steam.ext.commands.is_owner">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">is_owner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.ext.commands.commands.MCD</span></span></span><a class="headerlink" href="#steam.ext.commands.is_owner" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">is_owner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.ext.commands.commands.MCD</span></span></span><a class="headerlink" href="#steam.ext.commands.is_owner" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">is_owner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">steam.ext.commands.commands.MCD</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.ext.commands.commands.MCD</span></span></span></dt>
 <dd><p>A decorator that <em>could be called</em>.
@@ -1651,7 +1665,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Command.invo
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Command.parents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[~C]</span></em><a class="headerlink" href="#steam.ext.commands.Command.parents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[Self]</span></em><a class="headerlink" href="#steam.ext.commands.Command.parents" title="Permalink to this definition">¶</a></dt>
 <dd><p>The command’s parents.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -1702,7 +1716,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Command.before_invoke">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#steam.ext.commands.Command.before_invoke" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#steam.ext.commands.Command.before_invoke" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></span></dt>
 <dd><p>A decorator that <em>could be called</em>.
@@ -1716,7 +1730,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Command.after_invoke">
-<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">after_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#steam.ext.commands.Command.after_invoke" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">after_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">steam.ext.commands.commands.InvokeT</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#steam.ext.commands.Command.after_invoke" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">after_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></span></dt>
 <dd><p>A decorator that <em>could be called</em>.
@@ -1731,7 +1745,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Command.invoke">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Command.invoke" title="Permalink to this definition">¶</a></dt>
-<dd><p>InvokeT the callback the command holds.</p>
+<dd><p>Invoke the callback the command holds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.Context"><em>Context</em></a>) – The invocation context.</p>
@@ -1874,7 +1888,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Group.children">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">children</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[~C]</span></em><a class="headerlink" href="#steam.ext.commands.Group.children" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">children</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[Self]</span></em><a class="headerlink" href="#steam.ext.commands.Group.children" title="Permalink to this definition">¶</a></dt>
 <dd><p>The commands children.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -1982,7 +1996,7 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Group.parents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[~C]</span></em><a class="headerlink" href="#steam.ext.commands.Group.parents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[Self]</span></em><a class="headerlink" href="#steam.ext.commands.Group.parents" title="Permalink to this definition">¶</a></dt>
 <dd><p>The command’s parents.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -2017,7 +2031,7 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Group.invoke">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Group.invoke" title="Permalink to this definition">¶</a></dt>
-<dd><p>InvokeT the callback the command holds.</p>
+<dd><p>Invoke the callback the command holds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.Context"><em>Context</em></a>) – The invocation context.</p>
@@ -2374,7 +2388,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.HelpCommand.invoke">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.HelpCommand.invoke" title="Permalink to this definition">¶</a></dt>
-<dd><p>InvokeT the callback the command holds.</p>
+<dd><p>Invoke the callback the command holds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.context.Context"><em>steam.ext.commands.context.Context</em></a>) – The invocation context.</p>
@@ -2384,7 +2398,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.HelpCommand.parents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[~C]</span></em><a class="headerlink" href="#steam.ext.commands.HelpCommand.parents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[Self]</span></em><a class="headerlink" href="#steam.ext.commands.HelpCommand.parents" title="Permalink to this definition">¶</a></dt>
 <dd><p>The command’s parents.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -2645,7 +2659,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.DefaultHelpCommand.invoke">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.DefaultHelpCommand.invoke" title="Permalink to this definition">¶</a></dt>
-<dd><p>InvokeT the callback the command holds.</p>
+<dd><p>Invoke the callback the command holds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.context.Context"><em>steam.ext.commands.context.Context</em></a>) – The invocation context.</p>
@@ -2670,7 +2684,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.DefaultHelpCommand.parents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[~C]</span></em><a class="headerlink" href="#steam.ext.commands.DefaultHelpCommand.parents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="pre">:</span> <span class="pre">list[Self]</span></em><a class="headerlink" href="#steam.ext.commands.DefaultHelpCommand.parents" title="Permalink to this definition">¶</a></dt>
 <dd><p>The command’s parents.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -2904,7 +2918,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The prefix of the message the context was generated from</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2926,7 +2940,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The channel the message was sent in.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.abc.Channel" title="steam.abc.Channel">steam.abc.Channel</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.abc.Channel" title="steam.abc.Channel">steam.abc.Channel</a>[<a class="reference internal" href="../../../api/#steam.Message" title="steam.abc.Message">steam.abc.Message</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2937,7 +2951,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The clan the message was sent in <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a clan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan">steam.Clan</a></p>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan">steam.Clan</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2948,7 +2962,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd><p>The group the message was sent in <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.Group" title="steam.Group">steam.Group</a></p>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group">steam.Group</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3046,7 +3060,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd class="field-even"><p>The sent message, only applicable if <code class="docutils literal notranslate"><span class="pre">content</span></code> is passed.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.abc.M_co</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3211,7 +3225,7 @@ be accessed via <code class="xref py py-attr docutils literal notranslate"><span
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Converter.register">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">MC</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">MC</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#steam.ext.commands.Converter.register" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">MC</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">MC</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#steam.ext.commands.Converter.register" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">classmethod</span> </em><span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">MC</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MC</span></span></span></dt>
 <dd><p>A decorator that <em>could be called</em>.
