@@ -502,9 +502,7 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Clan.channels">channels (steam.Clan property)</a>
 
       <ul>
-        <li><a href="../api/#steam.Group.channels">(steam.Group attribute)</a>
-</li>
-        <li><a href="../api/#id0">(steam.Group property)</a>
+        <li><a href="../api/#steam.Group.channels">(steam.Group property)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Type.Chat">Chat (steam.Type attribute)</a>
@@ -1428,6 +1426,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.ClanChannel.id">(steam.ClanChannel attribute)</a>
 </li>
+        <li><a href="../api/#steam.ClanMessage.id">(steam.ClanMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.ClientUser.id">(steam.ClientUser property)</a>
 </li>
         <li><a href="../api/#steam.Comment.id">(steam.Comment attribute)</a>
@@ -1442,7 +1442,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.GroupChannel.id">(steam.GroupChannel attribute)</a>
 </li>
+        <li><a href="../api/#steam.GroupMessage.id">(steam.GroupMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.InvalidSteamID.id">(steam.InvalidSteamID attribute)</a>
+</li>
+        <li><a href="../api/#steam.Message.id">(steam.Message attribute)</a>
 </li>
         <li><a href="../api/#steam.ProfileItem.id">(steam.ProfileItem attribute)</a>
 </li>
@@ -1451,6 +1455,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.TradeOffer.id">(steam.TradeOffer attribute)</a>
 </li>
         <li><a href="../api/#steam.User.id">(steam.User property)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.id">(steam.UserMessage attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.abc.BaseUser.id2">id2 (steam.abc.BaseUser property)</a>
@@ -1603,6 +1609,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Result.InvalidSteamID">(steam.Result attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Inventory">Inventory (class in steam)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.inventory">inventory() (steam.abc.BaseUser method)</a>
@@ -1613,8 +1621,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.inventory">(steam.User method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.PersonaState.Invisible">Invisible (steam.PersonaState attribute)</a>
 </li>
       <li><a href="../api/#steam.Clan.invite">invite() (steam.Clan method)</a>
@@ -1696,6 +1702,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Result.IPNotFound">IPNotFound (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.IPTInitError">IPTInitError (steam.Result attribute)</a>
+</li>
+      <li><a href="../api/#steam.Comment.is_answer">is_answer() (steam.Comment method)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.is_banned">is_banned() (steam.abc.BaseUser method)</a>
 
@@ -2009,6 +2017,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Clan.member_count">member_count (steam.Clan attribute)</a>
 </li>
+      <li><a href="../api/#steam.Group.members">members (steam.Group attribute)</a>
+</li>
       <li><a href="../api/#steam.Clan.members">members() (steam.Clan method)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.mention">mention (steam.abc.BaseUser property)</a>
@@ -2209,12 +2219,12 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Client.on_trade_accept">on_trade_accept() (steam.Client method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.on_trade_cancel">on_trade_cancel() (steam.Client method)</a>
 </li>
       <li><a href="../api/#steam.Client.on_trade_counter">on_trade_counter() (steam.Client method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.on_trade_decline">on_trade_decline() (steam.Client method)</a>
 </li>
       <li><a href="../api/#steam.Client.on_trade_expire">on_trade_expire() (steam.Client method)</a>
@@ -2237,6 +2247,16 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ReviewType.OverwhelminglyPositive">OverwhelminglyPositive (steam.ReviewType attribute)</a>
 </li>
+      <li><a href="../api/#steam.FetchedGame.owned_by">owned_by() (steam.FetchedGame method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.game.StatefulGame.owned_by">(steam.game.StatefulGame method)</a>
+</li>
+        <li><a href="../api/#steam.UserGame.owned_by">(steam.UserGame method)</a>
+</li>
+        <li><a href="../api/#steam.WishlistGame.owned_by">(steam.WishlistGame method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.OwnedProfileItems">OwnedProfileItems (class in steam)</a>
 </li>
       <li><a href="../api/#steam.Clan.owner">owner (steam.Clan attribute)</a>
@@ -2249,6 +2269,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Inventory.owner">(steam.Inventory attribute)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.User.owns">owns() (steam.User method)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -2723,7 +2745,7 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Clan.top_members">top_members (steam.Clan attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.Group.top_members">(steam.Group attribute)</a>
+        <li><a href="../api/#steam.Group.top_members">(steam.Group property)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.UserGame.total_play_time">total_play_time (steam.UserGame attribute)</a>

@@ -639,7 +639,7 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dd class="field-even"><p>The created command.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>‘Callable[[CallT], C] | C’</p>
+<dd class="field-odd"><p>Callable[[CallT], C] | C</p>
 </dd>
 </dl>
 </dd></dl>
@@ -871,7 +871,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dd class="field-even"><p>The found command or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>‘Command | None’</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.Command">Command</a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)">None</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -951,7 +951,7 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dd class="field-even"><p>The created group command.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>‘Callable[[CallT], G] | G’</p>
+<dd class="field-odd"><p>Callable[[CallT], G] | G</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1036,7 +1036,7 @@ passed, the code will need to be inputted by the user via <a class="reference in
 <dd class="field-even"><p>The removed command or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the command was not found.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>‘Command | None’</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.Command">Command</a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)">None</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1074,7 +1074,7 @@ passed, the code will need to be inputted by the user via <a class="reference in
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.trade_history">
-<em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">trade_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.trade_history" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">trade_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.trade_history" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference internal" href="../../../api/#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a <a class="reference internal" href="../../../api/#steam.ClientUser" title="steam.ClientUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ClientUser</span></code></a>’s
 <a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.TradeOffer</span></code></a> objects.</p>
 <p class="rubric">Examples</p>
@@ -1099,7 +1099,6 @@ passed, the code will need to be inputted by the user via <a class="reference in
 of the user’s trades, but this will be a very slow operation.</p></li>
 <li><p><strong>before</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><em>datetime.datetime</em></a><em>]</em>) – A time to search for trades before.</p></li>
 <li><p><strong>after</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><em>datetime.datetime</em></a><em>]</em>) – A time to search for trades after.</p></li>
-<li><p><strong>active_only</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Whether or not to fetch only active trades defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yields</dt>
