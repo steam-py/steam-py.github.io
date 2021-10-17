@@ -9237,10 +9237,10 @@ Methods</span><ul>
 async</span><a class="reference internal" href="#steam.game.StatefulGame.clan">clan</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.game.StatefulGame.fetch">fetch</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.game.StatefulGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.game.StatefulGame.is_steam_game">is_steam_game</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.game.StatefulGame.owned_by">owned_by</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.game.StatefulGame.player_count">player_count</a></li></ul>
 </div></div><dl class="py class">
@@ -9283,8 +9283,8 @@ async</span><a class="reference internal" href="#steam.game.StatefulGame.player_
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.game.StatefulGame.owned_by">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">owned_by</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.game.StatefulGame.owned_by" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.game.StatefulGame.friends_who_own">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.game.StatefulGame.friends_who_own" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch the users in your friend list who own this game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -9352,12 +9352,12 @@ Methods</span><ul>
 async</span><a class="reference internal" href="#steam.UserGame.clan">clan</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.UserGame.fetch">fetch</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.UserGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.UserGame.has_visible_stats">has_visible_stats</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.UserGame.is_steam_game">is_steam_game</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.UserGame.owned_by">owned_by</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.UserGame.player_count">player_count</a></li></ul>
 </div></div><dl class="py class">
@@ -9447,23 +9447,23 @@ async</span><a class="reference internal" href="#steam.UserGame.player_count">pl
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.UserGame.friends_who_own">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.friends_who_own" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the users in your friend list who own this game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.UserGame.is_steam_game">
 <span class="sig-name descname"><span class="pre">is_steam_game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.is_steam_game" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the game could be a Steam game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.UserGame.owned_by">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">owned_by</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.owned_by" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch the users in your friend list who own this game.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9522,6 +9522,8 @@ Methods</span><ul>
 async</span><a class="reference internal" href="#steam.WishlistGame.clan">clan</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.WishlistGame.fetch">fetch</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.WishlistGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.WishlistGame.is_free">is_free</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
@@ -9532,8 +9534,6 @@ def</span><a class="reference internal" href="#steam.WishlistGame.is_on_mac_os">
 def</span><a class="reference internal" href="#steam.WishlistGame.is_on_windows">is_on_windows</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.WishlistGame.is_steam_game">is_steam_game</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.WishlistGame.owned_by">owned_by</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.WishlistGame.player_count">player_count</a></li></ul>
 </div></div><dl class="py class">
@@ -9755,23 +9755,23 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.WishlistGame.friends_who_own">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.friends_who_own" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the users in your friend list who own this game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.is_steam_game">
 <span class="sig-name descname"><span class="pre">is_steam_game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.is_steam_game" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the game could be a Steam game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.WishlistGame.owned_by">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">owned_by</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.owned_by" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch the users in your friend list who own this game.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9829,6 +9829,8 @@ Methods</span><ul>
 async</span><a class="reference internal" href="#steam.FetchedGame.clan">clan</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.FetchedGame.fetch">fetch</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.FetchedGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.FetchedGame.is_free">is_free</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
@@ -9839,8 +9841,6 @@ def</span><a class="reference internal" href="#steam.FetchedGame.is_on_mac_os">i
 def</span><a class="reference internal" href="#steam.FetchedGame.is_on_windows">is_on_windows</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.FetchedGame.is_steam_game">is_steam_game</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.FetchedGame.owned_by">owned_by</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.FetchedGame.player_count">player_count</a></li></ul>
 </div></div><dl class="py class">
@@ -10017,23 +10017,23 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.FetchedGame.friends_who_own">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.friends_who_own" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the users in your friend list who own this game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.is_steam_game">
 <span class="sig-name descname"><span class="pre">is_steam_game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_steam_game" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the game could be a Steam game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.FetchedGame.owned_by">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">owned_by</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.owned_by" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch the users in your friend list who own this game.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
