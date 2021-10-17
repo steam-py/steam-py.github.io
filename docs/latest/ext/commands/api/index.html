@@ -240,11 +240,33 @@ def</span><a class="reference internal" href="#steam.ext.commands.Bot.load_exten
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.login">login</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_announcement_create">on_announcement_create</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_clan_invite_decline">on_clan_invite_decline</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_clan_join">on_clan_join</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_clan_leave">on_clan_leave</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_clan_update">on_clan_update</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_command">on_command</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_command_completion">on_command_completion</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_command_error">on_command_error</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_event_create">on_event_create</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_group_join">on_group_join</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_group_leave">on_group_leave</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_group_update">on_group_update</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_user_invite_decline">on_user_invite_decline</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_user_remove">on_user_remove</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.process_commands">process_commands</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
@@ -1025,6 +1047,143 @@ passed, the code will need to be inputted by the user via <a class="reference in
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_announcement_create">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_announcement_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">announcement</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_announcement_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when an announcement in a clan is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>announcement</strong> (<em>steam.event.Announcement</em>) – The announcement that was created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_clan_invite_decline">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_clan_invite_decline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invite</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_clan_invite_decline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client/invitee declines an invite to join a <a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clan</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invite</strong> (<a class="reference internal" href="../../../api/#steam.ClanInvite" title="steam.ClanInvite"><em>steam.ClanInvite</em></a>) – The invite that was declined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_clan_join">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_clan_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clan</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_clan_join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client joins a new clan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clan</strong> (<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The joined clan.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_clan_leave">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_clan_leave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clan</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_clan_leave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client leaves a clan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clan</strong> (<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The left clan.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_clan_update">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_clan_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">before</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_clan_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a clan is updated, due to one or more of the following attributes changing:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../../../api/#steam.Clan.name" title="steam.Clan.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../../api/#steam.Clan.avatar_url" title="steam.Clan.avatar_url"><code class="xref py py-attr docutils literal notranslate"><span class="pre">avatar_url</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../../api/#steam.Clan.member_count" title="steam.Clan.member_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">member_count</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../../api/#steam.Clan.in_game_count" title="steam.Clan.in_game_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">in_game_count</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../../api/#steam.Clan.online_count" title="steam.Clan.online_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">online_count</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../../api/#steam.Clan.active_member_count" title="steam.Clan.active_member_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">active_member_count</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>before</strong> (<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The clan’s state before it was updated.</p></li>
+<li><p><strong>after</strong> (<a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The clan’s state now.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_event_create">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_event_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_event_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when an event in a clan is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>steam.event.Event</em>) – The event that was created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_group_join">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_group_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_group_join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client joins a new group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group</strong> (<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The joined group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_group_leave">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_group_leave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_group_leave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client leaves a group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group</strong> (<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The left group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_group_update">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_group_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">before</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_group_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a group is updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>before</strong> (<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The group’s state before it was updated.</p></li>
+<li><p><strong>after</strong> (<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The group’s state now.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_user_invite_decline">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_user_invite_decline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invite</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_user_invite_decline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client/invitee declines an invite from/to a <a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> to become a friend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invite</strong> (<a class="reference internal" href="../../../api/#steam.UserInvite" title="steam.UserInvite"><em>steam.UserInvite</em></a>) – The invite that was declined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_user_remove">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_user_remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_user_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when you or the <code class="docutils literal notranslate"><span class="pre">user</span></code> remove each other from your friends lists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> (<a class="reference internal" href="../../../api/#steam.User" title="steam.User"><em>steam.User</em></a>) – The user who was removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.remove_command">
 <span class="sig-name descname"><span class="pre">remove_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.remove_command" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove a command from the internal commands list.</p>
@@ -1110,7 +1269,7 @@ of the user’s trades, but this will be a very slow operation.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.trade_url">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">trade_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generate_new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.trade_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches this accounts trade url.</p>
+<dd><p>Fetches this account’s trade url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>generate_new</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not to generate a new trade token, defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>

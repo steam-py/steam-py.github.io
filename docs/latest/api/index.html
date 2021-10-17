@@ -230,7 +230,19 @@ def</span><a class="reference internal" href="#steam.Client.is_ready">is_ready</
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.login">login</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_announcement_create">on_announcement_create</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_clan_invite">on_clan_invite</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_clan_invite_accept">on_clan_invite_accept</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_clan_invite_decline">on_clan_invite_decline</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_clan_join">on_clan_join</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_clan_leave">on_clan_leave</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_clan_update">on_clan_update</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_comment">on_comment</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -239,6 +251,14 @@ async</span><a class="reference internal" href="#steam.Client.on_connect">on_con
 async</span><a class="reference internal" href="#steam.Client.on_disconnect">on_disconnect</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_error">on_error</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_event_create">on_event_create</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_group_join">on_group_join</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_group_leave">on_group_leave</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_group_update">on_group_update</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_login">on_login</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -268,7 +288,11 @@ async</span><a class="reference internal" href="#steam.Client.on_typing">on_typi
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_user_invite">on_user_invite</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Client.on_user_update">on_user_update</a></li><li class="py-attribute-table-entry">
+async</span><a class="reference internal" href="#steam.Client.on_user_invite_accept">on_user_invite_accept</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_user_invite_decline">on_user_invite_decline</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_user_remove">on_user_remove</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.Client.run">run</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -298,7 +322,7 @@ async</span><a class="reference internal" href="#steam.Client.wait_until_ready">
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Setting your status to <a class="reference internal" href="#steam.PersonaState.Offline" title="steam.PersonaState.Offline"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Offline</span></code></a>, will stop you receiving persona state updates
-and by extension <a class="reference internal" href="#steam.Client.on_user_update" title="steam.Client.on_user_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_user_update()</span></code></a> will stop being dispatched.</p>
+and by extension <code class="xref py py-meth docutils literal notranslate"><span class="pre">on_user_update()</span></code> will stop being dispatched.</p>
 </div>
 </p></li>
 <li><p><strong>ui_mode</strong> – The UI mode to set your status to on connect.</p></li>
@@ -753,7 +777,7 @@ of the user’s trades, but this will be a very slow operation.</p></li>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Setting your status to <a class="reference internal" href="#steam.PersonaState.Offline" title="steam.PersonaState.Offline"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Offline</span></code></a>, will stop you receiving persona state updates
-and by extension <a class="reference internal" href="#steam.Client.on_user_update" title="steam.Client.on_user_update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_user_update()</span></code></a> will stop being dispatched.</p>
+and by extension <code class="xref py py-meth docutils literal notranslate"><span class="pre">on_user_update()</span></code> will stop being dispatched.</p>
 </div>
 </p></li>
 <li><p><strong>ui_mode</strong> (<a class="reference internal" href="#steam.UIMode" title="steam.UIMode"><em>UIMode</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – The UI mode to set your status to.</p></li>
@@ -767,7 +791,7 @@ and by extension <a class="reference internal" href="#steam.Client.on_user_updat
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Client.trade_url">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">trade_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generate_new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.trade_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches this accounts trade url.</p>
+<dd><p>Fetches this account’s trade url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>generate_new</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not to generate a new trade token, defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
@@ -808,7 +832,7 @@ and by extension <a class="reference internal" href="#steam.Client.on_user_updat
 <dt class="sig sig-object py" id="steam.Client.wait_for">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['connect',</span> <span class="pre">'disconnect',</span> <span class="pre">'ready',</span> <span class="pre">'login',</span> <span class="pre">'logout'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">collections.abc.Callable[bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#steam.Client.wait_for" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['error'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">collections.abc.Callable[str,</span> <span class="pre">Exception,</span> <span class="pre">tuple[typing.Any,</span> <span class="pre">...],</span> <span class="pre">dict[str,</span> <span class="pre">typing.Any],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.10)"><span class="pre">Exception</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><span class="pre">dict</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['error'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">collections.abc.Callable[str,</span> <span class="pre">Exception,</span> <span class="pre">tuple[typing.Any,</span> <span class="pre">...],</span> <span class="pre">dict[str,</span> <span class="pre">typing.Any],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.10)"><span class="pre">Exception</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['message'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Message],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.Message" title="steam.Message"><span class="pre">Message</span></a></span></span></dt>
 <dt class="sig sig-object py">
@@ -816,13 +840,27 @@ and by extension <a class="reference internal" href="#steam.Client.on_user_updat
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['user_update'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[User,</span> <span class="pre">User],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.User" title="steam.User"><span class="pre">User</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.User" title="steam.User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['clan_update'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Clan,</span> <span class="pre">Clan],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Clan" title="steam.Clan"><span class="pre">Clan</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.Clan" title="steam.Clan"><span class="pre">Clan</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['group_update'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Group,</span> <span class="pre">Group],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Group" title="steam.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.Group" title="steam.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dt class="sig sig-object py">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['typing'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[User,</span> <span class="pre">datetime.datetime],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.User" title="steam.User"><span class="pre">User</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime.datetime</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['trade_receive',</span> <span class="pre">'trade_send',</span> <span class="pre">'trade_accept',</span> <span class="pre">'trade_decline',</span> <span class="pre">'trade_cancel',</span> <span class="pre">'trade_expire',</span> <span class="pre">'trade_counter'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[TradeOffer],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.TradeOffer" title="steam.TradeOffer"><span class="pre">TradeOffer</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['user_invite',</span> <span class="pre">'user_invite_accept'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[UserInvite],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.UserInvite" title="steam.UserInvite"><span class="pre">UserInvite</span></a></span></span></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['user_invite',</span> <span class="pre">'user_invite_accept',</span> <span class="pre">'user_invite_decline'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[UserInvite],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.UserInvite" title="steam.UserInvite"><span class="pre">UserInvite</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['clan_invite',</span> <span class="pre">'clan_invite_accept'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[ClanInvite],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.ClanInvite" title="steam.ClanInvite"><span class="pre">ClanInvite</span></a></span></span></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['user_remove'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[User],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.User" title="steam.User"><span class="pre">User</span></a></span></span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['clan_invite',</span> <span class="pre">'clan_invite_accept',</span> <span class="pre">'clan_invite_decline'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[ClanInvite],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.ClanInvite" title="steam.ClanInvite"><span class="pre">ClanInvite</span></a></span></span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['clan_join',</span> <span class="pre">'clan_leave'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Clan],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.Clan" title="steam.Clan"><span class="pre">Clan</span></a></span></span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['group_join',</span> <span class="pre">'group_leave'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Group],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.Group" title="steam.Group"><span class="pre">Group</span></a></span></span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['event_create'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Event],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Event</span></span></span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['announcement_create'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Announcement],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Announcement</span></span></span></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['socket_receive',</span> <span class="pre">'socket_send'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">collections.abc.Callable[MsgProto[Any]</span> <span class="pre">|</span> <span class="pre">Msg[Any]</span> <span class="pre">|</span> <span class="pre">GCMsgProto[Any]</span> <span class="pre">|</span> <span class="pre">GCMsg[Any],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Msgs</span></span></span></dt>
 <dd><p>Wait for the first event to be dispatched that meets the requirements, this by default is the first event
@@ -1077,6 +1115,39 @@ way by <a class="reference internal" href="#steam.Client" title="steam.Client"><
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_user_invite_accept">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_user_invite_accept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invite</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_user_invite_accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client/invitee accepts an invite from/to a <a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> to become a friend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invite</strong> (<a class="reference internal" href="#steam.UserInvite" title="steam.UserInvite"><em>steam.UserInvite</em></a>) – The invite that was accepted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_user_invite_decline">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_user_invite_decline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invite</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_user_invite_decline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client/invitee declines an invite from/to a <a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> to become a friend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invite</strong> (<a class="reference internal" href="#steam.UserInvite" title="steam.UserInvite"><em>steam.UserInvite</em></a>) – The invite that was declined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_user_remove">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_user_remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_user_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when you or the <code class="docutils literal notranslate"><span class="pre">user</span></code> remove each other from your friends lists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> (<a class="reference internal" href="#steam.User" title="steam.User"><em>steam.User</em></a>) – The user who was removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.Client.on_clan_invite">
 <em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_clan_invite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invite</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_clan_invite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called when the client receives/sends an invite from/to a <a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> to join a
@@ -1089,27 +1160,127 @@ way by <a class="reference internal" href="#steam.Client" title="steam.Client"><
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.Client.on_user_update">
-<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_user_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">before</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_user_update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called when a user’s their state, due to one or more of the following attributes changing:</p>
+<dt class="sig sig-object py" id="steam.Client.on_clan_invite_accept">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_clan_invite_accept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invite</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_clan_invite_accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client/invitee accepts an invite to join a <a class="reference internal" href="#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clan</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invite</strong> (<a class="reference internal" href="#steam.ClanInvite" title="steam.ClanInvite"><em>steam.ClanInvite</em></a>) – The invite that was accepted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_clan_invite_decline">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_clan_invite_decline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invite</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_clan_invite_decline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client/invitee declines an invite to join a <a class="reference internal" href="#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clan</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invite</strong> (<a class="reference internal" href="#steam.ClanInvite" title="steam.ClanInvite"><em>steam.ClanInvite</em></a>) – The invite that was declined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_clan_join">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_clan_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clan</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_clan_join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client joins a new clan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clan</strong> (<a class="reference internal" href="#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The joined clan.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_clan_update">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_clan_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">before</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_clan_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a clan is updated, due to one or more of the following attributes changing:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference internal" href="#steam.User.name" title="steam.User.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a></p></li>
-<li><p><a class="reference internal" href="#steam.User.state" title="steam.User.state"><code class="xref py py-attr docutils literal notranslate"><span class="pre">state</span></code></a></p></li>
-<li><p><a class="reference internal" href="#steam.User.flags" title="steam.User.flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">flags</span></code></a></p></li>
-<li><p><a class="reference internal" href="#steam.User.avatar_url" title="steam.User.avatar_url"><code class="xref py py-attr docutils literal notranslate"><span class="pre">avatar_url</span></code></a></p></li>
-<li><p><a class="reference internal" href="#steam.User.last_logon" title="steam.User.last_logon"><code class="xref py py-attr docutils literal notranslate"><span class="pre">last_logon</span></code></a></p></li>
-<li><p><a class="reference internal" href="#steam.User.last_logoff" title="steam.User.last_logoff"><code class="xref py py-attr docutils literal notranslate"><span class="pre">last_logoff</span></code></a></p></li>
-<li><p><a class="reference internal" href="#steam.User.last_seen_online" title="steam.User.last_seen_online"><code class="xref py py-attr docutils literal notranslate"><span class="pre">last_seen_online</span></code></a></p></li>
-<li><p><a class="reference internal" href="#steam.User.game" title="steam.User.game"><code class="xref py py-attr docutils literal notranslate"><span class="pre">game</span></code></a></p></li>
+<li><p><a class="reference internal" href="#steam.Clan.name" title="steam.Clan.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a></p></li>
+<li><p><a class="reference internal" href="#steam.Clan.avatar_url" title="steam.Clan.avatar_url"><code class="xref py py-attr docutils literal notranslate"><span class="pre">avatar_url</span></code></a></p></li>
+<li><p><a class="reference internal" href="#steam.Clan.member_count" title="steam.Clan.member_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">member_count</span></code></a></p></li>
+<li><p><a class="reference internal" href="#steam.Clan.in_game_count" title="steam.Clan.in_game_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">in_game_count</span></code></a></p></li>
+<li><p><a class="reference internal" href="#steam.Clan.online_count" title="steam.Clan.online_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">online_count</span></code></a></p></li>
+<li><p><a class="reference internal" href="#steam.Clan.active_member_count" title="steam.Clan.active_member_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">active_member_count</span></code></a></p></li>
 </ul>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>before</strong> (<a class="reference internal" href="#steam.User" title="steam.User"><em>steam.User</em></a>) – The user’s state before it was updated.</p></li>
-<li><p><strong>after</strong> (<a class="reference internal" href="#steam.User" title="steam.User"><em>steam.User</em></a>) – The user’s state now.</p></li>
+<li><p><strong>before</strong> (<a class="reference internal" href="#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The clan’s state before it was updated.</p></li>
+<li><p><strong>after</strong> (<a class="reference internal" href="#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The clan’s state now.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_clan_leave">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_clan_leave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clan</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_clan_leave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client leaves a clan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clan</strong> (<a class="reference internal" href="#steam.Clan" title="steam.Clan"><em>steam.Clan</em></a>) – The left clan.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_group_join">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_group_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_group_join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client joins a new group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group</strong> (<a class="reference internal" href="#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The joined group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_group_update">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_group_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">before</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_group_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a group is updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>before</strong> (<a class="reference internal" href="#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The group’s state before it was updated.</p></li>
+<li><p><strong>after</strong> (<a class="reference internal" href="#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The group’s state now.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_group_leave">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_group_leave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_group_leave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the client leaves a group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group</strong> (<a class="reference internal" href="#steam.Group" title="steam.Group"><em>steam.Group</em></a>) – The left group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_event_create">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_event_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_event_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when an event in a clan is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event</strong> (<em>steam.Event</em>) – The event that was created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_announcement_create">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_announcement_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">announcement</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_announcement_create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when an announcement in a clan is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>announcement</strong> (<em>steam.Announcement</em>) – The announcement that was created.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1117,7 +1288,7 @@ way by <a class="reference internal" href="#steam.Client" title="steam.Client"><
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Client.on_socket_receive">
 <em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_socket_receive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_socket_receive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called when the connected web-socket parses a received <code class="docutils literal notranslate"><span class="pre">Msg</span></code>/<code class="docutils literal notranslate"><span class="pre">MsgProto</span></code></p>
+<dd><p>Called when the connected CM parses a received <code class="docutils literal notranslate"><span class="pre">Msg</span></code>/<code class="docutils literal notranslate"><span class="pre">MsgProto</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>msg</strong> (<em>Msg</em><em> | </em><em>MsgProto</em>) – The received message.</p>
@@ -1128,7 +1299,7 @@ way by <a class="reference internal" href="#steam.Client" title="steam.Client"><
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Client.on_socket_send">
 <em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">on_socket_send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_socket_send" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called when the client sends a parsed <code class="docutils literal notranslate"><span class="pre">Msg</span></code>/<code class="docutils literal notranslate"><span class="pre">MsgProto</span></code> to the connected web-socket.</p>
+<dd><p>Called when the client sends a <code class="docutils literal notranslate"><span class="pre">Msg</span></code>/<code class="docutils literal notranslate"><span class="pre">MsgProto</span></code> to the connected CM.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>msg</strong> (<em>Msg</em><em> | </em><em>MsgProto</em>) – The sent message.</p>
@@ -1217,10 +1388,14 @@ is an alternative for <a class="reference internal" href="#steam.utils.find" tit
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The first element from the <code class="docutils literal notranslate"><span class="pre">iterable</span></code> which matches all the traits passed in <code class="docutils literal notranslate"><span class="pre">attrs</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no matching element was found.</p>
+<dd class="field-even"><p><ul class="simple">
+<li><p>The first element from the <code class="docutils literal notranslate"><span class="pre">iterable</span></code> which matches all the traits passed in <code class="docutils literal notranslate"><span class="pre">attrs</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no matching</p></li>
+<li><p><em>element was found.</em></p></li>
+</ul>
+</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.role.Role</span></code>]</p>
+<dd class="field-odd"><p>_T | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3125,14 +3300,14 @@ is an alternative for <a class="reference internal" href="#steam.utils.find" tit
 <dt class="sig sig-object py" id="steam.iterators.AsyncIterator.get">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attrs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.iterators.AsyncIterator.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper function which is similar to <a class="reference internal" href="#steam.utils.get" title="steam.utils.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code></a> except it runs over the async iterator.</p>
-<p>This is roughly equipment to:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">elements</span> <span class="o">=</span> <span class="k">await</span> <span class="n">AsyncIterator</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<p>This is roughly equivalent to:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">elements</span> <span class="o">=</span> <span class="k">await</span> <span class="n">async_iterator</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
 <span class="n">element</span> <span class="o">=</span> <span class="n">steam</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Item&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="rubric">Example</p>
 <p>Getting the last comment from a user named ‘Dave’ or None:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">User</span><span class="o">.</span><span class="n">comments</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">author__name</span><span class="o">=</span><span class="s2">&quot;Dave&quot;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">comment</span> <span class="o">=</span> <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">comments</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">author__name</span><span class="o">=</span><span class="s2">&quot;Dave&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3154,7 +3329,7 @@ is an alternative for <a class="reference internal" href="#steam.utils.find" tit
 <dd><p>A helper function which is similar to <a class="reference internal" href="#steam.utils.find" title="steam.utils.find"><code class="xref py py-func docutils literal notranslate"><span class="pre">find()</span></code></a> except it runs over the async iterator.
 However unlike <a class="reference internal" href="#steam.utils.find" title="steam.utils.find"><code class="xref py py-func docutils literal notranslate"><span class="pre">find()</span></code></a>, the predicate provided can be a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine"><em>coroutine</em></a>.</p>
 <p>This is roughly equivalent to:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">elements</span> <span class="o">=</span> <span class="k">await</span> <span class="n">AsyncIterator</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">elements</span> <span class="o">=</span> <span class="k">await</span> <span class="n">async_iterator</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
 <span class="n">element</span> <span class="o">=</span> <span class="n">steam</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">elements</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Item&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3163,7 +3338,7 @@ However unlike <a class="reference internal" href="#steam.utils.find" title="ste
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="n">trade</span><span class="p">:</span> <span class="n">steam</span><span class="o">.</span><span class="n">TradeOffer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">trade</span><span class="o">.</span><span class="n">message</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
 
-<span class="n">trade</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Client</span><span class="o">.</span><span class="n">trade_history</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span>
+<span class="n">trade</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">trade_history</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3185,7 +3360,7 @@ However unlike <a class="reference internal" href="#steam.utils.find" title="ste
 <dd><p>A helper function that iterates over the <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> returning a list of all the elements in the
 iterator.</p>
 <p>This is equivalent to:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">element</span> <span class="k">async</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">AsyncIterator</span><span class="p">]</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">element</span> <span class="k">async</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">async_iterator</span><span class="p">]</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3200,7 +3375,7 @@ iterator.</p>
 <span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.iterators.AsyncIterator.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter members of the async iterator according to a predicate. This function acts similarly to <a class="reference internal" href="#steam.iterators.AsyncIterator.filter" title="steam.iterators.AsyncIterator.filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter()</span></code></a>.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">dave</span> <span class="ow">in</span> <span class="n">AsyncIterator</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Dave&quot;</span><span class="p">):</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">dave</span> <span class="ow">in</span> <span class="n">async_iterator</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Dave&quot;</span><span class="p">):</span>
     <span class="o">...</span>  <span class="c1"># the element now has to have a name of Dave.</span>
 </pre></div>
 </div>
@@ -3219,7 +3394,7 @@ iterator.</p>
 <span class="sig-name descname"><span class="pre">map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.iterators.AsyncIterator.map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map the elements of the async iterator through a function. This function acts similarly to <a class="reference internal" href="#steam.iterators.AsyncIterator.map" title="steam.iterators.AsyncIterator.map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map()</span></code></a>.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">AsyncIterator</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">):</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">async_iterator</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">):</span>
     <span class="o">...</span>  <span class="c1"># name is now the iterators element&#39;s name.</span>
 </pre></div>
 </div>
@@ -3662,8 +3837,8 @@ api.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.comment">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.comment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Post a comment to a profile.</p>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post a comment to a comments section.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3682,7 +3857,7 @@ api.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.comments">
-<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.comments" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oldest_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a comment section’s <a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a> objects.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
@@ -3699,6 +3874,7 @@ api.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>oldest_first</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not to request comments with the oldest comments first or last. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – The maximum number of comments to search through.
 Default is <code class="docutils literal notranslate"><span class="pre">None</span></code> which will fetch the clan’s entire comments section.</p></li>
 <li><p><strong>before</strong> (<em>datetime</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – A time to search for comments before.</p></li>
@@ -4314,7 +4490,7 @@ async with</span><a class="reference internal" href="#steam.DMChannel.typing">ty
 <dd><p>The recipient of any messages sent.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Union[<a class="reference internal" href="#steam.User" title="steam.user.User">steam.user.User</a>, <a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID">steam.abc.SteamID</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.User" title="steam.user.User">steam.user.User</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4334,7 +4510,7 @@ async with</span><a class="reference internal" href="#steam.DMChannel.typing">ty
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.AsyncContextManager" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncContextManager</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.AsyncContextManager" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncContextManager</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4735,9 +4911,10 @@ Attributes</span><ul>
 <li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Clan.active_member_count">active_member_count</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Clan.admins">admins</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Clan.avatar_url">avatar_url</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Clan.channels">channels</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Clan.chat_id">chat_id</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Clan.community_url">community_url</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Clan.content">content</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Clan.created_at">created_at</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Clan.default_channel">default_channel</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Clan.default_role">default_role</a></li><li class="py-attribute-table-entry">
@@ -4786,6 +4963,8 @@ async for</span><a class="reference internal" href="#steam.Clan.events">events</
 async</span><a class="reference internal" href="#steam.Clan.fetch_announcement">fetch_announcement</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Clan.fetch_event">fetch_event</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Clan.fetch_members">fetch_members</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.Clan.get_channel">get_channel</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -4795,9 +4974,7 @@ def</span><a class="reference internal" href="#steam.Clan.is_valid">is_valid</a>
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Clan.join">join</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Clan.leave">leave</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Clan.members">members</a></li></ul>
+async</span><a class="reference internal" href="#steam.Clan.leave">leave</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Clan">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Clan</span></span><a class="headerlink" href="#steam.Clan" title="Permalink to this definition">¶</a></dt>
@@ -4841,20 +5018,20 @@ async</span><a class="reference internal" href="#steam.Clan.members">members</a>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Clan.icon_url">
-<span class="sig-name descname"><span class="pre">icon_url</span></span><a class="headerlink" href="#steam.Clan.icon_url" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.Clan.avatar_url">
+<span class="sig-name descname"><span class="pre">avatar_url</span></span><a class="headerlink" href="#steam.Clan.avatar_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The icon url of the clan. Uses the large (184x184 px) image url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Clan.description">
-<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#steam.Clan.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The description of the clan.</p>
+<dt class="sig sig-object py" id="steam.Clan.content">
+<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#steam.Clan.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content of the clan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
@@ -5027,21 +5204,16 @@ async</span><a class="reference internal" href="#steam.Clan.members">members</a>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Clan.default_channel">
-<span class="sig-name descname"><span class="pre">default_channel</span></span><a class="headerlink" href="#steam.Clan.default_channel" title="Permalink to this definition">¶</a></dt>
-<dd><p>The clan’s default channel.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ClanChannel" title="steam.ClanChannel">steam.ClanChannel</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Clan.channels">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ClanChannel" title="steam.ClanChannel"><span class="pre">steam.ClanChannel</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Clan.channels" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the clan’s channels.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Clan.default_channel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_channel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.ClanChannel" title="steam.ClanChannel"><span class="pre">ClanChannel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></em><a class="headerlink" href="#steam.Clan.default_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The clan’s default channel.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5059,8 +5231,8 @@ async</span><a class="reference internal" href="#steam.Clan.members">members</a>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.members">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">members</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.members" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.Clan.fetch_members">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_members</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.fetch_members" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetches a clan’s member list.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -5071,6 +5243,18 @@ async</span><a class="reference internal" href="#steam.Clan.members">members</a>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.SteamID</span></code></a>]</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Clan.description">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.Clan.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>An alias to <a class="reference internal" href="#steam.Clan.content" title="steam.Clan.content"><code class="xref py py-attr docutils literal notranslate"><span class="pre">content</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Clan.icon_url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">icon_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.Clan.icon_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>An alias to <a class="reference internal" href="#steam.Clan.avatar_url" title="steam.Clan.avatar_url"><code class="xref py py-attr docutils literal notranslate"><span class="pre">avatar_url</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5131,11 +5315,11 @@ async</span><a class="reference internal" href="#steam.Clan.members">members</a>
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Clan.events">
 <span class="sig-name descname"><span class="pre">events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.events" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> a clan’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Event</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> over a clan’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Event</span></code>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">events</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="s2">&quot;made an event&quot;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;starting at&quot;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="s2">&quot;made an event&quot;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;starting at&quot;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">starts_at</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All parameters are optional.</p>
@@ -5157,7 +5341,7 @@ of the clan’s events, but this will be a very slow operation.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Clan.announcements">
 <span class="sig-name descname"><span class="pre">announcements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.announcements" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> a clan’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Announcement</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> over a clan’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Announcement</span></code>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">announcement</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">announcements</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -5181,61 +5365,9 @@ fetch all of the clan’s announcements, but this will be a very slow operation.
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.create_event">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">create_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ClanEvent.Other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.create_event" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an event.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The name of the event</p></li>
-<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The description for the event.</p></li>
-<li><p><strong>type</strong> (<em>Literal</em><em>[</em><em>ClanEvent.Chat</em><em>, </em><em>ClanEvent.Game</em><em>, </em><em>ClanEvent.Broadcast</em><em>, </em><em>ClanEvent.Other</em><em>, </em><em>ClanEvent.Party</em><em>, </em><em>ClanEvent.Meeting</em><em>, </em><em>ClanEvent.SpecialCause</em><em>, </em><em>ClanEvent.MusicAndArts</em><em>, </em><em>ClanEvent.Sports</em><em>, </em><em>ClanEvent.Trip</em><em>]</em>) – The type of the event, defaults to <code class="xref py py-attr docutils literal notranslate"><span class="pre">steam.ClanEvent.Other</span></code>.</p></li>
-<li><p><strong>game</strong> (<a class="reference internal" href="#steam.Game" title="steam.Game"><em>Game</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – The game that will be played in the event.</p></li>
-<li><p><strong>start</strong> (<em>datetime</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – The time the event will start at.</p></li>
-<li><p><strong>server_address</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – The address of the server that the event will be played on.</p></li>
-<li><p><strong>server_password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – The password for the server that the event will be played on.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is recommended to use a timezone aware datetime for <code class="docutils literal notranslate"><span class="pre">start</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The created event.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.event.Event</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Clan.create_announcement">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">create_announcement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.create_announcement" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create an announcement.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The name of the announcement.</p></li>
-<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The description of the announcement.</p></li>
-<li><p><strong>hidden</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not the announcement should be hidden</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created announcement.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.event.Announcement</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.Clan.comment">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.comment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Post a comment to a profile.</p>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post a comment to a comments section.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5254,7 +5386,7 @@ fetch all of the clan’s announcements, but this will be a very slow operation.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Clan.comments">
-<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.comments" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oldest_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a comment section’s <a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a> objects.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
@@ -5271,6 +5403,7 @@ fetch all of the clan’s announcements, but this will be a very slow operation.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>oldest_first</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not to request comments with the oldest comments first or last. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>limit</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>]</em>) – The maximum number of comments to search through.
 Default is <code class="docutils literal notranslate"><span class="pre">None</span></code> which will fetch the clan’s entire comments section.</p></li>
 <li><p><strong>before</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime.datetime</em></a><em>]</em>) – A time to search for comments before.</p></li>
@@ -5283,11 +5416,39 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="steam.Clan.community_url">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">community_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></em><a class="headerlink" href="#steam.Clan.community_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SteamID’s community url.</p>
-<p>e.g <a class="reference external" href="https://steamcommunity.com/profiles/123456789">https://steamcommunity.com/profiles/123456789</a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.create_event">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">create_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type:</span> <span class="pre">Literal[&lt;ClanEvent.Other:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;ClanEvent.Chat:</span> <span class="pre">9&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;ClanEvent.Party:</span> <span class="pre">3&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;ClanEvent.Meeting:</span> <span class="pre">4&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;ClanEvent.SpecialCause:</span> <span class="pre">5&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;ClanEvent.MusicAndArts:</span> <span class="pre">6&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;ClanEvent.Sports:</span> <span class="pre">7&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;ClanEvent.Trip:</span> <span class="pre">8&gt;]</span> <span class="pre">=</span> <span class="pre">'ClanEvent.Other'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starts_at:</span> <span class="pre">datetime</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">'None'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.event.Event</span></span></span><a class="headerlink" href="#steam.Clan.create_event" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">create_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game:</span> <span class="pre">steam.game.Game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type:</span> <span class="pre">Literal[&lt;ClanEvent.Game:</span> <span class="pre">2&gt;]</span> <span class="pre">=</span> <span class="pre">ClanEvent.Other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starts_at:</span> <span class="pre">datetime</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_address:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_password:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.event.Event</span></span></span></dt>
+<dd><p>Create an event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the event</p></li>
+<li><p><strong>content</strong> – The content for the event.</p></li>
+<li><p><strong>type</strong> – The type of the event, defaults to <code class="xref py py-attr docutils literal notranslate"><span class="pre">ClanEvent.Other</span></code>.</p></li>
+<li><p><strong>game</strong> – The game that will be played in the event. Required if type is <code class="xref py py-attr docutils literal notranslate"><span class="pre">ClanEvent.Game</span></code>.</p></li>
+<li><p><strong>starts_at</strong> – The time the event will start at.</p></li>
+<li><p><strong>server_address</strong> – The address of the server that the event will be played on. This is only allowed if <code class="docutils literal notranslate"><span class="pre">type</span></code> is
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ClanEvent.Game</span></code>.</p></li>
+<li><p><strong>server_password</strong> – The password for the server that the event will be played on. This is only allowed if <code class="docutils literal notranslate"><span class="pre">type</span></code> is
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">ClanEvent.Game</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to use a timezone aware datetime for <code class="docutils literal notranslate"><span class="pre">start</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The created event.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.event.Event</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -5386,6 +5547,27 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dd><p>The Steam universe of the SteamID.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.create_announcement">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">create_announcement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.create_announcement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an announcement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The name of the announcement.</p></li>
+<li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The content of the announcement.</p></li>
+<li><p><strong>hidden</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not the announcement should initially be hidden.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The created announcement.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.event.Announcement</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -5407,13 +5589,7 @@ Methods</span><ul>
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Comment.delete">delete</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Comment.downvote">downvote</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.Comment.is_answer">is_answer</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Comment.report">report</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Comment.upvote">upvote</a></li></ul>
+async</span><a class="reference internal" href="#steam.Comment.report">report</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Comment">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Comment</span></span><a class="headerlink" href="#steam.Comment" title="Permalink to this definition">¶</a></dt>
@@ -5488,42 +5664,6 @@ async</span><a class="reference internal" href="#steam.Comment.upvote">upvote</a
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Comment.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the comment.</p>
 <dl class="field-list simple">
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Comment.upvote">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">upvote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Comment.upvote" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upvote the comment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Comment.downvote">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">downvote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Comment.downvote" title="Permalink to this definition">¶</a></dt>
-<dd><p>Downvote the comment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Comment.is_answer">
-<span class="sig-name descname"><span class="pre">is_answer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#steam.Comment.is_answer" title="Permalink to this definition">¶</a></dt>
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">is_answer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span></dt>
-<dd><p>Whether or not this comment has been marked as the answer to the discussion. <code class="docutils literal notranslate"><span class="pre">None`</span></code> if the <a class="reference internal" href="#steam.Comment.owner" title="steam.Comment.owner"><code class="xref py py-attr docutils literal notranslate"><span class="pre">owner</span></code></a>
-cannot mark an answer for the section.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>]</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -6232,7 +6372,7 @@ async</span><a class="reference internal" href="#steam.Group.leave">leave</a></l
 <dd><p>The group’s default channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.GroupChannel" title="steam.GroupChannel">steam.GroupChannel</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.GroupChannel" title="steam.GroupChannel">steam.GroupChannel</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -6580,7 +6720,7 @@ Attributes</span><ul>
 <dd><p>The message’s author.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Union[<a class="reference internal" href="#steam.User" title="steam.user.User">steam.user.User</a>, <a class="reference internal" href="#steam.ClientUser" title="steam.user.ClientUser">steam.user.ClientUser</a>]</p>
+<dd class="field-odd"><p>Authors</p>
 </dd>
 </dl>
 </dd></dl>
@@ -7900,8 +8040,8 @@ websocket.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.comment">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.comment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Post a comment to a profile.</p>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post a comment to a comments section.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7920,7 +8060,7 @@ websocket.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.comments">
-<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.comments" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oldest_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a comment section’s <a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a> objects.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
@@ -7937,6 +8077,7 @@ websocket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>oldest_first</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not to request comments with the oldest comments first or last. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>limit</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>]</em>) – The maximum number of comments to search through.
 Default is <code class="docutils literal notranslate"><span class="pre">None</span></code> which will fetch the clan’s entire comments section.</p></li>
 <li><p><strong>before</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime.datetime</em></a><em>]</em>) – A time to search for comments before.</p></li>
@@ -8621,8 +8762,8 @@ private inventory.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.User.comment">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.comment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Post a comment to a profile.</p>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post a comment to a comments section.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -8641,7 +8782,7 @@ private inventory.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.User.comments">
-<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.comments" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oldest_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.comments" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a comment section’s <a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a> objects.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
@@ -8658,6 +8799,7 @@ private inventory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>oldest_first</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not to request comments with the oldest comments first or last. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>limit</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>]</em>) – The maximum number of comments to search through.
 Default is <code class="docutils literal notranslate"><span class="pre">None</span></code> which will fetch the clan’s entire comments section.</p></li>
 <li><p><strong>before</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime.datetime</em></a><em>]</em>) – A time to search for comments before.</p></li>
@@ -8963,7 +9105,15 @@ def</span><a class="reference internal" href="#steam.Game.is_steam_game">is_stea
 <dt class="sig sig-object py" id="steam.Game">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Intable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Game" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><s><span class="pre">'Team</span> <span class="pre">Fortress</span> <span class="pre">2'</span></s><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Intable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><s><span class="pre">'Left</span> <span class="pre">4</span> <span class="pre">Dead</span> <span class="pre">2'</span></s><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Intable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><s><span class="pre">'DOTA</span> <span class="pre">2'</span></s><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Intable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><s><span class="pre">'Counter</span> <span class="pre">Strike</span> <span class="pre">Global-Offensive'</span></s><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Intable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><s><span class="pre">'Steam'</span></s><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Intable</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Represents a Steam game.</p>
 <dl class="field-list simple">
 </dl>
@@ -9096,7 +9246,7 @@ async</span><a class="reference internal" href="#steam.game.StatefulGame.player_
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.game.StatefulGame.clan">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">clan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.game.StatefulGame.clan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch this games clan.</p>
+<dd><p>Fetch this game’s clan.</p>
 <p>This can be useful to get a Game’s updates.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">clan</span> <span class="o">=</span> <span class="k">await</span> <span class="n">game</span><span class="o">.</span><span class="n">clan</span><span class="p">()</span>
 <span class="k">async</span> <span class="k">for</span> <span class="n">update</span> <span class="ow">in</span> <span class="n">clan</span><span class="o">.</span><span class="n">announcements</span><span class="p">()</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
@@ -9257,7 +9407,7 @@ async</span><a class="reference internal" href="#steam.UserGame.player_count">pl
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.UserGame.clan">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">clan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.clan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch this games clan.</p>
+<dd><p>Fetch this game’s clan.</p>
 <p>This can be useful to get a Game’s updates.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">clan</span> <span class="o">=</span> <span class="k">await</span> <span class="n">game</span><span class="o">.</span><span class="n">clan</span><span class="p">()</span>
 <span class="k">async</span> <span class="k">for</span> <span class="n">update</span> <span class="ow">in</span> <span class="n">clan</span><span class="o">.</span><span class="n">announcements</span><span class="p">()</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
@@ -9565,7 +9715,7 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.clan">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">clan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.clan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch this games clan.</p>
+<dd><p>Fetch this game’s clan.</p>
 <p>This can be useful to get a Game’s updates.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">clan</span> <span class="o">=</span> <span class="k">await</span> <span class="n">game</span><span class="o">.</span><span class="n">clan</span><span class="p">()</span>
 <span class="k">async</span> <span class="k">for</span> <span class="n">update</span> <span class="ow">in</span> <span class="n">clan</span><span class="o">.</span><span class="n">announcements</span><span class="p">()</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
@@ -9825,20 +9975,9 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.FetchedGame.is_free">
-<span class="sig-name descname"><span class="pre">is_free</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_free" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is free to download.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.clan">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">clan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.clan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch this games clan.</p>
+<dd><p>Fetch this game’s clan.</p>
 <p>This can be useful to get a Game’s updates.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">clan</span> <span class="o">=</span> <span class="k">await</span> <span class="n">game</span><span class="o">.</span><span class="n">clan</span><span class="p">()</span>
 <span class="k">async</span> <span class="k">for</span> <span class="n">update</span> <span class="ow">in</span> <span class="n">clan</span><span class="o">.</span><span class="n">announcements</span><span class="p">()</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
@@ -9867,17 +10006,6 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#steam.FetchedGame" title="steam.FetchedGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.FetchedGame</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.FetchedGame.is_on_windows">
-<span class="sig-name descname"><span class="pre">is_on_windows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_on_windows" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is able to be played on Windows.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -9919,6 +10047,28 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 <dt class="sig sig-object py" id="steam.FetchedGame.url">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.FetchedGame.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>What should be the game’s url on steamcommunity if applicable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.FetchedGame.is_free">
+<span class="sig-name descname"><span class="pre">is_free</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_free" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the game is free to download.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.FetchedGame.is_on_windows">
+<span class="sig-name descname"><span class="pre">is_on_windows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_on_windows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not the game is able to be played on Windows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

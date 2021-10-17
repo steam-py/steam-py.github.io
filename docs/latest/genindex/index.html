@@ -324,6 +324,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.abc.BaseUser.avatar_url">avatar_url (steam.abc.BaseUser attribute)</a>
 
       <ul>
+        <li><a href="../api/#steam.Clan.avatar_url">(steam.Clan attribute)</a>
+</li>
         <li><a href="../api/#steam.ClientUser.avatar_url">(steam.ClientUser attribute)</a>
 </li>
         <li><a href="../api/#steam.User.avatar_url">(steam.User attribute)</a>
@@ -733,11 +735,9 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.UserBadge.Community">Community (steam.UserBadge attribute)</a>
 </li>
-      <li><a href="../api/#steam.Clan.community_url">community_url (steam.Clan property)</a>
+      <li><a href="../api/#steam.ClientUser.community_url">community_url (steam.ClientUser attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.ClientUser.community_url">(steam.ClientUser attribute)</a>
-</li>
         <li><a href="../api/#steam.GameServer.community_url">(steam.GameServer property)</a>
 </li>
         <li><a href="../api/#steam.Group.community_url">(steam.Group property)</a>
@@ -771,9 +771,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Type.ConsoleUser">ConsoleUser (steam.Type attribute)</a>
 </li>
-      <li><a href="../api/#steam.Comment.content">content (steam.Comment attribute)</a>
+      <li><a href="../api/#steam.Clan.content">content (steam.Clan attribute)</a>
 
       <ul>
+        <li><a href="../api/#steam.Comment.content">(steam.Comment attribute)</a>
+</li>
         <li><a href="../api/#steam.Message.content">(steam.Message attribute)</a>
 </li>
       </ul></li>
@@ -877,7 +879,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.Default">(steam.ext.commands.BucketType attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.Clan.default_channel">default_channel (steam.Clan attribute)</a>
+      <li><a href="../api/#steam.Clan.default_channel">default_channel (steam.Clan property)</a>
 
       <ul>
         <li><a href="../api/#steam.Group.default_channel">(steam.Group attribute)</a>
@@ -907,7 +909,7 @@ DEALINGS IN THE SOFTWARE.
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.DeniedDueToCommunityCooldown">DeniedDueToCommunityCooldown (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.Clan.description">description (steam.Clan attribute)</a>
+      <li><a href="../api/#steam.Clan.description">description (steam.Clan property)</a>
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Cog.description">(steam.ext.commands.Cog attribute)</a>
@@ -938,8 +940,6 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.FetchedGame.dlc">dlc (steam.FetchedGame attribute)</a>
 </li>
       <li><a href="../api/#steam.DMChannel">DMChannel (class in steam)</a>
-</li>
-      <li><a href="../api/#steam.Comment.downvote">downvote() (steam.Comment method)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.DuplicateKeywordArgument">DuplicateKeywordArgument</a>
 </li>
@@ -1075,6 +1075,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_game">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.Clan.fetch_members">fetch_members() (steam.Clan method)</a>
+</li>
       <li><a href="../api/#steam.Client.fetch_price">fetch_price() (steam.Client method)</a>
 
       <ul>
@@ -1409,7 +1411,7 @@ DEALINGS IN THE SOFTWARE.
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.TypeChar.I">I (steam.TypeChar attribute)</a>
 </li>
-      <li><a href="../api/#steam.Clan.icon_url">icon_url (steam.Clan attribute)</a>
+      <li><a href="../api/#steam.Clan.icon_url">icon_url (steam.Clan property)</a>
 
       <ul>
         <li><a href="../api/#steam.Item.icon_url">(steam.Item attribute)</a>
@@ -1702,8 +1704,6 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Result.IPNotFound">IPNotFound (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.IPTInitError">IPTInitError (steam.Result attribute)</a>
-</li>
-      <li><a href="../api/#steam.Comment.is_answer">is_answer() (steam.Comment method)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.is_banned">is_banned() (steam.abc.BaseUser method)</a>
 
@@ -2019,8 +2019,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Group.members">members (steam.Group attribute)</a>
 </li>
-      <li><a href="../api/#steam.Clan.members">members() (steam.Clan method)</a>
-</li>
       <li><a href="../api/#steam.abc.BaseUser.mention">mention (steam.abc.BaseUser property)</a>
 
       <ul>
@@ -2185,8 +2183,40 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.OK">OK (steam.Result attribute)</a>
 </li>
+      <li><a href="../api/#steam.Client.on_announcement_create">on_announcement_create() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_announcement_create">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.Client.on_clan_invite">on_clan_invite() (steam.Client method)</a>
 </li>
+      <li><a href="../api/#steam.Client.on_clan_invite_accept">on_clan_invite_accept() (steam.Client method)</a>
+</li>
+      <li><a href="../api/#steam.Client.on_clan_invite_decline">on_clan_invite_decline() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_clan_invite_decline">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.Client.on_clan_join">on_clan_join() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_clan_join">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.Client.on_clan_leave">on_clan_leave() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_clan_leave">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.Client.on_clan_update">on_clan_update() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_clan_update">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_command">on_command() (in module steam.ext.commands.Bot)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_command_completion">on_command_completion() (in module steam.ext.commands.Bot)</a>
@@ -2207,8 +2237,34 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand.on_error">(steam.ext.commands.HelpCommand method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.Client.on_event_create">on_event_create() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_event_create">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.Client.on_group_join">on_group_join() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_group_join">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.Client.on_group_leave">on_group_leave() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_group_leave">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.Client.on_group_update">on_group_update() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_group_update">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.Client.on_login">on_login() (steam.Client method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.on_message">on_message() (steam.Client method)</a>
 </li>
       <li><a href="../api/#steam.Client.on_ready">on_ready() (steam.Client method)</a>
@@ -2223,8 +2279,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Client.on_trade_counter">on_trade_counter() (steam.Client method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.on_trade_decline">on_trade_decline() (steam.Client method)</a>
 </li>
       <li><a href="../api/#steam.Client.on_trade_expire">on_trade_expire() (steam.Client method)</a>
@@ -2237,8 +2291,20 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Client.on_user_invite">on_user_invite() (steam.Client method)</a>
 </li>
-      <li><a href="../api/#steam.Client.on_user_update">on_user_update() (steam.Client method)</a>
+      <li><a href="../api/#steam.Client.on_user_invite_accept">on_user_invite_accept() (steam.Client method)</a>
 </li>
+      <li><a href="../api/#steam.Client.on_user_invite_decline">on_user_invite_decline() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_user_invite_decline">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.Client.on_user_remove">on_user_remove() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.on_user_remove">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.PersonaState.Online">Online (steam.PersonaState attribute)</a>
 </li>
       <li><a href="../api/#steam.Clan.online_count">online_count (steam.Clan attribute)</a>
@@ -2865,8 +2931,6 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Inventory.update">update() (steam.Inventory method)</a>
 </li>
       <li><a href="../api/#steam.TradeOffer.updated_at">updated_at (steam.TradeOffer attribute)</a>
-</li>
-      <li><a href="../api/#steam.Comment.upvote">upvote() (steam.Comment method)</a>
 </li>
       <li><a href="../api/#steam.FetchedGame.url">url (steam.FetchedGame property)</a>
 
