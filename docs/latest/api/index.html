@@ -3473,6 +3473,8 @@ async</span><a class="reference internal" href="#steam.abc.BaseUser.equipped_pro
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.favourite_badge">favourite_badge</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.abc.BaseUser.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.friends">friends</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.games">games</a></li><li class="py-attribute-table-entry">
@@ -3843,7 +3845,7 @@ api.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message to add to the comment section.</p></li>
-<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p></li>
+<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether to subscribe to notifications on any future activity in this comment’s thread.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -3883,6 +3885,17 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd>
 <dt class="field-even">Yields</dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.abc.BaseUser.fetch_comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.fetch_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a comment by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4162,6 +4175,8 @@ def</span><a class="reference internal" href="#steam.Announcement.comments">comm
 async</span><a class="reference internal" href="#steam.Announcement.downvote">downvote</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Announcement.edit">edit</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Announcement.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Announcement.hide">hide</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -4464,7 +4479,7 @@ async</span><a class="reference internal" href="#steam.Announcement.upvote">upvo
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message to add to the comment section.</p></li>
-<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p></li>
+<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether to subscribe to notifications on any future activity in this comment’s thread.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -4504,6 +4519,17 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd>
 <dt class="field-even">Yields</dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Announcement.fetch_comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Announcement.fetch_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a comment by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5368,6 +5394,8 @@ async for</span><a class="reference internal" href="#steam.Clan.events">events</
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Clan.fetch_announcement">fetch_announcement</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Clan.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Clan.fetch_event">fetch_event</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Clan.fetch_members">fetch_members</a></li><li class="py-attribute-table-entry">
@@ -5784,7 +5812,7 @@ fetch all of the clan’s announcements, but this will be a very slow operation.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message to add to the comment section.</p></li>
-<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p></li>
+<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether to subscribe to notifications on any future activity in this comment’s thread.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -5859,6 +5887,17 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Event" title="steam.event.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.event.Event</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Clan.fetch_comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.fetch_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a comment by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6118,6 +6157,8 @@ async</span><a class="reference internal" href="#steam.Event.comment">comment</a
 def</span><a class="reference internal" href="#steam.Event.comments">comments</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Event.edit">edit</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Event.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Event.server">server</a></li></ul>
 </div></div><dl class="py class">
@@ -6395,7 +6436,7 @@ async</span><a class="reference internal" href="#steam.Event.server">server</a><
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message to add to the comment section.</p></li>
-<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p></li>
+<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether to subscribe to notifications on any future activity in this comment’s thread.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -6435,6 +6476,17 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd>
 <dt class="field-even">Yields</dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Event.fetch_comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Event.fetch_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a comment by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8542,6 +8594,8 @@ async</span><a class="reference internal" href="#steam.ClientUser.equipped_profi
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.favourite_badge">favourite_badge</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ClientUser.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.games">games</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ClientUser.has_setup_profile">has_setup_profile</a></li><li class="py-attribute-table-entry">
@@ -8828,7 +8882,7 @@ websocket.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message to add to the comment section.</p></li>
-<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p></li>
+<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether to subscribe to notifications on any future activity in this comment’s thread.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -8895,6 +8949,17 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.FavouriteBadge" title="steam.FavouriteBadge"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.FavouriteBadge</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ClientUser.fetch_comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.fetch_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a comment by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9183,6 +9248,8 @@ async</span><a class="reference internal" href="#steam.User.equipped_profile_ite
 async</span><a class="reference internal" href="#steam.User.escrow">escrow</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.favourite_badge">favourite_badge</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.User.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.friends">friends</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -9550,7 +9617,7 @@ private inventory.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message to add to the comment section.</p></li>
-<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – WWhether or not to subscribe to notifications on any future activity in this comment’s thread.</p></li>
+<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether to subscribe to notifications on any future activity in this comment’s thread.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -9617,6 +9684,17 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.FavouriteBadge" title="steam.FavouriteBadge"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.FavouriteBadge</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.User.fetch_comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.fetch_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a comment by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>

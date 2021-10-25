@@ -1877,7 +1877,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></span></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran before any arguments are parsed.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run before any arguments are parsed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -1891,7 +1891,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dt class="sig sig-object py">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">after_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">steam.ext.commands.commands.InvokeT</span></span></span></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran after the command has been invoked.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run after the command has been invoked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -1913,7 +1913,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Command.can_run">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">can_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Command.can_run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the command can be ran.</p>
+<dd><p>Whether the command can be run.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.Context"><em>Context</em></a>) – The invocation context.</p>
@@ -1997,7 +1997,7 @@ function.</p>
 <dt class="sig sig-object py" id="steam.ext.commands.Group.after_invoke">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">after_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Group.after_invoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran after the command has been invoked.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run after the command has been invoked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -2015,7 +2015,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dt class="sig sig-object py" id="steam.ext.commands.Group.before_invoke">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Group.before_invoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran before any arguments are parsed.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run before any arguments are parsed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -2032,7 +2032,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Group.can_run">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">can_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Group.can_run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the command can be ran.</p>
+<dd><p>Whether the command can be run.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.context.Context"><em>steam.ext.commands.context.Context</em></a>) – The invocation context.</p>
@@ -2472,7 +2472,7 @@ function.</p>
 <dt class="sig sig-object py" id="steam.ext.commands.HelpCommand.after_invoke">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">after_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.HelpCommand.after_invoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran after the command has been invoked.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run after the command has been invoked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -2484,7 +2484,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dt class="sig sig-object py" id="steam.ext.commands.HelpCommand.before_invoke">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.HelpCommand.before_invoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran before any arguments are parsed.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run before any arguments are parsed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -2501,7 +2501,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.HelpCommand.can_run">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">can_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.HelpCommand.can_run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the command can be ran.</p>
+<dd><p>Whether the command can be run.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.context.Context"><em>steam.ext.commands.context.Context</em></a>) – The invocation context.</p>
@@ -2698,7 +2698,7 @@ function.</p>
 <dt class="sig sig-object py" id="steam.ext.commands.DefaultHelpCommand.after_invoke">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">after_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.DefaultHelpCommand.after_invoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran after the command has been invoked.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run after the command has been invoked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -2710,7 +2710,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dt class="sig sig-object py" id="steam.ext.commands.DefaultHelpCommand.before_invoke">
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.DefaultHelpCommand.before_invoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>A decorator that <em>could be called</em>.
-Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be ran before any arguments are parsed.</p>
+Register a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine-function" title="(in Python v3.10)"><span class="xref std std-term">coroutine function</span></a> to be run before any arguments are parsed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>, (~InvokeT,)], <code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.ext.commands.commands.InvokeT</span></code>]</p>
@@ -2727,7 +2727,7 @@ Register a <a class="reference external" href="https://docs.python.org/3/glossar
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.DefaultHelpCommand.can_run">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">can_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.DefaultHelpCommand.can_run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the command can be ran.</p>
+<dd><p>Whether the command can be run.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.context.Context"><em>steam.ext.commands.context.Context</em></a>) – The invocation context.</p>
