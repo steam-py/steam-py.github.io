@@ -835,7 +835,7 @@ and by extension <code class="xref py py-meth docutils literal notranslate"><spa
 <dt class="sig sig-object py" id="steam.Client.wait_for">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['connect',</span> <span class="pre">'disconnect',</span> <span class="pre">'ready',</span> <span class="pre">'login',</span> <span class="pre">'logout'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">collections.abc.Callable[bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#steam.Client.wait_for" title="Permalink to this definition">¶</a></dt>
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['error'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">collections.abc.Callable[str,</span> <span class="pre">Exception,</span> <span class="pre">tuple[typing.Any,</span> <span class="pre">...],</span> <span class="pre">dict[str,</span> <span class="pre">typing.Any],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.10)"><span class="pre">Exception</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['error'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">collections.abc.Callable[str,</span> <span class="pre">Exception,</span> <span class="pre">tuple[typing.Any,</span> <span class="pre">...],</span> <span class="pre">dict[str,</span> <span class="pre">typing.Any],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.10)"><span class="pre">Exception</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">typing.Any</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">event:</span> <span class="pre">Literal['message'],</span> <span class="pre">*,</span> <span class="pre">check:</span> <span class="pre">Callable[[Message],</span> <span class="pre">bool]</span> <span class="pre">=</span> <span class="pre">&lt;return_true&gt;,</span> <span class="pre">timeout:</span> <span class="pre">float</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.Message" title="steam.Message"><span class="pre">Message</span></a></span></span></dt>
 <dt class="sig sig-object py">
@@ -3894,8 +3894,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.fetch_comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a comment by its ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the comment to fetch.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4528,8 +4531,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Announcement.fetch_comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a comment by its ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the comment to fetch.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5896,8 +5902,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Clan.fetch_comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a comment by its ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the comment to fetch.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.comment.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.comment.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6075,7 +6084,7 @@ async</span><a class="reference internal" href="#steam.Comment.report">report</a
 <dd><p>The author of the comment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Union[<a class="reference internal" href="#steam.User" title="steam.user.User">steam.user.User</a>, <a class="reference internal" href="#steam.ClientUser" title="steam.user.ClientUser">steam.user.ClientUser</a>]</p>
+<dd class="field-odd"><p>Authors</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6485,8 +6494,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Event.fetch_comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a comment by its ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the comment to fetch.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8958,8 +8970,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.fetch_comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a comment by its ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the comment to fetch.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9693,8 +9708,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.fetch_comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a comment by its ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the comment to fetch.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
