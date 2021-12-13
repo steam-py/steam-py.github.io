@@ -164,7 +164,7 @@ something you listen for and then respond to.</p>
 </pre></div>
 </div>
 <p>Lets walk through what this does:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We import the steam module, if this raises a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError" title="(in Python v3.10)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code></a> see <a class="reference internal" href="#installing"><span class="std std-ref">Installation</span></a> again.</p></li>
 <li><p>We then subclass <a class="reference internal" href="../api/#steam.Client" title="steam.Client"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Client</span></code></a> to create our own client <code class="docutils literal notranslate"><span class="pre">MyClient</span></code>.</p></li>
 <li><p>We register an event <a class="reference internal" href="../api/#steam.Client.on_ready" title="steam.Client.on_ready"><code class="xref py py-meth docutils literal notranslate"><span class="pre">steam.Client.on_ready()</span></code></a> in <code class="docutils literal notranslate"><span class="pre">MyClient</span></code>, which will be called after the client is
@@ -204,7 +204,7 @@ py -3 example_bot.py
 </div>
 <p>This will perform the same as the example using <a class="reference internal" href="../api/#steam.Client.on_message" title="steam.Client.on_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">steam.Client.on_message()</span></code></a>.</p>
 <p>Except with some key differences:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We import steam.ext.commands to handle commands.</p></li>
 <li><p>We subclass <a class="reference internal" href="../ext/commands/api/#steam.ext.commands.Bot" title="steam.ext.commands.Bot"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ext.commands.Bot</span></code></a> to inherit command parsing functionality.</p></li>
 <li><p>We swap out the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">message.content.startswith(&quot;$hello&quot;):</span></code> line for a command that is registered with the
