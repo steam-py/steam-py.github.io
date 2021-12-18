@@ -211,6 +211,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.AccountNotFriends">AccountNotFriends (steam.Result attribute)</a>
 </li>
+      <li><a href="../api/#steam.Item.actions">actions (steam.Item attribute)</a>
+</li>
       <li><a href="../api/#steam.TradeOfferState.Active">Active (steam.TradeOfferState attribute)</a>
 </li>
       <li><a href="../api/#steam.Clan.active_member_count">active_member_count (steam.Clan attribute)</a>
@@ -1201,8 +1203,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.iterators.AsyncIterator.filter">filter() (steam.iterators.AsyncIterator method)</a>
 </li>
-      <li><a href="../api/#steam.Inventory.filter_items">filter_items() (steam.Inventory method)</a>
-</li>
       <li><a href="../api/#steam.utils.find">find() (in module steam.utils)</a>
 
       <ul>
@@ -1220,6 +1220,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.iterators.AsyncIterator.flatten">flatten() (steam.iterators.AsyncIterator method)</a>
 </li>
       <li><a href="../api/#steam.Forbidden">Forbidden</a>
+</li>
+      <li><a href="../api/#steam.Item.fraud_warnings">fraud_warnings (steam.Item attribute)</a>
 </li>
       <li><a href="../api/#steam.FriendRelationship.Friend">Friend (steam.FriendRelationship attribute)</a>
 </li>
@@ -1275,9 +1277,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Game">Game (class in steam)</a>
 </li>
-      <li><a href="../api/#steam.abc.BaseUser.game">game (steam.abc.BaseUser attribute)</a>
+      <li><a href="../api/#steam.game">game (in module steam)</a>
 
       <ul>
+        <li><a href="../api/#steam.abc.BaseUser.game">(steam.abc.BaseUser attribute)</a>
+</li>
         <li><a href="../api/#steam.Announcement.game">(steam.Announcement attribute)</a>
 </li>
         <li><a href="../api/#steam.Asset.game">(steam.Asset attribute)</a>
@@ -1294,7 +1298,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.GameServer.game">(steam.GameServer attribute)</a>
 </li>
-        <li><a href="../api/#steam.Inventory.game">(steam.Inventory attribute)</a>
+        <li><a href="../api/#steam.Item.game">(steam.Item attribute)</a>
 </li>
         <li><a href="../api/#steam.ProfileItem.game">(steam.ProfileItem attribute)</a>
 </li>
@@ -1375,8 +1379,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_group">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.Inventory.get_item">get_item() (steam.Inventory method)</a>
-</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_prefix">get_prefix() (steam.ext.commands.Bot method)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Cooldown.get_retry_after">get_retry_after() (steam.ext.commands.Cooldown method)</a>
@@ -1713,7 +1715,7 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../api/#steam.Inventory">Inventory (class in steam)</a>
+      <li><a href="../api/#steam.Inventory">Inventory (in module steam)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.inventory">inventory() (steam.abc.BaseUser method)</a>
 
@@ -1923,7 +1925,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.ItemDeleted">ItemDeleted (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.Inventory.items">items (steam.Inventory attribute)</a>
+      <li><a href="../api/#steam.items">items (in module steam)</a>
 
       <ul>
         <li><a href="../api/#steam.Profile.items">(steam.Profile attribute)</a>
@@ -2431,14 +2433,16 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.OwnedProfileItems">OwnedProfileItems (class in steam)</a>
 </li>
-      <li><a href="../api/#steam.Clan.owner">owner (steam.Clan attribute)</a>
+      <li><a href="../api/#steam.owner">owner (in module steam)</a>
 
       <ul>
+        <li><a href="../api/#steam.Asset.owner">(steam.Asset attribute)</a>
+</li>
+        <li><a href="../api/#steam.Clan.owner">(steam.Clan attribute)</a>
+</li>
         <li><a href="../api/#steam.Comment.owner">(steam.Comment attribute)</a>
 </li>
         <li><a href="../api/#steam.Group.owner">(steam.Group attribute)</a>
-</li>
-        <li><a href="../api/#steam.Inventory.owner">(steam.Inventory attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.User.owns">owns() (steam.User method)</a>
@@ -2636,6 +2640,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.real_name">(steam.User attribute)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.TradeOffer.receipt">receipt() (steam.TradeOffer method)</a>
+</li>
       <li><a href="../api/#steam.Result.RefundToWallet">RefundToWallet (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.GameServer.region">region (steam.GameServer attribute)</a>
@@ -2672,10 +2678,10 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Group.remove_command">(steam.ext.commands.Group method)</a>
 </li>
       </ul></li>
-      <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_listener">remove_listener() (steam.ext.commands.Bot method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_listener">remove_listener() (steam.ext.commands.Bot method)</a>
+</li>
       <li><a href="../api/#steam.Comment.report">report() (steam.Comment method)</a>
 </li>
       <li><a href="../api/#steam.FriendRelationship.RequestInitiator">RequestInitiator (steam.FriendRelationship attribute)</a>
@@ -3071,8 +3077,6 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.unload_extension">unload_extension() (steam.ext.commands.Bot method)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.UnmatchedKeyValuePair">UnmatchedKeyValuePair</a>
-</li>
-      <li><a href="../api/#steam.Inventory.update">update() (steam.Inventory method)</a>
 </li>
       <li><a href="../api/#steam.Announcement.updated_at">updated_at (steam.Announcement attribute)</a>
 

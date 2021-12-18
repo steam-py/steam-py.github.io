@@ -1391,14 +1391,10 @@ is an alternative for <a class="reference internal" href="#steam.utils.find" tit
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p>The first element from the <code class="docutils literal notranslate"><span class="pre">iterable</span></code> which matches all the traits passed in <code class="docutils literal notranslate"><span class="pre">attrs</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no matching</p></li>
-<li><p><em>element was found.</em></p></li>
-</ul>
-</p>
+<dd class="field-even"><p>The first element from the <code class="docutils literal notranslate"><span class="pre">iterable</span></code> which matches all the traits passed in <code class="docutils literal notranslate"><span class="pre">attrs</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no matching element was found.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>_T | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.enums.E</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3661,7 +3657,7 @@ api.</p>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Forbidden" title="steam.Forbidden"><strong>Forbidden</strong></a> – The user’s inventory is private.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Inventory" title="steam.trade.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.Inventory</span></code></a></p>
+<dd class="field-odd"><p>Inventory</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8205,26 +8201,9 @@ Attributes</span><ul>
 </section>
 <section id="trading">
 <h3>Trading<a class="headerlink" href="#trading" title="Permalink to this headline">¶</a></h3>
-<div class="py-attribute-table" data-move-to-id="steam.Inventory"><div class="py-attribute-table-column">
-<span>
-Attributes</span><ul>
-<li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Inventory.game">game</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Inventory.items">items</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Inventory.owner">owner</a></li></ul>
-</div><div class="py-attribute-table-column">
-<span>
-Methods</span><ul>
-<li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.Inventory.filter_items">filter_items</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.Inventory.get_item">get_item</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Inventory.update">update</a></li></ul>
-</div></div><dl class="py class">
+<div class="py-attribute-table" data-move-to-id="steam.Inventory"></div><dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Inventory">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Inventory</span></span><a class="headerlink" href="#steam.Inventory" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Inventory</span></span><a class="headerlink" href="#steam.Inventory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a User’s inventory.</p>
 <div class="operations docutils container">
 <dl class="describe">
@@ -8246,11 +8225,9 @@ async</span><a class="reference internal" href="#steam.Inventory.update">update<
 </dd></dl>
 
 </div>
-<dl class="field-list simple">
-</dl>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Inventory.items">
-<span class="sig-name descname"><span class="pre">items</span></span><a class="headerlink" href="#steam.Inventory.items" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.items">
+<span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">items</span></span><a class="headerlink" href="#steam.items" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the inventory’s items.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -8260,8 +8237,8 @@ async</span><a class="reference internal" href="#steam.Inventory.update">update<
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Inventory.owner">
-<span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#steam.Inventory.owner" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.owner">
+<span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#steam.owner" title="Permalink to this definition">¶</a></dt>
 <dd><p>The owner of the inventory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -8271,58 +8248,13 @@ async</span><a class="reference internal" href="#steam.Inventory.update">update<
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Inventory.game">
-<span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.Inventory.game" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.game">
+<span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.game" title="Permalink to this definition">¶</a></dt>
 <dd><p>The game the inventory the game belongs to.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#steam.game.StatefulGame" title="steam.game.StatefulGame">steam.game.StatefulGame</a></p>
 </dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Inventory.filter_items">
-<span class="sig-name descname"><span class="pre">filter_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Inventory.filter_items" title="Permalink to this definition">¶</a></dt>
-<dd><p>A helper function that filters items by name from the inventory.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The names of the items to filter for.</p></li>
-<li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><em>None</em></a>) – The maximum amount of items to return. Checks from the front of the items.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – You passed a limit and multiple item names.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The matching items.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.trade.I</span></code>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Inventory.get_item">
-<span class="sig-name descname"><span class="pre">get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Inventory.get_item" title="Permalink to this definition">¶</a></dt>
-<dd><p>A helper function that gets an item or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no matching item is found by name from the inventory.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The item to get from the inventory.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">steam.trade.I</span></code>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Inventory.update">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Inventory.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Re-fetches the inventory.</p>
-<dl class="field-list simple">
 </dl>
 </dd></dl>
 
@@ -8332,9 +8264,12 @@ async</span><a class="reference internal" href="#steam.Inventory.update">update<
 <span>
 Attributes</span><ul>
 <li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Item.actions">actions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.colour">colour</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.descriptions">descriptions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.display_name">display_name</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Item.fraud_warnings">fraud_warnings</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Item.game">game</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.icon_url">icon_url</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.name">name</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.tags">tags</a></li><li class="py-attribute-table-entry">
@@ -8430,10 +8365,32 @@ def</span><a class="reference internal" href="#steam.Item.is_tradable">is_tradab
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Item.icon_url">
 <span class="sig-name descname"><span class="pre">icon_url</span></span><a class="headerlink" href="#steam.Item.icon_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The icon_url of the item. Uses the large (184x184 px) image url.</p>
+<dd><p>The icon url of the item. Uses the large (184x184 px) image url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Item.fraud_warnings">
+<span class="sig-name descname"><span class="pre">fraud_warnings</span></span><a class="headerlink" href="#steam.Item.fraud_warnings" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fraud warnings for the item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Item.actions">
+<span class="sig-name descname"><span class="pre">actions</span></span><a class="headerlink" href="#steam.Item.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The actions for the item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8460,6 +8417,12 @@ def</span><a class="reference internal" href="#steam.Item.is_tradable">is_tradab
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Item.game">
+<span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.Item.game" title="Permalink to this definition">¶</a></dt>
+<dd><p>The game the item is from.</p>
+</dd></dl>
+
 </dd></dl>
 
 <div class="py-attribute-table" data-move-to-id="steam.Asset"><div class="py-attribute-table-column">
@@ -8470,7 +8433,8 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.Asset.asset_id">asset_id</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Asset.class_id">class_id</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Asset.game">game</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Asset.instance_id">instance_id</a></li></ul>
+<a class="reference internal" href="#steam.Asset.instance_id">instance_id</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Asset.owner">owner</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Asset">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Asset</span></span><a class="headerlink" href="#steam.Asset" title="Permalink to this definition">¶</a></dt>
@@ -8486,17 +8450,6 @@ its class and instance IDs.</p>
 </div>
 <dl class="field-list simple">
 </dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Asset.game">
-<span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.Asset.game" title="Permalink to this definition">¶</a></dt>
-<dd><p>The game the item is from.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Game" title="steam.game.Game">steam.game.Game</a></p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Asset.asset_id">
 <span class="sig-name descname"><span class="pre">asset_id</span></span><a class="headerlink" href="#steam.Asset.asset_id" title="Permalink to this definition">¶</a></dt>
@@ -8539,6 +8492,23 @@ its class and instance IDs.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Asset.owner">
+<span class="sig-name descname"><span class="pre">owner</span></span><a class="headerlink" href="#steam.Asset.owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>The owner of the asset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.abc.BaseUser" title="steam.abc.BaseUser">steam.abc.BaseUser</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Asset.game">
+<span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.Asset.game" title="Permalink to this definition">¶</a></dt>
+<dd><p>The game the item is from.</p>
 </dd></dl>
 
 </dd></dl>
@@ -8797,6 +8767,23 @@ websocket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.PersonaStateFlag" title="steam.enums.PersonaStateFlag">steam.enums.PersonaStateFlag</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ClientUser.inventory">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.inventory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a user’s <a class="reference internal" href="#steam.Inventory" title="steam.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Inventory</span></code></a> for trading.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>game</strong> (<a class="reference internal" href="#steam.Game" title="steam.Game"><em>Game</em></a>) – The game to fetch the inventory for.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Forbidden" title="steam.Forbidden"><strong>Forbidden</strong></a> – The user’s inventory is private.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Inventory</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9061,23 +9048,6 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dt class="sig sig-object py" id="steam.ClientUser.instance">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.ClientUser.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.ClientUser.inventory">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.inventory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch a user’s <a class="reference internal" href="#steam.Inventory" title="steam.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Inventory</span></code></a> for trading.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>game</strong> (<a class="reference internal" href="#steam.Game" title="steam.game.Game"><em>steam.game.Game</em></a>) – The game to fetch the inventory for.</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="#steam.Forbidden" title="steam.Forbidden"><strong>Forbidden</strong></a> – The user’s inventory is private.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Inventory" title="steam.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Inventory</span></code></a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py property">
@@ -9824,7 +9794,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dd class="field-even"><p><a class="reference internal" href="#steam.Forbidden" title="steam.Forbidden"><strong>Forbidden</strong></a> – The user’s inventory is private.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Inventory" title="steam.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Inventory</span></code></a></p>
+<dd class="field-odd"><p>Inventory</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10002,18 +9972,33 @@ def</span><a class="reference internal" href="#steam.Game.is_steam_game">is_stea
 <dt class="sig sig-object py" id="steam.Game.name">
 <span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#steam.Game.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The game’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Game.id">
 <span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#steam.Game.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The game’s app ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Game.context_id">
 <span class="sig-name descname"><span class="pre">context_id</span></span><a class="headerlink" href="#steam.Game.context_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The context id of the game normally <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
@@ -10431,7 +10416,7 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.WishlistGame.added_at">
 <span class="sig-name descname"><span class="pre">added_at</span></span><a class="headerlink" href="#steam.WishlistGame.added_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The time the the game was added to their wishlist.</p>
+<dd><p>The time that the game was added to their wishlist.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a></p>
@@ -10478,7 +10463,7 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 <dd><p>The review status of the game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Any</p>
+<dd class="field-odd"><p>steam.enums.E</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10552,7 +10537,7 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.is_free">
 <span class="sig-name descname"><span class="pre">is_free</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.is_free" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is free to download.</p>
+<dd><p>Whether the game is free to download.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -10563,7 +10548,7 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.is_on_windows">
 <span class="sig-name descname"><span class="pre">is_on_windows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.is_on_windows" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is able to be played on Windows.</p>
+<dd><p>Whether the game is playable on Windows.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -10574,7 +10559,7 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.is_on_mac_os">
 <span class="sig-name descname"><span class="pre">is_on_mac_os</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.is_on_mac_os" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is able to be played on MacOS.</p>
+<dd><p>Whether the game is playable on macOS.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -10585,7 +10570,7 @@ async</span><a class="reference internal" href="#steam.WishlistGame.player_count
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.is_on_linux">
 <span class="sig-name descname"><span class="pre">is_on_linux</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.is_on_linux" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is able to be played on Linux.</p>
+<dd><p>Whether the game is playable on Linux.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -10933,7 +10918,7 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.is_free">
 <span class="sig-name descname"><span class="pre">is_free</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_free" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is free to download.</p>
+<dd><p>Whether the game is free to download.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -10944,7 +10929,7 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.is_on_windows">
 <span class="sig-name descname"><span class="pre">is_on_windows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_on_windows" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is able to be played on Windows.</p>
+<dd><p>Whether the game is playable on Windows.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -10955,7 +10940,7 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.is_on_mac_os">
 <span class="sig-name descname"><span class="pre">is_on_mac_os</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_on_mac_os" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is able to be played on MacOS.</p>
+<dd><p>Whether the game is playable on macOS.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -10966,7 +10951,7 @@ async</span><a class="reference internal" href="#steam.FetchedGame.player_count"
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.is_on_linux">
 <span class="sig-name descname"><span class="pre">is_on_linux</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.is_on_linux" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the game is able to be played on Linux.</p>
+<dd><p>Whether the game is playable on Linux.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -11150,7 +11135,9 @@ async</span><a class="reference internal" href="#steam.TradeOffer.decline">decli
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.TradeOffer.is_gift">is_gift</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.TradeOffer.is_our_offer">is_our_offer</a></li></ul>
+def</span><a class="reference internal" href="#steam.TradeOffer.is_our_offer">is_our_offer</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.TradeOffer.receipt">receipt</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.TradeOffer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">TradeOffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_to_send</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_to_receive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">items_to_send</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">items_to_receive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.TradeOffer" title="Permalink to this definition">¶</a></dt>
@@ -11333,6 +11320,20 @@ This rarely needs to be called as the client handles most of these.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#steam.ClientException" title="steam.ClientException"><strong>ClientException</strong></a> – The trade is either not active or already cancelled.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.TradeOffer.receipt">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">receipt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.TradeOffer.receipt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the receipt for a trade offer and the updated asset ids for the trade.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A trade receipt.  .. source:: steam.TradeOfferReceipt</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.TradeOfferReceiptItem</span></code>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.TradeOfferReceiptItem</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
