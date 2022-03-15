@@ -1017,10 +1017,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.EncryptionFailure">EncryptionFailure (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.Announcement.end">end (steam.Announcement attribute)</a>
+      <li><a href="../api/#steam.Announcement.ends_at">ends_at (steam.Announcement attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.Event.end">(steam.Event attribute)</a>
+        <li><a href="../api/#steam.Event.ends_at">(steam.Event attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.ChatEntryType.Entered">Entered (steam.ChatEntryType attribute)</a>
@@ -1159,6 +1159,14 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_price">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.abc.BaseUser.fetch_review">fetch_review() (steam.abc.BaseUser method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.ClientUser.fetch_review">(steam.ClientUser method)</a>
+</li>
+        <li><a href="../api/#steam.User.fetch_review">(steam.User method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.Client.fetch_server">fetch_server() (steam.Client method)</a>
 
       <ul>
@@ -1177,14 +1185,14 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_trade">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.fetch_user">fetch_user() (steam.Client method)</a>
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_user">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.fetch_user_named">fetch_user_named() (steam.Client method)</a>
 
       <ul>
@@ -1469,10 +1477,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.help_command">help_command (steam.ext.commands.Bot property)</a>
 </li>
-      <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand">HelpCommand (class in steam.ext.commands)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand">HelpCommand (class in steam.ext.commands)</a>
+</li>
       <li><a href="../api/#steam.Announcement.hidden">hidden (steam.Announcement attribute)</a>
 
       <ul>
@@ -1481,8 +1489,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Command.hidden">(steam.ext.commands.Command attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.Announcement.hide">hide() (steam.Announcement method)</a>
-</li>
       <li><a href="../api/#steam.ChatEntryType.HistoricalChat">HistoricalChat (steam.ChatEntryType attribute)</a>
 </li>
       <li><a href="../api/#steam.abc.Channel.history">history() (steam.abc.Channel method)</a>
@@ -2635,7 +2641,11 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Result.RefundToWallet">RefundToWallet (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.GameServer.region">region (steam.GameServer attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.Query.region">(steam.Query property)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.Result.RegionLocked">RegionLocked (steam.Result attribute)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Converter.register">register() (steam.ext.commands.Converter class method)</a>
@@ -2668,8 +2678,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Group.remove_command">(steam.ext.commands.Group method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_listener">remove_listener() (steam.ext.commands.Bot method)</a>
 </li>
       <li><a href="../api/#steam.Comment.report">report() (steam.Comment method)</a>
@@ -2682,6 +2690,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Cooldown.reset">reset() (steam.ext.commands.Cooldown method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.HTTPException.response">response (steam.HTTPException attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.RestrictedDevice">RestrictedDevice (steam.Result attribute)</a>
@@ -2692,8 +2702,36 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.CommandOnCooldown.retry_after">retry_after (steam.ext.commands.CommandOnCooldown attribute)</a>
 </li>
+      <li><a href="../api/#steam.Review">Review (class in steam)</a>
+</li>
+      <li><a href="../api/#steam.FetchedGame.review">review() (steam.FetchedGame method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.game.StatefulGame.review">(steam.game.StatefulGame method)</a>
+</li>
+        <li><a href="../api/#steam.UserGame.review">(steam.UserGame method)</a>
+</li>
+        <li><a href="../api/#steam.WishlistGame.review">(steam.WishlistGame method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.WishlistGame.review_status">review_status (steam.WishlistGame attribute)</a>
 </li>
+      <li><a href="../api/#steam.abc.BaseUser.reviews">reviews() (steam.abc.BaseUser method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.ClientUser.reviews">(steam.ClientUser method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedGame.reviews">(steam.FetchedGame method)</a>
+</li>
+        <li><a href="../api/#steam.game.StatefulGame.reviews">(steam.game.StatefulGame method)</a>
+</li>
+        <li><a href="../api/#steam.User.reviews">(steam.User method)</a>
+</li>
+        <li><a href="../api/#steam.UserGame.reviews">(steam.UserGame method)</a>
+</li>
+        <li><a href="../api/#steam.WishlistGame.reviews">(steam.WishlistGame method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.ReviewType">ReviewType (class in steam)</a>
 </li>
       <li><a href="../api/#steam.Result.Revoked">Revoked (steam.Result attribute)</a>
@@ -2813,11 +2851,7 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.UserBadge.SpringCleaning2020">SpringCleaning2020 (steam.UserBadge attribute)</a>
 </li>
       <li><a href="../api/#steam.Announcement.start">start (steam.Announcement attribute)</a>
-
-      <ul>
-        <li><a href="../api/#steam.Event.start">(steam.Event attribute)</a>
 </li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.start">start() (steam.Client method)</a>
@@ -2826,6 +2860,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.start">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.Event.starts_at">starts_at (steam.Event attribute)</a>
+</li>
       <li><a href="../api/#steam.abc.BaseUser.state">state (steam.abc.BaseUser attribute)</a>
 
       <ul>
@@ -3041,8 +3077,6 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.User.unblock">unblock() (steam.User method)</a>
 </li>
       <li><a href="../api/#steam.Result.UnexpectedError">UnexpectedError (steam.Result attribute)</a>
-</li>
-      <li><a href="../api/#steam.Announcement.unhide">unhide() (steam.Announcement method)</a>
 </li>
       <li><a href="../api/#steam.Query.unique_addresses">unique_addresses (steam.Query property)</a>
 </li>
