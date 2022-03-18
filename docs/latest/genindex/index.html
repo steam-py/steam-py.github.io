@@ -263,6 +263,8 @@ DEALINGS IN THE SOFTWARE.
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Command.aliases">aliases (steam.ext.commands.Command attribute)</a>
 </li>
+      <li><a href="../api/#steam.InstanceFlag.All">All (steam.InstanceFlag attribute)</a>
+</li>
       <li><a href="../api/#steam.Query.all">all (steam.Query property)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.all_commands">all_commands (steam.ext.commands.Bot property)</a>
@@ -527,7 +529,13 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Clan.chat_id">chat_id (steam.Clan attribute)</a>
 </li>
+      <li><a href="../api/#steam.InstanceFlag.ChatClan">ChatClan (steam.InstanceFlag attribute)</a>
+</li>
       <li><a href="../api/#steam.ChatEntryType">ChatEntryType (class in steam)</a>
+</li>
+      <li><a href="../api/#steam.InstanceFlag.ChatLobby">ChatLobby (steam.InstanceFlag attribute)</a>
+</li>
+      <li><a href="../api/#steam.InstanceFlag.ChatMMSLobby">ChatMMSLobby (steam.InstanceFlag attribute)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.check">check() (in module steam.ext.commands)</a>
 
@@ -562,11 +570,11 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.Clan">Clan (steam.ext.commands.BucketType attribute)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Context.clan">clan (steam.ext.commands.Context attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.Message.clan">(steam.Message attribute)</a>
 </li>
-      <li><a href="../api/#steam.InstanceFlag.Clan">Clan (steam.InstanceFlag attribute)</a>
-</li>
-      <li><a href="../api/#steam.Message.clan">clan (steam.Message attribute)</a>
-</li>
+      </ul></li>
       <li><a href="../api/#steam.Type.Clan">Clan (steam.Type attribute)</a>
 </li>
       <li><a href="../api/#steam.FetchedGame.clan">clan() (steam.FetchedGame method)</a>
@@ -677,10 +685,10 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand.cog_command_error">(steam.ext.commands.HelpCommand method)</a>
 </li>
       </ul></li>
-      <li><a href="../ext/commands/api/#steam.ext.commands.Cog.cog_unload">cog_unload() (steam.ext.commands.Cog method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../ext/commands/api/#steam.ext.commands.Cog.cog_unload">cog_unload() (steam.ext.commands.Cog method)</a>
+</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.cogs">cogs (steam.ext.commands.Bot property)</a>
 </li>
       <li><a href="../api/#steam.Item.colour">colour (steam.Item attribute)</a>
@@ -802,6 +810,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../api/#steam.Result.ConnectFailed">ConnectFailed (steam.Result attribute)</a>
+</li>
+      <li><a href="../api/#steam.InstanceFlag.Console">Console (steam.InstanceFlag attribute)</a>
 </li>
       <li><a href="../api/#steam.Type.ConsoleUser">ConsoleUser (steam.Type attribute)</a>
 </li>
@@ -947,8 +957,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.DeniedDueToCommunityCooldown">DeniedDueToCommunityCooldown (steam.Result attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Clan.description">description (steam.Clan property)</a>
 
       <ul>
@@ -961,10 +969,16 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ProfileItem.description">(steam.ProfileItem attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Item.descriptions">descriptions (steam.Item attribute)</a>
 </li>
-      <li><a href="../api/#steam.UIMode.Desktop">Desktop (steam.UIMode attribute)</a>
+      <li><a href="../api/#steam.InstanceFlag.Desktop">Desktop (steam.InstanceFlag attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.UIMode.Desktop">(steam.UIMode attribute)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.Universe.Dev">Dev (steam.Universe attribute)</a>
 </li>
       <li><a href="../api/#steam.FetchedGame.developers">developers (steam.FetchedGame attribute)</a>
@@ -2051,8 +2065,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.load_extension">load_extension() (steam.ext.commands.Bot method)</a>
 </li>
-      <li><a href="../api/#steam.InstanceFlag.Lobby">Lobby (steam.InstanceFlag attribute)</a>
-</li>
       <li><a href="../api/#steam.Clan.location">location (steam.Clan attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.LockingFailed">LockingFailed (steam.Result attribute)</a>
@@ -2168,8 +2180,6 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../ext/commands/api/#steam.ext.commands.MissingRequiredArgument">MissingRequiredArgument</a>
 </li>
       <li><a href="../api/#steam.ReviewType.Mixed">Mixed (steam.ReviewType attribute)</a>
-</li>
-      <li><a href="../api/#steam.InstanceFlag.MMSLobby">MMSLobby (steam.InstanceFlag attribute)</a>
 </li>
       <li><a href="../api/#steam.UIMode.Mobile">Mobile (steam.UIMode attribute)</a>
 </li>
@@ -3216,8 +3226,12 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ChatEntryType.WasKicked">WasKicked (steam.ChatEntryType attribute)</a>
 </li>
-      <li><a href="../api/#steam.UIMode.Web">Web (steam.UIMode attribute)</a>
+      <li><a href="../api/#steam.InstanceFlag.Web">Web (steam.InstanceFlag attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.UIMode.Web">(steam.UIMode attribute)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.FetchedGame.website_url">website_url (steam.FetchedGame attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.WGNetworkSendExceeded">WGNetworkSendExceeded (steam.Result attribute)</a>
@@ -3228,10 +3242,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Query.whitelisted">whitelisted (steam.Query property)</a>
 </li>
-      <li><a href="../api/#steam.UserBadge.Winter2015ARGRedHerring">Winter2015ARGRedHerring (steam.UserBadge attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.UserBadge.Winter2015ARGRedHerring">Winter2015ARGRedHerring (steam.UserBadge attribute)</a>
+</li>
       <li><a href="../api/#steam.UserBadge.WinterSale2011">WinterSale2011 (steam.UserBadge attribute)</a>
 </li>
       <li><a href="../api/#steam.UserBadge.WinterSale2012">WinterSale2012 (steam.UserBadge attribute)</a>

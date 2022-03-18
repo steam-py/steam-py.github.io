@@ -2335,20 +2335,44 @@ is an alternative for <a class="reference internal" href="#steam.utils.find" tit
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">InstanceFlag</span></span><a class="headerlink" href="#steam.InstanceFlag" title="Permalink to this definition">¶</a></dt>
 <dd><p>An enumeration.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.InstanceFlag.MMSLobby">
-<span class="sig-name descname"><span class="pre">MMSLobby</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">131072</span></em><a class="headerlink" href="#steam.InstanceFlag.MMSLobby" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.InstanceFlag.All">
+<span class="sig-name descname"><span class="pre">All</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#steam.InstanceFlag.All" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Instance for all Steam IDs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.InstanceFlag.Desktop">
+<span class="sig-name descname"><span class="pre">Desktop</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#steam.InstanceFlag.Desktop" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Instance for desktop Steam IDs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.InstanceFlag.Console">
+<span class="sig-name descname"><span class="pre">Console</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#steam.InstanceFlag.Console" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Instance for console  Steam IDs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.InstanceFlag.Web">
+<span class="sig-name descname"><span class="pre">Web</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#steam.InstanceFlag.Web" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Instance for web Steam IDs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.InstanceFlag.ChatMMSLobby">
+<span class="sig-name descname"><span class="pre">ChatMMSLobby</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">131072</span></em><a class="headerlink" href="#steam.InstanceFlag.ChatMMSLobby" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Steam ID is for a MMS Lobby.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.InstanceFlag.Lobby">
-<span class="sig-name descname"><span class="pre">Lobby</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">262144</span></em><a class="headerlink" href="#steam.InstanceFlag.Lobby" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.InstanceFlag.ChatLobby">
+<span class="sig-name descname"><span class="pre">ChatLobby</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">262144</span></em><a class="headerlink" href="#steam.InstanceFlag.ChatLobby" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Steam ID is for a Lobby.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.InstanceFlag.Clan">
-<span class="sig-name descname"><span class="pre">Clan</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">524288</span></em><a class="headerlink" href="#steam.InstanceFlag.Clan" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.InstanceFlag.ChatClan">
+<span class="sig-name descname"><span class="pre">ChatClan</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">524288</span></em><a class="headerlink" href="#steam.InstanceFlag.ChatClan" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Steam ID is for a Clan.</p>
 </dd></dl>
 
@@ -3992,7 +4016,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.abc.BaseUser.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.InstanceFlag" title="steam.enums.InstanceFlag"><span class="pre">steam.enums.InstanceFlag</span></a></em><a class="headerlink" href="#steam.abc.BaseUser.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
 </dd></dl>
 
@@ -5975,7 +5999,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Clan.instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.Clan.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.InstanceFlag" title="steam.enums.InstanceFlag"><span class="pre">steam.enums.InstanceFlag</span></a></em><a class="headerlink" href="#steam.Clan.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
 </dd></dl>
 
@@ -6817,7 +6841,7 @@ to respond.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.GameServer.instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.GameServer.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.InstanceFlag" title="steam.enums.InstanceFlag"><span class="pre">steam.enums.InstanceFlag</span></a></em><a class="headerlink" href="#steam.GameServer.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
 </dd></dl>
 
@@ -7318,7 +7342,7 @@ async</span><a class="reference internal" href="#steam.Group.leave">leave</a></l
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Group.instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.Group.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.InstanceFlag" title="steam.enums.InstanceFlag"><span class="pre">steam.enums.InstanceFlag</span></a></em><a class="headerlink" href="#steam.Group.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
 </dd></dl>
 
@@ -9030,7 +9054,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ClientUser.instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.ClientUser.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.InstanceFlag" title="steam.enums.InstanceFlag"><span class="pre">steam.enums.InstanceFlag</span></a></em><a class="headerlink" href="#steam.ClientUser.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
 </dd></dl>
 
@@ -9789,7 +9813,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.User.instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.User.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.InstanceFlag" title="steam.enums.InstanceFlag"><span class="pre">steam.enums.InstanceFlag</span></a></em><a class="headerlink" href="#steam.User.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
 </dd></dl>
 
@@ -11227,7 +11251,7 @@ def</span><a class="reference internal" href="#steam.SteamID.is_valid">is_valid<
 </dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.SteamID.instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.SteamID.instance" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.InstanceFlag" title="steam.enums.InstanceFlag"><span class="pre">steam.enums.InstanceFlag</span></a></em><a class="headerlink" href="#steam.SteamID.instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance of the SteamID.</p>
 </dd></dl>
 
