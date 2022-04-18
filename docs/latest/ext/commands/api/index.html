@@ -152,6 +152,8 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.ext.commands.Bot.groups">groups</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ext.commands.Bot.help_command">help_command</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ext.commands.Bot.latency">latency</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.ext.commands.Bot.licenses">licenses</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.ext.commands.Bot.messages">messages</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ext.commands.Bot.trades">trades</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ext.commands.Bot.user">user</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ext.commands.Bot.users">users</a></li></ul>
@@ -621,8 +623,8 @@ and by extension <code class="xref py py-meth docutils literal notranslate"><spa
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.clans">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clans</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><span class="pre">Clan</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.clans" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the clans the connected client is in.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clans</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><span class="pre">Clan</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.clans" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the clans the connected client is in.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1017,8 +1019,8 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.groups">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ext.commands.Group" title="steam.ext.commands.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the groups the connected client is in.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ext.commands.Group" title="steam.ext.commands.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the groups the connected client is in.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1060,6 +1062,12 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dd><p>Measures latency between a heartbeat send and the heartbeat interval in seconds.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.licenses">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">licenses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.10)"><span class="pre">collections.abc.Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.License" title="steam.License"><span class="pre">steam.License</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.licenses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of licenses the client has access to.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.login">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_secret</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.login" title="Permalink to this definition">¶</a></dt>
@@ -1081,6 +1089,12 @@ passed, the code will need to be inputted by the user via <a class="reference in
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.messages">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.Message" title="steam.Message"><span class="pre">Message</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the messages the client has.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1322,8 +1336,8 @@ of the user’s trades, but this will be a very slow operation.</p></li>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.trades">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trades</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer"><span class="pre">TradeOffer</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.trades" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the trades the connected client can see.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trades</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer"><span class="pre">TradeOffer</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.trades" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the trades the connected client can see.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1334,8 +1348,8 @@ of the user’s trades, but this will be a very slow operation.</p></li>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.users">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">users</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.User" title="steam.User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.users" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the users the connected client can see.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">users</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.User" title="steam.User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the users the connected client can see.</p>
 </dd></dl>
 
 <dl class="py method">

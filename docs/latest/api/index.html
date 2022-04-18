@@ -182,6 +182,8 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.Client.clans">clans</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Client.groups">groups</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Client.latency">latency</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Client.licenses">licenses</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Client.messages">messages</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Client.trades">trades</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Client.user">user</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Client.users">users</a></li></ul>
@@ -351,26 +353,38 @@ and by extension <code class="xref py py-meth docutils literal notranslate"><spa
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Client.users">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">users</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.User" title="steam.User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.users" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the users the connected client can see.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">users</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.User" title="steam.User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.users" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the users the connected client can see.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Client.trades">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trades</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.TradeOffer" title="steam.TradeOffer"><span class="pre">TradeOffer</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.trades" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the trades the connected client can see.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trades</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.TradeOffer" title="steam.TradeOffer"><span class="pre">TradeOffer</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.trades" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the trades the connected client can see.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Client.groups">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Group" title="steam.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the groups the connected client is in.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Group" title="steam.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the groups the connected client is in.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Client.messages">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Message" title="steam.Message"><span class="pre">Message</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the messages the client has.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Client.clans">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clans</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Clan" title="steam.Clan"><span class="pre">Clan</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.clans" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the clans the connected client is in.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clans</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Clan" title="steam.Clan"><span class="pre">Clan</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.clans" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of all the clans the connected client is in.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Client.licenses">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">licenses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.10)"><span class="pre">collections.abc.Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.License" title="steam.package.License"><span class="pre">steam.package.License</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Client.licenses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A read-only list of licenses the client has access to.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -8263,20 +8277,22 @@ cls</span><a class="reference internal" href="#steam.Query.whitelisted">Query.wh
 
 </div>
 <p class="rubric">Examples</p>
+<p>Match games running TF2, that are not empty and are using VAC</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span><span class="o">.</span><span class="n">running</span> <span class="o">/</span> <span class="n">TF2</span> <span class="o">/</span> <span class="n">Query</span><span class="o">.</span><span class="n">not_empty</span> <span class="o">/</span> <span class="n">Query</span><span class="o">.</span><span class="n">secure</span>
 <span class="go">&lt;Query query=&#39;\\appid\\440\\empty\\1\\secure\\1&#39;&gt;</span>
-<span class="go"># matches games running TF2, that are not empty and are using VAC</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span><span class="o">.</span><span class="n">not_empty</span> <span class="o">/</span> <span class="n">Query</span><span class="o">.</span><span class="n">not_full</span> <span class="o">|</span> <span class="n">Query</span><span class="o">.</span><span class="n">secure</span>
-<span class="go">&lt;Query query=&#39;\\empty\\1\\nor\\[\\full\\1\\secure\\1]&#39;&gt;</span>
-<span class="go"># matches games that are not empty, not full and are using VAC</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span><span class="o">.</span><span class="n">name_match</span> <span class="o">/</span> <span class="s2">&quot;A not cool server&quot;</span> <span class="o">|</span> <span class="n">Query</span><span class="o">.</span><span class="n">match_tags</span> <span class="o">/</span> <span class="p">[</span><span class="s2">&quot;alltalk&quot;</span><span class="p">,</span> <span class="s2">&quot;increased_maxplayers&quot;</span><span class="p">]</span>
-<span class="go">&lt;Query query=&#39;\\nor\\[\\name_match\\A not cool server\\gametype\\[alltalk,increased_maxplayers]]&#39;&gt;</span>
-<span class="go"># matches games where the server name is not &quot;A cool Server&quot; or the server doesn&#39;t support alltalk or increased</span>
-<span class="go"># max players</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span><span class="o">.</span><span class="n">linux</span> <span class="o">&amp;</span> <span class="n">Query</span><span class="o">.</span><span class="n">no_password</span>
-<span class="go"># matches games where the server is not on linux and the server doesn&#39;t have no password (has a password)</span>
 </pre></div>
 </div>
+<p>Matches games that are not empty, not full and are using VAC</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span><span class="o">.</span><span class="n">not_empty</span> <span class="o">/</span> <span class="n">Query</span><span class="o">.</span><span class="n">not_full</span> <span class="o">|</span> <span class="n">Query</span><span class="o">.</span><span class="n">secure</span>
+<span class="go">&lt;Query query=&#39;\\empty\\1\\nor\\[\\full\\1\\secure\\1]&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Match games where the server name is not “A cool Server” or the server doesn’t support alltalk or increased max players</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span><span class="o">.</span><span class="n">name_match</span> <span class="o">/</span> <span class="s2">&quot;A not cool server&quot;</span> <span class="o">|</span> <span class="n">Query</span><span class="o">.</span><span class="n">match_tags</span> <span class="o">/</span> <span class="p">[</span><span class="s2">&quot;alltalk&quot;</span><span class="p">,</span> <span class="s2">&quot;increased_maxplayers&quot;</span><span class="p">]</span>
+<span class="go">&lt;Query query=&#39;\\nor\\[\\name_match\\A not cool server\\gametype\\[alltalk,increased_maxplayers]]&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Match games where the server is not on linux and the server doesn’t have no password (has a password)</p>
 <dl class="field-list simple">
 </dl>
 <dl class="py property">
@@ -8328,13 +8344,13 @@ cls</span><a class="reference internal" href="#steam.Query.whitelisted">Query.wh
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Query.match_hidden_tags">
 <em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">match_hidden_tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.Query" title="steam.Query"><span class="pre">Query</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Query.match_hidden_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches servers with all of the given tag(s) in their ‘hidden’ tags only applies for <code class="xref py py-attr docutils literal notranslate"><span class="pre">steam.LFD2</span></code>.</p>
+<dd><p>Fetches servers with all the given tag(s) in their ‘hidden’ tags only applies for <code class="xref py py-attr docutils literal notranslate"><span class="pre">steam.LFD2</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.Query.match_tags">
 <em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">match_tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.Query" title="steam.Query"><span class="pre">Query</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Query.match_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches servers with all of the given tag(s) in <a class="reference internal" href="#steam.GameServer.tags" title="steam.GameServer.tags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GameServer.tags</span></code></a>.</p>
+<dd><p>Fetches servers with all the given tag(s) in <a class="reference internal" href="#steam.GameServer.tags" title="steam.GameServer.tags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">GameServer.tags</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -8870,12 +8886,22 @@ Attributes</span><ul>
 <dt class="sig sig-object py" id="steam.Manifest.game">
 <span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.Manifest.game" title="Permalink to this definition">¶</a></dt>
 <dd><p>The game that this manifest was fetched from.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.game.StatefulGame" title="steam.game.StatefulGame">steam.game.StatefulGame</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Manifest.created_at">
 <span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#steam.Manifest.created_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time at which the depot was created at.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py attribute">
@@ -10349,7 +10375,10 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.Message.content">content</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Message.created_at">created_at</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Message.group">group</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Message.id">id</a></li></ul>
+<a class="reference internal" href="#steam.Message.id">id</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Message.mentions">mentions</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Message.ordinal">ordinal</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Message.reactions">reactions</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Message">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Message</span></span><a class="headerlink" href="#steam.Message" title="Permalink to this definition">¶</a></dt>
@@ -10365,84 +10394,67 @@ Attributes</span><ul>
 <dl class="field-list simple">
 </dl>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Message.author">
+<span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.User" title="steam.user.User"><span class="pre">steam.user.User</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.ClientUser" title="steam.user.ClientUser"><span class="pre">steam.user.ClientUser</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID"><span class="pre">steam.abc.SteamID</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Message.author" title="Permalink to this definition">¶</a></dt>
+<dd><p>The message’s author.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Message.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#steam.Message.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The time this message was sent at.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Message.reactions">
+<span class="sig-name descname"><span class="pre">reactions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Message.reactions" title="Permalink to this definition">¶</a></dt>
+<dd><p>The message’s reactions.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Message.channel">
-<span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#steam.Message.channel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">channel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.abc.Channel" title="steam.abc.Channel"><span class="pre">steam.abc.Channel</span></a></em><a class="headerlink" href="#steam.Message.channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>The channel the message was sent in.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.abc.Channel" title="steam.abc.Channel">steam.abc.Channel</a>[<a class="reference internal" href="#steam.Message" title="steam.abc.Message">steam.abc.Message</a>]</p>
-</dd>
-</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Message.group">
+<span class="sig-name descname"><span class="pre">group</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Group" title="steam.Group"><span class="pre">steam.Group</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Message.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>The group the message was sent in. Will be <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a <a class="reference internal" href="#steam.Group" title="steam.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Message.clan">
+<span class="sig-name descname"><span class="pre">clan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Clan" title="steam.Clan"><span class="pre">steam.Clan</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Message.clan" title="Permalink to this definition">¶</a></dt>
+<dd><p>The clan the message was sent in. Will be <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a <a class="reference internal" href="#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clan</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Message.content">
-<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#steam.Message.content" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.Message.content" title="Permalink to this definition">¶</a></dt>
 <dd><p>The message’s content.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is <strong>not</strong> what you will see in the steam client see <a class="reference internal" href="#steam.Message.clean_content" title="steam.Message.clean_content"><code class="xref py py-attr docutils literal notranslate"><span class="pre">clean_content</span></code></a> for that.</p>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Message.ordinal">
+<span class="sig-name descname"><span class="pre">ordinal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.Message.ordinal" title="Permalink to this definition">¶</a></dt>
+<dd><p>A per-channel incremented integer up to <code class="docutils literal notranslate"><span class="pre">1000</span></code> for every message sent in a second window.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Message.clean_content">
-<span class="sig-name descname"><span class="pre">clean_content</span></span><a class="headerlink" href="#steam.Message.clean_content" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clean_content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.Message.clean_content" title="Permalink to this definition">¶</a></dt>
 <dd><p>The message’s clean content without bbcode.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Message.author">
-<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#steam.Message.author" title="Permalink to this definition">¶</a></dt>
-<dd><p>The message’s author.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Union[<a class="reference internal" href="#steam.User" title="steam.user.User">steam.user.User</a>, <a class="reference internal" href="#steam.ClientUser" title="steam.user.ClientUser">steam.user.ClientUser</a>, <a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID">steam.abc.SteamID</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Message.created_at">
-<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#steam.Message.created_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The time the message was sent at.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Message.group">
-<span class="sig-name descname"><span class="pre">group</span></span><a class="headerlink" href="#steam.Message.group" title="Permalink to this definition">¶</a></dt>
-<dd><p>The group the message was sent in. Will be <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a <a class="reference internal" href="#steam.Group" title="steam.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.Group" title="steam.Group">steam.Group</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Message.clan">
-<span class="sig-name descname"><span class="pre">clan</span></span><a class="headerlink" href="#steam.Message.clan" title="Permalink to this definition">¶</a></dt>
-<dd><p>The clan the message was sent in. Will be <code class="docutils literal notranslate"><span class="pre">None</span></code> if the message wasn’t sent in a <a class="reference internal" href="#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clan</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.Clan" title="steam.Clan">steam.Clan</a>]</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="steam.Message.mentions">
+<span class="sig-name descname"><span class="pre">mentions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">steam.protobufs.chat.Mentions</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Message.mentions" title="Permalink to this definition">¶</a></dt>
+<dd><p>An object representing mentions in this message.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -11164,7 +11176,8 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.Item.name">name</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.owner_descriptions">owner_descriptions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Item.tags">tags</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Item.type">type</a></li></ul>
+<a class="reference internal" href="#steam.Item.type">type</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Item.url">url</a></li></ul>
 </div><div class="py-attribute-table-column">
 <span>
 Methods</span><ul>
@@ -11325,6 +11338,13 @@ def</span><a class="reference internal" href="#steam.Item.is_tradable">is_tradab
 <dd><p>The game the item is from.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Item.url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.Item.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL for the asset in the owner’s inventory.</p>
+<p>e.g. <a class="reference external" href="https://steamcommunity.com/profiles/76561198248053954/inventory/#440_2_8526584188">https://steamcommunity.com/profiles/76561198248053954/inventory/#440_2_8526584188</a></p>
+</dd></dl>
+
 </dd></dl>
 
 <div class="py-attribute-table" data-move-to-id="steam.Asset"><div class="py-attribute-table-column">
@@ -11336,7 +11356,8 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.Asset.class_id">class_id</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Asset.game">game</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Asset.instance_id">instance_id</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Asset.owner">owner</a></li></ul>
+<a class="reference internal" href="#steam.Asset.owner">owner</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Asset.url">url</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Asset">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Asset</span></span><a class="headerlink" href="#steam.Asset" title="Permalink to this definition">¶</a></dt>
@@ -11411,6 +11432,13 @@ its class and instance IDs.</p>
 <dt class="sig sig-object py" id="steam.Asset.game">
 <span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.Asset.game" title="Permalink to this definition">¶</a></dt>
 <dd><p>The game the item is from.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="steam.Asset.url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.Asset.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL for the asset in the owner’s inventory.</p>
+<p>e.g. <a class="reference external" href="https://steamcommunity.com/profiles/76561198248053954/inventory/#440_2_8526584188">https://steamcommunity.com/profiles/76561198248053954/inventory/#440_2_8526584188</a></p>
 </dd></dl>
 
 </dd></dl>
@@ -11583,7 +11611,7 @@ async</span><a class="reference internal" href="#steam.ClientUser.wishlist">wish
 the api.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame">steam.StatefulGame</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame">steam.StatefulGame</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -11627,7 +11655,7 @@ the api.</p>
 <dd><p>The time at which the user’s account was created. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -12269,7 +12297,7 @@ async</span><a class="reference internal" href="#steam.User.wishlist">wishlist</
 api.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame">steam.StatefulGame</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame">steam.StatefulGame</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -12313,7 +12341,7 @@ api.</p>
 <dd><p>The time at which the user’s account was created. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a></p>
 </dd>
 </dl>
 </dd></dl>
