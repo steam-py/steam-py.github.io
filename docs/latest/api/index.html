@@ -8038,31 +8038,21 @@ async</span><a class="reference internal" href="#steam.GameServer.rules">rules</
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.GameServer.players">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">players</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">challenge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.GameServer.players" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch a server’s players  or <code class="docutils literal notranslate"><span class="pre">None</span></code> if something went wrong getting the info.</p>
+<dd><p>Fetch a server’s players.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>challenge</strong> (<em>Literal</em><em>[</em><em>-1</em><em>, </em><em>0</em><em>]</em>) – The challenge for the request default is 0 can also be -1. You may need to change if the server doesn’t seem
+<dd class="field-odd"><p><strong>challenge</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.10)"><em>Literal</em></a><em>[</em><em>-1</em><em>, </em><em>0</em><em>]</em>) – <p>The challenge for the request default is 0 can also be -1. You may need to change if the server doesn’t seem
 to respond.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.9.0: </span>This parameter no longer does anything.</p>
+</div>
+</p>
 </dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is recommended to use <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#asyncio.wait_for" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.wait_for()</span></code></a> to allow this to return if the server doesn’t respond.</p>
-<p>Returns
-ServerPlayer is a <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.NamedTuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.NamedTuple</span></code></a> defined as:</p>
-<blockquote>
-<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ServerPlayer</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
-    <span class="n">index</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">score</span><span class="p">:</span> <span class="nb">int</span>
-    <span class="n">play_time</span><span class="p">:</span> <span class="n">timedelta</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<dl class="field-list simple">
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ServerPlayer is a <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.NamedTuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.NamedTuple</span></code></a> defined as:  .. source:: steam.ServerPlayer</p>
+</dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.timedelta</span></code></a>]]]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.timedelta</span></code></a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8073,17 +8063,15 @@ ServerPlayer is a <a class="reference external" href="https://docs.python.org/3/
 <dd><p>Fetch a console variables. e.g. <code class="docutils literal notranslate"><span class="pre">sv_gravity</span></code> or <code class="docutils literal notranslate"><span class="pre">sv_voiceenable</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>challenge</strong> (<em>Literal</em><em>[</em><em>-1</em><em>, </em><em>0</em><em>]</em>) – The challenge for the request default is 0 can also be -1. You may need to change if the server doesn’t seem
+<dd class="field-odd"><p><strong>challenges</strong> – <p>The challenge for the request default is 0 can also be -1. You may need to change if the server doesn’t seem
 to respond.</p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is recommended to use <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#asyncio.wait_for" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">asyncio.wait_for()</span></code></a> to allow this to return if the server doesn’t respond.</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.9.0: </span>This parameter no longer does anything.</p>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]]</p>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8282,7 +8270,7 @@ cls</span><a class="reference internal" href="#steam.Query.whitelisted">Query.wh
 <span class="go">&lt;Query query=&#39;\\appid\\440\\empty\\1\\secure\\1&#39;&gt;</span>
 </pre></div>
 </div>
-<p>Matches games that are not empty, not full and are using VAC</p>
+<p>Matches games that are not empty, not full and are not using VAC</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span><span class="o">.</span><span class="n">not_empty</span> <span class="o">/</span> <span class="n">Query</span><span class="o">.</span><span class="n">not_full</span> <span class="o">|</span> <span class="n">Query</span><span class="o">.</span><span class="n">secure</span>
 <span class="go">&lt;Query query=&#39;\\empty\\1\\nor\\[\\full\\1\\secure\\1]&#39;&gt;</span>
 </pre></div>
