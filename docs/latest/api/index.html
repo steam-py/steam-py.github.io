@@ -723,7 +723,7 @@ passed, the code will need to be inputted by the user via <a class="reference in
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the package.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.package.Package</span></code></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.package.StatefulPackage</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4816,8 +4816,6 @@ async</span><a class="reference internal" href="#steam.abc.BaseUser.games">games
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.abc.BaseUser.has_setup_profile">has_setup_profile</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.abc.BaseUser.inventory">inventory</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.is_banned">is_banned</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.abc.BaseUser.is_commentable">is_commentable</a></li><li class="py-attribute-table-entry">
@@ -4829,6 +4827,8 @@ def</span><a class="reference internal" href="#steam.abc.BaseUser.is_valid">is_v
 async</span><a class="reference internal" href="#steam.abc.BaseUser.level">level</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.profile">profile</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.abc.BaseUser.profile_customisation_info">profile_customisation_info</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.profile_info">profile_info</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -4984,23 +4984,6 @@ api.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.inventory">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.inventory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch a user’s <a class="reference internal" href="#steam.Inventory" title="steam.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Inventory</span></code></a> for trading.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>game</strong> (<em>steam.game.Game</em>) – The game to fetch the inventory for.</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="#steam.Forbidden" title="steam.Forbidden"><strong>Forbidden</strong></a> – The user’s inventory is private.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.BaseInventory</span></code>[<a class="reference internal" href="#steam.Item" title="steam.trade.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.Item</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.friends">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.friends" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch the list of the users friends.</p>
@@ -5111,12 +5094,23 @@ api.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.abc.BaseUser.profile_customisation_info">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a user’s profile customisation information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.profile.ProfileCustomisation</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.profile">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s entire profile information.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This calls all the <code class="docutils literal notranslate"><span class="pre">profile_x</span></code> functions to return a Profile object which has all the info set.</p>
+<p>This calls all the profile related functions to return a Profile object which has all the info set.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -6457,7 +6451,7 @@ async</span><a class="reference internal" href="#steam.GroupChannel.send">send</
 <dd><p>The last message sent in the channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[steam.abc.M_co]</p>
+<dd class="field-odd"><p>Optional[steam.channel.GroupM_co]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6612,7 +6606,7 @@ async</span><a class="reference internal" href="#steam.ClanChannel.send">send</a
 <dd><p>The last message sent in the channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[steam.abc.M_co]</p>
+<dd class="field-odd"><p>Optional[steam.channel.GroupM_co]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10513,46 +10507,13 @@ Attributes</span><ul>
 </section>
 <section id="package">
 <h3>Package<a class="headerlink" href="#package" title="Permalink to this headline">¶</a></h3>
-<div class="py-attribute-table" data-move-to-id="steam.Package"><div class="py-attribute-table-column">
-<span>
-Methods</span><ul>
-<li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Package.fetch_games">fetch_games</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Package.info">info</a></li></ul>
-</div></div><dl class="py class">
+<div class="py-attribute-table" data-move-to-id="steam.Package"></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Package">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Package</span></span><a class="headerlink" href="#steam.Package" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents information on a package which is a collection of one or more applications and depots.</p>
 <p>Read more on <a class="reference external" href="https://partner.steamgames.com/doc/store/application/packages">steamworks</a>.</p>
 <dl class="field-list simple">
 </dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Package.fetch_games">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_games</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Package.fetch_games" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches this package’s games.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.StatefulGame</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Package.info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Package.info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Shorthand for:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">info</span><span class="p">,)</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">fetch_product_info</span><span class="p">(</span><span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="n">package</span><span class="p">])</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.PackageInfo" title="steam.PackageInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PackageInfo</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 <div class="py-attribute-table" data-move-to-id="steam.License"><div class="py-attribute-table-column">
@@ -10691,80 +10652,38 @@ Attributes</span><ul>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileInfo.created_at">
-<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#steam.ProfileInfo.created_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The time at which the user was created at.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#steam.ProfileInfo.created_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileInfo.real_name">
-<span class="sig-name descname"><span class="pre">real_name</span></span><a class="headerlink" href="#steam.ProfileInfo.real_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The real name of the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">real_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ProfileInfo.real_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileInfo.city_name">
-<span class="sig-name descname"><span class="pre">city_name</span></span><a class="headerlink" href="#steam.ProfileInfo.city_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The city the user is located in.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">city_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ProfileInfo.city_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileInfo.state_name">
-<span class="sig-name descname"><span class="pre">state_name</span></span><a class="headerlink" href="#steam.ProfileInfo.state_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the state the user is located in.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">state_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ProfileInfo.state_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileInfo.country_name">
-<span class="sig-name descname"><span class="pre">country_name</span></span><a class="headerlink" href="#steam.ProfileInfo.country_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the country the user is located in.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">country_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ProfileInfo.country_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileInfo.headline">
-<span class="sig-name descname"><span class="pre">headline</span></span><a class="headerlink" href="#steam.ProfileInfo.headline" title="Permalink to this definition">¶</a></dt>
-<dd><p>The profile’s headline.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">headline</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ProfileInfo.headline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileInfo.summary">
-<span class="sig-name descname"><span class="pre">summary</span></span><a class="headerlink" href="#steam.ProfileInfo.summary" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user’s summary.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">summary</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.ProfileInfo.summary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -10796,108 +10715,53 @@ async</span><a class="reference internal" href="#steam.ProfileItem.equip">equip<
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.id">
-<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#steam.ProfileItem.id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s id.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.ProfileItem.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.url">
-<span class="sig-name descname"><span class="pre">url</span></span><a class="headerlink" href="#steam.ProfileItem.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s url.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.ProfileItem.url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.name">
-<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#steam.ProfileItem.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.ProfileItem.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.title">
-<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#steam.ProfileItem.title" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s title.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.ProfileItem.title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.description">
-<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#steam.ProfileItem.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s description.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.ProfileItem.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.game">
-<span class="sig-name descname"><span class="pre">game</span></span><a class="headerlink" href="#steam.ProfileItem.game" title="Permalink to this definition">¶</a></dt>
-<dd><p>The game the item is from.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame">steam.StatefulGame</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame"><span class="pre">steam.StatefulGame</span></a></em><a class="headerlink" href="#steam.ProfileItem.game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.type">
 <span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#steam.ProfileItem.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s type.</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.class_">
 <span class="sig-name descname"><span class="pre">class_</span></span><a class="headerlink" href="#steam.ProfileItem.class_" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s class.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.movie">
-<span class="sig-name descname"><span class="pre">movie</span></span><a class="headerlink" href="#steam.ProfileItem.movie" title="Permalink to this definition">¶</a></dt>
-<dd><p>The movie associated with the item.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>steam.profile.ProfileMovie</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">movie</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">steam.profile.ProfileMovie</span></em><a class="headerlink" href="#steam.ProfileItem.movie" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ProfileItem.equipped_flags">
-<span class="sig-name descname"><span class="pre">equipped_flags</span></span><a class="headerlink" href="#steam.ProfileItem.equipped_flags" title="Permalink to this definition">¶</a></dt>
-<dd><p>The item’s equipped flags.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">equipped_flags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.ProfileItem.equipped_flags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ProfileItem.equip">
@@ -10926,58 +10790,28 @@ Attributes</span><ul>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.OwnedProfileItems.backgrounds">
-<span class="sig-name descname"><span class="pre">backgrounds</span></span><a class="headerlink" href="#steam.OwnedProfileItems.backgrounds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The backgrounds the client user owns.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">backgrounds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.OwnedProfileItems.backgrounds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.OwnedProfileItems.mini_profile_backgrounds">
-<span class="sig-name descname"><span class="pre">mini_profile_backgrounds</span></span><a class="headerlink" href="#steam.OwnedProfileItems.mini_profile_backgrounds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The mini profile backgrounds the client user owns.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">mini_profile_backgrounds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.OwnedProfileItems.mini_profile_backgrounds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.OwnedProfileItems.avatar_frames">
-<span class="sig-name descname"><span class="pre">avatar_frames</span></span><a class="headerlink" href="#steam.OwnedProfileItems.avatar_frames" title="Permalink to this definition">¶</a></dt>
-<dd><p>The avatar frames the client user owns.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">avatar_frames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.OwnedProfileItems.avatar_frames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.OwnedProfileItems.animated_avatars">
-<span class="sig-name descname"><span class="pre">animated_avatars</span></span><a class="headerlink" href="#steam.OwnedProfileItems.animated_avatars" title="Permalink to this definition">¶</a></dt>
-<dd><p>The animated avatars the client user owns.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">animated_avatars</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.OwnedProfileItems.animated_avatars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.OwnedProfileItems.modifiers">
-<span class="sig-name descname"><span class="pre">modifiers</span></span><a class="headerlink" href="#steam.OwnedProfileItems.modifiers" title="Permalink to this definition">¶</a></dt>
-<dd><p>The modifiers the client user owns.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">modifiers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.OwnedProfileItems.modifiers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -10998,147 +10832,37 @@ Attributes</span><ul>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.EquippedProfileItems.background">
-<span class="sig-name descname"><span class="pre">background</span></span><a class="headerlink" href="#steam.EquippedProfileItems.background" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped background.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">background</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.EquippedProfileItems.background" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.EquippedProfileItems.mini_profile_background">
-<span class="sig-name descname"><span class="pre">mini_profile_background</span></span><a class="headerlink" href="#steam.EquippedProfileItems.mini_profile_background" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped mini profile background for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">mini_profile_background</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.EquippedProfileItems.mini_profile_background" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.EquippedProfileItems.avatar_frame">
-<span class="sig-name descname"><span class="pre">avatar_frame</span></span><a class="headerlink" href="#steam.EquippedProfileItems.avatar_frame" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped avatar frame for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">avatar_frame</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.EquippedProfileItems.avatar_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.EquippedProfileItems.animated_avatar">
-<span class="sig-name descname"><span class="pre">animated_avatar</span></span><a class="headerlink" href="#steam.EquippedProfileItems.animated_avatar" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped animated avatar for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">animated_avatar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.EquippedProfileItems.animated_avatar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.EquippedProfileItems.modifier">
-<span class="sig-name descname"><span class="pre">modifier</span></span><a class="headerlink" href="#steam.EquippedProfileItems.modifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped modifier for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">modifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem"><span class="pre">steam.ProfileItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.EquippedProfileItems.modifier" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
-<div class="py-attribute-table" data-move-to-id="steam.Profile"><div class="py-attribute-table-column">
-<span>
-Attributes</span><ul>
-<li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Profile.animated_avatar">animated_avatar</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Profile.avatar_frame">avatar_frame</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Profile.background">background</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Profile.items">items</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Profile.mini_profile_background">mini_profile_background</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Profile.modifier">modifier</a></li></ul>
-</div></div><dl class="py class">
+<div class="py-attribute-table" data-move-to-id="steam.Profile"></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Profile">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Profile</span></span><a class="headerlink" href="#steam.Profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a user’s complete profile.</p>
 <dl class="field-list simple">
 </dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Profile.background">
-<span class="sig-name descname"><span class="pre">background</span></span><a class="headerlink" href="#steam.Profile.background" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped background.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Profile.mini_profile_background">
-<span class="sig-name descname"><span class="pre">mini_profile_background</span></span><a class="headerlink" href="#steam.Profile.mini_profile_background" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped mini profile background for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Profile.avatar_frame">
-<span class="sig-name descname"><span class="pre">avatar_frame</span></span><a class="headerlink" href="#steam.Profile.avatar_frame" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped avatar frame for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Profile.animated_avatar">
-<span class="sig-name descname"><span class="pre">animated_avatar</span></span><a class="headerlink" href="#steam.Profile.animated_avatar" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped animated avatar for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Profile.modifier">
-<span class="sig-name descname"><span class="pre">modifier</span></span><a class="headerlink" href="#steam.Profile.modifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The equipped modifier for the user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.ProfileItem" title="steam.ProfileItem">steam.ProfileItem</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Profile.items">
-<span class="sig-name descname"><span class="pre">items</span></span><a class="headerlink" href="#steam.Profile.items" title="Permalink to this definition">¶</a></dt>
-<dd><p>The account’s owned profile items.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only available for the <a class="reference internal" href="#steam.ClientUser" title="steam.ClientUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClientUser</span></code></a>'s profile otherwise it is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.OwnedProfileItems" title="steam.OwnedProfileItems">steam.OwnedProfileItems</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </section>
@@ -11530,6 +11254,8 @@ async</span><a class="reference internal" href="#steam.ClientUser.level">level</
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.profile">profile</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ClientUser.profile_customisation_info">profile_customisation_info</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.profile_info">profile_info</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.profile_items">profile_items</a></li><li class="py-attribute-table-entry">
@@ -11744,6 +11470,21 @@ websocket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#steam.OwnedProfileItems" title="steam.OwnedProfileItems"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.OwnedProfileItems</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ClientUser.profile">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a user’s entire profile information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This calls all the profile related functions to return a Profile object which has all the info set.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.profile.ClientUserProfile</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -12078,16 +11819,12 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.ClientUser.profile">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch a user’s entire profile information.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This calls all the <code class="docutils literal notranslate"><span class="pre">profile_x</span></code> functions to return a Profile object which has all the info set.</p>
-</div>
+<dt class="sig sig-object py" id="steam.ClientUser.profile_customisation_info">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a user’s profile customisation information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.Profile" title="steam.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Profile</span></code></a></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -12224,6 +11961,8 @@ async</span><a class="reference internal" href="#steam.User.level">level</a></li
 async</span><a class="reference internal" href="#steam.User.owns">owns</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.profile">profile</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.User.profile_customisation_info">profile_customisation_info</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.profile_info">profile_info</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -12842,11 +12581,22 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dd><p>Fetch a user’s entire profile information.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This calls all the <code class="docutils literal notranslate"><span class="pre">profile_x</span></code> functions to return a Profile object which has all the info set.</p>
+<p>This calls all the profile related functions to return a Profile object which has all the info set.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#steam.Profile" title="steam.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Profile</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.User.profile_customisation_info">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a user’s profile customisation information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -14532,10 +14282,10 @@ This can also be used in <a class="reference internal" href="#steam.User.send" t
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>item_to_send</strong> (<em>Items</em><em> | </em><em>None</em>) – The item to send with the trade offer.</p></li>
-<li><p><strong>item_to_receive</strong> (<em>Items</em><em> | </em><em>None</em>) – The item to receive with the trade offer.</p></li>
-<li><p><strong>items_to_send</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference internal" href="#steam.Item" title="steam.Item"><em>steam.Item</em></a><em>, </em><a class="reference internal" href="#steam.Asset" title="steam.Asset"><em>steam.Asset</em></a><em>]</em><em>]</em>) – The items you are sending to the other user.</p></li>
-<li><p><strong>items_to_receive</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference internal" href="#steam.Item" title="steam.Item"><em>steam.Item</em></a><em>, </em><a class="reference internal" href="#steam.Asset" title="steam.Asset"><em>steam.Asset</em></a><em>]</em><em>]</em>) – The items you are receiving from the other user.</p></li>
+<li><p><strong>item_to_send</strong> (<a class="reference internal" href="#steam.Asset" title="steam.Asset"><em>Asset</em></a><em> | </em><em>None</em>) – The item to send with the trade offer.</p></li>
+<li><p><strong>item_to_receive</strong> (<a class="reference internal" href="#steam.Asset" title="steam.Asset"><em>Asset</em></a><em> | </em><em>None</em>) – The item to receive with the trade offer.</p></li>
+<li><p><strong>items_to_send</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="#steam.Asset" title="steam.Asset"><em>steam.Asset</em></a><em>]</em>) – The items you are sending to the other user.</p></li>
+<li><p><strong>items_to_receive</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="#steam.Asset" title="steam.Asset"><em>steam.Asset</em></a><em>]</em>) – The items you are receiving from the other user.</p></li>
 <li><p><strong>token</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – The the trade token used to send trades to users who aren’t on the ClientUser’s friend’s list.</p></li>
 <li><p><strong>message</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – The offer message to send with the trade.</p></li>
 </ul>
@@ -14558,7 +14308,7 @@ This can also be used in <a class="reference internal" href="#steam.User.send" t
 <dd><p>A list of items to send to the partner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a>[<a class="reference internal" href="#steam.Item" title="steam.Item">steam.Item</a>, <a class="reference internal" href="#steam.Asset" title="steam.Asset">steam.Asset</a>]]</p>
+<dd class="field-odd"><p>Sequence[<a class="reference internal" href="#steam.Asset" title="steam.Asset">steam.Asset</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14569,7 +14319,7 @@ This can also be used in <a class="reference internal" href="#steam.User.send" t
 <dd><p>A list of items to receive from the partner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a>[<a class="reference internal" href="#steam.Item" title="steam.Item">steam.Item</a>, <a class="reference internal" href="#steam.Asset" title="steam.Asset">steam.Asset</a>]]</p>
+<dd class="field-odd"><p>Sequence[<a class="reference internal" href="#steam.Asset" title="steam.Asset">steam.Asset</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14663,8 +14413,8 @@ This rarely needs to be called as the client handles most of these.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#steam.ClientException" title="steam.ClientException"><strong>ClientException</strong></a> – The trade is not active.</p></li>
-<li><p><a class="reference internal" href="#steam.ConfirmationError" title="steam.ConfirmationError"><strong>ConfirmationError</strong></a> – No matching confirmation could not be found.</p></li>
+<li><p><a class="reference internal" href="#steam.ClientException" title="steam.ClientException"><strong>steam.ClientException</strong></a> – The trade is not active.</p></li>
+<li><p><a class="reference internal" href="#steam.ConfirmationError" title="steam.ConfirmationError"><strong>steam.ConfirmationError</strong></a> – No matching confirmation could not be found.</p></li>
 </ul>
 </dd>
 </dl>
@@ -14681,8 +14431,8 @@ This rarely needs to be called as the client handles most of these.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#steam.ClientException" title="steam.ClientException"><strong>ClientException</strong></a> – The trade is either not active, already accepted or not from the ClientUser.</p></li>
-<li><p><a class="reference internal" href="#steam.ConfirmationError" title="steam.ConfirmationError"><strong>ConfirmationError</strong></a> – No matching confirmation could not be found.</p></li>
+<li><p><a class="reference internal" href="#steam.ClientException" title="steam.ClientException"><strong>steam.ClientException</strong></a> – The trade is either not active, already accepted or not from the ClientUser.</p></li>
+<li><p><a class="reference internal" href="#steam.ConfirmationError" title="steam.ConfirmationError"><strong>steam.ConfirmationError</strong></a> – No matching confirmation could not be found.</p></li>
 </ul>
 </dd>
 </dl>
