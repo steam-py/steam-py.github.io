@@ -61,6 +61,7 @@ DEALINGS IN THE SOFTWARE.
   <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
   <script src="../_static/jquery.js"></script>
   <script src="../_static/underscore.js"></script>
+  <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
   <script src="../_static/doctools.js"></script>
   <script src="../_static/custom.js"></script>
   <script src="../_static/settings.js"></script>
@@ -346,13 +347,19 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Announcement.author">author (steam.Announcement attribute)</a>
 
       <ul>
+        <li><a href="../api/#steam.ClanMessage.author">(steam.ClanMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Comment.author">(steam.Comment attribute)</a>
 </li>
         <li><a href="../api/#steam.Event.author">(steam.Event attribute)</a>
 </li>
         <li><a href="../ext/commands/api/#steam.ext.commands.Context.author">(steam.ext.commands.Context attribute)</a>
 </li>
+        <li><a href="../api/#steam.GroupMessage.author">(steam.GroupMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Message.author">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.author">(steam.UserMessage attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PaymentMethod.AuthorizedDevice">AuthorizedDevice (steam.PaymentMethod attribute)</a>
@@ -604,15 +611,19 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../api/#steam.abc.Channel">Channel (class in steam.abc)</a>
-
-      <ul>
-        <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.Channel">(steam.ext.commands.BucketType attribute)</a>
 </li>
-      </ul></li>
+      <li><a href="../api/#steam.ClanMessage.channel">channel (steam.ClanMessage attribute)</a>
+</li>
+      <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.Channel">Channel (steam.ext.commands.BucketType attribute)</a>
+</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Context.channel">channel (steam.ext.commands.Context attribute)</a>
 
       <ul>
+        <li><a href="../api/#steam.GroupMessage.channel">(steam.GroupMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Message.channel">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.channel">(steam.UserMessage attribute)</a>
 </li>
       </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.ChannelConverter">ChannelConverter (class in steam.ext.commands)</a>
@@ -668,6 +679,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.ClanInvite.clan">(steam.ClanInvite attribute)</a>
 </li>
+        <li><a href="../api/#steam.ClanMessage.clan">(steam.ClanMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Event.clan">(steam.Event attribute)</a>
 </li>
       </ul></li>
@@ -676,10 +689,14 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../ext/commands/api/#steam.ext.commands.Context.clan">clan (steam.ext.commands.Context attribute)</a>
 
       <ul>
+        <li><a href="../api/#steam.GroupMessage.clan">(steam.GroupMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Message.clan">(steam.Message attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Type.Clan">Clan (steam.Type attribute)</a>
+</li>
+      <li><a href="../api/#steam.UserMessage.clan">clan (steam.UserMessage attribute)</a>
 </li>
       <li><a href="../api/#steam.FetchedGame.clan">clan() (steam.FetchedGame method)</a>
 
@@ -721,8 +738,16 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Asset.class_id">class_id (steam.Asset attribute)</a>
 </li>
-      <li><a href="../api/#steam.Message.clean_content">clean_content (steam.Message attribute)</a>
+      <li><a href="../api/#steam.ClanMessage.clean_content">clean_content (steam.ClanMessage attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.GroupMessage.clean_content">(steam.GroupMessage attribute)</a>
 </li>
+        <li><a href="../api/#steam.Message.clean_content">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.clean_content">(steam.UserMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Command.clean_params">clean_params (steam.ext.commands.Command attribute)</a>
 
       <ul>
@@ -799,10 +824,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.cogs">cogs (steam.ext.commands.Bot property)</a>
 </li>
-      <li><a href="../api/#steam.Item.colour">colour (steam.Item attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.Item.colour">colour (steam.Item attribute)</a>
+</li>
       <li><a href="../api/#steam.AppFlag.Comic">Comic (steam.AppFlag attribute)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Command">Command (class in steam.ext.commands)</a>
@@ -944,11 +969,17 @@ DEALINGS IN THE SOFTWARE.
       <ul>
         <li><a href="../api/#steam.Clan.content">(steam.Clan attribute)</a>
 </li>
+        <li><a href="../api/#steam.ClanMessage.content">(steam.ClanMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Comment.content">(steam.Comment attribute)</a>
 </li>
         <li><a href="../api/#steam.Event.content">(steam.Event attribute)</a>
 </li>
+        <li><a href="../api/#steam.GroupMessage.content">(steam.GroupMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Message.content">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.content">(steam.UserMessage attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Type.ContentServer">ContentServer (steam.Type attribute)</a>
@@ -1010,6 +1041,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Clan.created_at">(steam.Clan attribute)</a>
 </li>
+        <li><a href="../api/#steam.ClanMessage.created_at">(steam.ClanMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.ClientUser.created_at">(steam.ClientUser attribute)</a>
 </li>
         <li><a href="../api/#steam.Comment.created_at">(steam.Comment attribute)</a>
@@ -1017,6 +1050,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.FetchedGame.created_at">(steam.FetchedGame attribute)</a>
 </li>
         <li><a href="../api/#steam.GameInfo.created_at">(steam.GameInfo attribute)</a>
+</li>
+        <li><a href="../api/#steam.GroupMessage.created_at">(steam.GroupMessage attribute)</a>
 </li>
         <li><a href="../api/#steam.Manifest.created_at">(steam.Manifest attribute)</a>
 </li>
@@ -1027,6 +1062,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.TradeOffer.created_at">(steam.TradeOffer attribute)</a>
 </li>
         <li><a href="../api/#steam.User.created_at">(steam.User attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.created_at">(steam.UserMessage attribute)</a>
 </li>
         <li><a href="../api/#steam.WishlistGame.created_at">(steam.WishlistGame attribute)</a>
 </li>
@@ -1665,10 +1702,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.get_bucket">get_bucket() (steam.ext.commands.BucketType method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Clan.get_channel">get_channel() (steam.Clan method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.get_clan">get_clan() (steam.Client method)</a>
 
       <ul>
@@ -1738,15 +1775,21 @@ DEALINGS IN THE SOFTWARE.
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Group">(class in steam.ext.commands)</a>
 </li>
-        <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.Group">(steam.ext.commands.BucketType attribute)</a>
-</li>
       </ul></li>
+      <li><a href="../api/#steam.ClanMessage.group">group (steam.ClanMessage attribute)</a>
+</li>
+      <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.Group">Group (steam.ext.commands.BucketType attribute)</a>
+</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Context.group">group (steam.ext.commands.Context attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.GroupChannel.group">(steam.GroupChannel attribute)</a>
 </li>
+        <li><a href="../api/#steam.GroupMessage.group">(steam.GroupMessage attribute)</a>
+</li>
         <li><a href="../api/#steam.Message.group">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.group">(steam.UserMessage attribute)</a>
 </li>
       </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.group">group() (in module steam.ext.commands)</a>
@@ -2663,8 +2706,16 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../api/#steam.Message.mentions">mentions (steam.Message attribute)</a>
+      <li><a href="../api/#steam.ClanMessage.mentions">mentions (steam.ClanMessage attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.GroupMessage.mentions">(steam.GroupMessage attribute)</a>
 </li>
+        <li><a href="../api/#steam.Message.mentions">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.mentions">(steam.UserMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.Message">Message (class in steam)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Context.message">message (steam.ext.commands.Context attribute)</a>
@@ -2949,10 +3000,10 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.Client.on_login">on_login() (steam.Client method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.on_message">on_message() (steam.Client method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.on_ready">on_ready() (steam.Client method)</a>
 </li>
       <li><a href="../api/#steam.Client.on_socket_receive">on_socket_receive() (steam.Client method)</a>
@@ -2999,8 +3050,16 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ManifestPath.open">open() (steam.ManifestPath method)</a>
 </li>
-      <li><a href="../api/#steam.Message.ordinal">ordinal (steam.Message attribute)</a>
+      <li><a href="../api/#steam.ClanMessage.ordinal">ordinal (steam.ClanMessage attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.GroupMessage.ordinal">(steam.GroupMessage attribute)</a>
 </li>
+        <li><a href="../api/#steam.Message.ordinal">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.ordinal">(steam.UserMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.ClanEvent.Other">Other (steam.ClanEvent attribute)</a>
 </li>
       <li><a href="../api/#steam.ReviewType.OverwhelminglyNegative">OverwhelminglyNegative (steam.ReviewType attribute)</a>
@@ -3290,8 +3349,16 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.RateLimitExceeded">RateLimitExceeded (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.Message.reactions">reactions (steam.Message attribute)</a>
+      <li><a href="../api/#steam.ClanMessage.reactions">reactions (steam.ClanMessage attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.GroupMessage.reactions">(steam.GroupMessage attribute)</a>
 </li>
+        <li><a href="../api/#steam.Message.reactions">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.UserMessage.reactions">(steam.UserMessage attribute)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.ManifestPath.read">read() (steam.ManifestPath method)</a>
 </li>
       <li><a href="../api/#steam.ManifestPath.read_bytes">read_bytes() (steam.ManifestPath method)</a>
@@ -3380,10 +3447,10 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Group.remove_command">(steam.ext.commands.Group method)</a>
 </li>
       </ul></li>
-      <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_listener">remove_listener() (steam.ext.commands.Bot method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_listener">remove_listener() (steam.ext.commands.Bot method)</a>
+</li>
       <li><a href="../api/#steam.LicenseFlag.Renew">Renew (steam.LicenseFlag attribute)</a>
 </li>
       <li><a href="../api/#steam.LicenseFlag.RenewalFailed">RenewalFailed (steam.LicenseFlag attribute)</a>
@@ -4185,7 +4252,7 @@ DEALINGS IN THE SOFTWARE.
     </main>
     <footer class="grid-item">
         &#169; Copyright 2020, Gobot1234.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
     </footer>
   </div>
   <div id="settings" class="modal" onclick="if (event.target == this){ settingsModal.close(); }" hidden>
