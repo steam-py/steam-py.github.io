@@ -198,27 +198,27 @@ documentation and when debugging any issues in your code.</p>
 <li><p><a class="reference external" href="https://realpython.com/primer-on-python-decorators">Decorators</a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/python-type-checking">Basic type hints</a></p></li>
 </ul>
-<p><strong>Places to learn more python</strong></p>
+<p><strong>Places to learn more Python</strong></p>
 <ul class="simple">
-<li><p>https://docs.python.org/3/tutorial/index.html (official tutorial)</p></li>
-<li><p>https://greenteapress.com/wp/think-python-2e (for beginners to programming or python)</p></li>
-<li><p>https://www.codeabbey.com (exercises for beginners)</p></li>
-<li><p>https://www.real-python.com (good for individual quick topics)</p></li>
-<li><p>https://gto76.github.io/python-cheatsheet (cheat sheet)</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/index.html">https://docs.python.org/3/tutorial/index.html</a> (official tutorial)</p></li>
+<li><p><a class="reference external" href="https://greenteapress.com/wp/think-python-2e">https://greenteapress.com/wp/think-python-2e</a> (for beginners to programming or python)</p></li>
+<li><p><a class="reference external" href="https://www.codeabbey.com">https://www.codeabbey.com</a> (exercises for beginners)</p></li>
+<li><p><a class="reference external" href="https://www.real-python.com">https://www.real-python.com</a> (good for individual quick topics)</p></li>
+<li><p><a class="reference external" href="https://gto76.github.io/python-cheatsheet">https://gto76.github.io/python-cheatsheet</a> (cheat sheet)</p></li>
 </ul>
 </section>
 <section id="how-can-i-get-help-with-my-code">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">How can I get help with my code?</a><a class="headerlink" href="#how-can-i-get-help-with-my-code" title="Permalink to this heading">¶</a></h3>
 <p><strong>Bad practices:</strong></p>
 <ul class="simple">
-<li><p>Truncate the traceback as you might remove important parts from it. If it isn’t sommething that should be kept private
-like your username, password etc. include it.</p></li>
+<li><p>Truncate the traceback, as you might remove important parts from it. If it isn’t something that should be kept
+private like your username, password etc. include it.</p></li>
 <li><p>Send screenshots/text files of code/errors unless relevant as they can be difficult to read.</p></li>
 <li><p>Uploading a text file. Instead, you could use any of:</p>
 <ul>
-<li><p>https://mystb.in</p></li>
-<li><p>https://gist.github.com</p></li>
-<li><p>https://hastebin.com</p></li>
+<li><p><a class="reference external" href="https://mystb.in">https://mystb.in</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com">https://gist.github.com</a></p></li>
+<li><p><a class="reference external" href="https://hastebin.com">https://hastebin.com</a></p></li>
 </ul>
 </li>
 <li><p>Ask if you can ask a question about the library as the answer will always be yes.</p></li>
@@ -232,13 +232,14 @@ and what isn’t going right. Along with a traceback (if applicable).</p></li>
 </section>
 <section id="how-can-i-wait-for-an-event">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">How can I wait for an event?</a><a class="headerlink" href="#how-can-i-wait-for-an-event" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
 <span class="kn">import</span> <span class="nn">steam</span>
 <span class="kn">from</span> <span class="nn">steam.ext</span> <span class="kn">import</span> <span class="n">commands</span>
 
 
 <span class="n">bot</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">Bot</span><span class="p">(</span><span class="n">command_prefix</span><span class="o">=</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+
 
 <span class="nd">@bot</span><span class="o">.</span><span class="n">command</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">trade</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
@@ -275,7 +276,7 @@ and what isn’t going right. Along with a traceback (if applicable).</p></li>
 <li><p>Construct the TradeOffer from its items.</p></li>
 <li><p>Finally use the <a class="reference internal" href="../api/#steam.User.send" title="steam.User.send"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send()</span></code></a> method on the User that you want to send the offer to.</p></li>
 </ul>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we need to chose a game to fetch the inventory for</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># we need to choose a game to fetch the inventory for</span>
 <span class="n">game</span> <span class="o">=</span> <span class="n">steam</span><span class="o">.</span><span class="n">TF2</span>
 <span class="c1"># we need to get the inventories to get items</span>
 <span class="n">my_inventory</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">inventory</span><span class="p">(</span><span class="n">game</span><span class="p">)</span>
@@ -286,7 +287,7 @@ and what isn’t going right. Along with a traceback (if applicable).</p></li>
 <span class="n">earbuds</span> <span class="o">=</span> <span class="n">their_inventory</span><span class="o">.</span><span class="n">get_item</span><span class="p">(</span><span class="s2">&quot;Earbuds&quot;</span><span class="p">)</span>
 
 <span class="c1"># finally construct the trade</span>
-<span class="n">trade</span> <span class="o">=</span> <span class="n">TradeOffer</span><span class="p">(</span><span class="n">items_to_send</span><span class="o">=</span><span class="n">keys</span><span class="p">,</span> <span class="n">item_to_receive</span><span class="o">=</span><span class="n">earbuds</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;This trade was made using steam.py&quot;</span><span class="p">)</span>
+<span class="n">trade</span> <span class="o">=</span> <span class="n">steam</span><span class="o">.</span><span class="n">TradeOffer</span><span class="p">(</span><span class="n">items_to_send</span><span class="o">=</span><span class="n">keys</span><span class="p">,</span> <span class="n">item_to_receive</span><span class="o">=</span><span class="n">earbuds</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;This trade was made using steam.py&quot;</span><span class="p">)</span>
 <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">trade</span><span class="o">=</span><span class="n">trade</span><span class="p">)</span>
 <span class="c1"># you don&#39;t need to confirm the trade manually, the client will handle that for you</span>
 </pre></div>

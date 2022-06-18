@@ -131,7 +131,8 @@ py -m pip install -U steamio
 something you listen for and then respond to.</p>
 <p>For example, when a trade happens, you will receive an event about it that you can respond to.</p>
 <p>A quick example to showcase how events work:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">steam</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">steam</span>
+
 
 <span class="k">class</span> <span class="nc">MyClient</span><span class="p">(</span><span class="n">steam</span><span class="o">.</span><span class="n">Client</span><span class="p">):</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -139,6 +140,7 @@ something you listen for and then respond to.</p>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">on_trade_receive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trade</span><span class="p">:</span> <span class="n">steam</span><span class="o">.</span><span class="n">TradeOffer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Received trade: #</span><span class="si">{</span><span class="n">trade</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> from&quot;</span><span class="p">,</span> <span class="n">trade</span><span class="o">.</span><span class="n">partner</span><span class="p">)</span>
+
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">MyClient</span><span class="p">()</span>
 <span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;username&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span>
@@ -149,7 +151,8 @@ something you listen for and then respond to.</p>
 <h2>A Minimal Bot<a class="headerlink" href="#a-minimal-bot" title="Permalink to this heading">¶</a></h2>
 <p>Let’s make a bot that replies to a specific message and walk you through it.</p>
 <p>It looks something like this:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">steam</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">steam</span>
+
 
 <span class="k">class</span> <span class="nc">MyClient</span><span class="p">(</span><span class="n">steam</span><span class="o">.</span><span class="n">Client</span><span class="p">):</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -161,6 +164,7 @@ something you listen for and then respond to.</p>
 
         <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;$hello&quot;</span><span class="p">):</span>
             <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">MyClient</span><span class="p">()</span>
 <span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;username&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span>
@@ -181,7 +185,7 @@ reply of “Hello!”.</p></li>
 <p>After saving this as <code class="docutils literal notranslate"><span class="pre">example_bot.py</span></code> not called <code class="docutils literal notranslate"><span class="pre">steam.py</span></code> as it will interfere with the library we can run the bot
 and watch it come online using:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Linux/macOS</span>
-python3 example_bot.py
+python example_bot.py
 <span class="c1"># Windows</span>
 py -3 example_bot.py
 </pre></div>
@@ -190,7 +194,7 @@ py -3 example_bot.py
 <section id="a-minimal-bot-with-ext-commands">
 <h2>A Minimal Bot with ext.commands<a class="headerlink" href="#a-minimal-bot-with-ext-commands" title="Permalink to this heading">¶</a></h2>
 <p>Since code like this is so common steam.py comes with a powerful commands extension to aid with creating commands.</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">steam.ext</span> <span class="kn">import</span> <span class="n">commands</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">steam.ext</span> <span class="kn">import</span> <span class="n">commands</span>
 
 
 <span class="k">class</span> <span class="nc">MyBot</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Bot</span><span class="p">):</span>
@@ -200,6 +204,7 @@ py -3 example_bot.py
     <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
 
 <span class="n">bot</span> <span class="o">=</span> <span class="n">MyBot</span><span class="p">(</span><span class="n">command_prefix</span><span class="o">=</span><span class="s2">&quot;$&quot;</span><span class="p">)</span>
 <span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;username&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">)</span>
