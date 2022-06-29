@@ -215,7 +215,7 @@ Enumerations
     :members:
     :undoc-members:
 
-.. autoclass:: ClanEvent()
+.. autoclass:: EventType()
    :members:
    :undoc-members:
 
@@ -518,6 +518,16 @@ Package
 .. autoclass:: Package()
    :members:
 
+.. attributetable:: steam.package.StatefulPackage
+
+.. autoclass:: steam.package.StatefulPackage()
+   :members:
+   :inherited-members:
+
+.. attributetable:: steam.FetchedPackage()
+   :members:
+   :inherited-members:
+
 .. attributetable:: License
 
 .. autoclass:: License()
@@ -582,12 +592,65 @@ Trading
 .. autoclass:: Asset()
     :members:
 
+Reactions
+~~~~~~~~~~~~~~~
+
+.. attributetable:: Award
+
+.. autoclass:: Award()
+    :members:
+    :inherited-members:
+
+.. attributetable:: AwardReaction
+
+.. autoclass:: AwardReaction()
+    :members:
+    :inherited-members:
+
+.. attributetable:: PartialMessageReaction
+
+.. autoclass:: PartialMessageReaction()
+    :members:
+    :inherited-members:
+
+.. attributetable:: MessageReaction
+
+.. autoclass:: MessageReaction()
+    :members:
+    :inherited-members:
+
+.. attributetable:: Emoticon
+
+.. autoclass:: Emoticon()
+    :members:
+    :inherited-members:
+
+.. attributetable:: Sticker
+
+.. autoclass:: Sticker()
+    :members:
+    :inherited-members:
+
+.. attributetable:: ClientEmoticon
+
+.. autoclass:: ClientEmoticon()
+    :members:
+    :inherited-members:
+
+.. attributetable:: ClientSticker
+
+.. autoclass:: ClientSticker()
+    :members:
+    :inherited-members:
+
 Reviews
 ~~~~~~~~~~~~~~~
 
 .. attributetable:: Review
 
 .. autoclass:: Review()
+    :members:
+    :inherited-members:
 
 Roles
 ~~~~~~~~~~~~~~~
@@ -595,6 +658,7 @@ Roles
 .. attributetable:: Role
 
 .. autoclass:: Role()
+    :members:
 
 
 Users
