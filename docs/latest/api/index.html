@@ -5003,8 +5003,6 @@ async</span><a class="reference internal" href="#steam.abc.BaseUser.level">level
 async</span><a class="reference internal" href="#steam.abc.BaseUser.profile">profile</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.profile_customisation_info">profile_customisation_info</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.abc.BaseUser.profile_info">profile_info</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="async iterable">
 async for</span><a class="reference internal" href="#steam.abc.BaseUser.published_files">published_files</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="async iterable">
@@ -5290,17 +5288,6 @@ api.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.profile_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.profile_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user’s profile info.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.ProfileInfo" title="steam.profile.ProfileInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.profile.ProfileInfo</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.profile_customisation_info">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s profile customisation information.</p>
@@ -5371,7 +5358,7 @@ api.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">reviews</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Author: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;recommended&#39;</span> <span class="k">if</span> <span class="n">review</span><span class="o">.</span><span class="n">upvoted</span> <span class="s1">&#39;doesn&#39;</span><span class="n">t</span> <span class="n">recommend</span><span class="s1">&#39;} </span><span class="si">{review.game}</span><span class="s1">&quot;)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Author: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;recommended&#39;</span> <span class="k">if</span> <span class="n">review</span><span class="o">.</span><span class="n">recommend</span> <span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t recommend&#39;</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">game</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Flattening into a list:</p>
@@ -10130,6 +10117,8 @@ async</span><a class="reference internal" href="#steam.GameInfo.fetch">fetch</a>
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.GameInfo.fetch_manifest">fetch_manifest</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.GameInfo.friend_thoughts">friend_thoughts</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.GameInfo.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.GameInfo.get_branch">get_branch</a></li><li class="py-attribute-table-entry">
@@ -10486,6 +10475,17 @@ async for</span><a class="reference internal" href="#steam.GameInfo.reviews">rev
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.GameInfo.friend_thoughts">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friend_thoughts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.GameInfo.friend_thoughts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the client user’s friends who recommended and didn’t recommend this game in a review.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>FriendThoughts</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.GameInfo.friends_who_own">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.GameInfo.friends_who_own" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch the users in your friend list who own this game.</p>
@@ -10614,15 +10614,17 @@ fetch all the game’s published files, but this will be a very slow operation.<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.GameInfo.review">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.GameInfo.review" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.GameInfo.review" title="Permalink to this definition">¶</a></dt>
 <dd><p>Review a game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The content of the review.</p></li>
+<li><p><strong>recommend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you recommended the game.</p></li>
 <li><p><strong>public</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should be public.</p></li>
 <li><p><strong>commentable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should allow comments.</p></li>
 <li><p><strong>received_compensation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you received compensation for this review.</p></li>
+<li><p><strong>language</strong> (<em>Language</em><em> | </em><em>None</em>) – The language the review is in.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -11580,7 +11582,9 @@ Attributes</span><ul>
 Methods</span><ul>
 <li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.ProfileItem.equip">equip</a></li></ul>
+async</span><a class="reference internal" href="#steam.ProfileItem.equip">equip</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ProfileItem.item">item</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.ProfileItem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">ProfileItem</span></span><a class="headerlink" href="#steam.ProfileItem" title="Permalink to this definition">¶</a></dt>
@@ -11642,6 +11646,17 @@ async</span><a class="reference internal" href="#steam.ProfileItem.equip">equip<
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ProfileItem.equip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Equip the profile item.</p>
 <dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ProfileItem.item">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">item</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ProfileItem.item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve this to an actual item in the owner’s inventory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Item" title="steam.trade.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.trade.Item</span></code></a></p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -12640,11 +12655,11 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.Review.language">language</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Review.reactions">reactions</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Review.received_compensation">received_compensation</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Review.recommended">recommended</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Review.steam_purchase">steam_purchase</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Review.updated_at">updated_at</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Review.upvoted">upvoted</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.Review.upvotes">upvotes</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Review.votes_funny">votes_funny</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.Review.votes_helpful">votes_helpful</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Review.weighted_vote_score">weighted_vote_score</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.Review.written_during_early_access">written_during_early_access</a></li></ul>
 </div><div class="py-attribute-table-column">
@@ -12660,15 +12675,15 @@ async for</span><a class="reference internal" href="#steam.Review.comments">comm
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Review.delete">delete</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Review.downvote">downvote</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Review.edit">edit</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Review.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Review.mark_funny">mark_funny</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.Review.upvote">upvote</a></li></ul>
+async</span><a class="reference internal" href="#steam.Review.mark_helpful">mark_helpful</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Review.mark_not_helpful">mark_not_helpful</a></li></ul>
 </div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.Review">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">Review</span></span><a class="headerlink" href="#steam.Review" title="Permalink to this definition">¶</a></dt>
@@ -12682,12 +12697,17 @@ async</span><a class="reference internal" href="#steam.Review.upvote">upvote</a>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Review.author">
-<span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">BaseReviewUser</span></em><a class="headerlink" href="#steam.Review.author" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ReviewUser</span></em><a class="headerlink" href="#steam.Review.author" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Review.game">
-<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame"><span class="pre">StatefulGame</span></a></em><a class="headerlink" href="#steam.Review.game" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ReviewGame</span></em><a class="headerlink" href="#steam.Review.game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Review.recommended">
+<span class="sig-name descname"><span class="pre">recommended</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.Review.recommended" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -12711,13 +12731,8 @@ async</span><a class="reference internal" href="#steam.Review.upvote">upvote</a>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Review.upvoted">
-<span class="sig-name descname"><span class="pre">upvoted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.Review.upvoted" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Review.upvotes">
-<span class="sig-name descname"><span class="pre">upvotes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.Review.upvotes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.Review.votes_helpful">
+<span class="sig-name descname"><span class="pre">votes_helpful</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.Review.votes_helpful" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -12738,6 +12753,16 @@ async</span><a class="reference internal" href="#steam.Review.upvote">upvote</a>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Review.comment_count">
 <span class="sig-name descname"><span class="pre">comment_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.Review.comment_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Review.steam_purchase">
+<span class="sig-name descname"><span class="pre">steam_purchase</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Review.steam_purchase" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.Review.received_compensation">
+<span class="sig-name descname"><span class="pre">received_compensation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.Review.received_compensation" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -12818,16 +12843,6 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Review.steam_purchase">
-<span class="sig-name descname"><span class="pre">steam_purchase</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.Review.steam_purchase" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.Review.received_compensation">
-<span class="sig-name descname"><span class="pre">received_compensation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.Review.received_compensation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Review.written_during_early_access">
 <span class="sig-name descname"><span class="pre">written_during_early_access</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.Review.written_during_early_access" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -12848,16 +12863,16 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.Review.upvote">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">upvote</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Review.upvote" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.Review.mark_helpful">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">mark_helpful</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Review.mark_helpful" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mark this review as helpful.</p>
 <dl class="field-list simple">
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.Review.downvote">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">downvote</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Review.downvote" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="steam.Review.mark_not_helpful">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">mark_not_helpful</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Review.mark_not_helpful" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mark this review as not helpful.</p>
 <dl class="field-list simple">
 </dl>
@@ -12921,7 +12936,6 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.ClientUser.country">country</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ClientUser.created_at">created_at</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ClientUser.flags">flags</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.ClientUser.friends">friends</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ClientUser.from_url">from_url</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ClientUser.game">game</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.ClientUser.id">id</a></li><li class="py-attribute-table-entry">
@@ -12971,7 +12985,11 @@ async</span><a class="reference internal" href="#steam.ClientUser.fetch_review">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.fetch_reviews">fetch_reviews</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ClientUser.friends">friends</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.games">games</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="method">
+def</span><a class="reference internal" href="#steam.ClientUser.get_friend">get_friend</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.inventory">inventory</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -13036,9 +13054,6 @@ async</span><a class="reference internal" href="#steam.ClientUser.wishlist">wish
 <span class="sig-name descname"><span class="pre">friends</span></span><a class="headerlink" href="#steam.ClientUser.friends" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of the <a class="reference internal" href="#steam.ClientUser" title="steam.ClientUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClientUser</span></code></a>’s friends.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference internal" href="#steam.User" title="steam.user.User">steam.user.User</a>]</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -13166,6 +13181,28 @@ websocket.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the list of the users friends.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ClientUser.get_friend">
+<span class="sig-name descname"><span class="pre">get_friend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.get_friend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a friend from the client user’s friends list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.inventory">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.inventory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s <a class="reference internal" href="#steam.Inventory" title="steam.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Inventory</span></code></a> for trading.</p>
@@ -13220,6 +13257,17 @@ websocket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.profile.ClientUserProfile</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ClientUser.profile_info">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.profile_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>The friend’s profile info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.ProfileInfo" title="steam.ProfileInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileInfo</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -13571,17 +13619,6 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.ClientUser.profile_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.profile_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user’s profile info.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.ProfileInfo" title="steam.ProfileInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileInfo</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileType.Community</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.published_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code>s.</p>
@@ -13622,7 +13659,7 @@ user’s published files.</p></li>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">reviews</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Author: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;recommended&#39;</span> <span class="k">if</span> <span class="n">review</span><span class="o">.</span><span class="n">upvoted</span> <span class="s1">&#39;doesn&#39;</span><span class="n">t</span> <span class="n">recommend</span><span class="s1">&#39;} </span><span class="si">{review.game}</span><span class="s1">&quot;)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Author: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;recommended&#39;</span> <span class="k">if</span> <span class="n">review</span><span class="o">.</span><span class="n">recommend</span> <span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t recommend&#39;</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">game</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Flattening into a list:</p>
@@ -13737,10 +13774,6 @@ async</span><a class="reference internal" href="#steam.User.friends">friends</a>
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.games">games</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.User.invite_to_clan">invite_to_clan</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.User.invite_to_group">invite_to_group</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.is_banned">is_banned</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.User.is_commentable">is_commentable</a></li><li class="py-attribute-table-entry">
@@ -13753,13 +13786,9 @@ def</span><a class="reference internal" href="#steam.User.is_valid">is_valid</a>
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.level">level</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.User.owns">owns</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.profile">profile</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.profile_customisation_info">profile_customisation_info</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.User.profile_info">profile_info</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="async iterable">
 async for</span><a class="reference internal" href="#steam.User.published_files">published_files</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -14009,42 +14038,6 @@ private inventory.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.UserMessage" title="steam.UserMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.UserMessage</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.User.invite_to_group">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invite_to_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.invite_to_group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invites the user to a <a class="reference internal" href="#steam.Group" title="steam.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>group</strong> (<a class="reference internal" href="#steam.Group" title="steam.Group"><em>Group</em></a>) – The group to invite the user to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.User.invite_to_clan">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">invite_to_clan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clan</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.invite_to_clan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invites the user to a <a class="reference internal" href="#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clan</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>clan</strong> (<a class="reference internal" href="#steam.Clan" title="steam.Clan"><em>Clan</em></a>) – The clan to invite the user to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.User.owns">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">owns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.owns" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether the game is owned by this user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>game</strong> (<a class="reference internal" href="#steam.Game" title="steam.Game"><em>Game</em></a>) – The game you want to check the ownership of.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -14405,17 +14398,6 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.User.profile_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.profile_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user’s profile info.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.ProfileInfo" title="steam.ProfileInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileInfo</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.User.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileType.Community</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.published_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code>s.</p>
@@ -14456,7 +14438,7 @@ user’s published files.</p></li>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">reviews</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Author: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;recommended&#39;</span> <span class="k">if</span> <span class="n">review</span><span class="o">.</span><span class="n">upvoted</span> <span class="s1">&#39;doesn&#39;</span><span class="n">t</span> <span class="n">recommend</span><span class="s1">&#39;} </span><span class="si">{review.game}</span><span class="s1">&quot;)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Author: </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;recommended&#39;</span> <span class="k">if</span> <span class="n">review</span><span class="o">.</span><span class="n">recommend</span> <span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t recommend&#39;</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">review</span><span class="o">.</span><span class="n">game</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Flattening into a list:</p>
@@ -14661,6 +14643,8 @@ async</span><a class="reference internal" href="#steam.game.StatefulGame.fetch">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.game.StatefulGame.fetch_manifest">fetch_manifest</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.game.StatefulGame.friend_thoughts">friend_thoughts</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.game.StatefulGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.game.StatefulGame.info">info</a></li><li class="py-attribute-table-entry">
@@ -14731,6 +14715,17 @@ async for</span><a class="reference internal" href="#steam.game.StatefulGame.rev
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Manifest" title="steam.Manifest"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Manifest</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.game.StatefulGame.friend_thoughts">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friend_thoughts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.game.StatefulGame.friend_thoughts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the client user’s friends who recommended and didn’t recommend this game in a review.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14853,15 +14848,17 @@ fetch all the game’s published files, but this will be a very slow operation.<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.game.StatefulGame.review">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.game.StatefulGame.review" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.game.StatefulGame.review" title="Permalink to this definition">¶</a></dt>
 <dd><p>Review a game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The content of the review.</p></li>
+<li><p><strong>recommend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you recommended the game.</p></li>
 <li><p><strong>public</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should be public.</p></li>
 <li><p><strong>commentable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should allow comments.</p></li>
 <li><p><strong>received_compensation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you received compensation for this review.</p></li>
+<li><p><strong>language</strong> (<em>Language</em><em> | </em><em>None</em>) – The language the review is in.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -14942,6 +14939,8 @@ async</span><a class="reference internal" href="#steam.UserGame.clan">clan</a></
 async</span><a class="reference internal" href="#steam.UserGame.fetch">fetch</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.UserGame.fetch_manifest">fetch_manifest</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.UserGame.friend_thoughts">friend_thoughts</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.UserGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
@@ -15097,6 +15096,17 @@ async for</span><a class="reference internal" href="#steam.UserGame.reviews">rev
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.UserGame.friend_thoughts">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friend_thoughts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.friend_thoughts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the client user’s friends who recommended and didn’t recommend this game in a review.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.UserGame.friends_who_own">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.friends_who_own" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch the users in your friend list who own this game.</p>
@@ -15214,15 +15224,17 @@ fetch all the game’s published files, but this will be a very slow operation.<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.UserGame.review">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.review" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.review" title="Permalink to this definition">¶</a></dt>
 <dd><p>Review a game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The content of the review.</p></li>
+<li><p><strong>recommend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you recommended the game.</p></li>
 <li><p><strong>public</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should be public.</p></li>
 <li><p><strong>commentable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should allow comments.</p></li>
 <li><p><strong>received_compensation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you received compensation for this review.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language the review is in.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -15309,6 +15321,8 @@ async</span><a class="reference internal" href="#steam.WishlistGame.clan">clan</
 async</span><a class="reference internal" href="#steam.WishlistGame.fetch">fetch</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.WishlistGame.fetch_manifest">fetch_manifest</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.WishlistGame.friend_thoughts">friend_thoughts</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.WishlistGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -15569,6 +15583,17 @@ async for</span><a class="reference internal" href="#steam.WishlistGame.reviews"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.WishlistGame.friend_thoughts">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friend_thoughts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.friend_thoughts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the client user’s friends who recommended and didn’t recommend this game in a review.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.friends_who_own">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.friends_who_own" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch the users in your friend list who own this game.</p>
@@ -15686,15 +15711,17 @@ fetch all the game’s published files, but this will be a very slow operation.<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.review">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.review" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.review" title="Permalink to this definition">¶</a></dt>
 <dd><p>Review a game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The content of the review.</p></li>
+<li><p><strong>recommend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you recommended the game.</p></li>
 <li><p><strong>public</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should be public.</p></li>
 <li><p><strong>commentable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should allow comments.</p></li>
 <li><p><strong>received_compensation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you received compensation for this review.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language the review is in.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -15780,6 +15807,8 @@ async</span><a class="reference internal" href="#steam.FetchedGame.clan">clan</a
 async</span><a class="reference internal" href="#steam.FetchedGame.fetch">fetch</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.FetchedGame.fetch_manifest">fetch_manifest</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.FetchedGame.friend_thoughts">friend_thoughts</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.FetchedGame.friends_who_own">friends_who_own</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -15981,6 +16010,17 @@ async for</span><a class="reference internal" href="#steam.FetchedGame.reviews">
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.FetchedGame.friend_thoughts">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friend_thoughts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.friend_thoughts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the client user’s friends who recommended and didn’t recommend this game in a review.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.Friend</span></code>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.friends_who_own">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">friends_who_own</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.friends_who_own" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch the users in your friend list who own this game.</p>
@@ -16098,15 +16138,17 @@ fetch all the game’s published files, but this will be a very slow operation.<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.review">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.review" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">review</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recommend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commentable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">received_compensation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.review" title="Permalink to this definition">¶</a></dt>
 <dd><p>Review a game.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The content of the review.</p></li>
+<li><p><strong>recommend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you recommended the game.</p></li>
 <li><p><strong>public</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should be public.</p></li>
 <li><p><strong>commentable</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether the review should allow comments.</p></li>
 <li><p><strong>received_compensation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether you received compensation for this review.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language the review is in.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>

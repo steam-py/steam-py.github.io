@@ -1212,10 +1212,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PackageInfo.depots">depots() (steam.PackageInfo method)</a>
 </li>
-      <li><a href="../api/#steam.AppFlag.Deprecated">Deprecated (steam.AppFlag attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.AppFlag.Deprecated">Deprecated (steam.AppFlag attribute)</a>
+</li>
       <li><a href="../api/#steam.Branch.description">description (steam.Branch attribute)</a>
 
       <ul>
@@ -1277,11 +1277,7 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.DMChannel">DMChannel (class in steam)</a>
 </li>
       <li><a href="../api/#steam.Announcement.downvote">downvote() (steam.Announcement method)</a>
-
-      <ul>
-        <li><a href="../api/#steam.Review.downvote">(steam.Review method)</a>
 </li>
-      </ul></li>
       <li><a href="../api/#steam.Announcement.downvotes">downvotes (steam.Announcement attribute)</a>
 
       <ul>
@@ -1556,14 +1552,14 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.fetch_reviews">(steam.User method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.fetch_server">fetch_server() (steam.Client method)</a>
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_server">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.fetch_servers">fetch_servers() (steam.Client method)</a>
 
       <ul>
@@ -1638,6 +1634,18 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.FriendRelationship.Friend">Friend (steam.FriendRelationship attribute)</a>
 </li>
+      <li><a href="../api/#steam.FetchedGame.friend_thoughts">friend_thoughts() (steam.FetchedGame method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.game.StatefulGame.friend_thoughts">(steam.game.StatefulGame method)</a>
+</li>
+        <li><a href="../api/#steam.GameInfo.friend_thoughts">(steam.GameInfo method)</a>
+</li>
+        <li><a href="../api/#steam.UserGame.friend_thoughts">(steam.UserGame method)</a>
+</li>
+        <li><a href="../api/#steam.WishlistGame.friend_thoughts">(steam.WishlistGame method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.FriendRelationship">FriendRelationship (class in steam)</a>
 </li>
       <li><a href="../api/#steam.ClientUser.friends">friends (steam.ClientUser attribute)</a>
@@ -1645,6 +1653,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.abc.BaseUser.friends">friends() (steam.abc.BaseUser method)</a>
 
       <ul>
+        <li><a href="../api/#id0">(steam.ClientUser method)</a>
+</li>
         <li><a href="../api/#steam.User.friends">(steam.User method)</a>
 </li>
       </ul></li>
@@ -1835,6 +1845,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_context">get_context() (steam.ext.commands.Bot method)</a>
+</li>
+      <li><a href="../api/#steam.ClientUser.get_friend">get_friend() (steam.ClientUser method)</a>
 </li>
       <li><a href="../api/#steam.Client.get_game">get_game() (steam.Client method)</a>
 
@@ -2290,10 +2302,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.InvalidCredentials">InvalidCredentials</a>
 </li>
-      <li><a href="../api/#steam.Result.InvalidEmail">InvalidEmail (steam.Result attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.Result.InvalidEmail">InvalidEmail (steam.Result attribute)</a>
+</li>
       <li><a href="../api/#steam.TradeOfferState.InvalidItems">InvalidItems (steam.TradeOfferState attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.InvalidItemType">InvalidItemType (steam.Result attribute)</a>
@@ -2350,10 +2362,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.invite_code">(steam.User property)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.User.invite_to_clan">invite_to_clan() (steam.User method)</a>
-</li>
-      <li><a href="../api/#steam.User.invite_to_group">invite_to_group() (steam.User method)</a>
-</li>
       <li><a href="../api/#steam.abc.BaseUser.invite_url">invite_url (steam.abc.BaseUser property)</a>
 
       <ul>
@@ -2553,6 +2561,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.PaymentMethod.ItauOnline">ItauOnline (steam.PaymentMethod attribute)</a>
 </li>
       <li><a href="../api/#steam.Item">Item (class in steam)</a>
+</li>
+      <li><a href="../api/#steam.ProfileItem.item">item() (steam.ProfileItem method)</a>
 </li>
       <li><a href="../api/#steam.FavouriteBadge.item_id">item_id (steam.FavouriteBadge attribute)</a>
 </li>
@@ -2812,6 +2822,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Review.mark_funny">mark_funny() (steam.Review method)</a>
 </li>
+      <li><a href="../api/#steam.Review.mark_helpful">mark_helpful() (steam.Review method)</a>
+</li>
+      <li><a href="../api/#steam.Review.mark_not_helpful">mark_not_helpful() (steam.Review method)</a>
+</li>
       <li><a href="../api/#steam.GameInfo.market_presence">market_presence (steam.GameInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.PaymentMethod.MastercardBrazil">MastercardBrazil (steam.PaymentMethod attribute)</a>
@@ -2862,6 +2876,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Group.members">(steam.Group property)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.abc.BaseUser.mention">mention (steam.abc.BaseUser property)</a>
 
       <ul>
@@ -2870,8 +2886,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.mention">(steam.User property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.ClanMessage.mentions">mentions (steam.ClanMessage attribute)</a>
 
       <ul>
@@ -3182,10 +3196,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Client.on_socket_receive">on_socket_receive() (steam.Client method)</a>
 </li>
-      <li><a href="../api/#steam.Client.on_socket_send">on_socket_send() (steam.Client method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.Client.on_socket_send">on_socket_send() (steam.Client method)</a>
+</li>
       <li><a href="../api/#steam.Client.on_trade_accept">on_trade_accept() (steam.Client method)</a>
 </li>
       <li><a href="../api/#steam.Client.on_trade_cancel">on_trade_cancel() (steam.Client method)</a>
@@ -3267,8 +3281,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../api/#steam.Item.owner_descriptions">owner_descriptions (steam.Item attribute)</a>
-</li>
-      <li><a href="../api/#steam.User.owns">owns() (steam.User method)</a>
 </li>
       <li><a href="../api/#steam.PaymentMethod.OXXO">OXXO (steam.PaymentMethod attribute)</a>
 </li>
@@ -3394,10 +3406,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.UserGame.playtime_windows">playtime_windows (steam.UserGame attribute)</a>
 </li>
-      <li><a href="../api/#steam.AppFlag.Plugin">Plugin (steam.AppFlag attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.AppFlag.Plugin">Plugin (steam.AppFlag attribute)</a>
+</li>
       <li><a href="../api/#steam.GameServer.port">port (steam.GameServer attribute)</a>
 </li>
       <li><a href="../api/#steam.UserBadge.Portal2PotatoARG">Portal2PotatoARG (steam.UserBadge attribute)</a>
@@ -3454,14 +3466,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.profile_customisation_info">(steam.User method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.abc.BaseUser.profile_info">profile_info() (steam.abc.BaseUser method)</a>
-
-      <ul>
-        <li><a href="../api/#steam.ClientUser.profile_info">(steam.ClientUser method)</a>
+      <li><a href="../api/#steam.ClientUser.profile_info">profile_info() (steam.ClientUser method)</a>
 </li>
-        <li><a href="../api/#steam.User.profile_info">(steam.User method)</a>
-</li>
-      </ul></li>
       <li><a href="../api/#steam.ClientUser.profile_items">profile_items() (steam.ClientUser method)</a>
 </li>
       <li><a href="../api/#steam.ProfileInfo">ProfileInfo (class in steam)</a>
@@ -3622,6 +3628,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Review.received_compensation">received_compensation (steam.Review attribute)</a>
 </li>
       <li><a href="../api/#steam.ProfileItemType.Recommendation">Recommendation (steam.ProfileItemType attribute)</a>
+</li>
+      <li><a href="../api/#steam.Review.recommended">recommended (steam.Review attribute)</a>
 </li>
       <li><a href="../api/#steam.LicenseType.RecurringCharge">RecurringCharge (steam.LicenseType attribute)</a>
 </li>
@@ -4282,19 +4290,11 @@ DEALINGS IN THE SOFTWARE.
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Announcement.upvote">upvote() (steam.Announcement method)</a>
-
-      <ul>
-        <li><a href="../api/#steam.Review.upvote">(steam.Review method)</a>
-</li>
-      </ul></li>
-      <li><a href="../api/#steam.Review.upvoted">upvoted (steam.Review attribute)</a>
 </li>
       <li><a href="../api/#steam.Announcement.upvotes">upvotes (steam.Announcement attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.Event.upvotes">(steam.Event attribute)</a>
-</li>
-        <li><a href="../api/#steam.Review.upvotes">(steam.Review attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Asset.url">url (steam.Asset property)</a>
@@ -4375,10 +4375,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.version_info">version_info (in module steam)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Query.version_match">version_match (steam.Query property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.DepotFileFlag.VersionedUserConfig">VersionedUserConfig (steam.DepotFileFlag attribute)</a>
 </li>
       <li><a href="../api/#steam.ReviewType.VeryNegative">VeryNegative (steam.ReviewType attribute)</a>
@@ -4394,6 +4394,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.PriceOverview.volume">volume (steam.PriceOverview attribute)</a>
 </li>
       <li><a href="../api/#steam.Review.votes_funny">votes_funny (steam.Review attribute)</a>
+</li>
+      <li><a href="../api/#steam.Review.votes_helpful">votes_helpful (steam.Review attribute)</a>
 </li>
   </ul></td>
 </tr></table>
