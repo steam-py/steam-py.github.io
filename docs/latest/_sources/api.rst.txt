@@ -159,6 +159,10 @@ Enumerations
     :members:
     :undoc-members:
 
+.. autoclass:: Language()
+    :members:
+    :undoc-members:
+
 .. autoclass:: Universe()
     :members:
     :undoc-members:
@@ -592,6 +596,11 @@ Trading
 .. autoclass:: Asset()
     :members:
 
+.. attributetable:: MovedItem
+
+.. autoclass:: MovedItem()
+    :members:
+
 Reactions
 ~~~~~~~~~~~~~~~
 
@@ -740,6 +749,11 @@ Games can be manually constructed using there app id eg:
     :inherited-members:
     :members:
 
+.. attributetable:: DLC
+
+.. autoclass:: DLC()
+    :inherited-members:
+    :members:
 
 Steam IDs
 ~~~~~~~~~~~~~~~

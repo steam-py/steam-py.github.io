@@ -762,7 +762,7 @@ Register an event to listen to.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>Game</em></a><em>]</em>) – The app id of the game or a <a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a> instance.</p></li>
-<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language to fetch the game in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the game in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -773,14 +773,17 @@ Register an event to listen to.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_package">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_package" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_package" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a package from its ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the package.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the package.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the package in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.package.FetchedPackage</span></code></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.package.FetchedPackage</span></code>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -829,7 +832,7 @@ Register an event to listen to.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the published file.</p></li>
 <li><p><strong>revision</strong> (<a class="reference internal" href="../../../api/#steam.PublishedFileRevision" title="steam.enums.PublishedFileRevision"><em>PublishedFileRevision</em></a>) – The revision of the published file to fetch.</p></li>
-<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language to fetch the published file in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the published file in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -847,7 +850,7 @@ Register an event to listen to.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ids</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The IDs of the published files.</p></li>
 <li><p><strong>revision</strong> (<a class="reference internal" href="../../../api/#steam.PublishedFileRevision" title="steam.enums.PublishedFileRevision"><em>PublishedFileRevision</em></a>) – The revision of the published files to fetch.</p></li>
-<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language to fetch the published files in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the published files in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -906,7 +909,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the trade to search for from the API.</p></li>
-<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language to fetch the trade in. <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the trade in. <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -1389,7 +1392,7 @@ passed, the code will need to be inputted by the user via <a class="reference in
 of the user’s trades, but this will be a very slow operation.</p></li>
 <li><p><strong>before</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime</em></a><em>]</em>) – A time to search for trades before.</p></li>
 <li><p><strong>after</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime</em></a><em>]</em>) – A time to search for trades after.</p></li>
-<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>Language</em><em>]</em>) – The language to fetch the trade in. <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the trade in. <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
