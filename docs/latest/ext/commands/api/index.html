@@ -195,11 +195,11 @@ async</span><a class="reference internal" href="#steam.ext.commands.Bot.connect"
 <span class="py-attribute-table-badge" title="decorator">
 &#64;</span><a class="reference internal" href="#steam.ext.commands.Bot.event">event</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.fetch_app">fetch_app</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.fetch_clan">fetch_clan</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.fetch_clan_named">fetch_clan_named</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.ext.commands.Bot.fetch_game">fetch_game</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.fetch_package">fetch_package</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -223,6 +223,8 @@ async</span><a class="reference internal" href="#steam.ext.commands.Bot.fetch_us
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.fetch_users">fetch_users</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
+def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_app">get_app</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_clan">get_clan</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_cog">get_cog</a></li><li class="py-attribute-table-entry">
@@ -230,8 +232,6 @@ def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_cog">g
 def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_command">get_command</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.get_context">get_context</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_game">get_game</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ext.commands.Bot.get_group">get_group</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
@@ -609,13 +609,13 @@ event.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.change_presence">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">change_presence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">games</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ui_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_kick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.change_presence" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">change_presence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ui_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_kick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.change_presence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set your status.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>game</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>Game</em></a><em>]</em>) – A games to set your status as.</p></li>
-<li><p><strong>games</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>steam.Game</em></a><em>]</em><em>]</em>) – A list of games to set your status to.</p></li>
+<li><p><strong>app</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.App" title="steam.App"><em>App</em></a><em>]</em>) – An app to set your status as.</p></li>
+<li><p><strong>apps</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.App" title="steam.App"><em>steam.App</em></a><em>]</em><em>]</em>) – A list of apps to set your status to.</p></li>
 <li><p><strong>state</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.PersonaState" title="steam.enums.PersonaState"><em>PersonaState</em></a><em>]</em>) – <p>The state to show your account as.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -738,6 +738,23 @@ Register an event to listen to.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_app">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch an app from its ID or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the app was not found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.App" title="steam.App"><em>App</em></a><em>]</em>) – The app id of the app or a <a class="reference internal" href="../../../api/#steam.App" title="steam.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a> instance.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the app in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.FetchedApp" title="steam.FetchedApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.FetchedApp</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_clan">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_clan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_clan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetches a clan from the websocket with a matching ID or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the clan was not found.</p>
@@ -767,23 +784,6 @@ Register an event to listen to.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_game">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_game" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetch a game from its ID or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the game was not found.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>Game</em></a><em>]</em>) – The app id of the game or a <a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a> instance.</p></li>
-<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the game in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> uses the current language.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="../../../api/#steam.FetchedGame" title="steam.FetchedGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.FetchedGame</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_package">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_package" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a package from its ID.</p>
@@ -802,13 +802,13 @@ Register an event to listen to.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_price">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_price" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">currency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_price" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch the <code class="xref py py-class docutils literal notranslate"><span class="pre">PriceOverview</span></code> for an item.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The name of the item.</p></li>
-<li><p><strong>game</strong> (<a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>Game</em></a>) – The game the item is from.</p></li>
+<li><p><strong>app</strong> (<a class="reference internal" href="../../../api/#steam.App" title="steam.App"><em>App</em></a>) – The app the item is from.</p></li>
 <li><p><strong>currency</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>]</em>) – The currency to fetch the price in.</p></li>
 </ul>
 </dd>
@@ -820,17 +820,17 @@ Register an event to listen to.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_product_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_product_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">games</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_product_info" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_product_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_product_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch product info.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>games</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Collection" title="(in Python v3.10)"><em>Collection</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>Game</em></a><em>]</em>) – The games to fetch info on.</p></li>
+<li><p><strong>apps</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Collection" title="(in Python v3.10)"><em>Collection</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.App" title="steam.App"><em>App</em></a><em>]</em>) – The apps to fetch info on.</p></li>
 <li><p><strong>packages</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Collection" title="(in Python v3.10)"><em>Collection</em></a><em>[</em><a class="reference internal" href="../../../api/#steam.Package" title="steam.Package"><em>Package</em></a><em>]</em>) – The packages to fetch info on.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.GameInfo" title="steam.GameInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.GameInfo</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.PackageInfo" title="steam.PackageInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PackageInfo</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.GameInfo" title="steam.GameInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.GameInfo</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.PackageInfo" title="steam.PackageInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PackageInfo</span></code></a>]]]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.AppInfo" title="steam.AppInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.AppInfo</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.PackageInfo" title="steam.PackageInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PackageInfo</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.AppInfo" title="steam.AppInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.AppInfo</span></code></a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="../../../api/#steam.PackageInfo" title="steam.PackageInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PackageInfo</span></code></a>]]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -978,6 +978,20 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.get_app">
+<span class="sig-name descname"><span class="pre">get_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.get_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a stateful app from its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.App" title="steam.App"><em>App</em></a><em>]</em>) – The app id of the app or a <a class="reference internal" href="../../../api/#steam.App" title="steam.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a> instance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../../api/#steam.app.StatefulApp" title="steam.StatefulApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.StatefulApp</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.get_clan">
 <span class="sig-name descname"><span class="pre">get_clan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.get_clan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a clan from cache with a matching ID or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the group was not found.</p>
@@ -1005,20 +1019,6 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#steam.ext.commands.Command" title="steam.ext.commands.Command">Command</a> | None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.ext.commands.Bot.get_game">
-<span class="sig-name descname"><span class="pre">get_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.get_game" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a stateful game from its ID.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><em>Game</em></a><em>]</em>) – The app id of the game or a <a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a> instance.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="../../../api/#steam.game.StatefulGame" title="steam.StatefulGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.StatefulGame</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3556,7 +3556,7 @@ be accessed via <code class="xref py py-attr docutils literal notranslate"><span
 <li><p><a class="reference internal" href="../../../api/#steam.abc.Channel" title="steam.abc.Channel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Channel</span></code></a></p></li>
 <li><p><a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">Clan</span></code></a></p></li>
 <li><p><a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code></a></p></li>
-<li><p><a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a></p></li>
+<li><p><a class="reference internal" href="../../../api/#steam.App" title="steam.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a></p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -3684,14 +3684,6 @@ the global <a class="reference internal" href="#steam.ext.commands.UserConverter
 </dl>
 </dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="steam.ext.commands.GameConverter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">GameConverter</span></span><a class="headerlink" href="#steam.ext.commands.GameConverter" title="Permalink to this definition">¶</a></dt>
-<dd><p>The converter that is used when the type-hint passed is <a class="reference internal" href="../../../api/#steam.Game" title="steam.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">Game</span></code></a>.</p>
-<p>If the param is a digit it is assumed that the argument is the <code class="xref py py-attr docutils literal notranslate"><span class="pre">Game.id</span></code> else it is assumed it is the
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">Game.title</span></code>.</p>
-</dd></dl>
-
 </section>
 <section id="default-values">
 <h2>Default Values<a class="headerlink" href="#default-values" title="Permalink to this heading">¶</a></h2>
@@ -3744,12 +3736,6 @@ the global <a class="reference internal" href="#steam.ext.commands.UserConverter
 <dt class="sig sig-object py" id="steam.ext.commands.DefaultGroup">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">DefaultGroup</span></span><a class="headerlink" href="#steam.ext.commands.DefaultGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the <a class="reference internal" href="#steam.ext.commands.Context.group" title="steam.ext.commands.Context.group"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Context.group</span></code></a></p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="steam.ext.commands.DefaultGame">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.ext.commands.</span></span><span class="sig-name descname"><span class="pre">DefaultGame</span></span><a class="headerlink" href="#steam.ext.commands.DefaultGame" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the <a class="reference internal" href="#steam.ext.commands.Context.author" title="steam.ext.commands.Context.author"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Context.author</span></code></a>’s <a class="reference internal" href="../../../api/#steam.User.game" title="steam.User.game"><code class="xref py py-attr docutils literal notranslate"><span class="pre">game</span></code></a></p>
 </dd></dl>
 
 </section>

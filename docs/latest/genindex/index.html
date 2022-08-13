@@ -260,18 +260,18 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.UserMessage.add_emoticon">(steam.UserMessage method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.DLC.add_free_licenses">add_free_licenses() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.add_free_licenses">add_free_licenses() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.add_free_licenses">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.add_free_licenses">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.add_free_licenses">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.add_free_licenses">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.add_free_licenses">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.add_free_licenses">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.add_free_licenses">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.add_free_licenses">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.add_free_licenses">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.add_free_licenses">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.add_listener">add_listener() (steam.ext.commands.Bot method)</a>
@@ -286,7 +286,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.UserMessage.add_sticker">(steam.UserMessage method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.WishlistGame.added_at">added_at (steam.WishlistGame attribute)</a>
+      <li><a href="../api/#steam.WishlistApp.added_at">added_at (steam.WishlistApp attribute)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.Admin">Admin (steam.ext.commands.BucketType attribute)</a>
 </li>
@@ -326,8 +326,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Group.all_commands">(steam.ext.commands.Group property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.AlreadyLoggedInElsewhere">AlreadyLoggedInElsewhere (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.AlreadyOwned">AlreadyOwned (steam.Result attribute)</a>
@@ -358,9 +356,63 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Language.api_name">api_name (steam.Language property)</a>
 </li>
+      <li><a href="../api/#steam.App">App (class in steam)</a>
+</li>
+      <li><a href="../api/#steam.abc.BaseUser.app">app (steam.abc.BaseUser attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.Announcement.app">(steam.Announcement attribute)</a>
+</li>
+        <li><a href="../api/#steam.Asset.app">(steam.Asset attribute)</a>
+</li>
+        <li><a href="../api/#steam.Badge.app">(steam.Badge attribute)</a>
+</li>
+        <li><a href="../api/#steam.Clan.app">(steam.Clan attribute)</a>
+</li>
+        <li><a href="../api/#steam.ClientUser.app">(steam.ClientUser attribute)</a>
+</li>
+        <li><a href="../api/#steam.Event.app">(steam.Event attribute)</a>
+</li>
+        <li><a href="../api/#steam.FavouriteBadge.app">(steam.FavouriteBadge attribute)</a>
+</li>
+        <li><a href="../api/#steam.Friend.app">(steam.Friend attribute)</a>
+</li>
+        <li><a href="../api/#id9">(steam.Friend property)</a>
+</li>
+        <li><a href="../api/#steam.GameServer.app">(steam.GameServer attribute)</a>
+</li>
+        <li><a href="../api/#steam.HeadlessDepot.app">(steam.HeadlessDepot attribute)</a>
+</li>
+        <li><a href="../api/#steam.Item.app">(steam.Item attribute)</a>
+</li>
+        <li><a href="../api/#steam.Manifest.app">(steam.Manifest attribute)</a>
+</li>
+        <li><a href="../api/#steam.ProfileItem.app">(steam.ProfileItem attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.app">(steam.PublishedFile attribute)</a>
+</li>
+        <li><a href="../api/#steam.Review.app">(steam.Review attribute)</a>
+</li>
+        <li><a href="../api/#steam.User.app">(steam.User attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.ClientEmoticon.app">app() (steam.ClientEmoticon method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.ClientSticker.app">(steam.ClientSticker method)</a>
+</li>
+        <li><a href="../api/#steam.Emoticon.app">(steam.Emoticon method)</a>
+</li>
+        <li><a href="../api/#steam.Sticker.app">(steam.Sticker method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.PackageInfo.app_items">app_items (steam.PackageInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.AppFlag">AppFlag (class in steam)</a>
+</li>
+      <li><a href="../api/#steam.AppInfo">AppInfo (class in steam)</a>
 </li>
       <li><a href="../api/#steam.AppFlag.Application">Application (steam.AppFlag attribute)</a>
 </li>
@@ -370,6 +422,40 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PublishedFileRevision.ApprovedSnapshotChina">ApprovedSnapshotChina (steam.PublishedFileRevision attribute)</a>
 </li>
+      <li><a href="../api/#steam.PackageInfo.apps">apps (steam.PackageInfo attribute)</a>
+</li>
+      <li><a href="../api/#steam.abc.BaseUser.apps">apps() (steam.abc.BaseUser method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.ClientUser.apps">(steam.ClientUser method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedAppPackage.apps">(steam.FetchedAppPackage method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedPackage.apps">(steam.FetchedPackage method)</a>
+</li>
+        <li><a href="../api/#steam.Friend.apps">(steam.Friend method)</a>
+</li>
+        <li><a href="../api/#steam.License.apps">(steam.License method)</a>
+</li>
+        <li><a href="../api/#steam.package.StatefulPackage.apps">(steam.package.StatefulPackage method)</a>
+</li>
+        <li><a href="../api/#id0">(steam.PackageInfo method)</a>
+</li>
+        <li><a href="../api/#steam.User.apps">(steam.User method)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.FetchedAppPackage.apps_info">apps_info() (steam.FetchedAppPackage method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.FetchedPackage.apps_info">(steam.FetchedPackage method)</a>
+</li>
+        <li><a href="../api/#steam.License.apps_info">(steam.License method)</a>
+</li>
+        <li><a href="../api/#steam.package.StatefulPackage.apps_info">(steam.package.StatefulPackage method)</a>
+</li>
+        <li><a href="../api/#steam.PackageInfo.apps_info">(steam.PackageInfo method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.Language.Arabic">Arabic (steam.Language attribute)</a>
 </li>
       <li><a href="../api/#steam.ProfileItemType.ArtworkShowcase">ArtworkShowcase (steam.ProfileItemType attribute)</a>
@@ -445,7 +531,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Friend.avatar_url">(steam.Friend attribute)</a>
 </li>
-        <li><a href="../api/#id9">(steam.Friend property)</a>
+        <li><a href="../api/#id10">(steam.Friend property)</a>
 </li>
         <li><a href="../api/#steam.User.avatar_url">(steam.User attribute)</a>
 </li>
@@ -476,10 +562,10 @@ DEALINGS IN THE SOFTWARE.
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.EquippedProfileItems.background">background (steam.EquippedProfileItems attribute)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGame.background_url">background_url (steam.FetchedGame attribute)</a>
+      <li><a href="../api/#steam.FetchedApp.background_url">background_url (steam.FetchedApp attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.WishlistGame.background_url">(steam.WishlistGame attribute)</a>
+        <li><a href="../api/#steam.WishlistApp.background_url">(steam.WishlistApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.OwnedProfileItems.backgrounds">backgrounds (steam.OwnedProfileItems attribute)</a>
@@ -624,7 +710,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ManifestInfo.branch">(steam.ManifestInfo attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.GameInfo.branches">branches (steam.GameInfo property)</a>
+      <li><a href="../api/#steam.AppInfo.branches">branches (steam.AppInfo property)</a>
 </li>
       <li><a href="../api/#steam.EventType.Broadcast">Broadcast (steam.EventType attribute)</a>
 </li>
@@ -708,7 +794,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PublishedFile.cdn_url">cdn_url (steam.PublishedFile attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.change_number">change_number (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.change_number">change_number (steam.AppInfo attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.License.change_number">(steam.License attribute)</a>
@@ -816,18 +902,18 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.UserMessage.clan">clan (steam.UserMessage attribute)</a>
 </li>
-      <li><a href="../api/#steam.DLC.clan">clan() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.clan">clan() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.clan">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.clan">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.clan">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.clan">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.clan">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.clan">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.clan">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.clan">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.clan">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.clan">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.ClanChannel">ClanChannel (class in steam)</a>
@@ -1056,7 +1142,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.UserBadge.Community">Community (steam.UserBadge attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.community_hub_visible">community_hub_visible (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.community_hub_visible">community_hub_visible (steam.AppInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.ClientUser.community_url">community_url (steam.ClientUser attribute)</a>
 
@@ -1136,9 +1222,9 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand.context">context (steam.ext.commands.HelpCommand attribute)</a>
 </li>
-      <li><a href="../api/#steam.Game.context_id">context_id (steam.Game attribute)</a>
+      <li><a href="../api/#steam.App.context_id">context_id (steam.App attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.controller_support">controller_support (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.controller_support">controller_support (steam.AppInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.PaymentMethod.ConvenientStoreVoucher">ConvenientStoreVoucher (steam.PaymentMethod attribute)</a>
 </li>
@@ -1175,7 +1261,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Friend.country">(steam.Friend attribute)</a>
 </li>
-        <li><a href="../api/#id10">(steam.Friend property)</a>
+        <li><a href="../api/#id11">(steam.Friend property)</a>
 </li>
         <li><a href="../api/#steam.User.country">(steam.User attribute)</a>
 </li>
@@ -1191,6 +1277,8 @@ DEALINGS IN THE SOFTWARE.
       <ul>
         <li><a href="../api/#steam.Announcement.created_at">(steam.Announcement attribute)</a>
 </li>
+        <li><a href="../api/#steam.AppInfo.created_at">(steam.AppInfo attribute)</a>
+</li>
         <li><a href="../api/#steam.Clan.created_at">(steam.Clan attribute)</a>
 </li>
         <li><a href="../api/#steam.ClanMessage.created_at">(steam.ClanMessage attribute)</a>
@@ -1201,13 +1289,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.DLC.created_at">(steam.DLC attribute)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGame.created_at">(steam.FetchedGame attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.created_at">(steam.FetchedApp attribute)</a>
 </li>
         <li><a href="../api/#steam.Friend.created_at">(steam.Friend attribute)</a>
 </li>
-        <li><a href="../api/#id11">(steam.Friend property)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.created_at">(steam.GameInfo attribute)</a>
+        <li><a href="../api/#id12">(steam.Friend property)</a>
 </li>
         <li><a href="../api/#steam.GroupMessage.created_at">(steam.GroupMessage attribute)</a>
 </li>
@@ -1231,7 +1317,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.UserMessage.created_at">(steam.UserMessage attribute)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.created_at">(steam.WishlistGame attribute)</a>
+        <li><a href="../api/#steam.WishlistApp.created_at">(steam.WishlistApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PublishedFile.created_with">created_with (steam.PublishedFile attribute)</a>
@@ -1246,7 +1332,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PriceOverview.currency">currency (steam.PriceOverview attribute)</a>
 </li>
-      <li><a href="../api/#steam.CUSTOM_GAME">CUSTOM_GAME() (in module steam)</a>
+      <li><a href="../api/#steam.CUSTOM_APP">CUSTOM_APP() (in module steam)</a>
 </li>
       <li><a href="../api/#steam.DepotFileFlag.CustomExecutable">CustomExecutable (steam.DepotFileFlag attribute)</a>
 </li>
@@ -1302,8 +1388,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.DefaultClan">DefaultClan (class in steam.ext.commands)</a>
 </li>
-      <li><a href="../ext/commands/api/#steam.ext.commands.DefaultGame">DefaultGame (class in steam.ext.commands)</a>
-</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.DefaultGroup">DefaultGroup (class in steam.ext.commands)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.DefaultHelpCommand">DefaultHelpCommand (class in steam.ext.commands)</a>
@@ -1338,7 +1422,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Branch.depots">depots (steam.Branch attribute)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGamePackage.depots">depots() (steam.FetchedGamePackage method)</a>
+      <li><a href="../api/#steam.FetchedAppPackage.depots">depots() (steam.FetchedAppPackage method)</a>
 
       <ul>
         <li><a href="../api/#steam.FetchedPackage.depots">(steam.FetchedPackage method)</a>
@@ -1361,7 +1445,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../ext/commands/api/#steam.ext.commands.Command.description">(steam.ext.commands.Command attribute)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGame.description">(steam.FetchedGame attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.description">(steam.FetchedApp attribute)</a>
 </li>
         <li><a href="../api/#steam.ProfileItem.description">(steam.ProfileItem attribute)</a>
 </li>
@@ -1384,10 +1468,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Review.developer_response">developer_response (steam.Review attribute)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGame.developers">developers (steam.FetchedGame attribute)</a>
+      <li><a href="../api/#steam.AppInfo.developers">developers (steam.AppInfo attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.GameInfo.developers">(steam.GameInfo attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.developers">(steam.FetchedApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.EventType.DevStream">DevStream (steam.EventType attribute)</a>
@@ -1410,18 +1494,18 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.AppFlag.DLC">(steam.AppFlag attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.DLC.dlc">dlc() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.dlc">dlc() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.dlc">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.dlc">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.dlc">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.dlc">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.dlc">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.dlc">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.dlc">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.dlc">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.dlc">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.dlc">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.EventType.DLCRelease">DLCRelease (steam.EventType attribute)</a>
@@ -1612,18 +1696,18 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ProfileItemType.FavouriteGroup">FavouriteGroup (steam.ProfileItemType attribute)</a>
 </li>
-      <li><a href="../api/#steam.DLC.fetch">fetch() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.fetch">fetch() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.fetch">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.fetch">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGamePackage.fetch">(steam.FetchedGamePackage method)</a>
+        <li><a href="../api/#steam.DLC.fetch">(steam.DLC method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedApp.fetch">(steam.FetchedApp method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedAppPackage.fetch">(steam.FetchedAppPackage method)</a>
 </li>
         <li><a href="../api/#steam.FetchedPackage.fetch">(steam.FetchedPackage method)</a>
-</li>
-        <li><a href="../api/#steam.game.StatefulGame.fetch">(steam.game.StatefulGame method)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.fetch">(steam.GameInfo method)</a>
 </li>
         <li><a href="../api/#steam.License.fetch">(steam.License method)</a>
 </li>
@@ -1633,13 +1717,19 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.PackageInfo.fetch">(steam.PackageInfo method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.fetch">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.fetch">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.fetch">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.fetch">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Clan.fetch_announcement">fetch_announcement() (steam.Clan method)</a>
 </li>
+      <li><a href="../api/#steam.Client.fetch_app">fetch_app() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_app">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
       <li><a href="../api/#steam.PublishedFile.fetch_children">fetch_children() (steam.PublishedFile method)</a>
 </li>
       <li><a href="../api/#steam.Client.fetch_clan">fetch_clan() (steam.Client method)</a>
@@ -1676,26 +1766,20 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.Clan.fetch_event">fetch_event() (steam.Clan method)</a>
 </li>
-      <li><a href="../api/#steam.Client.fetch_game">fetch_game() (steam.Client method)</a>
-
-      <ul>
-        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_game">(steam.ext.commands.Bot method)</a>
-</li>
-      </ul></li>
       <li><a href="../api/#steam.PublishedFile.fetch_history_entry">fetch_history_entry() (steam.PublishedFile method)</a>
 </li>
-      <li><a href="../api/#steam.DLC.fetch_manifest">fetch_manifest() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.fetch_manifest">fetch_manifest() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.fetch_manifest">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.fetch_manifest">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.fetch_manifest">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.fetch_manifest">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.fetch_manifest">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.fetch_manifest">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.fetch_manifest">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.fetch_manifest">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.fetch_manifest">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.fetch_manifest">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Branch.fetch_manifests">fetch_manifests() (steam.Branch method)</a>
@@ -1802,9 +1886,9 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_users">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.FetchedGame">FetchedGame (class in steam)</a>
+      <li><a href="../api/#steam.FetchedApp">FetchedApp (class in steam)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGamePackage">FetchedGamePackage (class in steam)</a>
+      <li><a href="../api/#steam.FetchedAppPackage">FetchedAppPackage (class in steam)</a>
 </li>
       <li><a href="../api/#steam.FetchedPackage">FetchedPackage (class in steam)</a>
 </li>
@@ -1833,7 +1917,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Friend.flags">(steam.Friend attribute)</a>
 </li>
-        <li><a href="../api/#id12">(steam.Friend property)</a>
+        <li><a href="../api/#id13">(steam.Friend property)</a>
 </li>
         <li><a href="../api/#steam.License.flags">(steam.License attribute)</a>
 </li>
@@ -1872,18 +1956,18 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.FriendRelationship.Friend">(steam.FriendRelationship attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.DLC.friend_thoughts">friend_thoughts() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.friend_thoughts">friend_thoughts() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.friend_thoughts">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.friend_thoughts">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.friend_thoughts">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.friend_thoughts">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.friend_thoughts">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.friend_thoughts">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.friend_thoughts">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.friend_thoughts">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.friend_thoughts">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.friend_thoughts">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.FriendRelationship">FriendRelationship (class in steam)</a>
@@ -1900,18 +1984,18 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.friends">(steam.User method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.DLC.friends_who_own">friends_who_own() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.friends_who_own">friends_who_own() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.friends_who_own">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.friends_who_own">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.friends_who_own">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.friends_who_own">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.friends_who_own">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.friends_who_own">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.friends_who_own">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.friends_who_own">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.friends_who_own">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.friends_who_own">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.CommunityVisibilityState.FriendsOnly">FriendsOnly (steam.CommunityVisibilityState attribute)</a>
@@ -1940,7 +2024,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.from_url">(steam.User static method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.FetchedGame.full_description">full_description (steam.FetchedGame attribute)</a>
+      <li><a href="../api/#steam.FetchedApp.full_description">full_description (steam.FetchedApp attribute)</a>
 </li>
       <li><a href="../api/#steam.EventType.FutureRelease">FutureRelease (steam.EventType attribute)</a>
 </li>
@@ -1954,62 +2038,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.TypeChar.g">g (steam.TypeChar attribute)</a>
 </li>
-      <li><a href="../api/#steam.Game">Game (class in steam)</a>
-</li>
-      <li><a href="../api/#steam.abc.BaseUser.game">game (steam.abc.BaseUser attribute)</a>
-
-      <ul>
-        <li><a href="../api/#steam.Announcement.game">(steam.Announcement attribute)</a>
-</li>
-      </ul></li>
       <li><a href="../api/#steam.AppFlag.Game">Game (steam.AppFlag attribute)</a>
-</li>
-      <li><a href="../api/#steam.Asset.game">game (steam.Asset attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.Badge.game">(steam.Badge attribute)</a>
-</li>
-        <li><a href="../api/#steam.Clan.game">(steam.Clan attribute)</a>
-</li>
-        <li><a href="../api/#steam.ClientUser.game">(steam.ClientUser attribute)</a>
-</li>
-        <li><a href="../api/#steam.Event.game">(steam.Event attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="../api/#steam.EventType.Game">Game (steam.EventType attribute)</a>
-</li>
-      <li><a href="../api/#steam.FavouriteBadge.game">game (steam.FavouriteBadge attribute)</a>
-
-      <ul>
-        <li><a href="../api/#steam.Friend.game">(steam.Friend attribute)</a>
-</li>
-        <li><a href="../api/#id13">(steam.Friend property)</a>
-</li>
-        <li><a href="../api/#steam.GameServer.game">(steam.GameServer attribute)</a>
-</li>
-        <li><a href="../api/#steam.HeadlessDepot.game">(steam.HeadlessDepot attribute)</a>
-</li>
-        <li><a href="../api/#steam.Item.game">(steam.Item attribute)</a>
-</li>
-        <li><a href="../api/#steam.Manifest.game">(steam.Manifest attribute)</a>
-</li>
-        <li><a href="../api/#steam.ProfileItem.game">(steam.ProfileItem attribute)</a>
-</li>
-        <li><a href="../api/#steam.PublishedFile.game">(steam.PublishedFile attribute)</a>
-</li>
-        <li><a href="../api/#steam.Review.game">(steam.Review attribute)</a>
-</li>
-        <li><a href="../api/#steam.User.game">(steam.User attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="../api/#steam.ClientEmoticon.game">game() (steam.ClientEmoticon method)</a>
-
-      <ul>
-        <li><a href="../api/#steam.ClientSticker.game">(steam.ClientSticker method)</a>
-</li>
-        <li><a href="../api/#steam.Emoticon.game">(steam.Emoticon method)</a>
-</li>
-        <li><a href="../api/#steam.Sticker.game">(steam.Sticker method)</a>
+        <li><a href="../api/#steam.EventType.Game">(steam.EventType attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.ProfileItemType.GameCollector">GameCollector (steam.ProfileItemType attribute)</a>
@@ -2018,50 +2050,12 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.UserBadge.GameCollector">(steam.UserBadge attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../ext/commands/api/#steam.ext.commands.GameConverter">GameConverter (class in steam.ext.commands)</a>
-</li>
       <li><a href="../api/#steam.UserBadge.GameDeveloper">GameDeveloper (steam.UserBadge attribute)</a>
-</li>
-      <li><a href="../api/#steam.GameInfo">GameInfo (class in steam)</a>
 </li>
       <li><a href="../api/#steam.EventType.GameItemSales">GameItemSales (steam.EventType attribute)</a>
 </li>
       <li><a href="../api/#steam.EventType.GameRelease">GameRelease (steam.EventType attribute)</a>
 </li>
-      <li><a href="../api/#steam.PackageInfo.games">games (steam.PackageInfo attribute)</a>
-</li>
-      <li><a href="../api/#steam.abc.BaseUser.games">games() (steam.abc.BaseUser method)</a>
-
-      <ul>
-        <li><a href="../api/#steam.ClientUser.games">(steam.ClientUser method)</a>
-</li>
-        <li><a href="../api/#steam.FetchedGamePackage.games">(steam.FetchedGamePackage method)</a>
-</li>
-        <li><a href="../api/#steam.FetchedPackage.games">(steam.FetchedPackage method)</a>
-</li>
-        <li><a href="../api/#steam.Friend.games">(steam.Friend method)</a>
-</li>
-        <li><a href="../api/#steam.License.games">(steam.License method)</a>
-</li>
-        <li><a href="../api/#steam.package.StatefulPackage.games">(steam.package.StatefulPackage method)</a>
-</li>
-        <li><a href="../api/#id0">(steam.PackageInfo method)</a>
-</li>
-        <li><a href="../api/#steam.User.games">(steam.User method)</a>
-</li>
-      </ul></li>
-      <li><a href="../api/#steam.FetchedGamePackage.games_info">games_info() (steam.FetchedGamePackage method)</a>
-
-      <ul>
-        <li><a href="../api/#steam.FetchedPackage.games_info">(steam.FetchedPackage method)</a>
-</li>
-        <li><a href="../api/#steam.License.games_info">(steam.License method)</a>
-</li>
-        <li><a href="../api/#steam.package.StatefulPackage.games_info">(steam.package.StatefulPackage method)</a>
-</li>
-        <li><a href="../api/#steam.PackageInfo.games_info">(steam.PackageInfo method)</a>
-</li>
-      </ul></li>
       <li><a href="../api/#steam.EventType.GameSales">GameSales (steam.EventType attribute)</a>
 </li>
       <li><a href="../api/#steam.GameServer">GameServer (class in steam)</a>
@@ -2092,15 +2086,19 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.iterators.AsyncIterator.get">(steam.iterators.AsyncIterator method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.Client.get_app">get_app() (steam.Client method)</a>
+
+      <ul>
+        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_app">(steam.ext.commands.Bot method)</a>
+</li>
+      </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.DefaultHelpCommand.get_bot_mapping">get_bot_mapping() (steam.ext.commands.DefaultHelpCommand method)</a>
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand.get_bot_mapping">(steam.ext.commands.HelpCommand method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.GameInfo.get_branch">get_branch() (steam.GameInfo method)</a>
+      <li><a href="../api/#steam.AppInfo.get_branch">get_branch() (steam.AppInfo method)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.BucketType.get_bucket">get_bucket() (steam.ext.commands.BucketType method)</a>
 </li>
@@ -2128,12 +2126,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ClientUser.get_friend">get_friend() (steam.ClientUser method)</a>
 </li>
-      <li><a href="../api/#steam.Client.get_game">get_game() (steam.Client method)</a>
-
-      <ul>
-        <li><a href="../ext/commands/api/#steam.ext.commands.Bot.get_game">(steam.ext.commands.Bot method)</a>
-</li>
-      </ul></li>
       <li><a href="../api/#steam.Client.get_group">get_group() (steam.Client method)</a>
 
       <ul>
@@ -2146,6 +2138,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Group.get_member">(steam.Group method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Client.get_package">get_package() (steam.Client method)</a>
 
       <ul>
@@ -2270,19 +2264,19 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.PaymentMethod.HardwarePromo">(steam.PaymentMethod attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.GameInfo.has_adult_content">has_adult_content (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.has_adult_content">has_adult_content (steam.AppInfo attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.has_adult_content_violence">has_adult_content_violence (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.has_adult_content_violence">has_adult_content_violence (steam.AppInfo attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.has_visible_stats">has_visible_stats() (steam.GameInfo method)</a>
+      <li><a href="../api/#steam.AppInfo.has_visible_stats">has_visible_stats() (steam.AppInfo method)</a>
 
       <ul>
-        <li><a href="../api/#steam.UserGame.has_visible_stats">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.has_visible_stats">(steam.UserApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PersonaStateFlag.HasRichPresence">HasRichPresence (steam.PersonaStateFlag attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.headless_depots">headless_depots (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.headless_depots">headless_depots (steam.AppInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.HeadlessDepot">HeadlessDepot (class in steam)</a>
 </li>
@@ -2336,14 +2330,14 @@ DEALINGS IN THE SOFTWARE.
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.TypeChar.I">I (steam.TypeChar attribute)</a>
 </li>
-      <li><a href="../api/#steam.Clan.icon_url">icon_url (steam.Clan property)</a>
+      <li><a href="../api/#steam.AppInfo.icon_url">icon_url (steam.AppInfo attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.GameInfo.icon_url">(steam.GameInfo attribute)</a>
+        <li><a href="../api/#steam.Clan.icon_url">(steam.Clan property)</a>
 </li>
         <li><a href="../api/#steam.Item.icon_url">(steam.Item attribute)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.icon_url">(steam.UserGame attribute)</a>
+        <li><a href="../api/#steam.UserApp.icon_url">(steam.UserApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.ID">ID (class in steam)</a>
@@ -2352,6 +2346,8 @@ DEALINGS IN THE SOFTWARE.
 
       <ul>
         <li><a href="../api/#steam.Announcement.id">(steam.Announcement attribute)</a>
+</li>
+        <li><a href="../api/#steam.App.id">(steam.App attribute)</a>
 </li>
         <li><a href="../api/#steam.Asset.id">(steam.Asset attribute)</a>
 </li>
@@ -2374,8 +2370,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.FavouriteBadge.id">(steam.FavouriteBadge attribute)</a>
 </li>
         <li><a href="../api/#steam.Friend.id">(steam.Friend property)</a>
-</li>
-        <li><a href="../api/#steam.Game.id">(steam.Game attribute)</a>
 </li>
         <li><a href="../api/#steam.GameServer.id">(steam.GameServer property)</a>
 </li>
@@ -2506,18 +2500,18 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Type.Individual">Individual (steam.Type attribute)</a>
 </li>
-      <li><a href="../api/#steam.DLC.info">info() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.info">info() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.info">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.info">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGamePackage.info">(steam.FetchedGamePackage method)</a>
+        <li><a href="../api/#steam.DLC.info">(steam.DLC method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedApp.info">(steam.FetchedApp method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedAppPackage.info">(steam.FetchedAppPackage method)</a>
 </li>
         <li><a href="../api/#steam.FetchedPackage.info">(steam.FetchedPackage method)</a>
-</li>
-        <li><a href="../api/#steam.game.StatefulGame.info">(steam.game.StatefulGame method)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.info">(steam.GameInfo method)</a>
 </li>
         <li><a href="../api/#steam.License.info">(steam.License method)</a>
 </li>
@@ -2525,9 +2519,9 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.PackageInfo.info">(steam.PackageInfo method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.info">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.info">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.info">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.info">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.EventType.InGameBonusXP">InGameBonusXP (steam.EventType attribute)</a>
@@ -2766,16 +2760,16 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ManifestPath.is_file">is_file() (steam.ManifestPath method)</a>
 </li>
-      <li><a href="../api/#steam.DLC.is_free">is_free() (steam.DLC method)</a>
+      <li><a href="../api/#steam.AppInfo.is_free">is_free() (steam.AppInfo method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.is_free">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.DLC.is_free">(steam.DLC method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedApp.is_free">(steam.FetchedApp method)</a>
 </li>
         <li><a href="../api/#steam.FetchedPackage.is_free">(steam.FetchedPackage method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.is_free">(steam.GameInfo method)</a>
-</li>
-        <li><a href="../api/#steam.WishlistGame.is_free">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.is_free">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Friend.is_friend">is_friend() (steam.Friend method)</a>
@@ -2792,40 +2786,40 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Item.is_marketable">is_marketable() (steam.Item method)</a>
 </li>
-      <li><a href="../api/#steam.DLC.is_on_linux">is_on_linux() (steam.DLC method)</a>
+      <li><a href="../api/#steam.AppInfo.is_on_linux">is_on_linux() (steam.AppInfo method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.is_on_linux">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.DLC.is_on_linux">(steam.DLC method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedApp.is_on_linux">(steam.FetchedApp method)</a>
 </li>
         <li><a href="../api/#steam.FetchedPackage.is_on_linux">(steam.FetchedPackage method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.is_on_linux">(steam.GameInfo method)</a>
-</li>
-        <li><a href="../api/#steam.WishlistGame.is_on_linux">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.is_on_linux">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.DLC.is_on_mac_os">is_on_mac_os() (steam.DLC method)</a>
+      <li><a href="../api/#steam.AppInfo.is_on_mac_os">is_on_mac_os() (steam.AppInfo method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.is_on_mac_os">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.DLC.is_on_mac_os">(steam.DLC method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedApp.is_on_mac_os">(steam.FetchedApp method)</a>
 </li>
         <li><a href="../api/#steam.FetchedPackage.is_on_mac_os">(steam.FetchedPackage method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.is_on_mac_os">(steam.GameInfo method)</a>
-</li>
-        <li><a href="../api/#steam.WishlistGame.is_on_mac_os">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.is_on_mac_os">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.DLC.is_on_windows">is_on_windows() (steam.DLC method)</a>
+      <li><a href="../api/#steam.AppInfo.is_on_windows">is_on_windows() (steam.AppInfo method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.is_on_windows">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.DLC.is_on_windows">(steam.DLC method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedApp.is_on_windows">(steam.FetchedApp method)</a>
 </li>
         <li><a href="../api/#steam.FetchedPackage.is_on_windows">(steam.FetchedPackage method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.is_on_windows">(steam.GameInfo method)</a>
-</li>
-        <li><a href="../api/#steam.WishlistGame.is_on_windows">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.is_on_windows">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.TradeOffer.is_our_offer">is_our_offer() (steam.TradeOffer method)</a>
@@ -2854,22 +2848,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.GameServer.is_secure">is_secure() (steam.GameServer method)</a>
 </li>
-      <li><a href="../api/#steam.DLC.is_steam_game">is_steam_game() (steam.DLC method)</a>
-
-      <ul>
-        <li><a href="../api/#steam.FetchedGame.is_steam_game">(steam.FetchedGame method)</a>
-</li>
-        <li><a href="../api/#steam.Game.is_steam_game">(steam.Game method)</a>
-</li>
-        <li><a href="../api/#steam.game.StatefulGame.is_steam_game">(steam.game.StatefulGame method)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.is_steam_game">(steam.GameInfo method)</a>
-</li>
-        <li><a href="../api/#steam.UserGame.is_steam_game">(steam.UserGame method)</a>
-</li>
-        <li><a href="../api/#steam.WishlistGame.is_steam_game">(steam.WishlistGame method)</a>
-</li>
-      </ul></li>
       <li><a href="../api/#steam.PublishedFile.is_subscribed">is_subscribed() (steam.PublishedFile method)</a>
 </li>
       <li><a href="../api/#steam.ManifestPath.is_symlink">is_symlink() (steam.ManifestPath method)</a>
@@ -2881,9 +2859,19 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.abc.BaseUser.is_valid">is_valid() (steam.abc.BaseUser method)</a>
 
       <ul>
+        <li><a href="../api/#steam.App.is_valid">(steam.App method)</a>
+</li>
+        <li><a href="../api/#steam.app.StatefulApp.is_valid">(steam.app.StatefulApp method)</a>
+</li>
+        <li><a href="../api/#steam.AppInfo.is_valid">(steam.AppInfo method)</a>
+</li>
         <li><a href="../api/#steam.Clan.is_valid">(steam.Clan method)</a>
 </li>
         <li><a href="../api/#steam.ClientUser.is_valid">(steam.ClientUser method)</a>
+</li>
+        <li><a href="../api/#steam.DLC.is_valid">(steam.DLC method)</a>
+</li>
+        <li><a href="../api/#steam.FetchedApp.is_valid">(steam.FetchedApp method)</a>
 </li>
         <li><a href="../api/#steam.Friend.is_valid">(steam.Friend method)</a>
 </li>
@@ -2894,6 +2882,10 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ID.is_valid">(steam.ID method)</a>
 </li>
         <li><a href="../api/#steam.User.is_valid">(steam.User method)</a>
+</li>
+        <li><a href="../api/#steam.UserApp.is_valid">(steam.UserApp method)</a>
+</li>
+        <li><a href="../api/#steam.WishlistApp.is_valid">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PaymentMethod.IsBank">IsBank (steam.PaymentMethod attribute)</a>
@@ -3020,7 +3012,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.GroupChannel.last_message">(steam.GroupChannel attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.UserGame.last_played_at">last_played_at (steam.UserGame attribute)</a>
+      <li><a href="../api/#steam.UserApp.last_played_at">last_played_at (steam.UserApp attribute)</a>
 </li>
       <li><a href="../api/#steam.ClientUser.last_seen_online">last_seen_online (steam.ClientUser attribute)</a>
 
@@ -3136,14 +3128,14 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.LoginError">LoginError</a>
 </li>
-      <li><a href="../api/#steam.DLC.logo_url">logo_url (steam.DLC attribute)</a>
+      <li><a href="../api/#steam.AppInfo.logo_url">logo_url (steam.AppInfo attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.logo_url">(steam.FetchedGame attribute)</a>
+        <li><a href="../api/#steam.DLC.logo_url">(steam.DLC attribute)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.logo_url">(steam.GameInfo attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.logo_url">(steam.FetchedApp attribute)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.logo_url">(steam.WishlistGame attribute)</a>
+        <li><a href="../api/#steam.WishlistApp.logo_url">(steam.WishlistApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Result.LogonSessionReplaced">LogonSessionReplaced (steam.Result attribute)</a>
@@ -3192,18 +3184,18 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Branch.manifests">manifests (steam.Branch property)</a>
 </li>
-      <li><a href="../api/#steam.DLC.manifests">manifests() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.manifests">manifests() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.manifests">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.manifests">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.manifests">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.manifests">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.manifests">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.manifests">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.manifests">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.manifests">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.manifests">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.manifests">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.GameServer.map">map (steam.GameServer attribute)</a>
@@ -3216,7 +3208,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Review.mark_not_helpful">mark_not_helpful() (steam.Review method)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.market_presence">market_presence (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.market_presence">market_presence (steam.AppInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.License.master_package">master_package (steam.License attribute)</a>
 </li>
@@ -3354,7 +3346,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ProfileItem.movie">movie (steam.ProfileItem attribute)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGame.movies">movies (steam.FetchedGame attribute)</a>
+      <li><a href="../api/#steam.FetchedApp.movies">movies (steam.FetchedApp attribute)</a>
 </li>
       <li><a href="../api/#steam.WSException.msg">msg (steam.WSException attribute)</a>
 </li>
@@ -3385,6 +3377,8 @@ DEALINGS IN THE SOFTWARE.
       <ul>
         <li><a href="../api/#steam.Announcement.name">(steam.Announcement attribute)</a>
 </li>
+        <li><a href="../api/#steam.App.name">(steam.App attribute)</a>
+</li>
         <li><a href="../api/#steam.Award.name">(steam.Award attribute)</a>
 </li>
         <li><a href="../api/#steam.Branch.name">(steam.Branch attribute)</a>
@@ -3406,8 +3400,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Friend.name">(steam.Friend attribute)</a>
 </li>
         <li><a href="../api/#id17">(steam.Friend property)</a>
-</li>
-        <li><a href="../api/#steam.Game.name">(steam.Game attribute)</a>
 </li>
         <li><a href="../api/#steam.GameServer.name">(steam.GameServer attribute)</a>
 </li>
@@ -3748,18 +3740,18 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PackageInfo">PackageInfo (class in steam)</a>
 </li>
-      <li><a href="../api/#steam.DLC.packages">packages() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.packages">packages() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.packages">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.packages">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.packages">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.packages">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.packages">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.packages">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.packages">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.packages">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.packages">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.packages">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PackageStatus">PackageStatus (class in steam)</a>
@@ -3802,10 +3794,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.ParseFailure">ParseFailure (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGame.partial_dlc">partial_dlc (steam.FetchedGame attribute)</a>
+      <li><a href="../api/#steam.AppInfo.partial_dlc">partial_dlc (steam.AppInfo attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.GameInfo.partial_dlc">(steam.GameInfo attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.partial_dlc">(steam.FetchedApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PartialMessageReaction">PartialMessageReaction (class in steam)</a>
@@ -3860,33 +3852,33 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.GameServer.player_count">player_count (steam.GameServer attribute)</a>
 </li>
-      <li><a href="../api/#steam.DLC.player_count">player_count() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.player_count">player_count() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.player_count">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.player_count">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.player_count">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.player_count">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.player_count">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.player_count">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.player_count">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.player_count">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.player_count">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.player_count">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.GameServer.players">players() (steam.GameServer method)</a>
 </li>
-      <li><a href="../api/#steam.UserGame.playtime_forever">playtime_forever (steam.UserGame attribute)</a>
+      <li><a href="../api/#steam.UserApp.playtime_forever">playtime_forever (steam.UserApp attribute)</a>
 </li>
-      <li><a href="../api/#steam.UserGame.playtime_linux">playtime_linux (steam.UserGame attribute)</a>
+      <li><a href="../api/#steam.UserApp.playtime_linux">playtime_linux (steam.UserApp attribute)</a>
 </li>
-      <li><a href="../api/#steam.UserGame.playtime_mac_os">playtime_mac_os (steam.UserGame attribute)</a>
+      <li><a href="../api/#steam.UserApp.playtime_mac_os">playtime_mac_os (steam.UserApp attribute)</a>
 </li>
       <li><a href="../api/#steam.PublishedFile.playtime_stats">playtime_stats (steam.PublishedFile attribute)</a>
 </li>
-      <li><a href="../api/#steam.UserGame.playtime_two_weeks">playtime_two_weeks (steam.UserGame attribute)</a>
+      <li><a href="../api/#steam.UserApp.playtime_two_weeks">playtime_two_weeks (steam.UserApp attribute)</a>
 </li>
-      <li><a href="../api/#steam.UserGame.playtime_windows">playtime_windows (steam.UserGame attribute)</a>
+      <li><a href="../api/#steam.UserApp.playtime_windows">playtime_windows (steam.UserApp attribute)</a>
 </li>
       <li><a href="../api/#steam.AppFlag.Plugin">Plugin (steam.AppFlag attribute)</a>
 </li>
@@ -3927,7 +3919,7 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.DLC.price_overview">price_overview (steam.DLC attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.price_overview">(steam.FetchedGame attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.price_overview">(steam.FetchedApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PriceOverview">PriceOverview (class in steam)</a>
@@ -3944,7 +3936,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.primary_clan">(steam.User attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.WishlistGame.priority">priority (steam.WishlistGame attribute)</a>
+      <li><a href="../api/#steam.WishlistApp.priority">priority (steam.WishlistApp attribute)</a>
 </li>
       <li><a href="../api/#steam.Friend.privacy_state">privacy_state (steam.Friend property)</a>
 </li>
@@ -4010,7 +4002,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Universe.Public">(steam.Universe attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.GameInfo.public_branch">public_branch (steam.GameInfo property)</a>
+      <li><a href="../api/#steam.AppInfo.public_branch">public_branch (steam.AppInfo property)</a>
 </li>
       <li><a href="../api/#steam.Announcement.published">published (steam.Announcement attribute)</a>
 
@@ -4023,33 +4015,33 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.abc.BaseUser.published_files">published_files() (steam.abc.BaseUser method)</a>
 
       <ul>
+        <li><a href="../api/#steam.app.StatefulApp.published_files">(steam.app.StatefulApp method)</a>
+</li>
+        <li><a href="../api/#steam.AppInfo.published_files">(steam.AppInfo method)</a>
+</li>
         <li><a href="../api/#steam.ClientUser.published_files">(steam.ClientUser method)</a>
 </li>
         <li><a href="../api/#steam.DLC.published_files">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGame.published_files">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.FetchedApp.published_files">(steam.FetchedApp method)</a>
 </li>
         <li><a href="../api/#steam.Friend.published_files">(steam.Friend method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.published_files">(steam.game.StatefulGame method)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.published_files">(steam.GameInfo method)</a>
-</li>
         <li><a href="../api/#steam.User.published_files">(steam.User method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.published_files">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.published_files">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.published_files">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.published_files">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PublishedFile">PublishedFile (class in steam)</a>
 </li>
       <li><a href="../api/#steam.PublishedFileRevision">PublishedFileRevision (class in steam)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGame.publishers">publishers (steam.FetchedGame attribute)</a>
+      <li><a href="../api/#steam.AppInfo.publishers">publishers (steam.AppInfo attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.GameInfo.publishers">(steam.GameInfo attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.publishers">(steam.FetchedApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.License.purchase_country_code">purchase_country_code (steam.License attribute)</a>
@@ -4097,7 +4089,7 @@ DEALINGS IN THE SOFTWARE.
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../api/#steam.WishlistGame.rank">rank (steam.WishlistGame attribute)</a>
+      <li><a href="../api/#steam.WishlistApp.rank">rank (steam.WishlistApp attribute)</a>
 </li>
       <li><a href="../api/#steam.ProfileItemType.RareAchievementShowcase">RareAchievementShowcase (steam.ProfileItemType attribute)</a>
 </li>
@@ -4291,46 +4283,46 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Review">Review (class in steam)</a>
 </li>
-      <li><a href="../api/#steam.DLC.review">review() (steam.DLC method)</a>
+      <li><a href="../api/#steam.app.StatefulApp.review">review() (steam.app.StatefulApp method)</a>
 
       <ul>
-        <li><a href="../api/#steam.FetchedGame.review">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.AppInfo.review">(steam.AppInfo method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.review">(steam.game.StatefulGame method)</a>
+        <li><a href="../api/#steam.DLC.review">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.GameInfo.review">(steam.GameInfo method)</a>
+        <li><a href="../api/#steam.FetchedApp.review">(steam.FetchedApp method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.review">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.review">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.review">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.review">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.GameInfo.review_percentage">review_percentage (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.review_percentage">review_percentage (steam.AppInfo attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.review_score">review_score (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.review_score">review_score (steam.AppInfo attribute)</a>
 </li>
-      <li><a href="../api/#steam.WishlistGame.review_status">review_status (steam.WishlistGame attribute)</a>
+      <li><a href="../api/#steam.WishlistApp.review_status">review_status (steam.WishlistApp attribute)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.reviews">reviews() (steam.abc.BaseUser method)</a>
 
       <ul>
+        <li><a href="../api/#steam.app.StatefulApp.reviews">(steam.app.StatefulApp method)</a>
+</li>
+        <li><a href="../api/#steam.AppInfo.reviews">(steam.AppInfo method)</a>
+</li>
         <li><a href="../api/#steam.ClientUser.reviews">(steam.ClientUser method)</a>
 </li>
         <li><a href="../api/#steam.DLC.reviews">(steam.DLC method)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGame.reviews">(steam.FetchedGame method)</a>
+        <li><a href="../api/#steam.FetchedApp.reviews">(steam.FetchedApp method)</a>
 </li>
         <li><a href="../api/#steam.Friend.reviews">(steam.Friend method)</a>
 </li>
-        <li><a href="../api/#steam.game.StatefulGame.reviews">(steam.game.StatefulGame method)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.reviews">(steam.GameInfo method)</a>
-</li>
         <li><a href="../api/#steam.User.reviews">(steam.User method)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.reviews">(steam.UserGame method)</a>
+        <li><a href="../api/#steam.UserApp.reviews">(steam.UserApp method)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.reviews">(steam.WishlistGame method)</a>
+        <li><a href="../api/#steam.WishlistApp.reviews">(steam.WishlistApp method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.ReviewType">ReviewType (class in steam)</a>
@@ -4414,10 +4406,10 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.PublishedFile.score">score (steam.PublishedFile attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.WishlistGame.score">(steam.WishlistGame attribute)</a>
+        <li><a href="../api/#steam.WishlistApp.score">(steam.WishlistApp attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.WishlistGame.screenshots">screenshots (steam.WishlistGame attribute)</a>
+      <li><a href="../api/#steam.WishlistApp.screenshots">screenshots (steam.WishlistApp attribute)</a>
 </li>
       <li><a href="../api/#steam.ProfileItemType.ScreenshotShowcase">ScreenshotShowcase (steam.ProfileItemType attribute)</a>
 </li>
@@ -4489,7 +4481,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ClientUser.setup_profile">setup_profile() (steam.ClientUser method)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.sha">sha (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.sha">sha (steam.AppInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.HeadlessDepot.shared_install">shared_install (steam.HeadlessDepot attribute)</a>
 </li>
@@ -4513,7 +4505,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.LicenseType.SinglePurchaseLimitedUse">SinglePurchaseLimitedUse (steam.LicenseType attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.size">size (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.size">size (steam.AppInfo attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.ManifestPath.size">(steam.ManifestPath property)</a>
@@ -4589,7 +4581,7 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.ProfileInfo.state_name">state_name (steam.ProfileInfo attribute)</a>
 </li>
-      <li><a href="../api/#steam.game.StatefulGame">StatefulGame (class in steam.game)</a>
+      <li><a href="../api/#steam.app.StatefulApp">StatefulApp (class in steam.app)</a>
 </li>
       <li><a href="../api/#steam.package.StatefulPackage">StatefulPackage (class in steam.package)</a>
 </li>
@@ -4677,7 +4669,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.UserBadge.SummerSale2012">SummerSale2012 (steam.UserBadge attribute)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.supported_languages">supported_languages (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.supported_languages">supported_languages (steam.AppInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.Suspended">Suspended (steam.Result attribute)</a>
 </li>
@@ -4706,7 +4698,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.PublishedFile.tags">(steam.PublishedFile attribute)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.tags">(steam.WishlistGame attribute)</a>
+        <li><a href="../api/#steam.WishlistApp.tags">(steam.WishlistApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.License.territory_code">territory_code (steam.License attribute)</a>
@@ -4729,24 +4721,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.Timeout">Timeout (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.DLC.title">title (steam.DLC property)</a>
-
-      <ul>
-        <li><a href="../api/#steam.FetchedGame.title">(steam.FetchedGame property)</a>
+      <li><a href="../api/#steam.ProfileItem.title">title (steam.ProfileItem attribute)</a>
 </li>
-        <li><a href="../api/#steam.Game.title">(steam.Game property)</a>
-</li>
-        <li><a href="../api/#steam.game.StatefulGame.title">(steam.game.StatefulGame property)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.title">(steam.GameInfo property)</a>
-</li>
-        <li><a href="../api/#steam.ProfileItem.title">(steam.ProfileItem attribute)</a>
-</li>
-        <li><a href="../api/#steam.UserGame.title">(steam.UserGame property)</a>
-</li>
-        <li><a href="../api/#steam.WishlistGame.title">(steam.WishlistGame property)</a>
-</li>
-      </ul></li>
       <li><a href="../api/#steam.PaymentMethod.ToditoCash">ToditoCash (steam.PaymentMethod attribute)</a>
 </li>
       <li><a href="../api/#steam.AppFlag.Tool">Tool (steam.AppFlag attribute)</a>
@@ -4761,7 +4737,7 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.Announcement.topic_id">topic_id (steam.Announcement attribute)</a>
 </li>
-      <li><a href="../api/#steam.WishlistGame.total_reviews">total_reviews (steam.WishlistGame attribute)</a>
+      <li><a href="../api/#steam.WishlistApp.total_reviews">total_reviews (steam.WishlistApp attribute)</a>
 </li>
       <li><a href="../api/#steam.UserBadge.TowerAttackMiniGame">TowerAttackMiniGame (steam.UserBadge attribute)</a>
 </li>
@@ -4779,8 +4755,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.trade_url">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.TradeOffer">TradeOffer (class in steam)</a>
 </li>
       <li><a href="../api/#steam.TradeOfferState">TradeOfferState (class in steam)</a>
@@ -4791,6 +4765,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.trades">(steam.ext.commands.Bot property)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.ProfileItemType.TradeShowcase">TradeShowcase (steam.ProfileItemType attribute)</a>
 </li>
       <li><a href="../api/#steam.UserBadge.TradingCardBetaParticipant">TradingCardBetaParticipant (steam.UserBadge attribute)</a>
@@ -4820,6 +4796,8 @@ DEALINGS IN THE SOFTWARE.
       <ul>
         <li><a href="../api/#steam.Announcement.type">(steam.Announcement attribute)</a>
 </li>
+        <li><a href="../api/#steam.AppInfo.type">(steam.AppInfo attribute)</a>
+</li>
         <li><a href="../api/#steam.Clan.type">(steam.Clan property)</a>
 </li>
         <li><a href="../api/#steam.ClientUser.type">(steam.ClientUser property)</a>
@@ -4828,11 +4806,9 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.FavouriteBadge.type">(steam.FavouriteBadge attribute)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGame.type">(steam.FetchedGame attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.type">(steam.FetchedApp attribute)</a>
 </li>
         <li><a href="../api/#steam.Friend.type">(steam.Friend property)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.type">(steam.GameInfo attribute)</a>
 </li>
         <li><a href="../api/#steam.GameServer.type">(steam.GameServer property)</a>
 </li>
@@ -4852,7 +4828,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.User.type">(steam.User property)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.type">(steam.WishlistGame attribute)</a>
+        <li><a href="../api/#steam.WishlistApp.type">(steam.WishlistApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.TypeChar">TypeChar (class in steam)</a>
@@ -4965,9 +4941,15 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.PublishedFile.upvotes">(steam.PublishedFile attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.Asset.url">url (steam.Asset property)</a>
+      <li><a href="../api/#steam.App.url">url (steam.App property)</a>
 
       <ul>
+        <li><a href="../api/#steam.app.StatefulApp.url">(steam.app.StatefulApp property)</a>
+</li>
+        <li><a href="../api/#steam.AppInfo.url">(steam.AppInfo property)</a>
+</li>
+        <li><a href="../api/#steam.Asset.url">(steam.Asset property)</a>
+</li>
         <li><a href="../api/#steam.Award.url">(steam.Award property)</a>
 </li>
         <li><a href="../api/#steam.ClientEmoticon.url">(steam.ClientEmoticon property)</a>
@@ -4978,13 +4960,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Emoticon.url">(steam.Emoticon property)</a>
 </li>
-        <li><a href="../api/#steam.FetchedGame.url">(steam.FetchedGame property)</a>
-</li>
-        <li><a href="../api/#steam.Game.url">(steam.Game property)</a>
-</li>
-        <li><a href="../api/#steam.game.StatefulGame.url">(steam.game.StatefulGame property)</a>
-</li>
-        <li><a href="../api/#steam.GameInfo.url">(steam.GameInfo property)</a>
+        <li><a href="../api/#steam.FetchedApp.url">(steam.FetchedApp property)</a>
 </li>
         <li><a href="../api/#steam.Item.url">(steam.Item property)</a>
 </li>
@@ -4996,9 +4972,9 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.TradeOffer.url">(steam.TradeOffer property)</a>
 </li>
-        <li><a href="../api/#steam.UserGame.url">(steam.UserGame property)</a>
+        <li><a href="../api/#steam.UserApp.url">(steam.UserApp property)</a>
 </li>
-        <li><a href="../api/#steam.WishlistGame.url">(steam.WishlistGame property)</a>
+        <li><a href="../api/#steam.WishlistApp.url">(steam.WishlistApp property)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.GameServerRegion.USEastCoast">USEastCoast (steam.GameServerRegion attribute)</a>
@@ -5015,6 +4991,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.MessageReaction.user">user (steam.MessageReaction attribute)</a>
 </li>
+      <li><a href="../api/#steam.UserApp">UserApp (class in steam)</a>
+</li>
       <li><a href="../api/#steam.UserBadge">UserBadge (class in steam)</a>
 </li>
       <li><a href="../api/#steam.UserBadges">UserBadges (class in steam)</a>
@@ -5022,8 +5000,6 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.DepotFileFlag.UserConfig">UserConfig (steam.DepotFileFlag attribute)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.UserConverter">UserConverter (class in steam.ext.commands)</a>
-</li>
-      <li><a href="../api/#steam.UserGame">UserGame (class in steam)</a>
 </li>
       <li><a href="../api/#steam.UserInvite">UserInvite (class in steam)</a>
 </li>
@@ -5125,10 +5101,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PaymentMethod.WebMoneyJapan">WebMoneyJapan (steam.PaymentMethod attribute)</a>
 </li>
-      <li><a href="../api/#steam.FetchedGame.website_url">website_url (steam.FetchedGame attribute)</a>
+      <li><a href="../api/#steam.AppInfo.website_url">website_url (steam.AppInfo attribute)</a>
 
       <ul>
-        <li><a href="../api/#steam.GameInfo.website_url">(steam.GameInfo attribute)</a>
+        <li><a href="../api/#steam.FetchedApp.website_url">(steam.FetchedApp attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Review.weighted_vote_score">weighted_vote_score (steam.Review attribute)</a>
@@ -5165,7 +5141,7 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.User.wishlist">(steam.User method)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.WishlistGame">WishlistGame (class in steam)</a>
+      <li><a href="../api/#steam.WishlistApp">WishlistApp (class in steam)</a>
 </li>
       <li><a href="../api/#steam.ManifestPath.with_name">with_name() (steam.ManifestPath method)</a>
 </li>
@@ -5173,7 +5149,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ManifestPath.with_suffix">with_suffix() (steam.ManifestPath method)</a>
 </li>
-      <li><a href="../api/#steam.GameInfo.workshop_visible">workshop_visible (steam.GameInfo attribute)</a>
+      <li><a href="../api/#steam.AppInfo.workshop_visible">workshop_visible (steam.AppInfo attribute)</a>
 </li>
       <li><a href="../api/#steam.ProfileItemType.WorkshopItem">WorkshopItem (steam.ProfileItemType attribute)</a>
 </li>
