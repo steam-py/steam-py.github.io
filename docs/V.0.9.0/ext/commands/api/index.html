@@ -285,6 +285,10 @@ async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_group
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_group_update">on_group_update</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_reaction_add">on_reaction_add</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_reaction_remove">on_reaction_remove</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.on_user_invite_decline">on_user_invite_decline</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.process_commands">process_commands</a></li><li class="py-attribute-table-entry">
@@ -1306,6 +1310,28 @@ passed, the code will need to be inputted by the user via <a class="reference in
 <li><p><strong>before</strong> (<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><em>Group</em></a>) – The group’s state before it was updated.</p></li>
 <li><p><strong>after</strong> (<a class="reference internal" href="../../../api/#steam.Group" title="steam.Group"><em>Group</em></a>) – The group’s state now.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_reaction_add">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_reaction_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_reaction_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a reaction is added to a message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reaction</strong> (<a class="reference internal" href="../../../api/#steam.MessageReaction" title="steam.MessageReaction"><em>MessageReaction</em></a>) – The reaction that was added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Bot.on_reaction_remove">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_reaction_remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.on_reaction_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a reaction is removed from a message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reaction</strong> (<a class="reference internal" href="../../../api/#steam.MessageReaction" title="steam.MessageReaction"><em>MessageReaction</em></a>) – The reaction that was removed.</p>
 </dd>
 </dl>
 </dd></dl>
