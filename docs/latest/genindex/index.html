@@ -188,6 +188,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.UserInvite.accept">(steam.UserInvite method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.accepted">accepted (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.TradeOfferState.Accepted">Accepted (steam.TradeOfferState attribute)</a>
 </li>
       <li><a href="../api/#steam.License.access_token">access_token (steam.License attribute)</a>
@@ -237,6 +239,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.add_check">add_check() (steam.ext.commands.Bot method)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.add_child">add_child() (steam.PublishedFile method)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.add_cog">add_cog() (steam.ext.commands.Bot method)</a>
 </li>
@@ -316,14 +320,14 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Query.all">all (steam.Query property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.all_commands">all_commands (steam.ext.commands.Bot property)</a>
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Group.all_commands">(steam.ext.commands.Group property)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.AlreadyLoggedInElsewhere">AlreadyLoggedInElsewhere (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.AlreadyOwned">AlreadyOwned (steam.Result attribute)</a>
@@ -409,6 +413,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Message.author">(steam.Message attribute)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.author">(steam.PublishedFile attribute)</a>
+</li>
         <li><a href="../api/#steam.Review.author">(steam.Review attribute)</a>
 </li>
         <li><a href="../api/#steam.UserMessage.author">(steam.UserMessage attribute)</a>
@@ -423,6 +429,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../api/#steam.PackageStatus.Available">Available (steam.PackageStatus attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.available_revisions">available_revisions (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.EquippedProfileItems.avatar_frame">avatar_frame (steam.EquippedProfileItems attribute)</a>
 </li>
@@ -446,8 +454,12 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.AwardReaction.award">award (steam.AwardReaction attribute)</a>
 </li>
-      <li><a href="../api/#steam.Review.award">award() (steam.Review method)</a>
+      <li><a href="../api/#steam.PublishedFile.award">award() (steam.PublishedFile method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.Review.award">(steam.Review method)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.AwardReaction">AwardReaction (class in steam)</a>
 </li>
       <li><a href="../api/#steam.UserBadge.AwardsCommunityContributor">AwardsCommunityContributor (steam.UserBadge attribute)</a>
@@ -496,6 +508,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Ban">Ban (class in steam)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.ban_reason">ban_reason (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.ban_text_check_result">ban_text_check_result (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.PaymentMethod.BancoCreditoDePeru">BancoCreditoDePeru (steam.PaymentMethod attribute)</a>
 </li>
       <li><a href="../api/#steam.PaymentMethod.BancoDoBrasilOnline">BancoDoBrasilOnline (steam.PaymentMethod attribute)</a>
@@ -504,7 +520,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PaymentMethod.BankTransferJapan">BankTransferJapan (steam.PaymentMethod attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.banned">banned (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.Result.Banned">Banned (steam.Result attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.banner">banner (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.bans">bans() (steam.abc.BaseUser method)</a>
 
@@ -642,6 +662,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand.callback">(steam.ext.commands.HelpCommand property)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.can_be_deleted">can_be_deleted (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.can_run">can_run() (steam.ext.commands.Bot method)</a>
 
       <ul>
@@ -654,6 +676,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand.can_run">(steam.ext.commands.HelpCommand method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.can_subscribe">can_subscribe (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.TradeOffer.cancel">cancel() (steam.TradeOffer method)</a>
 </li>
       <li><a href="../api/#steam.Friend.cancel_invite">cancel_invite() (steam.Friend method)</a>
@@ -682,10 +706,14 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.PaymentMethod.CashU">CashU (steam.PaymentMethod attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.cdn_url">cdn_url (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.GameInfo.change_number">change_number (steam.GameInfo attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.License.change_number">(steam.License attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.change_number">(steam.PublishedFile attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Client.change_presence">change_presence() (steam.Client method)</a>
@@ -746,6 +774,8 @@ DEALINGS IN THE SOFTWARE.
 
       <ul>
         <li><a href="../ext/commands/api/#steam.ext.commands.Group.children">(steam.ext.commands.Group property)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.children">(steam.PublishedFile attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Clan.chunk">chunk() (steam.Clan method)</a>
@@ -983,6 +1013,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Friend.comment">(steam.Friend method)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.comment">(steam.PublishedFile method)</a>
+</li>
         <li><a href="../api/#steam.Review.comment">(steam.Review method)</a>
 </li>
         <li><a href="../api/#steam.User.comment">(steam.User method)</a>
@@ -1012,6 +1044,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Event.comments">(steam.Event method)</a>
 </li>
         <li><a href="../api/#steam.Friend.comments">(steam.Friend method)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.comments">(steam.PublishedFile method)</a>
 </li>
         <li><a href="../api/#steam.Review.comments">(steam.Review method)</a>
 </li>
@@ -1071,6 +1105,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.InstanceFlag.Console">Console (steam.InstanceFlag attribute)</a>
 </li>
       <li><a href="../api/#steam.Type.ConsoleUser">ConsoleUser (steam.Type attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.consumer_shortcut_id">consumer_shortcut_id (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.Announcement.content">content (steam.Announcement attribute)</a>
 
@@ -1185,6 +1221,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.ProfileInfo.created_at">(steam.ProfileInfo attribute)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.created_at">(steam.PublishedFile attribute)</a>
+</li>
         <li><a href="../api/#steam.Review.created_at">(steam.Review attribute)</a>
 </li>
         <li><a href="../api/#steam.TradeOffer.created_at">(steam.TradeOffer attribute)</a>
@@ -1196,6 +1234,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.WishlistGame.created_at">(steam.WishlistGame attribute)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.created_with">created_with (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.PaymentMethod.CreditCard">CreditCard (steam.PaymentMethod attribute)</a>
 </li>
       <li><a href="../api/#steam.PaymentMethod.CreditCardJapan">CreditCardJapan (steam.PaymentMethod attribute)</a>
@@ -1312,8 +1352,6 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.AppFlag.Deprecated">Deprecated (steam.AppFlag attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Branch.description">description (steam.Branch attribute)</a>
 
       <ul>
@@ -1327,7 +1365,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.ProfileItem.description">(steam.ProfileItem attribute)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.description">(steam.PublishedFile attribute)</a>
+</li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Item.descriptions">descriptions (steam.Item attribute)</a>
 </li>
       <li><a href="../api/#steam.InstanceFlag.Desktop">Desktop (steam.InstanceFlag attribute)</a>
@@ -1387,11 +1429,17 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.DMChannel">DMChannel (class in steam)</a>
 </li>
       <li><a href="../api/#steam.Announcement.downvote">downvote() (steam.Announcement method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.PublishedFile.downvote">(steam.PublishedFile method)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.Announcement.downvotes">downvotes (steam.Announcement attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.Event.downvotes">(steam.Event attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.downvotes">(steam.PublishedFile attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.ManifestPath.drive">drive (steam.ManifestPath property)</a>
@@ -1420,6 +1468,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ClientUser.edit">(steam.ClientUser method)</a>
 </li>
         <li><a href="../api/#steam.Event.edit">(steam.Event method)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.edit">(steam.PublishedFile method)</a>
 </li>
         <li><a href="../api/#steam.Review.edit">(steam.Review method)</a>
 </li>
@@ -1556,6 +1606,8 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.FavouriteBadge">FavouriteBadge (class in steam)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.favourited">favourited (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.ProfileItemType.FavouriteGame">FavouriteGame (steam.ProfileItemType attribute)</a>
 </li>
       <li><a href="../api/#steam.ProfileItemType.FavouriteGroup">FavouriteGroup (steam.ProfileItemType attribute)</a>
@@ -1588,6 +1640,8 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.Clan.fetch_announcement">fetch_announcement() (steam.Clan method)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.fetch_children">fetch_children() (steam.PublishedFile method)</a>
+</li>
       <li><a href="../api/#steam.Client.fetch_clan">fetch_clan() (steam.Client method)</a>
 
       <ul>
@@ -1613,6 +1667,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Friend.fetch_comment">(steam.Friend method)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.fetch_comment">(steam.PublishedFile method)</a>
+</li>
         <li><a href="../api/#steam.Review.fetch_comment">(steam.Review method)</a>
 </li>
         <li><a href="../api/#steam.User.fetch_comment">(steam.User method)</a>
@@ -1626,6 +1682,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.fetch_game">(steam.ext.commands.Bot method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.fetch_history_entry">fetch_history_entry() (steam.PublishedFile method)</a>
+</li>
       <li><a href="../api/#steam.DLC.fetch_manifest">fetch_manifest() (steam.DLC method)</a>
 
       <ul>
@@ -1752,6 +1810,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.DepotFileFlag.File">File (steam.DepotFileFlag attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.filename">filename (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.Result.FileNotFound">FileNotFound (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.iterators.AsyncIterator.filter">filter() (steam.iterators.AsyncIterator method)</a>
@@ -1779,10 +1839,16 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.ManifestPath.flags">(steam.ManifestPath attribute)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.flags">(steam.PublishedFile attribute)</a>
+</li>
         <li><a href="../api/#steam.User.flags">(steam.User attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.iterators.AsyncIterator.flatten">flatten() (steam.iterators.AsyncIterator method)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.followers">followers (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.for_sale_data">for_sale_data (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.Forbidden">Forbidden</a>
 </li>
@@ -1928,6 +1994,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Manifest.game">(steam.Manifest attribute)</a>
 </li>
         <li><a href="../api/#steam.ProfileItem.game">(steam.ProfileItem attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.game">(steam.PublishedFile attribute)</a>
 </li>
         <li><a href="../api/#steam.Review.game">(steam.Review attribute)</a>
 </li>
@@ -2220,10 +2288,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.ProfileInfo.headline">headline (steam.ProfileInfo attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Command.help">help (steam.ext.commands.Command attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.help_command">help_command (steam.ext.commands.Bot property)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.HelpCommand">HelpCommand (class in steam.ext.commands)</a>
@@ -2252,6 +2320,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Context.history">(steam.ext.commands.Context method)</a>
 </li>
         <li><a href="../api/#steam.GroupChannel.history">(steam.GroupChannel method)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.history">(steam.PublishedFile method)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.HTTPException">HTTPException</a>
@@ -2324,6 +2394,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Message.id">(steam.Message attribute)</a>
 </li>
         <li><a href="../api/#steam.ProfileItem.id">(steam.ProfileItem attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.id">(steam.PublishedFile attribute)</a>
 </li>
         <li><a href="../api/#steam.Review.id">(steam.Review attribute)</a>
 </li>
@@ -2436,9 +2508,17 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Sticker.image">(steam.Sticker method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.image_height">image_height (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.image_url">image_url (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.image_width">image_width (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.LicenseFlag.ImportedFromSteam2">ImportedFromSteam2 (steam.LicenseFlag attribute)</a>
 </li>
       <li><a href="../api/#steam.Clan.in_game_count">in_game_count (steam.Clan attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.incompatible">incompatible (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.Type.Individual">Individual (steam.Type attribute)</a>
 </li>
@@ -2546,12 +2626,12 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.InvalidItemType">InvalidItemType (steam.Result attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.InvalidLoginAuthCode">InvalidLoginAuthCode (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.InvalidName">InvalidName (steam.Result attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.InvalidParameter">InvalidParameter (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.InvalidPassword">InvalidPassword (steam.Result attribute)</a>
@@ -2808,6 +2888,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.WishlistGame.is_steam_game">(steam.WishlistGame method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.is_subscribed">is_subscribed() (steam.PublishedFile method)</a>
+</li>
       <li><a href="../api/#steam.ManifestPath.is_symlink">is_symlink() (steam.ManifestPath method)</a>
 </li>
       <li><a href="../api/#steam.Item.is_tradable">is_tradable() (steam.Item method)</a>
@@ -2888,11 +2970,13 @@ DEALINGS IN THE SOFTWARE.
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.PaymentMethod.Kiosk">Kiosk (steam.PaymentMethod attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.PaymentMethod.Konbini">Konbini (steam.PaymentMethod attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Language.Korean">Korean (steam.Language attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.kv_tags">kv_tags (steam.PublishedFile attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2907,6 +2991,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.Clan.language">language (steam.Clan attribute)</a>
 
       <ul>
+        <li><a href="../api/#steam.PublishedFile.language">(steam.PublishedFile attribute)</a>
+</li>
         <li><a href="../api/#steam.Review.language">(steam.Review attribute)</a>
 </li>
       </ul></li>
@@ -3022,6 +3108,16 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.LicenseType">LicenseType (class in steam)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.lifetime_favourited">lifetime_favourited (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.lifetime_followers">lifetime_followers (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.lifetime_playtime">lifetime_playtime (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.lifetime_playtime_sessions">lifetime_playtime_sessions (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.lifetime_subscriptions">lifetime_subscriptions (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.iterators.AsyncIterator.limit">limit (steam.iterators.AsyncIterator attribute)</a>
 </li>
       <li><a href="../api/#steam.LicenseType.LimitedUseDelayedActivation">LimitedUseDelayedActivation (steam.LicenseType attribute)</a>
@@ -3106,6 +3202,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Depot.manifest">manifest (steam.Depot attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.manifest">manifest() (steam.PublishedFile method)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.manifest_id">manifest_id (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.ManifestInfo">ManifestInfo (class in steam)</a>
 </li>
       <li><a href="../api/#steam.ManifestPath">ManifestPath (class in steam)</a>
@@ -3167,6 +3267,10 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.GameServer.max_player_count">max_player_count (steam.GameServer attribute)</a>
 </li>
       <li><a href="../api/#steam.HeadlessDepot.max_size">max_size (steam.HeadlessDepot attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.maybe_inappropriate_sex">maybe_inappropriate_sex (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.maybe_inappropriate_violence">maybe_inappropriate_violence (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.Clan.me">me (steam.Clan property)</a>
 
@@ -3234,6 +3338,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../ext/commands/api/#steam.ext.commands.Bot.messages">(steam.ext.commands.Bot property)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.metadata">metadata (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.GameServerRegion.MiddleEast">MiddleEast (steam.GameServerRegion attribute)</a>
 </li>
       <li><a href="../api/#steam.EquippedProfileItems.mini_profile_background">mini_profile_background (steam.EquippedProfileItems attribute)</a>
@@ -3339,6 +3445,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.ProfileItem.name">(steam.ProfileItem attribute)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.name">(steam.PublishedFile attribute)</a>
+</li>
         <li><a href="../api/#steam.Sticker.name">(steam.Sticker attribute)</a>
 </li>
         <li><a href="../api/#steam.User.name">(steam.User attribute)</a>
@@ -3360,10 +3468,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.MovedItem.new_id">new_id (steam.MovedItem attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.EventType.News">News (steam.EventType attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.iterators.AsyncIterator.next">next() (steam.iterators.AsyncIterator method)</a>
 </li>
       <li><a href="../api/#steam.License.next_process_at">next_process_at (steam.License attribute)</a>
@@ -3426,7 +3534,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.NoVerifiedPhone">NoVerifiedPhone (steam.Result attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.number_of_developer_comments">number_of_developer_comments (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.Ban.number_of_game_bans">number_of_game_bans (steam.Ban attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.number_of_public_comments">number_of_public_comments (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.BillingType.NumBillingTypes">NumBillingTypes (steam.BillingType attribute)</a>
 </li>
@@ -3702,6 +3814,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ManifestPath.parents">(steam.ManifestPath property)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile.parents">parents() (steam.PublishedFile method)</a>
+</li>
       <li><a href="../api/#steam.utils.parse_trade_url">parse_trade_url() (in module steam.utils)</a>
 </li>
       <li><a href="../api/#steam.Result.ParseFailure">ParseFailure (steam.Result attribute)</a>
@@ -3786,6 +3900,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.UserGame.playtime_mac_os">playtime_mac_os (steam.UserGame attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.playtime_stats">playtime_stats (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.UserGame.playtime_two_weeks">playtime_two_weeks (steam.UserGame attribute)</a>
 </li>
       <li><a href="../api/#steam.UserGame.playtime_windows">playtime_windows (steam.UserGame attribute)</a>
@@ -3798,10 +3914,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.UserBadge.Portal2PotatoARG">Portal2PotatoARG (steam.UserBadge attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Language.Portuguese">Portuguese (steam.Language attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Language.PortugueseBrazil">PortugueseBrazil (steam.Language attribute)</a>
 </li>
       <li><a href="../api/#steam.ClanChannel.position">position (steam.ClanChannel attribute)</a>
@@ -3821,6 +3937,10 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../ext/commands/api/#steam.ext.commands.Context.prefix">prefix (steam.ext.commands.Context attribute)</a>
 </li>
       <li><a href="../api/#steam.PackageStatus.Preorder">Preorder (steam.PackageStatus attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.preview">preview (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.previews">previews (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.DLC.price_overview">price_overview (steam.DLC attribute)</a>
 
@@ -3940,6 +4060,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.WishlistGame.published_files">(steam.WishlistGame method)</a>
 </li>
       </ul></li>
+      <li><a href="../api/#steam.PublishedFile">PublishedFile (class in steam)</a>
+</li>
       <li><a href="../api/#steam.PublishedFileRevision">PublishedFileRevision (class in steam)</a>
 </li>
       <li><a href="../api/#steam.FetchedGame.publishers">publishers (steam.FetchedGame attribute)</a>
@@ -4007,6 +4129,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.GroupMessage.reactions">(steam.GroupMessage attribute)</a>
 </li>
         <li><a href="../api/#steam.Message.reactions">(steam.Message attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.reactions">(steam.PublishedFile attribute)</a>
 </li>
         <li><a href="../api/#steam.Review.reactions">(steam.Review attribute)</a>
 </li>
@@ -4115,6 +4239,8 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_check">remove_check() (steam.ext.commands.Bot method)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.remove_child">remove_child() (steam.PublishedFile method)</a>
+</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_cog">remove_cog() (steam.ext.commands.Bot method)</a>
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Bot.remove_command">remove_command() (steam.ext.commands.Bot method)</a>
@@ -4158,6 +4284,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.BillingType.Rental">Rental (steam.BillingType attribute)</a>
 </li>
       <li><a href="../api/#steam.Comment.report">report() (steam.Comment method)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.reports">reports (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.BillingType.Repurchaseable">Repurchaseable (steam.BillingType attribute)</a>
 </li>
@@ -4224,6 +4352,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
       </ul></li>
       <li><a href="../api/#steam.ReviewType">ReviewType (class in steam)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.revision">revision (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.Revoked">Revoked (steam.Result attribute)</a>
 </li>
@@ -4299,8 +4429,12 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.Badge.scarcity">scarcity (steam.Badge attribute)</a>
 </li>
-      <li><a href="../api/#steam.WishlistGame.score">score (steam.WishlistGame attribute)</a>
+      <li><a href="../api/#steam.PublishedFile.score">score (steam.PublishedFile attribute)</a>
+
+      <ul>
+        <li><a href="../api/#steam.WishlistGame.score">(steam.WishlistGame attribute)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.WishlistGame.screenshots">screenshots (steam.WishlistGame attribute)</a>
 </li>
       <li><a href="../api/#steam.ProfileItemType.ScreenshotShowcase">ScreenshotShowcase (steam.ProfileItemType attribute)</a>
@@ -4381,6 +4515,12 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.AppFlag.Shortcut">Shortcut (steam.AppFlag attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.shortcut_id">shortcut_id (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.shortcut_name">shortcut_name (steam.PublishedFile attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.show_subscribe_all">show_subscribe_all (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.Language.SimplifiedChinese">SimplifiedChinese (steam.Language attribute)</a>
 </li>
       <li><a href="../api/#steam.Ban.since_last_ban">since_last_ban (steam.Ban attribute)</a>
@@ -4395,6 +4535,8 @@ DEALINGS IN THE SOFTWARE.
 
       <ul>
         <li><a href="../api/#steam.ManifestPath.size">(steam.ManifestPath property)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.size">(steam.PublishedFile attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Manifest.size_compressed">size_compressed (steam.Manifest property)</a>
@@ -4415,10 +4557,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Language.Spanish">Spanish (steam.Language attribute)</a>
 </li>
-      <li><a href="../api/#steam.Language.SpanishLatinAmerican">SpanishLatinAmerican (steam.Language attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/#steam.Language.SpanishLatinAmerican">SpanishLatinAmerican (steam.Language attribute)</a>
+</li>
       <li><a href="../ext/commands/api/#steam.ext.commands.Command.special_converters">special_converters (steam.ext.commands.Command attribute)</a>
 </li>
       <li><a href="../api/#steam.EventType.SpecialCause">SpecialCause (steam.EventType attribute)</a>
@@ -4426,6 +4568,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.PaymentMethod.SPEI">SPEI (steam.PaymentMethod attribute)</a>
 </li>
       <li><a href="../api/#steam.PaymentMethod.Split">Split (steam.PaymentMethod attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.spoiler">spoiler (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.EventType.Sports">Sports (steam.EventType attribute)</a>
 </li>
@@ -4517,6 +4661,10 @@ DEALINGS IN THE SOFTWARE.
       </ul></li>
       <li><a href="../api/#steam.ProfileShowcase.style">style (steam.ProfileShowcase attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.subscribe">subscribe() (steam.PublishedFile method)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.subscriptions">subscriptions (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.ManifestPath.suffix">suffix (steam.ManifestPath property)</a>
 </li>
       <li><a href="../api/#steam.ManifestPath.suffixes">suffixes (steam.ManifestPath property)</a>
@@ -4576,6 +4724,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Item.tags">(steam.Item attribute)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.tags">(steam.PublishedFile attribute)</a>
+</li>
         <li><a href="../api/#steam.WishlistGame.tags">(steam.WishlistGame attribute)</a>
 </li>
       </ul></li>
@@ -4590,6 +4740,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.License.time_limit">time_limit (steam.License attribute)</a>
 </li>
       <li><a href="../api/#steam.License.time_remaining">time_remaining (steam.License property)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.time_subscribed">time_subscribed (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.License.time_used">time_used (steam.License attribute)</a>
 </li>
@@ -4714,6 +4866,8 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.ProfileShowcase.type">(steam.ProfileShowcase attribute)</a>
 </li>
+        <li><a href="../api/#steam.PublishedFile.type">(steam.PublishedFile attribute)</a>
+</li>
         <li><a href="../api/#steam.SteamID.type">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.type">(steam.User property)</a>
@@ -4801,10 +4955,14 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../ext/commands/api/#steam.ext.commands.UnmatchedKeyValuePair">UnmatchedKeyValuePair</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.unsubscribe">unsubscribe() (steam.PublishedFile method)</a>
+</li>
       <li><a href="../api/#steam.Announcement.updated_at">updated_at (steam.Announcement attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.Branch.updated_at">(steam.Branch attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.updated_at">(steam.PublishedFile attribute)</a>
 </li>
         <li><a href="../api/#steam.Review.updated_at">(steam.Review attribute)</a>
 </li>
@@ -4814,11 +4972,17 @@ DEALINGS IN THE SOFTWARE.
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Announcement.upvote">upvote() (steam.Announcement method)</a>
+
+      <ul>
+        <li><a href="../api/#steam.PublishedFile.upvote">(steam.PublishedFile method)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.Announcement.upvotes">upvotes (steam.Announcement attribute)</a>
 
       <ul>
         <li><a href="../api/#steam.Event.upvotes">(steam.Event attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.upvotes">(steam.PublishedFile attribute)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.Asset.url">url (steam.Asset property)</a>
@@ -4845,6 +5009,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.Item.url">(steam.Item property)</a>
 </li>
         <li><a href="../api/#steam.ProfileItem.url">(steam.ProfileItem attribute)</a>
+</li>
+        <li><a href="../api/#steam.PublishedFile.url">(steam.PublishedFile attribute)</a>
 </li>
         <li><a href="../api/#steam.Sticker.url">(steam.Sticker property)</a>
 </li>
@@ -4915,10 +5081,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Query.version_match">version_match (steam.Query property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.DepotFileFlag.VersionedUserConfig">VersionedUserConfig (steam.DepotFileFlag attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.ReviewType.VeryNegative">VeryNegative (steam.ReviewType attribute)</a>
 </li>
       <li><a href="../api/#steam.ReviewType.VeryPositive">VeryPositive (steam.ReviewType attribute)</a>
@@ -4929,7 +5095,11 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Language.Vietnamese">Vietnamese (steam.Language attribute)</a>
 </li>
+      <li><a href="../api/#steam.PublishedFile.views">views (steam.PublishedFile attribute)</a>
+</li>
       <li><a href="../api/#steam.PaymentMethod.VisaBrazil">VisaBrazil (steam.PaymentMethod attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.visibility">visibility (steam.PublishedFile attribute)</a>
 </li>
       <li><a href="../api/#steam.PriceOverview.volume">volume (steam.PriceOverview attribute)</a>
 </li>
@@ -5063,11 +5233,13 @@ DEALINGS IN THE SOFTWARE.
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.PaymentMethod.Yandex">Yandex (steam.PaymentMethod attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.PaymentMethod.YapiKredi">YapiKredi (steam.PaymentMethod attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.UserBadge.YearsOfService">YearsOfService (steam.UserBadge attribute)</a>
+</li>
+      <li><a href="../api/#steam.PublishedFile.youtube_id">youtube_id (steam.PublishedFile attribute)</a>
 </li>
   </ul></td>
 </tr></table>

@@ -125,6 +125,7 @@ DEALINGS IN THE SOFTWARE.
 <li><a class="reference internal" href="#package">Package</a></li>
 <li><a class="reference internal" href="#priceoverview">PriceOverview</a></li>
 <li><a class="reference internal" href="#profile">Profile</a></li>
+<li><a class="reference internal" href="#publishedfile">PublishedFile</a></li>
 <li><a class="reference internal" href="#trading">Trading</a></li>
 <li><a class="reference internal" href="#reactions">Reactions</a></li>
 <li><a class="reference internal" href="#reviews">Reviews</a></li>
@@ -862,7 +863,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFile</span></code>]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.PublishedFile" title="steam.published_file.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFile</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -880,7 +881,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFile</span></code>]]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.PublishedFile" title="steam.published_file.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFile</span></code></a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5748,7 +5749,7 @@ user’s reviews.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileType.Community</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -5775,7 +5776,7 @@ user’s published files.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -10926,7 +10927,7 @@ async for</span><a class="reference internal" href="#steam.GameInfo.reviews">rev
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.GameInfo.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileQueryFileType.Items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.GameInfo.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">published_file</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -10954,7 +10955,7 @@ fetch all the game’s published files, but this will be a very slow operation.<
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -12813,7 +12814,7 @@ async</span><a class="reference internal" href="#steam.ProfileShowcase.published
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ProfileShowcase.published_file">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">published_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ProfileShowcase.published_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches the associated <code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code> from <code class="xref py py-attr docutils literal notranslate"><span class="pre">published_file_id</span></code>.</p>
+<dd><p>Fetches the associated <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a> from <code class="xref py py-attr docutils literal notranslate"><span class="pre">published_file_id</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -12822,7 +12823,7 @@ async</span><a class="reference internal" href="#steam.ProfileShowcase.published
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.published_file.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -12846,6 +12847,679 @@ async</span><a class="reference internal" href="#steam.ProfileShowcase.published
 <dd><p>Represents a user’s complete profile.</p>
 <dl class="field-list simple">
 </dl>
+</dd></dl>
+
+</section>
+<section id="publishedfile">
+<h3>PublishedFile<a class="headerlink" href="#publishedfile" title="Permalink to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="steam.PublishedFile"><div class="py-attribute-table-column">
+<span>
+Attributes</span><ul>
+<li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.accepted">accepted</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.author">author</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.available_revisions">available_revisions</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.ban_reason">ban_reason</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.ban_text_check_result">ban_text_check_result</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.banned">banned</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.banner">banner</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.can_be_deleted">can_be_deleted</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.can_subscribe">can_subscribe</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.cdn_url">cdn_url</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.change_number">change_number</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.children">children</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.consumer_shortcut_id">consumer_shortcut_id</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.created_at">created_at</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.created_with">created_with</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.description">description</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.downvotes">downvotes</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.favourited">favourited</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.filename">filename</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.flags">flags</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.followers">followers</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.for_sale_data">for_sale_data</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.game">game</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.id">id</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.image_height">image_height</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.image_url">image_url</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.image_width">image_width</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.incompatible">incompatible</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.kv_tags">kv_tags</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.language">language</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.lifetime_favourited">lifetime_favourited</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.lifetime_followers">lifetime_followers</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.lifetime_playtime">lifetime_playtime</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.lifetime_playtime_sessions">lifetime_playtime_sessions</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.lifetime_subscriptions">lifetime_subscriptions</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.manifest_id">manifest_id</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.maybe_inappropriate_sex">maybe_inappropriate_sex</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.maybe_inappropriate_violence">maybe_inappropriate_violence</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.metadata">metadata</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.name">name</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.number_of_developer_comments">number_of_developer_comments</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.number_of_public_comments">number_of_public_comments</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.playtime_stats">playtime_stats</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.preview">preview</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.previews">previews</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.reactions">reactions</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.reports">reports</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.revision">revision</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.score">score</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.shortcut_id">shortcut_id</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.shortcut_name">shortcut_name</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.show_subscribe_all">show_subscribe_all</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.size">size</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.spoiler">spoiler</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.subscriptions">subscriptions</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.tags">tags</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.time_subscribed">time_subscribed</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.type">type</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.updated_at">updated_at</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.upvotes">upvotes</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.url">url</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.views">views</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.visibility">visibility</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PublishedFile.youtube_id">youtube_id</a></li></ul>
+</div><div class="py-attribute-table-column">
+<span>
+Methods</span><ul>
+<li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.add_child">add_child</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.award">award</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.comment">comment</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="async iterable">
+async for</span><a class="reference internal" href="#steam.PublishedFile.comments">comments</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.downvote">downvote</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.edit">edit</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.fetch_children">fetch_children</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.fetch_comment">fetch_comment</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.fetch_history_entry">fetch_history_entry</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.history">history</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.is_subscribed">is_subscribed</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.manifest">manifest</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.parents">parents</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.remove_child">remove_child</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.subscribe">subscribe</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.unsubscribe">unsubscribe</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.PublishedFile.upvote">upvote</a></li></ul>
+</div></div><dl class="py class">
+<dt class="sig sig-object py" id="steam.PublishedFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">PublishedFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a published file on SteamPipe.</p>
+<dl class="field-list simple">
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.author">
+<span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.User" title="steam.user.User"><span class="pre">User</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.ClientUser" title="steam.user.ClientUser"><span class="pre">ClientUser</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID"><span class="pre">SteamID</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.author" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.game">
+<span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame"><span class="pre">StatefulGame</span></a></em><a class="headerlink" href="#steam.PublishedFile.game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.created_with">
+<span class="sig-name descname"><span class="pre">created_with</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame"><span class="pre">StatefulGame</span></a></em><a class="headerlink" href="#steam.PublishedFile.created_with" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime</span></a></em><a class="headerlink" href="#steam.PublishedFile.created_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime</span></a></em><a class="headerlink" href="#steam.PublishedFile.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.url">
+<span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.manifest_id">
+<span class="sig-name descname"><span class="pre">manifest_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.manifest_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.revision">
+<span class="sig-name descname"><span class="pre">revision</span></span><a class="headerlink" href="#steam.PublishedFile.revision" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.available_revisions">
+<span class="sig-name descname"><span class="pre">available_revisions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a></em><a class="headerlink" href="#steam.PublishedFile.available_revisions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.change_number">
+<span class="sig-name descname"><span class="pre">change_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.change_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#steam.PublishedFile.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.views">
+<span class="sig-name descname"><span class="pre">views</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.views" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.youtube_id">
+<span class="sig-name descname"><span class="pre">youtube_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.youtube_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.visibility">
+<span class="sig-name descname"><span class="pre">visibility</span></span><a class="headerlink" href="#steam.PublishedFile.visibility" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.flags">
+<span class="sig-name descname"><span class="pre">flags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.flags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.accepted">
+<span class="sig-name descname"><span class="pre">accepted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.accepted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.show_subscribe_all">
+<span class="sig-name descname"><span class="pre">show_subscribe_all</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.show_subscribe_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.number_of_developer_comments">
+<span class="sig-name descname"><span class="pre">number_of_developer_comments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.number_of_developer_comments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.number_of_public_comments">
+<span class="sig-name descname"><span class="pre">number_of_public_comments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.number_of_public_comments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.spoiler">
+<span class="sig-name descname"><span class="pre">spoiler</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.spoiler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.children">
+<span class="sig-name descname"><span class="pre">children</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">steam.published_file.PublishedFileChild</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.children" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.size">
+<span class="sig-name descname"><span class="pre">size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.cdn_url">
+<span class="sig-name descname"><span class="pre">cdn_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.cdn_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.preview">
+<span class="sig-name descname"><span class="pre">preview</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PreviewInfo</span></em><a class="headerlink" href="#steam.PublishedFile.preview" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.previews">
+<span class="sig-name descname"><span class="pre">previews</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">steam.published_file.DetailsPreview</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.previews" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.banned">
+<span class="sig-name descname"><span class="pre">banned</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.banned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.ban_reason">
+<span class="sig-name descname"><span class="pre">ban_reason</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.ban_reason" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.banner">
+<span class="sig-name descname"><span class="pre">banner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.banner" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.ban_text_check_result">
+<span class="sig-name descname"><span class="pre">ban_text_check_result</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">EBanContentCheckResult</span></em><a class="headerlink" href="#steam.PublishedFile.ban_text_check_result" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.can_be_deleted">
+<span class="sig-name descname"><span class="pre">can_be_deleted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.can_be_deleted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.incompatible">
+<span class="sig-name descname"><span class="pre">incompatible</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.incompatible" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.can_subscribe">
+<span class="sig-name descname"><span class="pre">can_subscribe</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.can_subscribe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.subscriptions">
+<span class="sig-name descname"><span class="pre">subscriptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.time_subscribed">
+<span class="sig-name descname"><span class="pre">time_subscribed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.time_subscribed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.favourited">
+<span class="sig-name descname"><span class="pre">favourited</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.favourited" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.followers">
+<span class="sig-name descname"><span class="pre">followers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.followers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.award">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">award</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">award</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.award" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an <a class="reference internal" href="#steam.Award" title="steam.Award"><code class="xref py py-class docutils literal notranslate"><span class="pre">Award</span></code></a> to this piece of user generated content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>award</strong> (<a class="reference internal" href="#steam.Award" title="steam.reaction.Award"><em>Award</em></a>) – The award to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscribe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post a comment to a comments section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The message to add to the comment section.</p></li>
+<li><p><strong>subscribe</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether to subscribe to notifications on any future activity in this comment’s thread.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The created comment.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.comments">
+<em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">comments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oldest_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a comment section’s <a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a> objects.</p>
+<p class="rubric">Examples</p>
+<p>Usage:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">comment</span> <span class="ow">in</span> <span class="n">commentable</span><span class="o">.</span><span class="n">comments</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Author:&quot;</span><span class="p">,</span> <span class="n">comment</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="s2">&quot;Said:&quot;</span><span class="p">,</span> <span class="n">comment</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Flattening into a list:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">comments</span> <span class="o">=</span> <span class="k">await</span> <span class="n">commentable</span><span class="o">.</span><span class="n">comments</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="c1"># comments is now a list of Comment</span>
+</pre></div>
+</div>
+<p>All parameters are optional.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oldest_first</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) – Whether or not to request comments with the oldest comments first or last. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>]</em>) – The maximum number of comments to search through.
+Default is <code class="docutils literal notranslate"><span class="pre">None</span></code> which will fetch the all the comments in the comments section.</p></li>
+<li><p><strong>before</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime</em></a><em>]</em>) – A time to search for comments before.</p></li>
+<li><p><strong>after</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime</em></a><em>]</em>) – A time to search for comments after.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Comment</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.fetch_comment">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.fetch_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch a comment by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – The ID of the comment to fetch.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#steam.Comment" title="steam.Comment"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Comment</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.lifetime_subscriptions">
+<span class="sig-name descname"><span class="pre">lifetime_subscriptions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.lifetime_subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.lifetime_favourited">
+<span class="sig-name descname"><span class="pre">lifetime_favourited</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.lifetime_favourited" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.lifetime_followers">
+<span class="sig-name descname"><span class="pre">lifetime_followers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.lifetime_followers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.lifetime_playtime">
+<span class="sig-name descname"><span class="pre">lifetime_playtime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.lifetime_playtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.lifetime_playtime_sessions">
+<span class="sig-name descname"><span class="pre">lifetime_playtime_sessions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.lifetime_playtime_sessions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.image_width">
+<span class="sig-name descname"><span class="pre">image_width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.image_width" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.image_height">
+<span class="sig-name descname"><span class="pre">image_height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.image_height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.image_url">
+<span class="sig-name descname"><span class="pre">image_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.image_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.shortcut_id">
+<span class="sig-name descname"><span class="pre">shortcut_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.shortcut_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.shortcut_name">
+<span class="sig-name descname"><span class="pre">shortcut_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.shortcut_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.consumer_shortcut_id">
+<span class="sig-name descname"><span class="pre">consumer_shortcut_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.consumer_shortcut_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.tags">
+<span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">steam.protobufs.published_file.PublishedFileDetailsTag</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.kv_tags">
+<span class="sig-name descname"><span class="pre">kv_tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.kv_tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.reports">
+<span class="sig-name descname"><span class="pre">reports</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.reports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.upvotes">
+<span class="sig-name descname"><span class="pre">upvotes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.upvotes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.downvotes">
+<span class="sig-name descname"><span class="pre">downvotes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#steam.PublishedFile.downvotes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.score">
+<span class="sig-name descname"><span class="pre">score</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></em><a class="headerlink" href="#steam.PublishedFile.score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.playtime_stats">
+<span class="sig-name descname"><span class="pre">playtime_stats</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PublishedFileDetailsPlaytimeStats</span></em><a class="headerlink" href="#steam.PublishedFile.playtime_stats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.for_sale_data">
+<span class="sig-name descname"><span class="pre">for_sale_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PublishedFileDetailsForSaleData</span></em><a class="headerlink" href="#steam.PublishedFile.for_sale_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.PublishedFile.metadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.language">
+<span class="sig-name descname"><span class="pre">language</span></span><a class="headerlink" href="#steam.PublishedFile.language" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.maybe_inappropriate_sex">
+<span class="sig-name descname"><span class="pre">maybe_inappropriate_sex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.maybe_inappropriate_sex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.maybe_inappropriate_violence">
+<span class="sig-name descname"><span class="pre">maybe_inappropriate_violence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.PublishedFile.maybe_inappropriate_violence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PublishedFile.reactions">
+<span class="sig-name descname"><span class="pre">reactions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.AwardReaction" title="steam.reaction.AwardReaction"><span class="pre">steam.reaction.AwardReaction</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PublishedFile.reactions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.manifest">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">manifest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.manifest" title="Permalink to this definition">¶</a></dt>
+<dd><p>The manifest associated with this published file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.Manifest" title="steam.Manifest"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Manifest</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.fetch_children">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.fetch_children" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches this published file’s children.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>revision</strong> (<a class="reference internal" href="#steam.PublishedFileRevision" title="steam.enums.PublishedFileRevision"><em>PublishedFileRevision</em></a>) – The revision to fetch.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch children in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.parents">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.parents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches this published file’s parents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>revision</strong> (<a class="reference internal" href="#steam.PublishedFileRevision" title="steam.enums.PublishedFileRevision"><em>PublishedFileRevision</em></a>) – The revision to fetch.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch parents in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.upvote">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">upvote</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.upvote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upvotes this published file.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.downvote">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">downvote</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.downvote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downvotes this published file.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.subscribe">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">subscribe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.subscribe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribes to this published file’s changes.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.unsubscribe">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">unsubscribe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.unsubscribe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unsubscribes from this published file’s changes.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.is_subscribed">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_subscribed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.is_subscribed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the client user is subscribed to this published file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.add_child">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">add_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">child</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.add_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a child to this published file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>child</strong> (<a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><em>PublishedFile</em></a>) – The child to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.remove_child">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">remove_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">child</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.remove_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a child from this published file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>child</strong> (<a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><em>PublishedFile</em></a>) – The child to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.history">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches this published file’s history.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch history in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFileChange</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.fetch_history_entry">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_history_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.fetch_history_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches the history entry at a given time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>at</strong> (<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><em>datetime</em></a>) – The time to fetch the history entry at.</p></li>
+<li><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch history entries in. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current language is used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.published_file.PublishedFileChange</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.PublishedFile.edit">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visibility</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preview_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.PublishedFile.edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edits this published file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – The new name of the file.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – The new description of the file.</p></li>
+<li><p><strong>visibility</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><em>PublishedFileVisibility</em><em>]</em>) – The new visibility of the file.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.10)"><em>Sequence</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – The new tags of the file.</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – The new filename of the file.</p></li>
+<li><p><strong>preview_filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) – The new preview filename of the file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -14855,7 +15529,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileType.Community</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -14882,7 +15556,7 @@ user’s published files.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -15646,7 +16320,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.User.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileType.Community</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -15673,7 +16347,7 @@ user’s published files.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -16598,7 +17272,7 @@ After h = attrgetter(‘name.first’, ‘name.last’), the call h(r) returns
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Friend.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileType.Community</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a user’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -16625,7 +17299,7 @@ user’s published files.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -17154,7 +17828,7 @@ async for</span><a class="reference internal" href="#steam.game.StatefulGame.rev
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.game.StatefulGame.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileQueryFileType.Items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.game.StatefulGame.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">published_file</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -17182,7 +17856,7 @@ fetch all the game’s published files, but this will be a very slow operation.<
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -17592,7 +18266,7 @@ async for</span><a class="reference internal" href="#steam.UserGame.reviews">rev
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.UserGame.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileQueryFileType.Items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.UserGame.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">published_file</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -17620,7 +18294,7 @@ fetch all the game’s published files, but this will be a very slow operation.<
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -18129,7 +18803,7 @@ async for</span><a class="reference internal" href="#steam.WishlistGame.reviews"
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.WishlistGame.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileQueryFileType.Items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.WishlistGame.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">published_file</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -18157,7 +18831,7 @@ fetch all the game’s published files, but this will be a very slow operation.<
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -18604,7 +19278,7 @@ async for</span><a class="reference internal" href="#steam.FetchedGame.reviews">
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.FetchedGame.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileQueryFileType.Items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.FetchedGame.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">published_file</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -18632,7 +19306,7 @@ fetch all the game’s published files, but this will be a very slow operation.<
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -19091,7 +19765,7 @@ async for</span><a class="reference internal" href="#steam.DLC.reviews">reviews<
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.DLC.published_files">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">published_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileQueryFileType.Items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">revision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PublishedFileRevision.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.DLC.published_files" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code>s.</p>
+<dd><p>An <a class="reference internal" href="#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a game’s <a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.PublishedFile</span></code></a>s.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">for</span> <span class="n">published_file</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">published_files</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -19119,7 +19793,7 @@ fetch all the game’s published files, but this will be a very slow operation.<
 </ul>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="#steam.PublishedFile" title="steam.PublishedFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishedFile</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
