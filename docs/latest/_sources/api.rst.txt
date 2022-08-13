@@ -600,7 +600,7 @@ PublishedFile
 
 .. attributetable:: PublishedFile
 
-.. autoclass:: PublishedFile
+.. autoclass:: PublishedFile()
     :members:
     :inherited-members:
 
