@@ -1033,7 +1033,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.community_url">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.community_url">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.community_url">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.community_url">(steam.User attribute)</a>
 </li>
@@ -1865,7 +1865,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.from_url">(steam.Group static method)</a>
 </li>
-        <li><a href="../api/#steam.ID.from_url">(steam.ID static method)</a>
+        <li><a href="../api/#steam.SteamID.from_url">(steam.SteamID static method)</a>
 </li>
         <li><a href="../api/#steam.User.from_url">(steam.User static method)</a>
 </li>
@@ -2272,8 +2272,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.UserGame.icon_url">(steam.UserGame attribute)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.ID">ID (class in steam)</a>
-</li>
       <li><a href="../api/#steam.abc.BaseUser.id">id (steam.abc.BaseUser property)</a>
 
       <ul>
@@ -2313,9 +2311,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.HeadlessDepot.id">(steam.HeadlessDepot attribute)</a>
 </li>
-        <li><a href="../api/#steam.ID.id">(steam.ID property)</a>
-</li>
-        <li><a href="../api/#steam.InvalidID.id">(steam.InvalidID attribute)</a>
+        <li><a href="../api/#steam.InvalidSteamID.id">(steam.InvalidSteamID attribute)</a>
 </li>
         <li><a href="../api/#steam.Manifest.id">(steam.Manifest property)</a>
 </li>
@@ -2326,6 +2322,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ProfileItem.id">(steam.ProfileItem attribute)</a>
 </li>
         <li><a href="../api/#steam.Review.id">(steam.Review attribute)</a>
+</li>
+        <li><a href="../api/#steam.SteamID.id">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.TradeOffer.id">(steam.TradeOffer attribute)</a>
 </li>
@@ -2347,7 +2345,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.id2">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.id2">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.id2">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.id2">(steam.User property)</a>
 </li>
@@ -2365,7 +2363,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.id2_zero">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.id2_zero">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.id2_zero">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.id2_zero">(steam.User property)</a>
 </li>
@@ -2383,9 +2381,27 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.id3">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.id3">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.id3">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.id3">(steam.User property)</a>
+</li>
+      </ul></li>
+      <li><a href="../api/#steam.abc.BaseUser.id64">id64 (steam.abc.BaseUser property)</a>
+
+      <ul>
+        <li><a href="../api/#steam.Clan.id64">(steam.Clan property)</a>
+</li>
+        <li><a href="../api/#steam.ClientUser.id64">(steam.ClientUser property)</a>
+</li>
+        <li><a href="../api/#steam.Friend.id64">(steam.Friend property)</a>
+</li>
+        <li><a href="../api/#steam.GameServer.id64">(steam.GameServer property)</a>
+</li>
+        <li><a href="../api/#steam.Group.id64">(steam.Group property)</a>
+</li>
+        <li><a href="../api/#steam.SteamID.id64">(steam.SteamID property)</a>
+</li>
+        <li><a href="../api/#steam.User.id64">(steam.User property)</a>
 </li>
       </ul></li>
       <li><a href="../api/#steam.PaymentMethod.Ideal">Ideal (steam.PaymentMethod attribute)</a>
@@ -2481,7 +2497,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.instance">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.instance">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.instance">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.instance">(steam.User property)</a>
 </li>
@@ -2522,8 +2538,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.InvalidEmail">InvalidEmail (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.InvalidID">InvalidID</a>
-</li>
       <li><a href="../api/#steam.TradeOfferState.InvalidItems">InvalidItems (steam.TradeOfferState attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.InvalidItemType">InvalidItemType (steam.Result attribute)</a>
@@ -2532,20 +2546,24 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Result.InvalidName">InvalidName (steam.Result attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.InvalidParameter">InvalidParameter (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.InvalidPassword">InvalidPassword (steam.Result attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Result.InvalidProtocolVersion">InvalidProtocolVersion (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.InvalidSignature">InvalidSignature (steam.Result attribute)</a>
 </li>
       <li><a href="../api/#steam.Result.InvalidState">InvalidState (steam.Result attribute)</a>
 </li>
-      <li><a href="../api/#steam.Result.InvalidSteamID">InvalidSteamID (steam.Result attribute)</a>
+      <li><a href="../api/#steam.InvalidSteamID">InvalidSteamID</a>
+
+      <ul>
+        <li><a href="../api/#steam.Result.InvalidSteamID">(steam.Result attribute)</a>
 </li>
+      </ul></li>
       <li><a href="../api/#steam.Inventory">Inventory (in module steam)</a>
 </li>
       <li><a href="../api/#steam.abc.BaseUser.inventory">inventory() (steam.abc.BaseUser method)</a>
@@ -2575,7 +2593,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.invite_code">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.invite_code">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.invite_code">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.invite_code">(steam.User property)</a>
 </li>
@@ -2597,7 +2615,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.invite_url">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.invite_url">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.invite_url">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.invite_url">(steam.User property)</a>
 </li>
@@ -2805,7 +2823,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.is_valid">(steam.Group method)</a>
 </li>
-        <li><a href="../api/#steam.ID.is_valid">(steam.ID method)</a>
+        <li><a href="../api/#steam.SteamID.is_valid">(steam.SteamID method)</a>
 </li>
         <li><a href="../api/#steam.User.is_valid">(steam.User method)</a>
 </li>
@@ -3075,6 +3093,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.PaymentMethod.MaestroBoaCompra">MaestroBoaCompra (steam.PaymentMethod attribute)</a>
 </li>
       <li><a href="../api/#steam.EventType.MajorUpdate">MajorUpdate (steam.EventType attribute)</a>
+</li>
+      <li><a href="../api/#steam.utils.make_id64">make_id64() (in module steam.utils)</a>
 </li>
       <li><a href="../api/#steam.PaymentMethod.MangirKart">MangirKart (steam.PaymentMethod attribute)</a>
 </li>
@@ -3662,8 +3682,6 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ManifestPath.parents">(steam.ManifestPath property)</a>
 </li>
       </ul></li>
-      <li><a href="../api/#steam.utils.parse_id64">parse_id64() (in module steam.utils)</a>
-</li>
       <li><a href="../api/#steam.utils.parse_trade_url">parse_trade_url() (in module steam.utils)</a>
 </li>
       <li><a href="../api/#steam.Result.ParseFailure">ParseFailure (steam.Result attribute)</a>
@@ -4377,10 +4395,10 @@ DEALINGS IN THE SOFTWARE.
 </li>
       <li><a href="../api/#steam.Language.Spanish">Spanish (steam.Language attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/#steam.Language.SpanishLatinAmerican">SpanishLatinAmerican (steam.Language attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../ext/commands/api/#steam.ext.commands.Command.special_converters">special_converters (steam.ext.commands.Command attribute)</a>
 </li>
       <li><a href="../api/#steam.EventType.SpecialCause">SpecialCause (steam.EventType attribute)</a>
@@ -4452,6 +4470,8 @@ DEALINGS IN THE SOFTWARE.
       <li><a href="../api/#steam.UserBadge.SteamBoxBeta">SteamBoxBeta (steam.UserBadge attribute)</a>
 </li>
       <li><a href="../api/#steam.SteamException">SteamException</a>
+</li>
+      <li><a href="../api/#steam.SteamID">SteamID (class in steam)</a>
 </li>
       <li><a href="../api/#steam.Result.SteamRealmMismatch">SteamRealmMismatch (steam.Result attribute)</a>
 </li>
@@ -4664,8 +4684,6 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.type">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.type">(steam.ID property)</a>
-</li>
         <li><a href="../api/#steam.Item.type">(steam.Item attribute)</a>
 </li>
         <li><a href="../api/#steam.License.type">(steam.License attribute)</a>
@@ -4673,6 +4691,8 @@ DEALINGS IN THE SOFTWARE.
         <li><a href="../api/#steam.ProfileItem.type">(steam.ProfileItem attribute)</a>
 </li>
         <li><a href="../api/#steam.ProfileShowcase.type">(steam.ProfileShowcase attribute)</a>
+</li>
+        <li><a href="../api/#steam.SteamID.type">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.type">(steam.User property)</a>
 </li>
@@ -4726,7 +4746,7 @@ DEALINGS IN THE SOFTWARE.
 </li>
         <li><a href="../api/#steam.Group.universe">(steam.Group property)</a>
 </li>
-        <li><a href="../api/#steam.ID.universe">(steam.ID property)</a>
+        <li><a href="../api/#steam.SteamID.universe">(steam.SteamID property)</a>
 </li>
         <li><a href="../api/#steam.User.universe">(steam.User property)</a>
 </li>
