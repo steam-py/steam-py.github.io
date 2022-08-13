@@ -292,6 +292,10 @@ async</span><a class="reference internal" href="#steam.Client.on_login">on_login
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_message">on_message</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_reaction_add">on_reaction_add</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Client.on_reaction_remove">on_reaction_remove</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_ready">on_ready</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Client.on_socket_receive">on_socket_receive</a></li><li class="py-attribute-table-entry">
@@ -977,6 +981,28 @@ and by extension <a class="reference internal" href="#steam.Client.on_user_updat
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.PriceOverview" title="steam.models.PriceOverview"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.models.PriceOverview</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_reaction_add">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_reaction_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_reaction_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a reaction is added to a message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reaction</strong> (<a class="reference internal" href="#steam.MessageReaction" title="steam.MessageReaction"><em>MessageReaction</em></a>) – The reaction that was added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Client.on_reaction_remove">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_reaction_remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Client.on_reaction_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a reaction is removed from a message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reaction</strong> (<a class="reference internal" href="#steam.MessageReaction" title="steam.MessageReaction"><em>MessageReaction</em></a>) – The reaction that was removed.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -13339,20 +13365,64 @@ Attributes</span><ul>
 
 </dd></dl>
 
-<div class="py-attribute-table" data-move-to-id="steam.PartialMessageReaction"></div><dl class="py class">
+<div class="py-attribute-table" data-move-to-id="steam.PartialMessageReaction"><div class="py-attribute-table-column">
+<span>
+Attributes</span><ul>
+<li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PartialMessageReaction.emoticon">emoticon</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PartialMessageReaction.message">message</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.PartialMessageReaction.sticker">sticker</a></li></ul>
+</div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.PartialMessageReaction">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">PartialMessageReaction</span></span><a class="headerlink" href="#steam.PartialMessageReaction" title="Permalink to this definition">¶</a></dt>
-<dd><p>PartialMessageReaction(_state: ‘ConnectionState’, message: ‘Message’, emoticon: ‘Emoticon | None’, sticker: ‘Sticker | None’)</p>
+<dd><p>Represents a partial reaction to a message.</p>
 <dl class="field-list simple">
 </dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PartialMessageReaction.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#steam.Message" title="steam.abc.Message"><span class="pre">Message</span></a></em><a class="headerlink" href="#steam.PartialMessageReaction.message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PartialMessageReaction.emoticon">
+<span class="sig-name descname"><span class="pre">emoticon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Emoticon" title="steam.reaction.Emoticon"><span class="pre">Emoticon</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PartialMessageReaction.emoticon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.PartialMessageReaction.sticker">
+<span class="sig-name descname"><span class="pre">sticker</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.Sticker" title="steam.reaction.Sticker"><span class="pre">Sticker</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.PartialMessageReaction.sticker" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
-<div class="py-attribute-table" data-move-to-id="steam.MessageReaction"></div><dl class="py class">
+<div class="py-attribute-table" data-move-to-id="steam.MessageReaction"><div class="py-attribute-table-column">
+<span>
+Attributes</span><ul>
+<li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.MessageReaction.created_at">created_at</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.MessageReaction.ordinal">ordinal</a></li><li class="py-attribute-table-entry">
+<a class="reference internal" href="#steam.MessageReaction.user">user</a></li></ul>
+</div></div><dl class="py class">
 <dt class="sig sig-object py" id="steam.MessageReaction">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">steam.</span></span><span class="sig-name descname"><span class="pre">MessageReaction</span></span><a class="headerlink" href="#steam.MessageReaction" title="Permalink to this definition">¶</a></dt>
-<dd><p>MessageReaction(_state: ‘ConnectionState’, message: ‘Message’, emoticon: ‘Emoticon | None’, sticker: ‘Sticker | None’, user: ‘Authors’, created_at: ‘datetime | None’ = None, ordinal: ‘int | None’ = None)</p>
+<dd><p>Represents a reaction to a message.</p>
 <dl class="field-list simple">
 </dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.MessageReaction.user">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.User" title="steam.user.User"><span class="pre">User</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.ClientUser" title="steam.user.ClientUser"><span class="pre">ClientUser</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#steam.SteamID" title="steam.abc.SteamID"><span class="pre">SteamID</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.MessageReaction.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.MessageReaction.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#steam.MessageReaction.created_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="steam.MessageReaction.ordinal">
+<span class="sig-name descname"><span class="pre">ordinal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#steam.MessageReaction.ordinal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <div class="py-attribute-table" data-move-to-id="steam.Emoticon"><div class="py-attribute-table-column">
@@ -13715,17 +13785,6 @@ async</span><a class="reference internal" href="#steam.ClientSticker.save">save<
 <dl class="field-list simple">
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.ClientSticker.game">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientSticker.game" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches this sticker’s associated game.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.StatefulGame</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientSticker.image">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spoiler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientSticker.image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return this file as an image for uploading.</p>
@@ -13779,6 +13838,17 @@ async</span><a class="reference internal" href="#steam.ClientSticker.save">save<
 <dt class="sig sig-object py" id="steam.ClientSticker.url">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#steam.ClientSticker.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL for this sticker.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ClientSticker.game">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientSticker.game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches this sticker’s associated game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.game.StatefulGame" title="steam.StatefulGame"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.StatefulGame</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
