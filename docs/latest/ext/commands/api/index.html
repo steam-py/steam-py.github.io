@@ -306,8 +306,8 @@ def</span><a class="reference internal" href="#steam.ext.commands.Bot.remove_lis
 def</span><a class="reference internal" href="#steam.ext.commands.Bot.run">run</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.start">start</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="async iterable">
-async for</span><a class="reference internal" href="#steam.ext.commands.Bot.trade_history">trade_history</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="method">
+def</span><a class="reference internal" href="#steam.ext.commands.Bot.trade_history">trade_history</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.trade_url">trade_url</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
@@ -1413,7 +1413,7 @@ passed, the code will need to be inputted by the user via <a class="reference in
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.trade_history">
 <em class="property"><span class="pre">async</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">trade_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.trade_history" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <a class="reference internal" href="../../../api/#steam.iterators.AsyncIterator" title="steam.iterators.AsyncIterator"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterator</span></code></a> for accessing a <a class="reference internal" href="../../../api/#steam.ClientUser" title="steam.ClientUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ClientUser</span></code></a>’s
+<dd><p>An <span class="xref std std-term">async iterator</span> for accessing a <a class="reference internal" href="../../../api/#steam.ClientUser" title="steam.ClientUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ClientUser</span></code></a>’s
 <a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.TradeOffer</span></code></a> objects.</p>
 <p class="rubric">Examples</p>
 <p>Usage:</p>
@@ -1422,11 +1422,6 @@ passed, the code will need to be inputted by the user via <a class="reference in
     <span class="n">items</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;Nothing&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Partner:&quot;</span><span class="p">,</span> <span class="n">trade</span><span class="o">.</span><span class="n">partner</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sent:&quot;</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Flattening into a list:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">trades</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">trade_history</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-<span class="c1"># trades is now a list of TradeOffer</span>
 </pre></div>
 </div>
 <p>All parameters are optional.</p>
@@ -3393,7 +3388,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.AsyncIterator</span></code>[<a class="reference internal" href="../../../api/#steam.Message" title="steam.abc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.abc.Message</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
