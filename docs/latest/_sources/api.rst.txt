@@ -146,7 +146,7 @@ Utilities
 
 steam.py provides some utility functions.
 
-.. autofunction:: steam.utils.parse_id64
+.. autofunction:: steam.utils.make_id64
 
 .. autofunction:: steam.utils.parse_trade_url
 
@@ -273,6 +273,23 @@ Guard
 .. autofunction:: steam.guard.generate_confirmation_code
 
 .. autofunction:: steam.guard.generate_device_id
+
+
+Async Iterators
+-----------------
+
+An async iterator is a class that is capable of being used with the syntax :ref:`async for <py:async for>`.
+
+They can be used as follows:
+
+.. code-block:: python3
+
+    async for trade in client.trade_history():
+        ...  # do stuff with trade here
+
+
+.. autoclass:: steam.iterators.AsyncIterator()
+    :members:
 
 
 Abstract Base Classes
@@ -464,9 +481,9 @@ Manifests
    :members:
    :inherited-members:
 
-.. attributetable:: AppInfo
+.. attributetable:: GameInfo
 
-.. autoclass:: AppInfo()
+.. autoclass:: GameInfo()
    :members:
    :inherited-members:
 
@@ -528,9 +545,9 @@ Package
    :members:
    :inherited-members:
 
-.. attributetable:: FetchedAppPackage
+.. attributetable:: FetchedGamePackage
 
-.. autoclass:: FetchedAppPackage()
+.. autoclass:: FetchedGamePackage()
    :members:
    :inherited-members:
 
@@ -708,18 +725,18 @@ Data-Classes
 
 There are a few classes that can be constructed by the user, these include.
 
-App
+Game
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: App
+.. attributetable:: Game
 
-.. autoclass:: App
+.. autoclass:: Game
     :members:
 
-There are some predefined apps which are:
+There are some predefined games which are:
 
 +---------------------------------+-----------------+
-| App Name                        | Accessed via    |
+| Game Name                       | Accessed via    |
 +=================================+=================+
 | Team Fortress 2                 | ``steam.TF2``   |
 +---------------------------------+-----------------+
@@ -732,36 +749,37 @@ There are some predefined apps which are:
 | Steam                           | ``steam.STEAM`` |
 +---------------------------------+-----------------+
 
-Apps can be manually constructed using there app id eg:
+Games can be manually constructed using there app id eg:
 
 .. code-block:: python3
 
-    my_rust_instance = steam.App(id=252490, name="Rust")
-    # this can then be used for trading an app name is not required for this
+    my_rust_instance = steam.Game(id=252490, name="Rust")
+    # this can then be used for trading a game name is not required for this
+    # but it is for setting in game statuses if the game isn't a Steam game.
 
-.. autofunction:: CUSTOM_APP
+.. autofunction:: CUSTOM_GAME
 
-.. attributetable:: steam.app.StatefulApp
+.. attributetable:: steam.game.StatefulGame
 
-.. autoclass:: steam.app.StatefulApp()
+.. autoclass:: steam.game.StatefulGame()
     :inherited-members:
     :members:
 
-.. attributetable:: UserApp
+.. attributetable:: UserGame
 
-.. autoclass:: UserApp()
+.. autoclass:: UserGame()
     :inherited-members:
     :members:
 
-.. attributetable:: WishlistApp
+.. attributetable:: WishlistGame
 
-.. autoclass:: WishlistApp()
+.. autoclass:: WishlistGame()
     :inherited-members:
     :members:
 
-.. attributetable:: FetchedApp
+.. attributetable:: FetchedGame
 
-.. autoclass:: FetchedApp()
+.. autoclass:: FetchedGame()
     :inherited-members:
     :members:
 
@@ -774,9 +792,9 @@ Apps can be manually constructed using there app id eg:
 Steam IDs
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: ID
+.. attributetable:: SteamID
 
-.. autoclass:: ID
+.. autoclass:: SteamID
     :members:
 
 TradeOffers
@@ -827,7 +845,7 @@ The following exceptions are thrown by the library.
 
 .. autoexception:: WSNotFound
 
-.. autoexception:: InvalidID
+.. autoexception:: InvalidSteamID
 
 
 
@@ -850,4 +868,4 @@ Exception Hierarchy
             - :exc:`WSException`
                 - :exc:`WSForbidden`
                 - :exc:`WSNotFound`
-            - :exc:`InvalidID`
+            - :exc:`InvalidSteamID`
