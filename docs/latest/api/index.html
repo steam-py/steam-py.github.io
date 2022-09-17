@@ -5018,9 +5018,6 @@ is an alternative for <a class="reference internal" href="#steam.utils.find" tit
 Attributes</span><ul>
 <li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.app">app</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.abc.BaseUser.avatar_url">avatar_url</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.abc.BaseUser.country">country</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.abc.BaseUser.created_at">created_at</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.flags">flags</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.from_url">from_url</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.id">id</a></li><li class="py-attribute-table-entry">
@@ -5033,8 +5030,6 @@ Attributes</span><ul>
 <a class="reference internal" href="#steam.abc.BaseUser.last_logoff">last_logoff</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.mention">mention</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.name">name</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.abc.BaseUser.primary_clan">primary_clan</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#steam.abc.BaseUser.real_name">real_name</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.rich_presence">rich_presence</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.state">state</a></li><li class="py-attribute-table-entry">
 <a class="reference internal" href="#steam.abc.BaseUser.type">type</a></li><li class="py-attribute-table-entry">
@@ -5072,10 +5067,6 @@ async</span><a class="reference internal" href="#steam.abc.BaseUser.inventory">i
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.is_banned">is_banned</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.abc.BaseUser.is_commentable">is_commentable</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.abc.BaseUser.is_private">is_private</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.abc.BaseUser.is_valid">is_valid</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.level">level</a></li><li class="py-attribute-table-entry">
@@ -5087,6 +5078,8 @@ async</span><a class="reference internal" href="#steam.abc.BaseUser.profile_cust
 def</span><a class="reference internal" href="#steam.abc.BaseUser.published_files">published_files</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.abc.BaseUser.reviews">reviews</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.abc.BaseUser.server">server</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.abc.BaseUser.wishlist">wishlist</a></li></ul>
 </div></div><dl class="py class">
@@ -5151,71 +5144,12 @@ api.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.primary_clan">
-<span class="sig-name descname"><span class="pre">primary_clan</span></span><a class="headerlink" href="#steam.abc.BaseUser.primary_clan" title="Permalink to this definition">¶</a></dt>
-<dd><p>The primary clan the User displays on their profile.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This can be lazily awaited to get more attributes of the clan.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.Clan" title="steam.clan.Clan">steam.clan.Clan</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.avatar_url">
-<span class="sig-name descname"><span class="pre">avatar_url</span></span><a class="headerlink" href="#steam.abc.BaseUser.avatar_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The avatar url of the user. Uses the large (184x184 px) image url.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.real_name">
-<span class="sig-name descname"><span class="pre">real_name</span></span><a class="headerlink" href="#steam.abc.BaseUser.real_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user’s real name defined by them. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.created_at">
-<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#steam.abc.BaseUser.created_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The time at which the user’s account was created. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.last_logoff">
 <span class="sig-name descname"><span class="pre">last_logoff</span></span><a class="headerlink" href="#steam.abc.BaseUser.last_logoff" title="Permalink to this definition">¶</a></dt>
 <dd><p>The last time the user logged into steam. Could be None (e.g. if they are currently online).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.country">
-<span class="sig-name descname"><span class="pre">country</span></span><a class="headerlink" href="#steam.abc.BaseUser.country" title="Permalink to this definition">¶</a></dt>
-<dd><p>The country code of the account. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5249,6 +5183,17 @@ api.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="steam.abc.BaseUser.server">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the game server this user is currently playing on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.GameServer" title="steam.game_server.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.game_server.GameServer</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.inventory">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">inventory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.inventory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s <a class="reference internal" href="#steam.Inventory" title="steam.Inventory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Inventory</span></code></a> for trading.</p>
@@ -5274,7 +5219,7 @@ api.</p>
 <dd><p>Fetch the list of the users friends.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.user.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.User</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.user.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.user.User</span></code></a>, <a class="reference internal" href="#steam.ID" title="steam.ID"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ID</span></code></a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5289,6 +5234,17 @@ api.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.UserApp" title="steam.app.UserApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.app.UserApp</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.abc.BaseUser.wishlist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wishlist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.wishlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the <a class="reference internal" href="#steam.WishlistApp" title="steam.WishlistApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">WishlistApp</span></code></a>s the user has on their wishlist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.WishlistApp" title="steam.app.WishlistApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.app.WishlistApp</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5316,12 +5272,17 @@ api.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.badges">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">badges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.badges" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches the user’s <a class="reference internal" href="#steam.UserBadges" title="steam.UserBadges"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserBadges</span></code></a>s.</p>
+<dt class="sig sig-object py" id="steam.abc.BaseUser.is_banned">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_banned</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.is_banned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the user is banned from any part of Steam.</p>
+<p>Shorthand for:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bans</span> <span class="o">=</span> <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">bans</span><span class="p">()</span>
+<span class="n">bans</span><span class="o">.</span><span class="n">is_banned</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#steam.UserBadges" title="steam.badge.UserBadges"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.badge.UserBadges</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -5329,7 +5290,7 @@ api.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.level">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches the user’s level if your account is premium, otherwise it’s cached.</p>
+<dd><p>Fetches the user’s level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
@@ -5338,12 +5299,12 @@ api.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.wishlist">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wishlist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.wishlist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the <a class="reference internal" href="#steam.WishlistApp" title="steam.WishlistApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">WishlistApp</span></code></a>s the user has on their wishlist.</p>
+<dt class="sig sig-object py" id="steam.abc.BaseUser.badges">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">badges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.badges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetches the user’s <a class="reference internal" href="#steam.UserBadges" title="steam.UserBadges"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserBadges</span></code></a>s.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.WishlistApp" title="steam.app.WishlistApp"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.app.WishlistApp</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.UserBadges" title="steam.badge.UserBadges"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.badge.UserBadges</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -5375,14 +5336,11 @@ api.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.abc.BaseUser.profile_customisation_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s profile customisation information.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the profile items in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> the current language is used</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.profile.ProfileCustomisation</span></code></p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.profile.ProfileCustomisation</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -5403,44 +5361,6 @@ api.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#steam.Profile" title="steam.profile.Profile"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.profile.Profile</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.is_commentable">
-<span class="sig-name descname"><span class="pre">is_commentable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.is_commentable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user’s account can be commented on.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.is_private">
-<span class="sig-name descname"><span class="pre">is_private</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.is_private" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user has a private profile.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.abc.BaseUser.is_banned">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_banned</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.abc.BaseUser.is_banned" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user is banned from any part of Steam.</p>
-<p>Shorthand for:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bans</span> <span class="o">=</span> <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">bans</span><span class="p">()</span>
-<span class="n">bans</span><span class="o">.</span><span class="n">is_banned</span><span class="p">()</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -13867,12 +13787,12 @@ Attributes</span><ul>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.MessageReaction.created_at">
-<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#steam.MessageReaction.created_at" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.MessageReaction.created_at" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.MessageReaction.ordinal">
-<span class="sig-name descname"><span class="pre">ordinal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#steam.MessageReaction.ordinal" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ordinal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.MessageReaction.ordinal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -14658,10 +14578,6 @@ async</span><a class="reference internal" href="#steam.ClientUser.inventory">inv
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.is_banned">is_banned</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.ClientUser.is_commentable">is_commentable</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.ClientUser.is_private">is_private</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ClientUser.is_valid">is_valid</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.level">level</a></li><li class="py-attribute-table-entry">
@@ -14677,6 +14593,8 @@ async</span><a class="reference internal" href="#steam.ClientUser.profile_items"
 def</span><a class="reference internal" href="#steam.ClientUser.published_files">published_files</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ClientUser.reviews">reviews</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ClientUser.server">server</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ClientUser.setup_profile">setup_profile</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -14749,7 +14667,7 @@ api.</p>
 <dd><p>The avatar url of the user. Uses the large (184x184 px) image url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14760,7 +14678,7 @@ api.</p>
 <dd><p>The user’s real name defined by them. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14771,7 +14689,7 @@ api.</p>
 <dd><p>The user’s primary clan. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.Clan" title="steam.Clan">steam.Clan</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14782,7 +14700,7 @@ api.</p>
 <dd><p>The time at which the user’s account was created. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14827,7 +14745,7 @@ websocket.</p>
 <dd><p>The country code of the account. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15070,7 +14988,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ClientUser.community_url">
-<span class="sig-name descname"><span class="pre">community_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ClientUser.community_url" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">community_url</span></span><a class="headerlink" href="#steam.ClientUser.community_url" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -15224,28 +15142,6 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.ClientUser.is_commentable">
-<span class="sig-name descname"><span class="pre">is_commentable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.is_commentable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user’s account can be commented on.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.ClientUser.is_private">
-<span class="sig-name descname"><span class="pre">is_private</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.is_private" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user has a private profile.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.is_valid">
 <span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.is_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether this Steam ID is valid.</p>
@@ -15290,7 +15186,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.level">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches the user’s level if your account is premium, otherwise it’s cached.</p>
+<dd><p>Fetches the user’s level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
@@ -15306,14 +15202,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ClientUser.profile_customisation_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s profile customisation information.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the profile items in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> the current language is used</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -15370,6 +15263,17 @@ user’s reviews.</p></li>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Review" title="steam.Review"><code class="xref py py-class docutils literal notranslate"><span class="pre">Review</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ClientUser.server">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ClientUser.server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the game server this user is currently playing on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.GameServer" title="steam.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.GameServer</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -15466,11 +15370,7 @@ async</span><a class="reference internal" href="#steam.User.friends">friends</a>
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.is_banned">is_banned</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.User.is_commentable">is_commentable</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.User.is_friend">is_friend</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.User.is_private">is_private</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.User.is_valid">is_valid</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -15487,6 +15387,8 @@ async</span><a class="reference internal" href="#steam.User.remove">remove</a></
 def</span><a class="reference internal" href="#steam.User.reviews">reviews</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.send">send</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.User.server">server</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.User.unblock">unblock</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -15551,7 +15453,7 @@ api.</p>
 <dd><p>The avatar url of the user. Uses the large (184x184 px) image url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15562,7 +15464,7 @@ api.</p>
 <dd><p>The user’s real name defined by them. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15573,7 +15475,7 @@ api.</p>
 <dd><p>The user’s primary clan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.Clan" title="steam.Clan">steam.Clan</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15584,7 +15486,7 @@ api.</p>
 <dd><p>The time at which the user’s account was created. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15629,7 +15531,7 @@ websocket.</p>
 <dd><p>The country code of the account. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15839,7 +15741,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.User.community_url">
-<span class="sig-name descname"><span class="pre">community_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.User.community_url" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">community_url</span></span><a class="headerlink" href="#steam.User.community_url" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -15915,7 +15817,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dd><p>Fetch the list of the users friends.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>, <a class="reference internal" href="#steam.ID" title="steam.ID"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ID</span></code></a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -16004,28 +15906,6 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.User.is_commentable">
-<span class="sig-name descname"><span class="pre">is_commentable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.is_commentable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user’s account can be commented on.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.User.is_private">
-<span class="sig-name descname"><span class="pre">is_private</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.is_private" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user has a private profile.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.User.is_valid">
 <span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.is_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether this Steam ID is valid.</p>
@@ -16070,7 +15950,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.User.level">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches the user’s level if your account is premium, otherwise it’s cached.</p>
+<dd><p>Fetches the user’s level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
@@ -16106,14 +15986,11 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.User.profile_customisation_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s profile customisation information.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the profile items in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> the current language is used</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -16170,6 +16047,17 @@ user’s reviews.</p></li>
 </dd>
 <dt class="field-even">Yields<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#steam.Review" title="steam.Review"><code class="xref py py-class docutils literal notranslate"><span class="pre">Review</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.User.server">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.User.server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the game server this user is currently playing on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.GameServer" title="steam.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.GameServer</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -16275,11 +16163,7 @@ async</span><a class="reference internal" href="#steam.Friend.invite_to_group">i
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Friend.is_banned">is_banned</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.Friend.is_commentable">is_commentable</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.Friend.is_friend">is_friend</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="method">
-def</span><a class="reference internal" href="#steam.Friend.is_private">is_private</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.Friend.is_valid">is_valid</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -16300,6 +16184,8 @@ async</span><a class="reference internal" href="#steam.Friend.remove">remove</a>
 def</span><a class="reference internal" href="#steam.Friend.reviews">reviews</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Friend.send">send</a></li><li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.Friend.server">server</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.Friend.unblock">unblock</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -16362,44 +16248,24 @@ api.</p>
 <dt class="sig sig-object py" id="steam.Friend.avatar_url">
 <span class="sig-name descname"><span class="pre">avatar_url</span></span><a class="headerlink" href="#steam.Friend.avatar_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The avatar url of the user. Uses the large (184x184 px) image url.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Friend.real_name">
 <span class="sig-name descname"><span class="pre">real_name</span></span><a class="headerlink" href="#steam.Friend.real_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user’s real name defined by them. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Friend.primary_clan">
 <span class="sig-name descname"><span class="pre">primary_clan</span></span><a class="headerlink" href="#steam.Friend.primary_clan" title="Permalink to this definition">¶</a></dt>
 <dd><p>The user’s primary clan.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference internal" href="#steam.Clan" title="steam.Clan">steam.Clan</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.Friend.created_at">
 <span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#steam.Friend.created_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time at which the user’s account was created. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)">datetime.datetime</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
@@ -16440,11 +16306,6 @@ websocket.</p>
 <dt class="sig sig-object py" id="steam.Friend.country">
 <span class="sig-name descname"><span class="pre">country</span></span><a class="headerlink" href="#steam.Friend.country" title="Permalink to this definition">¶</a></dt>
 <dd><p>The country code of the account. Could be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py attribute">
@@ -16741,7 +16602,7 @@ After h = attrgetter(‘name.first’, ‘name.last’), the call h(r) returns
 <dd><p>Fetch the list of the users friends.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference internal" href="#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.User</span></code></a>, <a class="reference internal" href="#steam.ID" title="steam.ID"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ID</span></code></a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -16852,31 +16713,9 @@ After h = attrgetter(‘name.first’, ‘name.last’), the call h(r) returns
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="steam.Friend.is_commentable">
-<span class="sig-name descname"><span class="pre">is_commentable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.is_commentable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user’s account can be commented on.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="steam.Friend.is_friend">
 <span class="sig-name descname"><span class="pre">is_friend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.is_friend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the user is in the <a class="reference internal" href="#steam.ClientUser" title="steam.ClientUser"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClientUser</span></code></a>’s friends.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.Friend.is_private">
-<span class="sig-name descname"><span class="pre">is_private</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.is_private" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the user has a private profile.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
@@ -16962,7 +16801,7 @@ After h = attrgetter(‘name.first’, ‘name.last’), the call h(r) returns
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Friend.level">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fetches the user’s level if your account is premium, otherwise it’s cached.</p>
+<dd><p>Fetches the user’s level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
@@ -17045,14 +16884,11 @@ After h = attrgetter(‘name.first’, ‘name.last’), the call h(r) returns
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.Friend.profile_customisation_info">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">profile_customisation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.profile_customisation_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetch a user’s profile customisation information.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>language</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference internal" href="#steam.Language" title="steam.enums.Language"><em>Language</em></a><em>]</em>) – The language to fetch the profile items in. If <code class="docutils literal notranslate"><span class="pre">None</span></code> the current language is used</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.ProfileCustomisation</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -17193,6 +17029,17 @@ After h = attrgetter(‘name.first’, ‘name.last’), the call h(r) returns
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference internal" href="#steam.UserMessage" title="steam.UserMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.UserMessage</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.Friend.server">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.Friend.server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch the game server this user is currently playing on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#steam.GameServer" title="steam.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.GameServer</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
