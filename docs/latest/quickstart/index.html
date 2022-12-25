@@ -1,122 +1,241 @@
-<!--
-The MIT License (MIT)
-
-Copyright (c) 2015-2020 Rapptz
-
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
--->
 
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quickstart</title> 
-  <!-- end extra head -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-  <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
-  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/codeblocks.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/icons.css" type="text/css" />
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-  <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-  <script src="../_static/jquery.js"></script>
-  <script src="../_static/underscore.js"></script>
-  <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-  <script src="../_static/doctools.js"></script>
-  <script src="../_static/custom.js"></script>
-  <script src="../_static/settings.js"></script>
-  <script src="../_static/copy.js"></script>
-  <script src="../_static/sidebar.js"></script>
-  <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <link rel="index" title="Index" href="../genindex/" />
-  <link rel="search" title="Search" href="../search/" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta property="og:title" content="Quickstart" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="quickstart/" />
+<meta property="og:site_name" content="steam.py" />
+<meta property="og:description" content="A quick start guide for steam.py Installation: Installation should be as simple as: The Basics: steam.py being heavily inspired by and based on discord.py revolves around events. An event is someth..." />
+<meta name="description" content="A quick start guide for steam.py Installation: Installation should be as simple as: The Basics: steam.py being heavily inspired by and based on discord.py revolves around events. An event is someth..." />
+
+
+  <title>Quickstart - steam.py 0.9.6 documentation</title><link rel="shortcut icon" href="../_static/favicon.ico"/><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" />
+<link rel="stylesheet" href="../_static/skeleton.css" type="text/css" /><link rel="stylesheet" type="text/css" href="../_static/pygments.css" /><link rel="stylesheet" type="text/css" href="../_static/styles/lutra.css?digest=48f40a625d8b2030d40761bd6a2f9dd9" /><link rel="stylesheet" type="text/css" href="../_static/styles/lutra-extensions.css?digest=cb0a2a27d38948a8faa936a2d3ead04a" />
+
+
+<style>
+html {
+  --theme-brand: var(--color-blue-brand);
+
+  --theme-primary: var(--color-blue-solid);
+  --theme-primary_dark: var(--color-blue-solid_dark);
+  --theme-primary-highlight: var(--color-blue-highlight);
+  --theme-primary-target: var(--color-blue-target);
+  --theme-primary-target_dark: var(--color-blue-target_dark);
+
+  --theme-secondary: var(--color-violet-solid);
+  --theme-secondary_dark: var(--color-violet-solid_dark);
+  --theme-secondary-highlight: var(--color-violet-highlight);
+  --theme-secondary-target: var(--color-violet-target);
+  --theme-secondary-target_dark: var(--color-violet-target_dark);
+}
+html:not(.dark) {
+  
+--color_bg-code_block: #f0f0f0;
+--color_text-code_block: black;
+}
+html.dark {
+  
+--color_bg-code_block: #1d1f21;
+--color_text-code_block: #90afc0;
+}
+</style>
+
+  
 </head>
-<body>
-  <div class="main-grid">
-    <header class="grid-item">
-      <nav>
-        <a href="../" class="main-heading">steam.py</a>
-        <a href="https://github.com/Gobot1234/steam.py" title="GitHub"><span class="material-icons custom-icons">github</span></a>
-        <a href="https://discord.gg/MQ68WUS" title="Discord"><span class="material-icons custom-icons">discord</span></a>
-        <a href="../faq/" title="FAQ"><span class="material-icons">help_center</span></a>
-        <a onclick="mobileSearch.open();" title="Search" id="open-search" class="mobile-only"><span class="material-icons">search</span></a>
-        <a onclick="mobileSearch.close();" title="Close" id="close-search" class="mobile-only" hidden><span class="material-icons">close</span></a>
-      </nav>
-      <nav class="mobile-only">
-        <form role="search" class="search" action="../search/" method="get">
-          <div class="search-wrapper">
-            <input type="search" name="q" placeholder="Search documentation" />
-            <button type="submit">
-              <span class="material-icons">search</span>
-            </button>
-          </div>
-        </form>
-      </nav>
-    </header>
-    <div class="sub-header grid-item">
-      <label for="documentation_select">View Documentation For</label>
-      <select id="documentation_select" onchange="window.location = this.value;">
-        <option value="#" selected>steam</option>
-        <option value="../ext/commands/" >steam.ext.commands</option>
-      </select>
-      <form role="search" class="search" action="../search/" method="get">
-        <div class="search-wrapper">
-          <input type="search" name="q" placeholder="Search documentation" />
-          <button type="submit">
-            <span class="material-icons">search</span>
-          </button>
-        </div>
-      </form>
-      <a accesskey="S" class="settings" onclick="settingsModal.open();"><span class="material-icons">settings</span></a>
-    </div>
-    <aside class="grid-item">
-      <span id="hamburger-toggle">
-        <span class="material-icons">menu</span>
-      </span>
-      <span id="settings-toggle" class="settings" onclick="settingsModal.open();">
-        <span class="material-icons">settings</span>
-      </span>
-      <div id="sidebar">
-  <div>
-    <h3><a href="../">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Quickstart</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#the-basics">The Basics</a></li>
-<li><a class="reference internal" href="#a-minimal-bot">A Minimal Bot</a></li>
-<li><a class="reference internal" href="#a-minimal-bot-with-ext-commands">A Minimal Bot with ext.commands</a></li>
+<body class="antialiased has-no-parents">
+  
+<script>
+  // Eager dark-mode handling.
+  const currentTheme = localStorage.getItem("theme") || "auto";
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  document.body.dataset.theme = currentTheme;
+  if ((currentTheme === "auto" && prefersDark) || currentTheme === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+  // Eager sidebar collapse
+  if ((localStorage.getItem("collapsed") || "false") === "true") {
+    document.body.classList.add("collapsed-site-navigation");
+  }
+</script>
+<a class="skip-to-content" href="#lutra-main-content">Skip to content</a>
+<svg style="display: none;">
+  <symbol id="icon-collapse" viewBox="0 0 24 24">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </symbol>
+  <symbol id="icon-secondary-collapse" viewBox="0 0 24 24">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+  </symbol>
+  <symbol id="icon-theme-auto" viewBox="0 0 24 24">
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path
+        d="M10.85 12.65h2.3L12 9l-1.15 3.65zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM14.3 16l-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9z">
+      </path>
+    </svg>
+  </symbol>
+  <symbol id="icon-theme-dark" viewBox="0 0 24 24">
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path
+        d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z">
+      </path>
+    </svg>
+  </symbol>
+  <symbol id="icon-theme-light" viewBox="0 0 24 24">
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0z"></path>
+      <path
+        d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z">
+      </path>
+    </svg>
+  </symbol>
+</svg>
+
+
+<div class="sb-announcement">
+  
+</div>
+
+
+<header class="sb-header">
+  <div class="sb-header__inner sb-page-width">
+    <div class="header-container">
+  
+  <div class="hide-when-primary-sidebar-shown flex items-center">
+  
+  <label for="sb-sidebar-toggle--primary" class="hide-when-primary-sidebar-shown" role="button">
+  
+<svg class="h-6 w-6"><use href="#icon-collapse"></use></svg>
+
+</label>
+  
+</div>
+  <a class="header-logo-container" href="../">
+  <div class="header-title">steam.py 0.9.6 documentation</div>
+</a>
+  
+  
+  <div class="flex-1"></div>
+  <div class="header-search-container">
+  <a id="lutra-header-search-link" href="../search/">
+    <span class="header-search-icon"></span>
+  </a>
+  <div id="lutra-header-search-form">
+    <form class="search-form" method="get" action="../search/" role="search">
+  <input type="text" name="q" value="" label="Search" placeholder="Search"
+    autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus/>
+  <div class="search-guidance">
+    Press Enter to get search results
+    <noscript>(needs JavaScript to work)</noscript>
+  </div>
+</form>
+  </div>
+  <div id="lutra-header-search-overlay"></div>
+</div>
+
+  <button class="theme-toggle">
+  <div class="theme-icon-when-auto">
+    <svg><use href="#icon-theme-auto"></use></svg>
+  </div>
+  <div class="theme-icon-when-dark">
+    <svg><use href="#icon-theme-dark"></use></svg>
+  </div>
+  <div class="theme-icon-when-light">
+    <svg><use href="#icon-theme-light"></use></svg>
+  </div>
+</button>
+  
+</div>
+  </div>
+</header>
+
+
+<header class="sb-header-secondary">
+  <div class="sb-header-secondary__inner sb-page-width">
+    
+  </div>
+</header>
+
+
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--primary" id="sb-sidebar-toggle--primary">
+<input type="checkbox" class="sb-sidebar-toggle" name="sb-sidebar-toggle--secondary" id="sb-sidebar-toggle--secondary">
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--primary"></label>
+<label class="sb-sidebar-overlay" for="sb-sidebar-toggle--secondary"></label>
+
+
+<div class="sb-container">
+  <div class="sb-container__inner sb-page-width">
+    
+    <aside class="sb-sidebar-primary">
+      <div class="site-navigation-container sidebar-sticky">
+  <button id="lutra-site-navigation-collapse-icon" tabindex="0" aria-label="Toggle Sidebar"></button>
+  <div id="lutra-primary-sidebar-container" class="sidebar-scroll">
+    
+    
+    <div class="toctree-container">
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/">steam API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ext/commands/api/">steam.ext.commands API Reference</a></li>
 </ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ext/commands/"><code class="docutils literal notranslate"><span class="pre">steam.ext.commands</span></code> - Bot commands framework</a></li>
 </ul>
 
+    </div>
+    
   </div>
-      </div>
+</div>
     </aside>
-    <main class="grid-item" role="main">
+    
+    <main class="sb-main">
       
-  <section id="quickstart">
-<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">¶</a></h1>
+      <header class="sb-header-content">
+        <div class="sb-header-content__inner">
+          <a href="#" class="back-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</a>
+<div class="toc-toggle-container hide-when-secondary-sidebar-shown">
+  <label for="sb-sidebar-toggle--secondary" class="hide-when-secondary-sidebar-shown" role="button">
+  
+<svg class="h-6 w-6"><use href="#icon-secondary-collapse"></use></svg>
+
+</label>
+</div>
+        </div>
+      </header>
+      
+      <div class="sb-content">
+        
+<div class="sb-article-container"><header class="sb-header-article">
+    <div class="match-content-width">
+  
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item breadcrumb-nav-index-item"><a href="../">Home</a><span class="breadcrumb-separator" role="presentation"></span></li>
+    <li class="breadcrumb-nav-list-item breadcrumb-nav-page-item"><span>Quickstart</span><span class="breadcrumb-separator" role="presentation"></span></li>
+  </ol>
+</nav>
+  
+</div>
+  </header><article class="sb-article" role="main">
+    <div id="lutra-main-content" class="prose"><section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h1>
 <p>A quick start guide for steam.py</p>
 <section id="installation">
-<span id="installing"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<span id="installing"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
 <p>Installation should be as simple as:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Linux/macOS</span>
 python3 -m pip install -U steamio
@@ -126,7 +245,7 @@ py -m pip install -U steamio
 </div>
 </section>
 <section id="the-basics">
-<h2>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this heading">¶</a></h2>
+<h2>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this heading">#</a></h2>
 <p>steam.py being heavily inspired by and based on discord.py revolves around <a class="reference internal" href="../api/#event-reference"><span class="std std-ref">events</span></a>. An event is
 something you listen for and then respond to.</p>
 <p>For example, when a trade happens, you will receive an event about it that you can respond to.</p>
@@ -148,7 +267,7 @@ something you listen for and then respond to.</p>
 </div>
 </section>
 <section id="a-minimal-bot">
-<h2>A Minimal Bot<a class="headerlink" href="#a-minimal-bot" title="Permalink to this heading">¶</a></h2>
+<h2>A Minimal Bot<a class="headerlink" href="#a-minimal-bot" title="Permalink to this heading">#</a></h2>
 <p>Let’s make a bot that replies to a specific message and walk you through it.</p>
 <p>It looks something like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">steam</span>
@@ -172,7 +291,7 @@ something you listen for and then respond to.</p>
 </div>
 <p>Lets walk through what this does:</p>
 <ol class="arabic simple">
-<li><p>We import the steam module, if this raises a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError" title="(in Python v3.10)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code></a> see <a class="reference internal" href="#installing"><span class="std std-ref">Installation</span></a> again.</p></li>
+<li><p>We import the steam module, if this raises a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError" title="(in Python v3.11)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code></a> see <a class="reference internal" href="#installing"><span class="std std-ref">Installation</span></a> again.</p></li>
 <li><p>We then subclass <a class="reference internal" href="../api/#steam.Client" title="steam.Client"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Client</span></code></a> to create our own client <code class="docutils literal notranslate"><span class="pre">MyClient</span></code>.</p></li>
 <li><p>We register an event <a class="reference internal" href="../api/#steam.Client.on_ready" title="steam.Client.on_ready"><code class="xref py py-meth docutils literal notranslate"><span class="pre">steam.Client.on_ready()</span></code></a> in <code class="docutils literal notranslate"><span class="pre">MyClient</span></code>, which will be called after the client is
 ready. This event will print once we log in to inform us as such.</p></li>
@@ -192,7 +311,7 @@ py -3 example_bot.py
 </div>
 </section>
 <section id="a-minimal-bot-with-ext-commands">
-<h2>A Minimal Bot with ext.commands<a class="headerlink" href="#a-minimal-bot-with-ext-commands" title="Permalink to this heading">¶</a></h2>
+<h2>A Minimal Bot with ext.commands<a class="headerlink" href="#a-minimal-bot-with-ext-commands" title="Permalink to this heading">#</a></h2>
 <p>Since code like this is so common steam.py comes with a powerful commands extension to aid with creating commands.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">steam.ext</span> <span class="kn">import</span> <span class="n">commands</span>
 
@@ -224,60 +343,98 @@ message’s content starts with the prefix “$”.</p></li>
 </ol>
 </section>
 </section>
+</div>
+  </article>
+  <footer class="sb-footer-article">
+    <div class="related-pages match-content-width">
+  
+  
+</div>
+  </footer>
+</div>
 
-
-    </main>
-    <footer class="grid-item">
-        &#169; Copyright 2020, Gobot1234.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
-    </footer>
-  </div>
-  <div id="settings" class="modal" onclick="if (event.target == this){ settingsModal.close(); }" hidden>
-    <div class="modal-content">
-      <span class="close" onclick="settingsModal.close();" title="Close">
-        <span class="material-icons">close</span>
-      </span>
-      <h1>Settings</h1>
-
-      <h2>Font</h2>
-      <div class="setting">
-        <h3>Use a serif font:
-          <label class="toggle"
-            title="Use a serif font? Your system font will be used, falling back to serif.">
-            <input type="checkbox" name="useSerifFont" onclick="updateSetting(this);">
-            <span class="toggle-slider"></span>
-          </label>
-        </h3>
-      </div>
-
-      <h2>Theme</h2>
-      <div class="setting">
-        <h3>
-          <label class="toggle" title="Set your theme based on your system preferences">
-            <input type="radio" name="setTheme" onclick="updateSetting(this);" value="automatic" checked>
-          </label>
-          Automatic
-        </h3>
-        <h3>
-          <label class="toggle" title="Set your theme to light theme">
-            <input type="radio" name="setTheme" onclick="updateSetting(this);" value="light">
-          </label>
-          Light
-        </h3>
-        <h3>
-          <label class="toggle" title="Set your theme to dark theme">
-            <input type="radio" name="setTheme" onclick="updateSetting(this);" value="dark">
-          </label>
-          Dark
-        </h3>
-      </div>
+        
+        <aside class="sb-sidebar-secondary">
+          <div class="page-navigation-container sidebar-sticky">
+  <div class="sidebar-scroll">
+    <div class="sidebar-link-container">
+      <span id="searchbox"></span>
+    </div>
+    
+    <div class="toc-container lutra-dedent-first-li-children lutra-hide-top-bullet-content">
+      <p class="page-navigation-prompt">On this page</p>
+      <ul>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#the-basics">The Basics</a></li>
+<li><a class="reference internal" href="#a-minimal-bot">A Minimal Bot</a></li>
+<li><a class="reference internal" href="#a-minimal-bot-with-ext-commands">A Minimal Bot with ext.commands</a></li>
+</ul>
+</li>
+</ul>
 
     </div>
+    
+    
   </div>
-
-  <div id="to-top" onclick="window.scrollTo(0, 0)">
-    <span><span class="material-icons">arrow_upward</span> to top</span>
+</div>
+        </aside>
+        
+      </div>
+      
+      <footer class="sb-footer-content">
+        <div class="sb-footer-content__inner">
+          
+        </div>
+      </footer>
+      
+    </main>
   </div>
+</div>
 
-</body>
+
+
+<footer class="sb-footer">
+  <div class="sb-footer__inner sb-page-width">
+    <div>
+  <div class="footer-copyright">Copyright &copy; 2020, Gobot1234</div>
+  
+  Made with <a href="https://github.com/pradyunsg/lutra">Lutra</a> theme for <a href="https://www.sphinx-doc.org/" target="_blank">Sphinx</a>.
+</div>
+<div>
+  <div class="footer-icons">
+    <!-- GitHub -->
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+  </div>
+</div>
+
+
+<!-- Mimick GSoC-style links at the bottom.
+
+Documents to link to, by default, if they exist:
+
+- bugs
+- donate
+- license
+- privacy
+
+Allow people to provide their own.
+
+-->
+  </div>
+</footer>
+
+
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+  <script src="../_static/jquery.js"></script>
+  <script src="../_static/underscore.js"></script>
+  <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+  <script src="../_static/doctools.js"></script>
+  <script src="../_static/sphinx_highlight.js"></script>
+  <script src="../_static/scripts/lutra.js"></script>
+  <script src="../_static/custom.js"></script>
+  <script src="../_static/settings.js"></script>
+  <script src="../_static/copy.js"></script>
+  <script src="../_static/sidebar.js"></script>
+  </body>
 </html>
