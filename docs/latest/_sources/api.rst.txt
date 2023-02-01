@@ -58,8 +58,8 @@ through subclassing :class:`Client` and overriding the specific events. For exam
             await trade.partner.send('Thank you for your trade')
             print(f'Received trade: #{trade.id}')
             print('Trade partner is:', trade.partner)
-            print('We would send:', len(trade.items_to_send), 'items')
-            print('We would receive:', len(trade.items_to_receive), 'items')
+            print('We would send:', len(trade.sending), 'items')
+            print('We would receive:', len(trade.receiving), 'items')
 
             if trade.is_gift():
                 print('Accepting the trade as it is a gift')
@@ -146,7 +146,7 @@ Utilities
 
 steam.py provides some utility functions.
 
-.. autofunction:: steam.utils.make_id64
+.. autofunction:: steam.utils.parse_id64
 
 .. autofunction:: steam.utils.parse_trade_url
 
@@ -168,6 +168,14 @@ Enumerations
     :members:
     :undoc-members:
 
+.. autoclass:: CurrencyCode()
+    :members:
+    :undoc-members:
+
+.. autoclass:: PurchaseResult()
+    :member:
+    :undoc-members:
+
 .. autoclass:: Universe()
     :members:
     :undoc-members:
@@ -180,7 +188,7 @@ Enumerations
     :members:
     :undoc-members:
 
-.. autoclass:: InstanceFlag()
+.. autoclass:: Instance()
     :members:
     :undoc-members:
 
@@ -232,11 +240,15 @@ Enumerations
    :members:
    :undoc-members:
 
+.. autoclass:: CommunityItemClass()
+   :members:
+   :undoc-members:
+
 .. autoclass:: DepotFileFlag()
    :members:
    :undoc-members:
 
-.. autoclass:: AppFlag()
+.. autoclass:: AppType()
    :members:
    :undoc-members:
 
@@ -264,6 +276,30 @@ Enumerations
    :members:
    :undoc-members:
 
+.. autoclass:: LeaderboardDataRequest()
+    :members:
+    :undoc-members:
+
+.. autoclass:: LeaderboardSortMethod()
+    :members:
+    :undoc-members:
+
+.. autoclass:: LeaderboardDisplayType()
+    :members:
+    :undoc-members:
+
+.. autoclass:: LeaderboardUploadScoreMethod()
+    :members:
+    :undoc-members:
+
+.. autoclass:: CommunityDefinitionItemType()
+    :members:
+    :undoc-members:
+
+.. autoclass:: AuthSessionResponse()
+    :members:
+    :undoc-members:
+
 
 Guard
 ---------------
@@ -275,23 +311,6 @@ Guard
 .. autofunction:: steam.guard.generate_device_id
 
 
-Async Iterators
------------------
-
-An async iterator is a class that is capable of being used with the syntax :ref:`async for <py:async for>`.
-
-They can be used as follows:
-
-.. code-block:: python3
-
-    async for trade in client.trade_history():
-        ...  # do stuff with trade here
-
-
-.. autoclass:: steam.iterators.AsyncIterator()
-    :members:
-
-
 Abstract Base Classes
 -----------------------
 
@@ -301,11 +320,18 @@ An :term:`abstract base class` (also known as an ``abc``) is a class that models
 
 .. autoclass:: steam.abc.BaseUser()
     :members:
+    :undoc-members:
     :inherited-members:
 
 .. attributetable:: steam.abc.Channel
 
 .. autoclass:: steam.abc.Channel()
+    :members:
+    :inherited-members:
+
+.. attributetable:: steam.abc.Commentable
+
+.. autoclass:: steam.abc.Commentable()
     :members:
     :inherited-members:
 
@@ -320,6 +346,51 @@ Steam Models
 steam.py provides wrappers around common Steam API objects.
 These are not meant to be constructed by the user instead you receive them from methods/events.
 
+Achievements
+~~~~~~~~~~~~~~~
+
+.. attributetable:: AppStat
+
+.. autoclass:: AppStat()
+    :members:
+    :inherited-members:
+
+.. attributetable:: UserAppStat
+
+.. autoclass:: UserAppStat()
+    :members:
+    :inherited-members:
+
+.. attributetable:: AppAchievement
+
+.. autoclass:: AppAchievement()
+    :members:
+    :inherited-members:
+
+.. attributetable:: AppStatAchievement
+
+.. autoclass:: AppStatAchievement()
+    :members:
+    :inherited-members:
+
+.. attributetable:: UserAppAchievement
+
+.. autoclass:: UserAppAchievement()
+    :members:
+    :inherited-members:
+
+.. attributetable:: AppStats
+
+.. autoclass:: AppStats()
+    :members:
+    :inherited-members:
+
+.. attributetable:: UserAppStats
+
+.. autoclass:: UserAppStats()
+    :members:
+    :inherited-members:
+
 Announcements
 ~~~~~~~~~~~~~~~
 
@@ -333,9 +404,14 @@ Announcements
 Badge
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: Badge
+.. attributetable:: AppBadge
 
-.. autoclass:: Badge()
+.. autoclass:: AppBadge()
+    :members:
+
+.. attributetable:: UserBadge
+
+.. autoclass:: UserBadge()
     :members:
 
 .. attributetable:: UserBadges
@@ -356,12 +432,32 @@ Ban
 .. autoclass:: Ban()
     :members:
 
+
+Bundle
+~~~~~~~~~~~~~~~
+
+.. attributetable:: Bundle
+
+.. autoclass:: Bundle()
+    :members:
+
+.. attributetable:: PartialBundle
+
+.. autoclass:: PartialBundle()
+    :members:
+
+.. attributetable:: FetchedBundle
+
+.. autoclass:: FetchedBundle()
+    :members:
+
+
 Channel
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: DMChannel
+.. attributetable:: UserChannel
 
-.. autoclass:: DMChannel()
+.. autoclass:: UserChannel()
     :members:
     :inherited-members:
 
@@ -402,7 +498,7 @@ Events
 
 .. attributetable:: Event
 
-.. autoclass:: Event
+.. autoclass:: Event()
     :members:
     :inherited-members:
 
@@ -446,6 +542,27 @@ Invite
     :members:
     :inherited-members:
 
+Leaderboard
+~~~~~~~~~~~~~~~
+
+.. attributetable:: Leaderboard
+
+.. autoclass:: Leaderboard()
+    :members:
+    :inherited-members:
+
+.. attributetable:: LeaderboardUser
+
+.. autoclass:: LeaderboardUser()
+    :members:
+    :undoc-members:
+    :inherited-members:
+
+.. attributetable:: LeaderboardScoreUpdate
+
+.. autoclass:: LeaderboardScoreUpdate()
+    :members:
+
 Manifests
 ~~~~~~~~~~~~~~~
 
@@ -481,9 +598,9 @@ Manifests
    :members:
    :inherited-members:
 
-.. attributetable:: GameInfo
+.. attributetable:: AppInfo
 
-.. autoclass:: GameInfo()
+.. autoclass:: AppInfo()
    :members:
    :inherited-members:
 
@@ -527,9 +644,9 @@ Package
 .. autoclass:: Package()
    :members:
 
-.. attributetable:: steam.package.StatefulPackage
+.. attributetable:: steam.package.PartialPackage
 
-.. autoclass:: steam.package.StatefulPackage()
+.. autoclass:: steam.package.PartialPackage()
    :members:
    :inherited-members:
 
@@ -545,11 +662,21 @@ Package
    :members:
    :inherited-members:
 
-.. attributetable:: FetchedGamePackage
+.. attributetable:: FetchedAppPackage
 
-.. autoclass:: FetchedGamePackage()
+.. autoclass:: FetchedAppPackage()
    :members:
    :inherited-members:
+
+
+Post
+~~~~~~~~~~~~~~~
+
+.. attributetable:: Post
+
+.. autoclass:: Post()
+    :members:
+    :inherited-members:
 
 
 PriceOverview
@@ -604,6 +731,63 @@ PublishedFile
     :members:
     :inherited-members:
 
+
+Store
+~~~~~~~~~~~~~~~
+
+.. attributetable:: StoreItem
+
+.. autoclass:: StoreItem()
+    :members:
+    :inherited-members:
+
+.. attributetable:: AppStoreItem
+
+.. autoclass:: AppStoreItem()
+    :members:
+    :inherited-members:
+
+.. attributetable:: PackageStoreItem
+
+.. autoclass:: PackageStoreItem()
+    :members:
+    :inherited-members:
+
+.. attributetable:: BundleStoreItem
+
+.. autoclass:: BundleStoreItem()
+    :members:
+    :inherited-members:
+
+.. attributetable:: TransactionReceipt
+
+.. autoclass:: TransactionReceipt()
+    :members:
+    :inherited-members:
+
+App Tickets
+~~~~~~~~~~~~~~~
+
+.. attributetable:: EncryptedTicket
+
+.. autoclass:: EncryptedTicket()
+    :members:
+    :inherited-members:
+    :undoc-members:
+
+.. attributetable:: OwnershipTicket
+
+.. autoclass:: OwnershipTicket()
+    :members:
+    :inherited-members:
+    :undoc-members:
+
+.. attributetable:: AuthenticationTicket
+
+.. autoclass:: AuthenticationTicket()
+    :members:
+    :inherited-members:
+    :undoc-members:
 
 Trading
 ~~~~~~~~~~~~~~~
@@ -690,6 +874,13 @@ Reviews
     :members:
     :inherited-members:
 
+.. attributetable:: ReviewUser
+
+.. autoclass:: ReviewUser()
+    :members:
+    :undoc-members:
+    :inherited-members:
+
 Roles
 ~~~~~~~~~~~~~~~
 
@@ -698,88 +889,109 @@ Roles
 .. autoclass:: Role()
     :members:
 
+.. attributetable:: RolePermissions
+
+.. autoclass:: RolePermissions()
+    :members:
 
 Users
 ~~~~~~~~~~~~~~~
+
+.. attributetable:: PartialUser
+
+.. autoclass:: PartialUser()
+    :members:
+    :undoc-members:
+    :inherited-members:
 
 .. attributetable:: ClientUser
 
 .. autoclass:: ClientUser()
     :members:
+    :undoc-members:
     :inherited-members:
 
 .. attributetable:: User
 
 .. autoclass:: User()
     :members:
+    :undoc-members:
     :inherited-members:
 
 .. attributetable:: Friend
 
 .. autoclass:: Friend()
     :members:
+    :undoc-members:
     :inherited-members:
+
+Wallet
+~~~~~~~~~~~~~~~
+
+.. attributetable:: Wallet
+
+.. autoclass:: Wallet()
+
 
 Data-Classes
 ---------------
 
 There are a few classes that can be constructed by the user, these include.
 
-Game
+App
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: Game
+.. attributetable:: App
 
-.. autoclass:: Game
+.. autoclass:: App
     :members:
 
-There are some predefined games which are:
+There are some predefined apps which are:
 
-+---------------------------------+-----------------+
-| Game Name                       | Accessed via    |
-+=================================+=================+
-| Team Fortress 2                 | ``steam.TF2``   |
-+---------------------------------+-----------------+
-| DOTA2                           | ``steam.DOTA2`` |
-+---------------------------------+-----------------+
-| Counter Strike Global-Offensive | ``steam.CSGO``  |
-+---------------------------------+-----------------+
-| Left for Dead 2                 | ``steam.LFD2``  |
-+---------------------------------+-----------------+
-| Steam                           | ``steam.STEAM`` |
-+---------------------------------+-----------------+
+.. autodata:: TF2
 
-Games can be manually constructed using there app id eg:
+.. autodata:: DOTA2
+
+.. autodata:: CSGO
+
+.. autodata:: LFD2
+
+.. autodata:: STEAM
+
+These are shorthand for ``Client.get_game(440)`` etc. (you need a client to have been constructed and be use to use the
+methods that they inherit from :class:`PartialApp`), they are also valid as type parameters to :class:`typing.Literal`
+
+
+Apps can be manually constructed using their app ID eg:
 
 .. code-block:: python3
 
-    my_rust_instance = steam.Game(id=252490, name="Rust")
-    # this can then be used for trading a game name is not required for this
-    # but it is for setting in game statuses if the game isn't a Steam game.
+    my_rust_instance = steam.App(id=252490, name="Rust")
+    # this can then be used for trading an app name is not required for this
 
-.. autofunction:: CUSTOM_GAME
+.. autofunction:: CUSTOM_APP
 
-.. attributetable:: steam.game.StatefulGame
+.. attributetable:: steam.app.PartialApp
 
-.. autoclass:: steam.game.StatefulGame()
+.. autoclass:: steam.app.PartialApp()
     :inherited-members:
     :members:
 
-.. attributetable:: UserGame
+.. attributetable:: UserApp
 
-.. autoclass:: UserGame()
+.. autoclass:: UserApp()
     :inherited-members:
     :members:
 
-.. attributetable:: WishlistGame
+.. attributetable:: WishlistApp
 
-.. autoclass:: WishlistGame()
+.. autoclass:: WishlistApp()
     :inherited-members:
     :members:
 
-.. attributetable:: FetchedGame
+.. attributetable:: FetchedApp
 
-.. autoclass:: FetchedGame()
+.. autoclass:: FetchedApp()
     :inherited-members:
     :members:
 
@@ -789,12 +1001,31 @@ Games can be manually constructed using there app id eg:
     :inherited-members:
     :members:
 
+.. attributetable:: OwnershipTicket
+
+.. autoclass:: OwnershipTicket()
+    :inherited-members:
+    :members:
+
+.. attributetable:: AuthenticationTicket
+
+.. autoclass:: AuthenticationTicket()
+    :inherited-members:
+    :members:
+
+.. attributetable:: EncryptedTicket
+
+.. autoclass:: EncryptedTicket()
+    :inherited-members:
+    :members:
+
+
 Steam IDs
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: SteamID
+.. attributetable:: ID
 
-.. autoclass:: SteamID
+.. autoclass:: ID
     :members:
 
 TradeOffers
@@ -806,12 +1037,12 @@ TradeOffers
     :members:
 
 
-Images
+Media
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: Image
+.. attributetable:: Media
 
-.. autoclass:: Image
+.. autoclass:: Media
     :members:
 
 Exceptions
@@ -845,7 +1076,7 @@ The following exceptions are thrown by the library.
 
 .. autoexception:: WSNotFound
 
-.. autoexception:: InvalidSteamID
+.. autoexception:: InvalidID
 
 
 
@@ -868,4 +1099,4 @@ Exception Hierarchy
             - :exc:`WSException`
                 - :exc:`WSForbidden`
                 - :exc:`WSNotFound`
-            - :exc:`InvalidSteamID`
+            - :exc:`InvalidID`
