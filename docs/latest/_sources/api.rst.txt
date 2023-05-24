@@ -37,7 +37,6 @@ Client
                       on_clan_leave,
                       on_group_join, on_group_update, on_group_leave,
                       on_event_create, on_announcement_create,
-                      on_socket_receive, on_socket_send
 
 
 .. _event-reference:
@@ -55,14 +54,14 @@ through subclassing :class:`Client` and overriding the specific events. For exam
 
     class MyClient(steam.Client):
         async def on_trade_receive(self, trade: steam.TradeOffer) -> None:
-            await trade.partner.send('Thank you for your trade')
-            print(f'Received trade: #{trade.id}')
-            print('Trade partner is:', trade.partner)
-            print('We would send:', len(trade.sending), 'items')
-            print('We would receive:', len(trade.receiving), 'items')
+            await trade.partner.send("Thank you for your trade")
+            print(f"Received trade: #{trade.id}")
+            print("Trade partner is:", trade.partner)
+            print("We would send:", len(trade.sending), "items")
+            print("We would receive:", len(trade.receiving), "items")
 
             if trade.is_gift():
-                print('Accepting the trade as it is a gift')
+                print("Accepting the trade as it is a gift")
                 await trade.accept()
 
 
@@ -135,10 +134,6 @@ traceback and ignoring the exception.
 .. automethod:: Client.on_event_create
 
 .. automethod:: Client.on_announcement_create
-
-.. automethod:: Client.on_socket_receive
-
-.. automethod:: Client.on_socket_send
 
 
 Utilities
@@ -217,10 +212,6 @@ Enumerations
     :undoc-members:
 
 .. autoclass:: UIMode()
-    :members:
-    :undoc-members:
-
-.. autoclass:: UserBadge()
     :members:
     :undoc-members:
 
@@ -785,6 +776,13 @@ App Tickets
 .. attributetable:: AuthenticationTicket
 
 .. autoclass:: AuthenticationTicket()
+    :members:
+    :inherited-members:
+    :undoc-members:
+
+.. attributetable:: AuthenticationTicketVerificationResult
+
+.. autoclass:: AuthenticationTicketVerificationResult()
     :members:
     :inherited-members:
     :undoc-members:

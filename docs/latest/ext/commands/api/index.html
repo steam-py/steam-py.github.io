@@ -13,8 +13,8 @@
 <meta name="description" content="The following section outlines the API of steam.py’s command extension module. Bot: Attributes all_commands, children, clans, cogs, commands, converters, emoticons, extensions, groups, help_command..." />
 
 
-  <title>API Reference - steam.py 1.0.0a2532+g1787ac2 documentation</title><link rel="shortcut icon" href="../../../_static/favicon.ico"/><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="steam.ext.commands - Bot commands framework" href="../" /><link rel="prev" title="API reference" href="../../../api/" />
-<link rel="stylesheet" href="../../../_static/skeleton.css" type="text/css" /><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" /><link rel="stylesheet" type="text/css" href="../../../_static/styles/lutra.css?digest=48f40a625d8b2030d40761bd6a2f9dd9" /><link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" /><link rel="stylesheet" type="text/css" href="../../../_static/sphinx-codeautolink.css" /><link rel="stylesheet" type="text/css" href="../../../_static/styles/lutra-extensions.css?digest=cb0a2a27d38948a8faa936a2d3ead04a" />
+  <title>API Reference - steam.py 1.0.0a2656+g61a5646 documentation</title><link rel="shortcut icon" href="../../../_static/favicon.ico"/><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="API Reference" href="../../csgo/api/" /><link rel="prev" title="API reference" href="../../../api/" />
+<link rel="stylesheet" href="../../../_static/skeleton.css" type="text/css" /><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" /><link rel="stylesheet" type="text/css" href="../../../_static/styles/lutra.css?digest=48f40a625d8b2030d40761bd6a2f9dd9" /><link rel="stylesheet" type="text/css" href="../../../_static/styles/lutra-extensions.css?digest=cb0a2a27d38948a8faa936a2d3ead04a" />
 
 
 <style>
@@ -121,7 +121,7 @@ html.dark {
   
 </div>
   <a class="header-logo-container" href="../../../">
-  <div class="header-title">steam.py 1.0.0a2532+g1787ac2 documentation</div>
+  <div class="header-title">steam.py 1.0.0a2656+g61a5646 documentation</div>
 </a>
   
   
@@ -186,9 +186,13 @@ html.dark {
       <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../api/">steam API Reference</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">steam.ext.commands API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csgo/api/">steam.ext.csgo API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tf2/api/">steam.ext.tf2 API Reference</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../"><code class="docutils literal notranslate"><span class="pre">steam.ext.commands</span></code> - Bot commands framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csgo/"><code class="docutils literal notranslate"><span class="pre">steam.ext.csgo</span></code> - A Counter-Strike Global Offensive Game Coordinator client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tf2/"><code class="docutils literal notranslate"><span class="pre">steam.ext.tf2</span></code> - A Team Fortress 2 Game Coordinator client</a></li>
 </ul>
 
     </div>
@@ -295,8 +299,6 @@ async</span><a class="reference internal" href="#steam.ext.commands.Bot.code">co
 &#64;</span><a class="reference internal" href="#steam.ext.commands.Bot.command">command</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
 async</span><a class="reference internal" href="#steam.ext.commands.Bot.create_post">create_post</a></li><li class="py-attribute-table-entry">
-<span class="py-attribute-table-badge" title="coroutine">
-async</span><a class="reference internal" href="#steam.ext.commands.Bot.create_published_file">create_published_file</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="decorator">
 &#64;</span><a class="reference internal" href="#steam.ext.commands.Bot.event">event</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -464,9 +466,9 @@ e.g.</p>
 it should always be last as no prefix after it will be matched.</p>
 </div>
 </p></li>
-<li><p><strong>owner_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The Steam ID of the owner, this is converted to their 64 bit ID representation upon initialization.</p></li>
-<li><p><strong>owner_ids</strong> (set[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]) – The Steam IDs of the owners, these are converted to their 64 bit ID representations upon initialization.</p></li>
-<li><p><strong>case_insensitive</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether or not commands should be invoke-able case insensitively.</p></li>
+<li><p><strong>owner_id</strong> – The Steam ID of the owner, this is converted to their 64 bit ID representation upon initialization.</p></li>
+<li><p><strong>owner_ids</strong> – The Steam IDs of the owners, these are converted to their 64 bit ID representations upon initialization.</p></li>
+<li><p><strong>case_insensitive</strong> – Whether or not commands should be invoke-able case insensitively.</p></li>
 </ul>
 </dd>
 </dl>
@@ -863,17 +865,6 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="steam.ext.commands.Bot.create_published_file">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">create_published_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.create_published_file" title="Permalink to this definition">#</a></dt>
-<dd><p>Create a published file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../../api/#steam.PublishedFile" title="steam.PublishedFile">PublishedFile</a></p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.emoticons">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">emoticons</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.11)"><span class="pre">collections.abc.Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.ClientEmoticon" title="steam.reaction.ClientEmoticon"><span class="pre">steam.reaction.ClientEmoticon</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#steam.ext.commands.Bot.emoticons" title="Permalink to this definition">#</a></dt>
@@ -1061,14 +1052,14 @@ Register an event to listen to.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_server">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_server" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_server" title="Permalink to this definition">#</a></dt>
 <dd><p>Fetch a <a class="reference internal" href="../../../api/#steam.GameServer" title="steam.GameServer"><code class="xref py py-class docutils literal notranslate"><span class="pre">GameServer</span></code></a> from its ip and port or its Steam ID or <code class="docutils literal notranslate"><span class="pre">None</span></code> if fetching the server failed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ip</strong> (<em>IPAdress</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The ip of the server.</p></li>
-<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The port of the server.</p></li>
-<li><p><strong>id</strong> (<em>Intable</em>) – The ID of the game server, can be an <a class="reference internal" href="../../../api/#steam.ID.id64" title="steam.ID.id64"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID.id64</span></code></a>, <a class="reference internal" href="../../../api/#steam.ID.id2" title="steam.ID.id2"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID.id2</span></code></a> or an <a class="reference internal" href="../../../api/#steam.ID.id3" title="steam.ID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID.id3</span></code></a>.
+<li><p><strong>ip</strong> (<em>IPAdress</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – The ip of the server.</p></li>
+<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – The port of the server.</p></li>
+<li><p><strong>id</strong> (<em>Intable</em><em> | </em><em>None</em>) – The ID of the game server, can be an <a class="reference internal" href="../../../api/#steam.ID.id64" title="steam.ID.id64"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID.id64</span></code></a>, <a class="reference internal" href="../../../api/#steam.ID.id2" title="steam.ID.id2"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID.id2</span></code></a> or an <a class="reference internal" href="../../../api/#steam.ID.id3" title="steam.ID.id3"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID.id3</span></code></a>.
 If this is passed, it makes a call to the master server to fetch its ip and port.</p></li>
 </ul>
 </dd>
@@ -1132,7 +1123,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer">TradeOffer</a>[<a class="reference internal" href="../../../api/#steam.Item" title="steam.Item">Item</a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.User">User</a> | <a class="reference internal" href="../../../api/#steam.PartialUser" title="steam.PartialUser">PartialUser</a>], <a class="reference internal" href="../../../api/#steam.User" title="steam.User">User</a> | <a class="reference internal" href="../../../api/#steam.PartialUser" title="steam.PartialUser">PartialUser</a>] | None</p>
+<dd class="field-even"><p><a class="reference internal" href="../../../api/#steam.TradeOffer" title="steam.TradeOffer">TradeOffer</a>[<a class="reference internal" href="../../../api/#steam.Item" title="steam.Item">Item</a>[<a class="reference internal" href="../../../api/#steam.User" title="steam.User">User</a>], <a class="reference internal" href="../../../api/#steam.Item" title="steam.Item">Item</a>[<a class="reference internal" href="../../../api/#steam.ClientUser" title="steam.ClientUser">ClientUser</a>], <a class="reference internal" href="../../../api/#steam.User" title="steam.User">User</a>] | None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1169,7 +1160,7 @@ If this is passed, it makes a call to the master server to fetch its ip and port
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.fetch_users">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">ids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.fetch_users" title="Permalink to this definition">#</a></dt>
-<dd><p>Fetches a list of :class:<a href="#id1"><span class="problematic" id="id2">`</span></a>~steam.User.</p>
+<dd><p>Fetches a list of <a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <a class="reference internal" href="../../../api/#steam.User" title="steam.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> objects returned are unlikely to retain the order they were originally in.</p>
@@ -1377,17 +1368,17 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Bot.login">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_secret</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity_secret</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refresh_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.login" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_secret</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity_secret</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refresh_token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Bot.login" title="Permalink to this definition">#</a></dt>
 <dd><p>Initialize a connection to a Steam CM and login.</p>
 <p>If no <code class="docutils literal notranslate"><span class="pre">shared_secret</span></code> is passed, you will have to manually enter a Steam guard code using <a class="reference internal" href="#steam.ext.commands.Bot.code" title="steam.ext.commands.Bot.code"><code class="xref py py-meth docutils literal notranslate"><span class="pre">code()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>username</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The username of the account to login to.</p></li>
-<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The password of the account to login to.</p></li>
-<li><p><strong>shared_secret</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The shared secret for the account to login to.</p></li>
-<li><p><strong>identity_secret</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The identity secret for the account to login to.</p></li>
-<li><p><strong>refresh_token</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The refresh token of the account to login to.</p></li>
+<li><p><strong>username</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – The username of the account to login to.</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – The password of the account to login to.</p></li>
+<li><p><strong>shared_secret</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – The shared secret for the account to login to.</p></li>
+<li><p><strong>identity_secret</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – The identity secret for the account to login to.</p></li>
+<li><p><strong>refresh_token</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – The refresh token of the account to login to.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1417,7 +1408,7 @@ A decorator that invokes <a class="reference internal" href="#steam.ext.commands
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ticket</strong> (<a class="reference internal" href="../../../api/#id14" title="steam.AuthenticationTicket"><em>steam.AuthenticationTicket</em></a>) – The updated ticket.</p></li>
+<li><p><strong>ticket</strong> (<a class="reference internal" href="../../../api/#id6" title="steam.AuthenticationTicket"><em>steam.AuthenticationTicket</em></a>) – The updated ticket.</p></li>
 <li><p><strong>response</strong> (<a class="reference internal" href="../../../api/#steam.AuthSessionResponse" title="steam.AuthSessionResponse"><em>steam.AuthSessionResponse</em></a>) – The response code from the CM.</p></li>
 <li><p><strong>state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – The state of the ticket.</p></li>
 </ul>
@@ -1809,8 +1800,6 @@ of the user’s trades, but this will be a very slow operation.</p></li>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.11)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'clan_invite'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../../api/#steam.ClanInvite" title="steam.ClanInvite"><span class="pre">ClanInvite</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../../../api/#steam.ClanInvite" title="steam.ClanInvite"><span class="pre">ClanInvite</span></a></span></span></dt>
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.11)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'socket_receive'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'socket_send'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Msgs</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Msgs</span></span></span></dt>
-<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.11)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'command_error'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.Context"><span class="pre">Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><span class="pre">Exception</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.Context"><span class="pre">Context</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.11)"><span class="pre">Exception</span></a><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.11)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'command'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'command_completion'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.Context"><span class="pre">Context</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#steam.ext.commands.Context" title="steam.ext.commands.Context"><span class="pre">Context</span></a></span></span></dt>
@@ -1956,7 +1945,7 @@ command error.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="steam.ext.commands.BucketType.Admin">
 <span class="sig-name descname"><span class="pre">Admin</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#steam.ext.commands.BucketType.Admin" title="Permalink to this definition">#</a></dt>
-<dd><p>The <a class="reference internal" href="#steam.ext.commands.BucketType" title="steam.ext.commands.BucketType"><code class="xref py py-class docutils literal notranslate"><span class="pre">BucketType</span></code></a> for a <a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Clan</span></code></a>’s <a class="reference internal" href="../../../api/#steam.Clan.admins" title="steam.Clan.admins"><code class="xref py py-attr docutils literal notranslate"><span class="pre">steam.Clan.admins</span></code></a>.</p>
+<dd><p>The <a class="reference internal" href="#steam.ext.commands.BucketType" title="steam.ext.commands.BucketType"><code class="xref py py-class docutils literal notranslate"><span class="pre">BucketType</span></code></a> for a <a class="reference internal" href="../../../api/#steam.Clan" title="steam.Clan"><code class="xref py py-class docutils literal notranslate"><span class="pre">steam.Clan</span></code></a>’s <code class="xref py py-attr docutils literal notranslate"><span class="pre">steam.Clan.admins</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3472,6 +3461,8 @@ Attributes</span><ul>
 <span>
 Methods</span><ul>
 <li class="py-attribute-table-entry">
+<span class="py-attribute-table-badge" title="coroutine">
+async</span><a class="reference internal" href="#steam.ext.commands.Context.fetch_message">fetch_message</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="method">
 def</span><a class="reference internal" href="#steam.ext.commands.Context.history">history</a></li><li class="py-attribute-table-entry">
 <span class="py-attribute-table-badge" title="coroutine">
@@ -3552,7 +3543,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 
 <dl class="py method">
 <dt class="sig sig-object py" id="steam.ext.commands.Context.history">
-<span class="sig-name descname"><span class="pre">history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Context.history" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Context.history" title="Permalink to this definition">#</a></dt>
 <dd><p>A shortcut method that gets the current channel’s history.</p>
 <p>Equivalent to</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ctx</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -3569,6 +3560,17 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dt class="sig sig-object py" id="steam.ext.commands.Context.valid">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">valid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#steam.ext.commands.Context.valid" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether or not the context could be invoked.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="steam.ext.commands.Context.fetch_message">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#steam.ext.commands.Context.fetch_message" title="Permalink to this definition">#</a></dt>
+<dd><p>Fetch a message by its <code class="xref py py-attr docutils literal notranslate"><span class="pre">Message.id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>MessageT | None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -3598,7 +3600,7 @@ async</span><a class="reference internal" href="#steam.ext.commands.Context.send
 <dd class="field-even"><p>The sent message, only applicable if <code class="docutils literal notranslate"><span class="pre">content</span></code> is passed.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>M_co | None</p>
+<dd class="field-odd"><p>MessageT | None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4136,12 +4138,12 @@ then carries on normally.</p>
         
       </div>
     </a>
-  <a class="next-page" href="../">
+  <a class="next-page" href="../../csgo/api/">
       <div class="page-info">
         <div class="context">
           <span>Next</span>
         </div>
-        <div class="title"><code class="docutils literal notranslate"><span class="pre">steam.ext.commands</span></code> - Bot commands framework</div>
+        <div class="title">API Reference</div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -4250,7 +4252,5 @@ Allow people to provide their own.
   <script src="../../../_static/underscore.js"></script>
   <script src="../../../_static/doctools.js"></script>
   <script src="../../../_static/scripts/lutra.js"></script>
-  <script src="../../../_static/clipboard.min.js"></script>
-  <script src="../../../_static/copybutton.js"></script>
   </body>
 </html>
