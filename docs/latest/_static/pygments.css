@@ -16,6 +16,7 @@ html:not(.dark) .highlight .c1 { color: #60a0b0; font-style: italic } /* Comment
 html:not(.dark) .highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
 html:not(.dark) .highlight .gd { color: #A00000 } /* Generic.Deleted */
 html:not(.dark) .highlight .ge { font-style: italic } /* Generic.Emph */
+html:not(.dark) .highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
 html:not(.dark) .highlight .gr { color: #FF0000 } /* Generic.Error */
 html:not(.dark) .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 html:not(.dark) .highlight .gi { color: #00A000 } /* Generic.Inserted */

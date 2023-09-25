@@ -1,0 +1,11 @@
+*.json
+*.py[cod]
+*.log
+*.egg-info
+
+venv
+.venv
+.idea
+
+.DS_Store
+Thumbs.db
