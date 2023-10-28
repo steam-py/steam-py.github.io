@@ -419,7 +419,7 @@ and what isn’t going right. Along with a traceback (if applicable).</p></li>
 <span class="o">...</span>  <span class="c1"># handle degenerate cases len() != 3 and earbuds are None</span>
 
 <span class="c1"># finally construct the trade</span>
-<span class="n">trade</span> <span class="o">=</span> <span class="n">steam</span><span class="o">.</span><span class="n">TradeOffer</span><span class="p">(</span><span class="n">sending</span><span class="o">=</span><span class="n">keys</span><span class="p">,</span> <span class="n">item_to_receive</span><span class="o">=</span><span class="n">earbuds</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;This trade was made using steam.py&quot;</span><span class="p">)</span>
+<span class="n">trade</span> <span class="o">=</span> <span class="n">steam</span><span class="o">.</span><span class="n">TradeOffer</span><span class="p">(</span><span class="n">sending</span><span class="o">=</span><span class="n">keys</span><span class="p">,</span> <span class="n">receiving</span><span class="o">=</span><span class="n">earbuds</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;This trade was made using steam.py&quot;</span><span class="p">)</span>
 <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">trade</span><span class="o">=</span><span class="n">trade</span><span class="p">)</span>
 <span class="c1"># you don&#39;t need to confirm the trade manually, the client will handle that for you</span>
 </pre></div>
