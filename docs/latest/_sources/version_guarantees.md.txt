@@ -1,11 +1,14 @@
 # Version Guarantees
 
-steam.py follows semantic versioning ([semvar](https://semver.org)) with a public API described by the documentation you are reading here.
+steam.py follows semantic versioning ([semvar](https://semver.org)) with a public API described by the documentation you are reading on the rest of this site.
 
 ## Examples of changes
 
 | Change                                   | Breaking |
 | ---------------------------------------- | :------: |
 | Adding a new attribute/method to a class |    ❌     |
+| Changing a type to a more specific type  |    ❌     |
 
 If a method is broken but fixing it is a breaking change, its not considered a breaking change
+
+"it's not my fault that there's a breaking change in a minor release if valve already did the breaking first"
